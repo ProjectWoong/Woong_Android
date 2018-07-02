@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/rv_item_image"
+    android:layout_width="175dp"
+    android:layout_height="240dp"
+    android:orientation="vertical">
+    <TextView
+        android:gravity="center"
+        android:background="#ececec"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="현듀마켓"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <ImageView
+            android:id="@+id/img__myproduct"
+            android:background="#acacac"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+        <ImageView
+            android:id="@+id/btn_bookmark_myproduct"
+            android:layout_alignParentBottom="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="#000000"/>
+        <ImageView
+            android:id="@+id/btn_cart_myproduct"
+            android:layout_alignParentRight="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="#000000"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="돼지 감자"/>
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/unitnum_bookmark_myproduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"/>
+        <TextView
+            android:layout_toRightOf="@+id/unitnum_bookmark_myproduct"
+            android:id="@+id/unitname_bookmark_myproduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kg"/>
+        <TextView
+            android:layout_toRightOf="@+id/unitname_bookmark_myproduct"
+            android:id="@+id/dang_bookmark_myproduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="당"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/dang_bookmark_myproduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6600원"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/firsttag_bookmark_myproduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#당일배송"
+            android:background="#5fc1ad"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/firsttag_bookmark_myproduct"
+            android:id="@+id/secondtag_bookmark_myproduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#당일배송"
+            android:background="#5fc1ad"
+            android:textColor="#ffffff"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>
