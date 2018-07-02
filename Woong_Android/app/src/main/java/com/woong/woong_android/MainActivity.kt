@@ -8,6 +8,7 @@ import com.woong.woong_android.myproduct.MyProduct
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
+
     override fun onClick(p0: View?) {
         when(p0){
             btn_myproduct_main ->{
@@ -32,4 +33,5 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         transaction.commit()
 
     }
+
 }
