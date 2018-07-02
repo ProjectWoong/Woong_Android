@@ -20,7 +20,11 @@
         <activity android:name=".map.LocationChange"></activity>
         <activity android:name=".Login.LoginActivity" />
         <activity android:name=".Login.ConsumerLoginActivity" />
-        <activity android:name=".Join.ConsumerTermsActivity"></activity>
+        <activity android:name=".Join.ConsumerTermsActivity" />
+        <activity android:name=".Join.ConsumerJoin1Activity" />
+        <activity android:name=".Join.ConsumerJoin2Activity" />
+        <activity android:name=".Join.ConsumerJoin3Activity" />
+        <activity android:name=".SplashActivity"></activity>
     </application>
 
 </manifest>
