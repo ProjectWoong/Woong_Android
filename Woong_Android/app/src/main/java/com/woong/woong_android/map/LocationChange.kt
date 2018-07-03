@@ -8,6 +8,6 @@ class LocationChange : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_location_change)
+        setContentView(R.layout.activity_location_map)
     }
 }

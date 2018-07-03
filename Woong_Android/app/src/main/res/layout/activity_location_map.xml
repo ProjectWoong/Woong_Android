@@ -48,9 +48,32 @@
             android:id="@+id/iv_searchico_main"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_toLeftOf="@id/tv_search_main"
+            android:layout_toLeftOf="@+id/tv_search_main"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:background="@color/colorAccent"/>
     </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_recent_map"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:text="최근 주소"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recent_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+    </android.support.v7.widget.RecyclerView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="주소 검색 결과 '홍익대학교'"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_result_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
 </LinearLayout>
