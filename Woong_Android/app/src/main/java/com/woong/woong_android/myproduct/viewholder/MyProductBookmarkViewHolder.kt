@@ -7,7 +7,7 @@ import android.widget.TextView
 import com.woong.woong_android.R
 import kotlinx.android.synthetic.main.item_bookmark_myproduct.view.*
 
-class MyProductViewHolder(itemView : View?) : RecyclerView.ViewHolder(itemView) {
+class MyProductBookmarkViewHolder(itemView : View?) : RecyclerView.ViewHolder(itemView) {
 
     var productimg : ImageView = itemView!!.findViewById(R.id.iv_bmproductimg_myproduct) as ImageView
     var marketname : TextView = itemView!!.findViewById(R.id.marketname_bookmark_myproduct) as TextView

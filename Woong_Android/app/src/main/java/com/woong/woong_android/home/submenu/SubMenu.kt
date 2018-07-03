@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.fragment_submenu_tab.view.*
 class SubMenu :android.support.v4.app.Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_submenu_tab,container,false)
-        val subMenuPagerAdapter = SubMenuPagerAdapter(activity!!.supportFragmentManager)
+        val subMenuPagerAdapter = SubMenuPagerAdapter(this.childFragmentManager)
         val viewPager = v.viewpager_submenu
         val tabLayout = v.tab_top_submenu
 
