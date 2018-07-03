@@ -8,6 +8,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="스플래쉬화면~"
+        android:text="스플래쉬화면 일단 3초로 해둠"
         android:textSize="50sp"/>
 </android.support.constraint.ConstraintLayout>

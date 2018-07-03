@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.woong.woong_android.Login.LoginActivity
 import com.woong.woong_android.MainActivity
 import com.woong.woong_android.R
 
@@ -16,7 +17,7 @@ class SplashActivity : AppCompatActivity() {
         val handler = Handler()
         handler.postDelayed({
             //
-            startActivity(Intent(applicationContext, MainActivity::class.java))
+            startActivity(Intent(applicationContext, LoginActivity::class.java))
             finish()
         }, 3000) // 밀리세컨드=초*1000
     }

@@ -1,4 +1,4 @@
-package com.woong.woong_android
+package com.woong.woong_android.Join.Consumer
 
 import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
@@ -8,7 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.RelativeLayout
 import net.daum.mf.map.api.MapView
-import android.view.ViewGroup
+import com.woong.woong_android.R
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 
