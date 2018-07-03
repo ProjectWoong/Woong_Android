@@ -13,10 +13,14 @@
 
         </activity>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <activity android:name=".map.LocationChange"></activity>
 =======
         <activity android:name=".map.LocationChange" />
 >>>>>>> e9ce95e45685732cdff64d58fe241ed281160619
+=======
+        <activity android:name=".map.LocationChange" />
+>>>>>>> c4421a3e7360988f5a6d34a2301880a8084fb493
         <activity android:name=".Login.LoginActivity" />
         <activity android:name=".Login.ConsumerLoginActivity" />
         <activity android:name=".Join.ConsumerTermsActivity" />
