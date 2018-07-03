@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Join.ConsumerJoin2Activity"
+    tools:context=".Join.Consumer.Join2Activity"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -97,6 +97,7 @@
         android:layout_height="0dp"
         android:layout_weight="1">
         <Button
+            android:id="@+id/btn_next_join2"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_centerInParent="true"

@@ -1,4 +1,4 @@
-package com.woong.woong_android.Join
+package com.woong.woong_android.Join.Consumer
 
 import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
