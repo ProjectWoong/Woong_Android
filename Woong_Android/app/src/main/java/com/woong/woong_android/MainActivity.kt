@@ -20,13 +20,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when(p0){
             btn_home_main ->{
-                addFragment(HomeMain())
+                replaceFragment(HomeMain())
             }
             btn_market_main ->{
-                addFragment(com.woong.woong_android.home.submenu.SubMenu())
+                replaceFragment(com.woong.woong_android.home.submenu.SubMenu())
             }
             btn_myproduct_main ->{
-                addFragment(MyProduct())
+                replaceFragment(MyProduct())
             }
         }
     }
@@ -54,6 +54,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         transaction.add(R.id.frame_fragment_main,fragment)
         transaction.commit()
 
+    }
+
+    fun replaceFragment(fragment: Fragment) {
+        val fm = supportFragmentManager
+        val transaction = fm.beginTransaction()
+
+        transaction.replace(R.id.frame_fragment_main,fragment)
+        transaction.commit()
     }
 
 }
