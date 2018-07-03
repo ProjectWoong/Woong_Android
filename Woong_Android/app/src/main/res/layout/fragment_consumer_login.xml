@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login.ConsumerLoginActivity"
-    android:orientation="vertical">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/colorPrimaryDark"
-        android:gravity="top"
-        android:text="귀여운 웅이와 로고"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:textAlignment="center"/>
+    android:background="#FFFFFF">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_height="match_parent"
         android:orientation="vertical">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -68,6 +54,7 @@
                 </RelativeLayout>
 
                 <Button
+                    android:id="@+id/btn_login_consumer_login"
                     android:layout_width="300dp"
                     android:layout_height="50dp"
                     android:background="@color/colorPrimaryDark"
@@ -86,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:text="SNS로 로그인하기"
                 android:textAlignment="center"
-                android:textColor="#5D5D5D"
+                android:textColor="#707070"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -123,14 +110,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="계정이 없으신가요?"
-                        android:layout_marginRight="20dp"/>
-                    <Button
+                        android:layout_marginRight="20dp"
+                        android:textColor="#707070"/>
+                    <TextView
+                        android:id="@+id/tv_signup_consumer_login"
                         android:layout_centerHorizontal="true"
-                        android:layout_width="wrap_content"
+                        android:layout_width="100dp"
+                        android:textAlignment="center"
                         android:layout_height="wrap_content"
-                        android:text="가입하기"/>
+                        android:background="#FFFFFF"
+                        android:text="가입하기"
+                        android:textColor="#707070"/>
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
