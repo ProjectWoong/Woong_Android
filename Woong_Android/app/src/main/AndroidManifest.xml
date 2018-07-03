@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".map.LocationChange" />
         <activity android:name=".Login.LoginActivity" />
@@ -20,12 +23,8 @@
         <activity android:name=".Join.ConsumerJoin2Activity" />
         <activity android:name=".Join.ConsumerJoin3Activity" />
         <activity android:name=".Splash.SplashActivity" />
-        <activity android:name=".MapActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Join.MapActivity">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".MyPage.MyPageActivity">
