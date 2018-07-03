@@ -1,14 +1,19 @@
 package com.woong.woong_android
 
+import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.Base64
+import android.util.Log
 import android.view.SubMenu
 import android.view.View
 import com.woong.woong_android.R
 import com.woong.woong_android.home.main.HomeMain
 import com.woong.woong_android.myproduct.MyProduct
 import kotlinx.android.synthetic.main.activity_main.*
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -29,6 +34,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+
 
         addFragment(HomeMain())
 
