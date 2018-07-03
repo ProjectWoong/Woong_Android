@@ -1,9 +1,11 @@
-package com.woong.woong_android
+package com.woong.woong_android.Splash
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.woong.woong_android.MainActivity
+import com.woong.woong_android.R
 
 class SplashActivity : AppCompatActivity() {
 
