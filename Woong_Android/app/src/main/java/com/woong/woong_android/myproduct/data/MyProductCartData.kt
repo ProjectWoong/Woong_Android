@@ -11,6 +11,4 @@ data class MyProductCartData (
         var c_cost : String?,
         var c_quantity : String?,
         var c_subtotal : String?
-        //var c_pdselect : Boolean
-       // var c_allselect:Boolean
 )
