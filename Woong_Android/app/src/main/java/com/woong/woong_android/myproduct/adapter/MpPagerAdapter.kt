@@ -11,7 +11,6 @@ class MpPagerAdapter(fm:FragmentManager) : FragmentPagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {
         when(position){
             0 ->  return MyProductBookMark()
-
             1 ->  return MyProductCart()
 
         }

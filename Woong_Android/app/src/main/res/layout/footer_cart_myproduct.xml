@@ -19,12 +19,12 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp">
             <TextView
-                android:id="@+id/pdtotalnum_cart_myproduct"
+                android:id="@+id/pdtotalnum_footer_myproduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="25500"/>
             <TextView
-                android:layout_toRightOf="@+id/pdtotalnum_cart_myproduct"
+                android:layout_toRightOf="@+id/pdtotalnum_footer_myproduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="원"/>
@@ -80,12 +80,12 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp">
             <TextView
-                android:id="@+id/totalnum_cart_myproduct"
+                android:id="@+id/totalnum_footer_myproduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="28000"/>
             <TextView
-                android:layout_toRightOf="@+id/totalnum_cart_myproduct"
+                android:layout_toRightOf="@+id/totalnum_footer_myproduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="원"/>
