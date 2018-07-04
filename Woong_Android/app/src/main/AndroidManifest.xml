@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.woong.woong_android">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <meta-data
+        android:name="com.kakao.sdk.AppKey"
+        android:value="5b9f84f71895898003a9683274d06a39" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,6 +19,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -21,16 +29,15 @@
         <activity android:name=".Join.Consumer.Join1Activity" />
         <activity android:name=".Join.Consumer.Join2Activity" />
         <activity android:name=".Join.Consumer.AllergyActivity" />
+<<<<<<< HEAD
         <activity android:name=".Splash.SplashActivity"> </activity>
         <activity android:name=".Join.Consumer.MapActivity"/>
         <activity android:name=".MyPage.MyPageActivity"/>
+=======
+        <activity android:name=".Splash.SplashActivity"></activity>
+        <activity android:name=".map.MapActivity" />
+        <activity android:name=".map.LocationSearchActivity"></activity>
+>>>>>>> e136d0eacc93ea99d9b01b2a1888061526ee5c9c
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-    <meta-data
-        android:name="com.kakao.sdk.AppKey"
-        android:value="5b9f84f71895898003a9683274d06a39" />
 
 </manifest>

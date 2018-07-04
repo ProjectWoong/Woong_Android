@@ -1,16 +1,14 @@
-package com.woong.woong_android.Join.Consumer
+package com.woong.woong_android.map
 
-import android.content.pm.PackageManager
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Base64
-import android.util.Log
 import android.view.View
 import android.widget.RelativeLayout
+import com.woong.woong_android.MainActivity
 import net.daum.mf.map.api.MapView
 import com.woong.woong_android.R
-import java.security.MessageDigest
-import java.security.NoSuchAlgorithmException
+import kotlinx.android.synthetic.main.activity_join_map.*
 
 
 //참고사이트 http://es1015.tistory.com/296
@@ -18,9 +16,9 @@ class MapActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_map)
+        setContentView(R.layout.activity_join_map)
 
-        /* 키해쉬*/
+        /* 키해쉬 구하기
         try {
             val info = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNATURES)
             for (signature in info.signatures) {
@@ -32,12 +30,20 @@ class MapActivity : AppCompatActivity() {
             e.printStackTrace()
         } catch (e: NoSuchAlgorithmException) {
             e.printStackTrace()
-        }
+        }*/
 
         val mapView = MapView(this)
         mapView.setDaumMapApiKey("5b9f84f71895898003a9683274d06a39")
         val container = findViewById<View>(R.id.map_view) as RelativeLayout
 
         container.addView(mapView)
+        btn_search_join_map.setOnClickListener {
+            val intent = Intent(applicationContext, LocationSearchActivity::class.java)
+            startActivity(intent)   // 전환될 액티비티로 넘어갈때
+        }
+        btn_decided_join_map.setOnClickListener {
+            val intent = Intent(applicationContext, MainActivity::class.java)
+            startActivity(intent)   // 전환될 액티비티로 넘어갈때
+        }
     }
 }

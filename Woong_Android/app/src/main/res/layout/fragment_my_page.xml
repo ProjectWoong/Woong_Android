@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyPage.MyPageActivity"
+    tools:context=".MyPage"
     android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -182,6 +182,7 @@
                     android:layout_height="2dp"
                     android:background="@android:color/darker_gray"/>
                 <RelativeLayout
+                    android:id="@+id/btn_logout_mypage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp">
@@ -373,6 +374,10 @@
                         android:layout_alignParentRight="true"
                         />
                 </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
