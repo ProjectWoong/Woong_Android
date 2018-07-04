@@ -47,7 +47,7 @@
                     android:id="@+id/spinner_year"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"/>
+                    android:layout_weight="1.5"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:text="월"/>
                 <Spinner
-                    android:id="@+id/spinner_date"
+                    android:id="@+id/spinner_day"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />

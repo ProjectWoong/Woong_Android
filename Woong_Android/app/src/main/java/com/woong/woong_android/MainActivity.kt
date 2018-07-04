@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.SubMenu
 import android.view.View
 import com.woong.woong_android.R
+import com.woong.woong_android.home.MyPage.MyPage
 import com.woong.woong_android.home.main.HomeMain
 import com.woong.woong_android.myproduct.MyProduct
 import kotlinx.android.synthetic.main.activity_main.*
@@ -28,6 +29,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             btn_myproduct_main ->{
                 replaceFragment(MyProduct())
             }
+            btn_my_main ->{
+                replaceFragment(MyPage())
+            }
         }
     }
 
@@ -35,14 +39,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
-
         addFragment(HomeMain())
 
         btn_myproduct_main.setOnClickListener(this)
         btn_home_main.setOnClickListener(this)
         btn_market_main.setOnClickListener(this)
+        btn_my_main.setOnClickListener(this)
 
     }
 
