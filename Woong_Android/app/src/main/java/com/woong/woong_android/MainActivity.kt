@@ -9,10 +9,13 @@ import android.util.Log
 import android.view.SubMenu
 import android.view.View
 import com.woong.woong_android.R
+import com.woong.woong_android.R.id.*
 import com.woong.woong_android.home.MyPage.MyPage
 import com.woong.woong_android.home.main.HomeMain
 import com.woong.woong_android.myproduct.MyProduct
+import com.woong.woong_android.notice.Notice
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 
@@ -28,6 +31,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             btn_myproduct_main ->{
                 replaceFragment(MyProduct())
+            }
+            btn_notice_main->{
+                replaceFragment(Notice())
             }
             btn_my_main ->{
                 replaceFragment(MyPage())
@@ -45,6 +51,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_home_main.setOnClickListener(this)
         btn_market_main.setOnClickListener(this)
         btn_my_main.setOnClickListener(this)
+        btn_notice_main.setOnClickListener(this)
 
     }
 
