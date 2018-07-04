@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Join.Consumer.MapActivity">
+    tools:context=".map.MapActivity">
 
     <RelativeLayout
         android:id="@+id/map_view"
@@ -13,6 +13,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/btn_search_join_map"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:layout_width="300dp"
@@ -27,6 +28,7 @@
     </RelativeLayout>
     
     <Button
+        android:id="@+id/btn_decided_join_map"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/colorPrimaryDark"

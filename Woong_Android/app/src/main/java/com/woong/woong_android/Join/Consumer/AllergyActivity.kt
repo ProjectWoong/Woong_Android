@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.woong.woong_android.R
+import com.woong.woong_android.map.MapActivity
 import kotlinx.android.synthetic.main.activity_consumer_join_allergy.*
 
 

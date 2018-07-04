@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <ImageView
+        android:id="@+id/iv_pin_location"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@color/colorPrimaryDark"/>
+    <TextView
+        android:id="@+id/item_address_join_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_pin_location"
+        android:layout_marginLeft="10dp"
+        android:text="ㅋ"/>
+    <TextView
+        android:id="@+id/tv_road_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/item_address_join_location"
+        android:layout_below="@+id/item_address_join_location"
+        android:text="[도로명] "/>
+    <TextView
+        android:id="@+id/item_road_join_location"
+        android:layout_toRightOf="@+id/tv_road_name"
+        android:layout_alignTop="@+id/tv_road_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="ㅋㄷㅋㄷ" />
+</RelativeLayout>
