@@ -12,7 +12,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-<<<<<<< HEAD
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -26,22 +25,7 @@
 
         </activity>
         <activity android:name=".Join.Consumer.MapActivity"/>
-=======
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".map.LocationChange" />
-        <activity android:name=".Login.LoginActivity" />
-        <activity android:name=".Login.ConsumerLoginActivity" />
-        <activity android:name=".Join.ConsumerTermsActivity" />
-        <activity android:name=".Join.ConsumerJoin1Activity" />
-        <activity android:name=".Join.ConsumerJoin2Activity" />
-        <activity android:name=".Join.ConsumerJoin3Activity" />
-        <activity android:name=".Splash.SplashActivity" />
-        <activity android:name=".MapActivity"/>
->>>>>>> eef4334f2ff893998aa71971a9c1849d567c5a45
         <activity android:name=".MyPage.MyPageActivity"/>
     </application>
 
