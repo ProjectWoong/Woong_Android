@@ -5,7 +5,7 @@
     android:layout_height="50dp"
     android:orientation="horizontal">
     <CheckBox
-        android:id="@+id/all_checkbox_cart_myproduct"
+        android:id="@+id/all_checkbox_header_myproduct"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
