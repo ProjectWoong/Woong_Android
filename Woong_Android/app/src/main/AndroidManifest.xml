@@ -29,15 +29,11 @@
         <activity android:name=".Join.Consumer.Join1Activity" />
         <activity android:name=".Join.Consumer.Join2Activity" />
         <activity android:name=".Join.Consumer.AllergyActivity" />
-<<<<<<< HEAD
-        <activity android:name=".Splash.SplashActivity"> </activity>
-        <activity android:name=".Join.Consumer.MapActivity"/>
-        <activity android:name=".MyPage.MyPageActivity"/>
-=======
+
         <activity android:name=".Splash.SplashActivity"></activity>
         <activity android:name=".map.MapActivity" />
         <activity android:name=".map.LocationSearchActivity"></activity>
->>>>>>> e136d0eacc93ea99d9b01b2a1888061526ee5c9c
+
     </application>
 
 </manifest>
