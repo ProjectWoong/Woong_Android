@@ -34,15 +34,18 @@
         <activity android:name=".map.LocationSearchActivity" />
 
         <activity android:name=".myproduct.payment.PaymentActivity" />
+
         <activity android:name=".notice.message.chat.NoticeChatActivity"/>
 
         <activity android:name=".Join.Marketer.TermsActivity" />
         <activity android:name=".Join.Marketer.Join1Activity" />
         <activity android:name=".Join.Marketer.Join2Activity" />
+
         <activity android:name=".Join.Marketer.Market.Enroll1Activity"/>
 
         <activity android:name=".Join.Marketer.Market.Enroll2Activity" />
         <activity android:name=".Join.Marketer.Market.Enroll3Activity"/>
+        
 
 
     </application>
