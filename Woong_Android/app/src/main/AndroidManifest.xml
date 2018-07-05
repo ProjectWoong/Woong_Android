@@ -28,7 +28,10 @@
         <activity android:name=".Splash.SplashActivity" />
         <activity android:name=".map.MapActivity" />
         <activity android:name=".map.LocationSearchActivity" />
-<<<<<<< HEAD
+
+        <activity android:name=".myproduct.payment.PaymentActivity" />
+        <activity android:name=".notice.message.chat.NoticeChatActivity">
+
         <activity android:name=".Join.Marketer.TermsActivity" />
         <activity android:name=".Join.Marketer.Join1Activity" />
         <activity android:name=".Join.Marketer.Join2Activity" />
@@ -39,11 +42,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".Join.Marketer.Market.Enroll2Activity" />
         <activity android:name=".Join.Marketer.Market.Enroll3Activity"></activity>
-=======
         <activity android:name=".myproduct.payment.PaymentActivity"></activity>
->>>>>>> 9d190ae931434abd058e5125f54440e46b0ee67a
+
     </application>
 
 </manifest>
