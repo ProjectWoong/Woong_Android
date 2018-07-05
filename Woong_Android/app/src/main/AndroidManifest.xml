@@ -17,11 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".map.LocationChange" />
         <activity android:name=".Login.LoginActivity" />
@@ -32,7 +28,14 @@
         <activity android:name=".Splash.SplashActivity" />
         <activity android:name=".map.MapActivity" />
         <activity android:name=".map.LocationSearchActivity" />
-        <activity android:name=".myproduct.payment.PaymentActivity"></activity>
+        <activity android:name=".myproduct.payment.PaymentActivity" />
+        <activity android:name=".notice.message.chat.NoticeChatActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
