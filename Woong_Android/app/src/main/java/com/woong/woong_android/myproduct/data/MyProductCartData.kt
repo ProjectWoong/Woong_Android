@@ -1,5 +1,7 @@
 package com.woong.woong_android.myproduct.data
 
+import android.widget.CheckBox
+
 data class MyProductCartData (
         var c_productimg : Int,
         var c_productname : String?,
