@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Woong_Android</string>
     <string-array name="date_year">
+        <item></item>
         <item>1970</item>
         <item>1971</item>
         <item>19721</item>
@@ -46,6 +47,7 @@
     </string-array>
 
     <string-array name="date_month">
+        <item></item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -61,6 +63,7 @@
     </string-array>
 
     <string-array name="date_day">
+        <item></item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
