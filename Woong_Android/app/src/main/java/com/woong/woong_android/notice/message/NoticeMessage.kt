@@ -9,7 +9,7 @@ import com.woong.woong_android.R
 
 class NoticeMessage :Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val v = inflater.inflate(R.layout.fragment_message_notice,container,false)
+        val v = inflater.inflate(R.layout.fragment_notice_message,container,false)
         return v
     }
 }

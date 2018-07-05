@@ -20,14 +20,18 @@
 
     </RelativeLayout>
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_chat_notice"
+            android:layout_below="@+id/topbox"
+            android:layout_above="@+id/chatbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
 
 
-   <android.support.v7.widget.RecyclerView
-       android:id="@+id/rv_chat_notice"
-       android:layout_below="@+id/topbox"
-       android:layout_above="@+id/chatbox"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+
+
     <RelativeLayout
         android:id="@+id/chatbox"
         android:layout_centerInParent="true"
