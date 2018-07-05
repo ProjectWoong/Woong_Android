@@ -17,11 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".map.LocationChange" />
         <activity android:name=".Login.LoginActivity" />
@@ -29,9 +25,21 @@
         <activity android:name=".Join.Consumer.Join1Activity" />
         <activity android:name=".Join.Consumer.Join2Activity" />
         <activity android:name=".Join.Consumer.AllergyActivity" />
-        <activity android:name=".Splash.SplashActivity"></activity>
+        <activity android:name=".Splash.SplashActivity" />
         <activity android:name=".map.MapActivity" />
-        <activity android:name=".map.LocationSearchActivity"></activity>
+        <activity android:name=".map.LocationSearchActivity" />
+        <activity android:name=".Join.Marketer.TermsActivity" />
+        <activity android:name=".Join.Marketer.Join1Activity" />
+        <activity android:name=".Join.Marketer.Join2Activity" />
+        <activity android:name=".Join.Marketer.Market.Enroll1Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Join.Marketer.Market.Enroll2Activity" />
+        <activity android:name=".Join.Marketer.Market.Enroll3Activity"></activity>
     </application>
 
 </manifest>
