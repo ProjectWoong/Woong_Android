@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Join.Consumer.TermsActivity"
+    tools:context=".Join.Marketer.TermsActivity"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="소비자 회원가입 약관"
+            android:text="판매자 회원가입 약관"
             android:layout_centerInParent="true"/>
     </RelativeLayout>
 

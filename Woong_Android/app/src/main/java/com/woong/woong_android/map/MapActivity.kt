@@ -9,6 +9,9 @@ import com.woong.woong_android.MainActivity
 import net.daum.mf.map.api.MapView
 import com.woong.woong_android.R
 import kotlinx.android.synthetic.main.activity_join_map.*
+import net.daum.mf.map.api.MapPOIItem
+import net.daum.mf.map.n.api.internal.NativeMapLocationManager.setCurrentLocationTrackingMode
+import net.daum.mf.map.n.api.internal.NativeMapLocationManager.setShowCurrentLocationMarker
 
 
 //참고사이트 http://es1015.tistory.com/296
@@ -37,6 +40,7 @@ class MapActivity : AppCompatActivity() {
         val container = findViewById<View>(R.id.map_view) as RelativeLayout
 
         container.addView(mapView)
+
         btn_search_join_map.setOnClickListener {
             val intent = Intent(applicationContext, LocationSearchActivity::class.java)
             startActivity(intent)   // 전환될 액티비티로 넘어갈때
