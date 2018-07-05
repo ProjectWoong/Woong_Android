@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Join.ConsumerJoin1Activity"
+    tools:context=".Join.Consumer.Join1Activity"
     android:orientation="vertical"
     android:background="#FFFFFF">
     
@@ -107,7 +107,7 @@
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_centerInParent="true"
-            android:text="NEXT"
+            android:text="다음"
             android:textColor="@android:color/white"
             android:background="@color/colorPrimaryDark"/>
     </RelativeLayout>

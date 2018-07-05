@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Join.Consumer.Join2Activity"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    tools:context=".Join.Marketer.Join2Activity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -21,7 +20,7 @@
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="소비자로 등록중입니다."
+            android:text="판매자로 등록중입니다."
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/join1_logo"/>
     </RelativeLayout>
@@ -101,7 +100,7 @@
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_centerInParent="true"
-            android:text="다음"
+            android:text="NEXT"
             android:textColor="@android:color/white"
             android:background="@color/colorPrimaryDark"/>
     </RelativeLayout>
