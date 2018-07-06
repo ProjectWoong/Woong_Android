@@ -56,6 +56,7 @@ class NoticeMessage :Fragment(),View.OnClickListener {
         v.rv_new_message.layoutManager = LinearLayoutManager(context)
         v.rv_new_message.adapter = ntMessageAdapter
 
+
         ntMessageAdapter = NtMessageAdapter(oldItems)
         ntMessageAdapter.setOnItemClickListener(this)
         v.rv_old_message.layoutManager = LinearLayoutManager(context)
