@@ -57,40 +57,197 @@
                     android:text="을 확인해주세요"/>
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/draw_edge"
-            android:padding="15dp"
-            android:orientation="vertical">
-            <TextView
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="우리 마켓 등록하기"
-                android:gravity="center"
-                android:layout_marginVertical="10dp"/>
-            <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="마켓 이름"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="최대 5글자"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="마켓 한 줄 소개"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="마켓사진"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/draw_edge"
+                    android:padding="15dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="우리 마켓 등록하기"
+                        android:gravity="center"
+                        android:layout_marginVertical="10dp"/>
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="마켓 이름"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="최대 5글자"
+                        android:maxLength="5"
+                        android:layout_marginBottom="10dp"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="마켓 한 줄 소개"/>
+                        <ImageView
+                            android:id="@+id/question1"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_marginLeft="5dp"/>
+                    </LinearLayout>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="마켓사진"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        >
+                        <TextView
+                            android:background="@drawable/draw_edge"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:text="파일 이름 들어올 곳"
+                            android:paddingTop="5dp"
+                            android:textAlignment="center"/>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="첨부"
+                            android:background="@color/colorPrimaryDark"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="마켓 설명"/>
+                        <ImageView
+                            android:id="@+id/question2"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_marginLeft="5dp"/>
+                    </LinearLayout>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:lines="4"
+                        android:inputType="textMultiLine"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="마켓 키워드"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#유기농"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#가성비갑"
+                            android:layout_marginHorizontal="20dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#빠른배송"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="계좌 설정"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+                        <Spinner
+                            android:id="@+id/spinner_bank"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            >
+                        </Spinner>
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:inputType="number"/>
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/answer1"
+                android:layout_marginTop="90dp"
+                android:layout_marginLeft="130dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="#EDEDED"
+                android:visibility="invisible"
+                >
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ex.채식주의자들을 위한 마켓"/>
+                <ImageView
+                    android:id="@+id/btn_cancel1_enroll2"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/colorPrimaryDark"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/answer2"
+                android:layout_marginTop="240dp"
+                android:layout_marginLeft="100dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="#EDEDED"
+                android:visibility="invisible"
+                >
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="본인의 마켓에 대해\n자유롭게 써주세요."/>
+                <ImageView
+                    android:id="@+id/btn_cancel2_enroll2"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/colorPrimaryDark"/>
+                </RelativeLayout>
+        </FrameLayout>
+        <Button
+            android:id="@+id/btn_complete_enroll2"
+            android:layout_marginVertical="20dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:text="등록 완료"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimaryDark"
+            android:layout_gravity="center_horizontal"/>
     </LinearLayout>
+
 </ScrollView>

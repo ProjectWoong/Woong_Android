@@ -15,6 +15,9 @@ class LoginTab : Fragment() {
         v.btn_consumer_login.setOnClickListener {
             replaceFragment(ConsumerLoginTab())
         }
+        v.btn_marketer_login.setOnClickListener {
+            replaceFragment(MarketerLoginTab())
+        }
         return v
     }
     fun replaceFragment(fragment: Fragment) {
