@@ -1,25 +1,26 @@
-package com.woong.woong_android.map
+package com.woong.woong_android.Join.Marketer.Market
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.woong.woong_android.R
+import com.woong.woong_android.map.LocationSearchAdapter
+import com.woong.woong_android.map.LocationSearchItem
 import kotlinx.android.synthetic.main.activity_enroll1_search.*
 
-class LocationSearchActivity : AppCompatActivity() {
-
-    lateinit var locationSearchItems : ArrayList<LocationSearchItem>
-    lateinit var locationSearchAdapter : LocationSearchAdapter
+class Enroll1SearchActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_join_location_search)
+        setContentView(R.layout.activity_enroll1_search)
+
+        lateinit var locationSearchItems : ArrayList<LocationSearchItem>
+        lateinit var locationSearchAdapter : LocationSearchAdapter
 
         btn_back_market_location_search.setOnClickListener {
-            val intent = Intent(applicationContext, MapActivity::class.java)
-            startActivity(intent)   // 전환될 액티비티로 넘어갈때
+            val intent = Intent(applicationContext, Enroll1Activity::class.java)
+            startActivity(intent)
         }
 
         locationSearchItems = ArrayList()
