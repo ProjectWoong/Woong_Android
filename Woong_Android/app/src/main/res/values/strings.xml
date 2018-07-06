@@ -1,4 +1,5 @@
 <resources>
+    <!--소비자 회원가입(Join.Consumer.Join1Activity)-->
     <string name="app_name">Woong_Android</string>
     <string-array name="date_year">
         <item></item>
@@ -43,7 +44,6 @@
         <item>2008</item>
         <item>2009</item>
         <item>2010</item>
-
     </string-array>
 
     <string-array name="date_month">
@@ -95,6 +95,14 @@
         <item>29</item>
         <item>30</item>
         <item>31</item>
+    </string-array>
 
+    <!--마켓 등록(Join.Marketer.Market.Enroll2Activity)-->
+    <string-array name="bank">
+        <item>은행</item>
+        <item>농협</item>
+        <item>신한</item>
+        <item>우리</item>
+        <item>국민</item>
     </string-array>
 </resources>
