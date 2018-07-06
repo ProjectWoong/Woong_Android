@@ -2,22 +2,16 @@ package com.woong.woong_android.notice.message
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Message
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
 import com.woong.woong_android.R
 import com.woong.woong_android.notice.adapter.NtMessageAdapter
 import com.woong.woong_android.notice.data.MessageData
-import com.woong.woong_android.notice.data.NewMessageData
-import com.woong.woong_android.notice.data.OldMessageData
 import com.woong.woong_android.notice.message.chat.NoticeChatActivity
-import kotlinx.android.synthetic.main.fragment_myproduct_cart.view.*
 import kotlinx.android.synthetic.main.fragment_notice_message.view.*
-import kotlinx.android.synthetic.main.item_cart_myproduct.view.*
 
 class NoticeMessage :Fragment(),View.OnClickListener {
     override fun onClick(p0: View?) {

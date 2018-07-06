@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".Join.Marketer.Market.Enroll3Activity">
-
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        android:background="#FFFFFF">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@android:color/holo_orange_light"/>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginVertical="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="등록이 완료되었습니다.\n결과는 1주일 후 e-mail로 전송됩니다."
+                android:textAlignment="center"/>
+            <Button
+                android:id="@+id/btn_ok_enroll3"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="확인"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
