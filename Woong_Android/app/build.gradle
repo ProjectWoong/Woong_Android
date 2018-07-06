@@ -9,7 +9,7 @@ android {
         release {
             keyAlias 'key0'
             keyPassword '1611821'
-            storeFile file('C:/Users/hyera/Woong_Android/Woong_Android/releasekey.jks')
+            storeFile file('../releasekey.jks')
             storePassword '1611821'
         }
     }
