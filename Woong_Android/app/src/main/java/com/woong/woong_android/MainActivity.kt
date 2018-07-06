@@ -1,5 +1,6 @@
 package com.woong.woong_android
 
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +15,7 @@ import com.woong.woong_android.home.MyPage.MyPage
 import com.woong.woong_android.home.main.HomeMain
 import com.woong.woong_android.myproduct.MyProduct
 import com.woong.woong_android.notice.Notice
+import com.woong.woong_android.seller_market.SellerMarketActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.view.*
 import java.security.MessageDigest
@@ -24,7 +26,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when(p0){
             btn_home_main ->{
-                replaceFragment(HomeMain())
+//                replaceFragment(HomeMain())
+                // 판매자 마켓 테스트용 임시 인텐트
+                val intent = Intent(applicationContext, SellerMarketActivity::class.java)
+                startActivity(intent)
             }
             btn_market_main ->{
                 replaceFragment(com.woong.woong_android.home.submenu.SubMenu())
