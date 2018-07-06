@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/topbox"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:gravity="center"
+            android:id="@+id/marketname_chat_notice"
+            android:background="@color/colorPrimaryDark"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="#ffffff"
+            android:text="현듀마켓"/>
+
+    </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_chat_notice"
+            android:layout_below="@+id/topbox"
+            android:layout_above="@+id/chatbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/chatbox"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_width="340dp"
+        android:layout_height="60dp">
+        <EditText
+            android:id="@+id/input_message_notice"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:textSize="13sp"
+            android:text="대화를 입력하세요"/>
+        <ImageView
+            android:id="@+id/btn_send_notice"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/colorPrimaryDark"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
