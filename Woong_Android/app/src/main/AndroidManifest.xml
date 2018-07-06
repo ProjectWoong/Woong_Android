@@ -35,6 +35,14 @@
         <activity android:name=".Join.Marketer.TermsActivity" />
         <activity android:name=".Join.Marketer.Join1Activity" />
         <activity android:name=".Join.Marketer.Join2Activity" />
+<<<<<<< HEAD
+        <activity android:name=".Join.Marketer.Market.Enroll1Activity"></activity>
+        <activity android:name=".Join.Marketer.Market.Enroll2Activity" />
+        <activity android:name=".Join.Marketer.Market.Enroll3Activity" />
+        <activity android:name=".myproduct.payment.PaymentActivity" />
+        <activity android:name=".notice.message.chat.NoticeChatActivity" />
+        <activity android:name=".notice.deliveryandreview.review_write.ReviewWriteActivity"></activity>
+=======
         <activity android:name=".Join.Marketer.Market.Enroll1Activity" />
         <activity android:name=".Join.Marketer.Market.Enroll2Activity" />
 <<<<<<< HEAD
@@ -53,6 +61,7 @@
         <activity android:name=".notice.message.chat.NoticeChatActivity"/>
 
 >>>>>>> 8b3aed104292a7df786728dcbc4cdd02fdbacb79
+>>>>>>> 9c28023b8922e2ca9e7b2497f3432f4d225f88f8
     </application>
 
 </manifest>

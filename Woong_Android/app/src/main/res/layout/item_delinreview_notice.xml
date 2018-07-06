@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp">
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/profileimg_message_notice"
+            android:layout_centerVertical="true"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:background="#bcbcbc"/>
+        <RelativeLayout
+
+            android:layout_toRightOf="@+id/profileimg_message_notice"
+            android:layout_width="240dp"
+            android:layout_height="75dp">
+            <RelativeLayout
+                android:paddingLeft="10dp"
+                android:layout_width="240dp"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="현듀마켓"/>
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="웅이네 포슬포슬 왕감자 3kg"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:paddingLeft="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="240dp"
+                android:layout_height="35dp">
+                <TextView
+                    android:id="@+id/orderdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="주문일"/>
+                <TextView
+                    android:paddingLeft="30dp"
+                    android:layout_toRightOf="@+id/orderdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018.06.24"/>
+                <TextView
+
+                    android:id="@+id/totalpay"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="결제 금액"/>
+                <TextView
+                    android:paddingLeft="12dp"
+                    android:layout_toRightOf="@+id/totalpay"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30,000원"/>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/delivernum_deliver_notice"
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/profileimg_message_notice"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="송장번호: 우체국 000-0000-0000 "
+            android:visibility="invisible"/>
+        <ImageView
+            android:id="@+id/writebtn_review_message"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/profileimg_message_notice"
+            android:layout_alignParentBottom="true"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:background="@color/colorPastel"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#bcbcbc"/>
+
+
+
+
+</RelativeLayout>
