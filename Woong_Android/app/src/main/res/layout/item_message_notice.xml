@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp">
+    <TextView
+        android:id="@+id/title_message_notice"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/colorPastel"
+        android:text="현듀 마켓"
+        android:textColor="#ffffff"/>
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/profileimg_message_notice"
+        android:layout_centerVertical="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#bcbcbc"/>
+    <RelativeLayout
+        android:paddingLeft="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/profileimg_message_notice"
+        android:layout_width="250dp"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제일 마지막으로 보내진 채팅"/>
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="몇년몇월몇일 몇시 몇분"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:paddingRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="70dp"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/alarm_message_notice"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/colorPastel"
+            android:textColor="#ffffff"
+            android:text="2"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>
