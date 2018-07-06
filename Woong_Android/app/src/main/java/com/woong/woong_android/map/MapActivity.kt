@@ -12,6 +12,14 @@ import kotlinx.android.synthetic.main.activity_join_map.*
 import net.daum.mf.map.api.MapPOIItem
 import net.daum.mf.map.n.api.internal.NativeMapLocationManager.setCurrentLocationTrackingMode
 import net.daum.mf.map.n.api.internal.NativeMapLocationManager.setShowCurrentLocationMarker
+import android.provider.SyncStateContract.Helpers.update
+import android.content.pm.PackageManager
+import com.kakao.util.maps.helper.Utility.getPackageInfo
+import android.content.pm.PackageInfo
+import android.util.Base64
+import android.util.Log
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
 
 
 //참고사이트 http://es1015.tistory.com/296
@@ -21,7 +29,6 @@ class MapActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_join_map)
 
-        /* 키해쉬 구하기
         try {
             val info = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNATURES)
             for (signature in info.signatures) {
@@ -33,7 +40,21 @@ class MapActivity : AppCompatActivity() {
             e.printStackTrace()
         } catch (e: NoSuchAlgorithmException) {
             e.printStackTrace()
+        }
+/* 키해쉬 구하기
+        try {
+            val info = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNATURES)
+            for (signature in info.signatures) {
+                val md = MessageDigest.getInstance("SHA")
+                md.update(signature.toByteArray())
+                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT))
+            }
+        } catch (e: PackageManager.NameNotFoundException) {
+
+        } catch (e: NoSuchAlgorithmException) {
+
         }*/
+
 
         val mapView = MapView(this)
         mapView.setDaumMapApiKey("5b9f84f71895898003a9683274d06a39")

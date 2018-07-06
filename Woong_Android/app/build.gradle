@@ -5,6 +5,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias 'key0'
+            keyPassword '1611821'
+            storeFile file('C:/Users/hyera/Woong_Android/Woong_Android/releasekey.jks')
+            storePassword '1611821'
+        }
+    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.woong.woong_android"
@@ -18,6 +26,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
