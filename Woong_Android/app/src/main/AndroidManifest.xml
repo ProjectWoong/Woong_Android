@@ -45,7 +45,7 @@
 
         <activity android:name=".Join.Marketer.Market.Enroll2Activity" />
         <activity android:name=".Join.Marketer.Market.Enroll3Activity"/>
-        
+
 
 
     </application>

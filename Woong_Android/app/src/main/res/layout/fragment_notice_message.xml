@@ -27,6 +27,7 @@
                     android:text="NEW"/>
             </RelativeLayout>
             <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_new_message"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:nestedScrollingEnabled="false"/>
@@ -46,6 +47,7 @@
                         android:text="읽은 메세지"/>
                 </RelativeLayout>
                 <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_old_message"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:nestedScrollingEnabled="false"/>
