@@ -25,5 +25,10 @@ class Enroll1Activity : AppCompatActivity() {
             val intent = Intent(applicationContext, Enroll2Activity::class.java)
             startActivity(intent)   // 전환될 액티비티로 넘어갈때
         }
+
+        farm_location_confirm.setOnClickListener {
+            val intent = Intent(applicationContext, Enroll1SearchActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
