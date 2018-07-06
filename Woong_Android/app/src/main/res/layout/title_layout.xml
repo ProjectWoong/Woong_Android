@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="한듀곤듀"
+        android:textColor="#ffffff"
+        android:id="@+id/mytext"
+        android:textSize="18sp" />
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/ic_launcher_background"
+        android:layout_alignParentRight="true"/>
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_launcher_background"
+        android:layout_alignParentLeft="true"/>
+
+</RelativeLayout>
