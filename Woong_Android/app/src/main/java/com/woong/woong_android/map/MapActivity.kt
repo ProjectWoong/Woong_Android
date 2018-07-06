@@ -41,7 +41,7 @@ class MapActivity : AppCompatActivity() {
         } catch (e: NoSuchAlgorithmException) {
             e.printStackTrace()
         }
-/* 키해쉬 구하기
+/* 키해쉬 구하기*/
         try {
             val info = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNATURES)
             for (signature in info.signatures) {
@@ -53,7 +53,7 @@ class MapActivity : AppCompatActivity() {
 
         } catch (e: NoSuchAlgorithmException) {
 
-        }*/
+        }
 
 
         val mapView = MapView(this)
