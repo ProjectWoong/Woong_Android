@@ -42,6 +42,7 @@
         <activity android:name=".myproduct.payment.PaymentActivity"></activity>
 
 
+
         <activity android:name=".notice.message.chat.NoticeChatActivity"/>
 
     </application>
