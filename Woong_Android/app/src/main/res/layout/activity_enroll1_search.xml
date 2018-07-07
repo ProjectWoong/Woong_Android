@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Join.Marketer.Market.Enroll1SearchActivity"
+    tools:context=".join.marketer.market.Enroll1SearchActivity"
     android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"

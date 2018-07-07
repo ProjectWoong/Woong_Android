@@ -1,4 +1,4 @@
-package com.woong.woong_android.Join.Marketer.Market
+package com.woong.woong_android.join.marketer.market
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity

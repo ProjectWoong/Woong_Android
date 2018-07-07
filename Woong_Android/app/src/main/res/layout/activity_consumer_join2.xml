@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Join.Consumer.Join2Activity"
+    tools:context=".join.consumer.Join2Activity"
     android:orientation="vertical">
 
     <RelativeLayout
