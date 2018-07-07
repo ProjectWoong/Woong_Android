@@ -1,9 +1,9 @@
-package com.woong.woong_android.Join.Marketer
+package com.woong.woong_android.join.marketer
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.woong.woong_android.Join.Marketer.Market.Enroll1Activity
+import com.woong.woong_android.join.marketer.market.Enroll1Activity
 import com.woong.woong_android.R
 import kotlinx.android.synthetic.main.activity_marketer_join2.*
 

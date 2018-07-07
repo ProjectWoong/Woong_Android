@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.woong.woong_android.Login.LoginActivity
+import com.woong.woong_android.login.LoginActivity
 import com.woong.woong_android.R
 import kotlinx.android.synthetic.main.fragment_my_page.view.*
 

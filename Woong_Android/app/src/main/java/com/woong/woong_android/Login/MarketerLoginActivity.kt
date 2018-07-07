@@ -1,9 +1,9 @@
-package com.woong.woong_android.Login
+package com.woong.woong_android.login
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.woong.woong_android.Join.Marketer.TermsActivity
+import com.woong.woong_android.join.marketer.TermsActivity
 import com.woong.woong_android.R
 import kotlinx.android.synthetic.main.activity_marketer_login.*
 

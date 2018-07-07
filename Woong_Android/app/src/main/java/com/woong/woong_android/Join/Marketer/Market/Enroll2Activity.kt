@@ -1,11 +1,10 @@
-package com.woong.woong_android.Join.Marketer.Market
+package com.woong.woong_android.join.marketer.market
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.RelativeLayout
 import android.widget.Spinner
 import com.woong.woong_android.R
 import kotlinx.android.synthetic.main.activity_market_enroll2.*
