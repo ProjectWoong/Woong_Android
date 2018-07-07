@@ -1,11 +1,8 @@
-package com.woong.woong_android.Login
+package com.woong.woong_android.login
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.view.View
-import com.woong.woong_android.MainActivity
 import com.woong.woong_android.R
 import kotlinx.android.synthetic.main.activity_login.*
 
