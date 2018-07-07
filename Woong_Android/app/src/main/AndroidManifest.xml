@@ -3,11 +3,13 @@
     package="com.woong.woong_android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <meta-data
         android:name="com.kakao.sdk.AppKey"
-        android:value="5b9f84f71895898003a9683274d06a39" />
+        android:value="5b9f84f71895898003a9683274d06a39" /> <!--앱키-->
 
     <application
         android:allowBackup="true"
