@@ -23,11 +23,11 @@ class Enroll1SearchActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        locationSearchItems = ArrayList()
-        locationSearchItems.add(LocationSearchItem("마포구 상수동 72-1", "와우산로 94"))
-
-        locationSearchAdapter = LocationSearchAdapter(locationSearchItems)
-        rv_result_location_search.layoutManager = LinearLayoutManager(this)
-        rv_result_location_search.adapter = locationSearchAdapter
+//        locationSearchItems = ArrayList()
+//        locationSearchItems.add(LocationSearchItem("마포구 상수동 72-1", "와우산로 94"))
+//
+//        locationSearchAdapter = LocationSearchAdapter()
+//        rv_result_location_search.layoutManager = LinearLayoutManager(this)
+//        rv_result_location_search.adapter = locationSearchAdapter
     }
 }
