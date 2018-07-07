@@ -67,7 +67,7 @@
         android:text="주소 검색 결과 '홍익대학교'"/>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_result_location_search"
+        android:id="@+id/rv_result_consumer_location_search"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 </LinearLayout>

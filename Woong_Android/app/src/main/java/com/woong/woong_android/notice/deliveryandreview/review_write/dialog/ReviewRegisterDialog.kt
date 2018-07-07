@@ -19,7 +19,7 @@ class ReviewRegisterDialog(context: Context) : Dialog(context) {
         setContentView(R.layout.dialog_register_review)
         this.setCancelable(false) //뒤로가기,터치 무력화
         btn_ok_rwdialog.setOnClickListener {
-            val intent = Intent(context,MainActivity::class.java) 
+            val intent = Intent(context,MainActivity::class.java)
             context.startActivity(intent)
         }
     }
