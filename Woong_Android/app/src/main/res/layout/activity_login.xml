@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/login_background"
     tools:context=".login.LoginActivity">
 
-    <!--귀여운 웅이와 로고-->
-    <ImageView
-        android:id="@+id/login_logo"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/colorPrimaryDark"/>
 
     <!--로그인 버튼 2개-->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <!--귀여운 웅이와 로고-->
+        <ImageView
+            android:id="@+id/login_logo"
+            android:layout_width="135dp"
+            android:layout_height="112dp"
+            android:background="@drawable/login_logo"
+            android:layout_marginBottom="55dp"
+            android:layout_gravity="center_horizontal"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,21 +30,23 @@
             android:layout_centerInParent="true">
             <Button
                 android:id="@+id/btn_marketer_login"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:background="#FFFFFF"
+                android:layout_width="295dp"
+                android:layout_height="48dp"
+                android:background="@drawable/green_round_button"
                 android:layout_centerInParent="true"
+                android:textSize="16dp"
                 android:text="판매자로 로그인"
-                android:textColor="#ADADAD"/>
+                android:textColor="#FFFFFF"/>
             <Button
                 android:id="@+id/btn_consumer_login"
-                android:layout_marginTop="30dp"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:background="@color/colorPrimaryDark"
+                android:layout_marginTop="33dp"
+                android:layout_width="295dp"
+                android:layout_height="48dp"
+                android:background="@drawable/green_round_button"
+                android:textSize="16dp"
                 android:text="소비자로 로그인"
                 android:textColor="#FFFFFF"/>
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

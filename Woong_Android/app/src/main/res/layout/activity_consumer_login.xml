@@ -10,12 +10,19 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/login_logo"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"/>
+            android:layout_height="184dp"
+            android:background="@drawable/login_background">
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="51dp"
+                android:id="@+id/login_logo"
+                android:layout_width="135dp"
+                android:layout_height="112dp"
+                android:background="@drawable/login_logo"/>
+        </RelativeLayout>
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -28,14 +35,14 @@
                 android:orientation="vertical">
 
                 <RelativeLayout
-                    android:layout_width="300dp"
-                    android:layout_height="60dp"
+                    android:layout_width="295dp"
+                    android:layout_height="48dp"
                     android:layout_marginBottom="20dp">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:background="@android:color/darker_gray" />
+                        android:background="@drawable/white_round_button" />
 
                     <EditText
                         android:layout_width="230dp"
@@ -53,7 +60,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:background="@android:color/darker_gray" />
+                        android:background="@drawable/white_round_button" />
                     <EditText
                         android:layout_width="230dp"
                         android:layout_height="45dp"
@@ -65,9 +72,9 @@
 
                 <Button
                     android:id="@+id/btn_login_consumer_login"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="297dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/green_round_button"
                     android:layout_centerInParent="true"
                     android:text="로그인"
                     android:textColor="#FFFFFF"/>

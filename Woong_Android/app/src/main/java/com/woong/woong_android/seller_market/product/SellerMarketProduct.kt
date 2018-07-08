@@ -12,22 +12,28 @@ import kotlinx.android.synthetic.main.fragment_sellermarket_product.view.*
 // 물품 클릭했을 때 SellerMarketProductDetail 뜨게 추가해야함
 class SellerMarketProduct: Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
-//        replaceFragment(SellerMarketProductDetail())
+        replaceFragment(SellerMarketProductDetail())
     }
-//    fun replaceFragment(fragment: Fragment) {
+
+    //    fun replaceFragment(fragment: Fragment) {
 //        val fm = fragmentManager
 //        val transaction = fm!!.beginTransaction()
 //        transaction.replace(R.id.frame_fragment_main, fragment)
 //        transaction.addToBackStack(null)    // 이전 상태를 백스택에 추가하여 사용자가 백버튼을 눌렀을때에 대한 호환성 추가
 //        transaction.commit()
 //    }
-//    fun replaceFragment(fragment: Fragment) {
-//        val fm = fragmentManager
-//        val transaction = fm!!.beginTransaction()
-//
-//        transaction.replace(R.id.frame_fragment_main,fragment)
-//        transaction.commit()
-//    }
+    fun replaceFragment(fragment: Fragment) {
+        val fm = activity!!.supportFragmentManager
+        val transaction = fm.beginTransaction()
+    // 어디에 띄워야하는지 잘 모르겠음viewpager_sellermarket
+        transaction.replace(R.id.frame_sellermarket,fragment)
+        //transaction.replace(R.id.frame_sellermarket,fragment)
+        transaction.addToBackStack(null)    // 이전 상태를 백스택에 추가하여 사용자가 백버튼을 눌렀을때에 대한 호환성 추가
+        transaction.commit()
+    }
+
+
+
 
     lateinit var productItems : ArrayList<SellerMarketProductItem>
     lateinit var productAdapter : SellerMarketProductAdapter

@@ -15,6 +15,7 @@ class SellerMarketProductAdapter(var productItems : ArrayList<SellerMarketProduc
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SellerMarketProductViewHolder {
         val mainView : View = LayoutInflater.from(parent.context).inflate(R.layout.item_sellermarket_product, parent, false)
+        mainView.setOnClickListener(onItemClick)
         return SellerMarketProductViewHolder(mainView)
     }
 
