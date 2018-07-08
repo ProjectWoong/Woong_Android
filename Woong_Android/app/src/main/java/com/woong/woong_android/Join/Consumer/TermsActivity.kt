@@ -12,7 +12,7 @@ class TermsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_consumer_terms)
 
-        btn_next_terms.setOnClickListener {
+        btn_next_consumer_terms.setOnClickListener {
             val intent = Intent(applicationContext, Join1Activity::class.java)
             startActivity(intent)   // 전환될 액티비티로 넘어갈때
         }

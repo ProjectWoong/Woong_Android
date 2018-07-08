@@ -14,15 +14,15 @@ class Join1Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_consumer_join1)
 
-        btn_next_join1.setOnClickListener {
+        btn_next_consumer_join1.setOnClickListener {
             val intent = Intent(applicationContext, Join2Activity::class.java)
             startActivity(intent)   // 전환될 액티비티로 넘어갈때
         }
 
         //Spinner
-        val spnYear = findViewById(R.id.spinner_year) as Spinner
-        val spnMonth = findViewById(R.id.spinner_month) as Spinner
-        val spnDay = findViewById(R.id.spinner_day) as Spinner
+        val spnYear = findViewById(R.id.spinner_year_consumer) as Spinner
+        val spnMonth = findViewById(R.id.spinner_month_consumer) as Spinner
+        val spnDay = findViewById(R.id.spinner_day_consumer) as Spinner
 
         val adapterYear = ArrayAdapter.createFromResource(this, R.array.date_year, android.R.layout.simple_spinner_item)
         val adapterMonth = ArrayAdapter.createFromResource(this, R.array.date_month, android.R.layout.simple_spinner_item)

@@ -12,7 +12,7 @@ class Join2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_marketer_join2)
-        btn_next_join2.setOnClickListener {
+        btn_next_marketer_join2.setOnClickListener {
             val intent = Intent(applicationContext, Enroll1Activity::class.java)
             startActivity(intent)   // 전환될 액티비티로 넘어갈때
         }
