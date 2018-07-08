@@ -1,21 +1,22 @@
 package com.woong.woong_android.seller_market
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.graphics.Color
-import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.annotation.RequiresApi
+import android.support.design.widget.AppBarLayout
 import android.support.v7.app.ActionBar
-import android.util.Log
+import android.view.View
 import com.woong.woong_android.R
 import com.woong.woong_android.seller_market.adapter.SmPagerAdapter
 import kotlinx.android.synthetic.main.activity_sellermarket.*
 
+
+
 class SellerMarketActivity : AppCompatActivity() {
 
     @SuppressLint("RestrictedApi")
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sellermarket)
@@ -28,27 +29,29 @@ class SellerMarketActivity : AppCompatActivity() {
         tabLayout.setTabTextColors(Color.parseColor("#ffffff"), Color.parseColor("#ffffff"))
         tabLayout.setupWithViewPager(viewPager)
 
-        Log.d("scrollYYYYYY","11111111")
         setSupportActionBar(toolbar)
-        scr.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
-            Log.d("scrollYYYYYY","22222222")
-            Log.d("scrollYYYYYY",scrollY.toString())
-        }
-        supportActionBar?.setShowHideAnimationEnabled(true)
 
-//        scr.viewTreeObserver.addOnScrollChangedListener {
-////            scr.scrollY
-//
-//        }
-//        if(scr.scrollY<=700)
-//            supportActionBar?.setDisplayShowCustomEnabled(false)
-        ActionBar.OnMenuVisibilityListener {
-            supportActionBar?.setDisplayShowCustomEnabled(true)
-            Log.d("scrollYYYYYY",scr.scrollY.toString())
-        }
-
-        supportActionBar?.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        supportActionBar?.setDisplayShowCustomEnabled(false)
+        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
+        supportActionBar?.setDisplayShowCustomEnabled(true)
         supportActionBar?.setCustomView(R.layout.title_layout)
+        supportActionBar?.setShowHideAnimationEnabled(false)
+
+        val listener = AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
+            if (verticalOffset<=-1*dpToPx(126.5f,applicationContext)) {
+                toolbar.visibility=View.VISIBLE
+                tab_top_sellermarket.setBackgroundColor(Color.WHITE)
+                tab_top_sellermarket.setSelectedTabIndicatorColor(Color.parseColor("#529C77"))
+                tab_top_sellermarket.setTabTextColors(Color.parseColor("#ADADAD"), Color.parseColor("#529C77"))
+            } else {
+                toolbar.visibility=View.INVISIBLE
+                tab_top_sellermarket.setBackgroundColor(Color.parseColor("#529C77"))
+                tab_top_sellermarket.setSelectedTabIndicatorColor(Color.WHITE)
+                tab_top_sellermarket.setTabTextColors(Color.WHITE, Color.WHITE)
+            }
+        }
+        test2.addOnOffsetChangedListener(listener)
+    }
+    private fun dpToPx(dp:Float, context: Context):Float{
+        return (dp * context.resources.displayMetrics.density);
     }
 }

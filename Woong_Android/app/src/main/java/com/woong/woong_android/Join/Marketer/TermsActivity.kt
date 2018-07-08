@@ -12,7 +12,7 @@ class TermsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_marketer_terms)
 
-        btn_next_terms.setOnClickListener {
+        btn_next_marketer_terms.setOnClickListener {
             val intent = Intent(applicationContext, Join1Activity::class.java)
             startActivity(intent)
         }
