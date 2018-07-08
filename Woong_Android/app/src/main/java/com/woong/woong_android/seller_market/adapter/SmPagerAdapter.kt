@@ -14,9 +14,9 @@ class SmPagerAdapter (fm: FragmentManager) : FragmentPagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {
         when(position){
 //            0 -> return SellerMarketIntro()
-//            1 -> return SellerMarketProduct()
+            1 -> return SellerMarketProduct()
             0 ->  return MyProductBookMark()
-            1 ->  return MyProductCart()
+//            1 ->  return MyProductCart()
             2 -> return SellerMarketAlbum()
             3 -> return SellerMarketReview()
         }

@@ -21,7 +21,7 @@ class LocationSearchChangeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_change_location_search)
         imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager //키보드 내리기위해서
-
+        addFragment(LocationShowPreviousSearch())
 
 //        rv_result_consumer_location_search.layoutManager = LinearLayoutManager(this)
 
@@ -34,7 +34,7 @@ class LocationSearchChangeActivity : AppCompatActivity() {
 
                     bundle.putString("keyword",location_keyword)
                     LocationSearchResult().arguments = bundle
-                    addFragment(LocationSearchResult())
+                    replaceFragment(LocationSearchResult())
                     hideKeyboard()
 
                     true
@@ -68,11 +68,19 @@ class LocationSearchChangeActivity : AppCompatActivity() {
 
         val fm = supportFragmentManager
         val transaction = fm.beginTransaction()
-        fragment.arguments = bundle
+
         transaction.add(R.id.frame_show_change_locationlist,fragment)
 
         transaction.commit()
 
+    }
+    fun replaceFragment(fragment: Fragment) {
+        val fm = supportFragmentManager
+        val transaction = fm.beginTransaction()
+        fragment.arguments = bundle
+        transaction.replace(R.id.frame_show_change_locationlist,fragment)
+        transaction.addToBackStack(null);
+        transaction.commit()
     }
 
 

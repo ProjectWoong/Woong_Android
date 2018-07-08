@@ -11,7 +11,7 @@ class Join2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_consumer_join2)
-        btn_next_join2.setOnClickListener {
+        btn_next_consumer_join2.setOnClickListener {
             val intent = Intent(applicationContext, AllergyActivity::class.java)
             startActivity(intent)   // 전환될 액티비티로 넘어갈때
         }

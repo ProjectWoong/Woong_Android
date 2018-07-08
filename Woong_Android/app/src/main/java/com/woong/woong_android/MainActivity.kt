@@ -13,6 +13,7 @@ import com.woong.woong_android.R
 import com.woong.woong_android.R.id.*
 import com.woong.woong_android.home.MyPage.MyPage
 import com.woong.woong_android.home.main.HomeMain
+import com.woong.woong_android.map.location_change.LocationSearchResult
 import com.woong.woong_android.myproduct.MyProduct
 import com.woong.woong_android.notice.Notice
 import com.woong.woong_android.seller_market.SellerMarketActivity
@@ -22,7 +23,7 @@ import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-
+    val bundle = Bundle()
     override fun onClick(p0: View?) {
         when(p0){
             btn_home_main ->{
@@ -50,6 +51,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var re_address : String? = intent.getStringExtra("search_address")
+        bundle?.putString("re_address",re_address)
+
+         HomeMain()?.arguments = bundle
         addFragment(HomeMain())
 
         btn_myproduct_main.setOnClickListener(this)
@@ -58,13 +63,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_my_main.setOnClickListener(this)
         btn_notice_main.setOnClickListener(this)
 
+
+
     }
 
     fun addFragment(fragment: Fragment) {
 
         val fm = supportFragmentManager
         val transaction = fm.beginTransaction()
-
+        fragment.arguments = bundle
         transaction.add(R.id.frame_fragment_main,fragment)
         transaction.commit()
 
