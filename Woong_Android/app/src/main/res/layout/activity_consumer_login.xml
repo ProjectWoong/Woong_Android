@@ -13,14 +13,14 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="184dp"
-            android:background="@drawable/login_background">
+            android:background="#ffffff">
             <ImageView
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="51dp"
                 android:id="@+id/login_logo"
                 android:layout_width="135dp"
                 android:layout_height="112dp"
-                android:background="@drawable/login_logo"/>
+                android:background="@color/colorPastel"/>
         </RelativeLayout>
 
 
