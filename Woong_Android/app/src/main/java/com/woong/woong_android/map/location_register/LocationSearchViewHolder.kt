@@ -1,4 +1,4 @@
-package com.woong.woong_android.map
+package com.woong.woong_android.map.location_register
 
 import android.view.View
 import android.support.v7.widget.RecyclerView

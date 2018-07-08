@@ -3,10 +3,8 @@ package com.woong.woong_android.join.marketer.market
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
 import com.woong.woong_android.R
-import com.woong.woong_android.map.LocationSearchAdapter
-import com.woong.woong_android.map.LocationSearchItem
+import com.woong.woong_android.map.location_register.LocationSearchAdapter
 import kotlinx.android.synthetic.main.activity_enroll1_search.*
 
 class Enroll1SearchActivity : AppCompatActivity() {
@@ -15,7 +13,7 @@ class Enroll1SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_enroll1_search)
 
-        lateinit var locationSearchItems : ArrayList<LocationSearchItem>
+        //lateinit var locationSearchItems : ArrayList<LocationSearchItem>
         lateinit var locationSearchAdapter : LocationSearchAdapter
 
         btn_back_market_location_search.setOnClickListener {
