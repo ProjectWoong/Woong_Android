@@ -1,6 +1,6 @@
 <resources>
     <!--소비자 회원가입(Join.Consumer.Join1Activity)-->
-    <string name="app_name">Woong_Android</string>
+    <string name="app_name">웅이감자</string>
     <string-array name="date_year">
         <item></item>
         <item>1970</item>
