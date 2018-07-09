@@ -30,6 +30,7 @@ class LocationSearchResult() : android.support.v4.app.Fragment(),View.OnClickLis
         val idx : Int = rv_result_consumer_location_search.getChildAdapterPosition(p0)
         val intent = Intent(context, MainActivity::class.java)
         intent.putExtra("search_address",locationSearchItems[idx].address_name)
+        intent.putExtra("address_flag",1)
         Log.v("주소",locationSearchItems[idx].address_name)
         startActivity(intent)
 
