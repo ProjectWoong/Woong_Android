@@ -46,15 +46,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+   var flag : Int? = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        flag = intent.getIntExtra("address_flag",0)
+        if(flag == 1){
+            var re_address = intent.getStringExtra("search_address")
+            Log.v("주소넘김",re_address)
+            bundle.putString("re_address",re_address)
+            HomeMain().arguments = bundle
+        }
 
-        var re_address : String? = intent.getStringExtra("search_address")
-        bundle?.putString("re_address",re_address)
-
-         HomeMain()?.arguments = bundle
         addFragment(HomeMain())
 
         btn_myproduct_main.setOnClickListener(this)
