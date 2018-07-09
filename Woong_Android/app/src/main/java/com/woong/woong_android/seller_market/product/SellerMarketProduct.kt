@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.fragment_sellermarket_product.view.*
 // 물품 클릭했을 때 SellerMarketProductDetail 뜨게 추가해야함
 class SellerMarketProduct: Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
-        replaceFragment(SellerMarketProductDetail())
+        replaceFragment(SellerMarketProductDetail(),)
     }
 
     //    fun replaceFragment(fragment: Fragment) {
