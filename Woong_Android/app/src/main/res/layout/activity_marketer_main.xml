@@ -5,17 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".marketer.MarketerMainActivity">
-
     <FrameLayout
         android:id="@+id/frame_fragment_marketer"
-        android:layout_above="@+id/tab_bottom_main"
+        android:layout_above="@+id/tab_bottom_marketer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></FrameLayout>
     <LinearLayout
         android:id="@+id/tab_bottom_marketer"
         android:gravity="center"
-        android:layout_alignParentBottom="true"
         android:background="#ebebeb"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal">

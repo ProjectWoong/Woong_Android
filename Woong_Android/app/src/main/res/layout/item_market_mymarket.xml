@@ -24,8 +24,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="현듀마켓"/>
-            <ImageButton
-                android:id="@+id/ib_bookmark_market"
+            <ImageView
+                android:id="@+id/iv_bookmark_market"
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:layout_toRightOf="@id/tv_name_market"
@@ -44,10 +44,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_address_market"
-                android:paddingLeft="10dp"
-                android:paddingTop="2dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="2dp"
                 android:textColor="#ffffff"
                 android:background="@color/colorPastel"
                 android:text="#유기농"/>
@@ -56,10 +52,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_address_market"
-                android:paddingLeft="10dp"
-                android:paddingTop="2dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="2dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#ffffff"
@@ -71,10 +63,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_address_market"
-                android:paddingLeft="10dp"
-                android:paddingTop="2dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="2dp"
                 android:textColor="#ffffff"
                 android:background="@color/colorPastel"
                 android:layout_toRightOf="@+id/tv_tag2_market"

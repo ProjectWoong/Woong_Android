@@ -1,4 +1,4 @@
-package com.woong.woong_android.home.MyPage
+package com.woong.woong_android.my
 
 import android.content.Intent
 import android.os.Bundle

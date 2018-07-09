@@ -1,18 +1,11 @@
 package com.woong.woong_android.marketer
 
-import android.annotation.SuppressLint
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.View
 import com.woong.woong_android.R
-import com.woong.woong_android.home.MyPage.MyPage
-import com.woong.woong_android.home.main.HomeMain
-import com.woong.woong_android.myproduct.MyProduct
 import com.woong.woong_android.notice.Notice
-import com.woong.woong_android.seller_market.SellerMarketActivity
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_marketer_main.*
 
 class MarketerMainActivity : AppCompatActivity(), View.OnClickListener {
