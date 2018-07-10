@@ -40,7 +40,15 @@
             android:text="우리 농장 지역 확인"
             android:textAlignment="center"
             android:background="@android:color/darker_gray"/>
+
         <RelativeLayout
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="50dp"
+            android:background="@drawable/round_map_layout"
+            android:layout_marginTop="20dp"></RelativeLayout>
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:layout_width="match_parent"
@@ -59,7 +67,6 @@
                 android:layout_height="30dp"
                 android:background="@color/colorPastel"/>
         </RelativeLayout>
-
 
     </LinearLayout>
 

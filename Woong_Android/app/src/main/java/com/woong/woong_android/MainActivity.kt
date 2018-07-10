@@ -22,21 +22,31 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when(p0){
             btn_home_main ->{
+                clearSelected()
+                btn_home_main.isSelected = true
                 replaceFragment(HomeMain())
                 // 판매자 마켓 테스트용 임시 인텐트
 //                val intent = Intent(applicationContext, SellerMarketActivity::class.java)
 //                startActivity(intent)
             }
             btn_market_main ->{
+                clearSelected()
+                btn_market_main.isSelected = true
                 replaceFragment(Market())
             }
             btn_myproduct_main ->{
+                clearSelected()
+                btn_myproduct_main.isSelected = true
                 replaceFragment(MyProduct())
             }
             btn_notice_main->{
+                clearSelected()
+                btn_notice_main.isSelected = true
                 replaceFragment(Notice())
             }
             btn_my_main ->{
+                clearSelected()
+                btn_my_main.isSelected = true
                 replaceFragment(MyPage())
             }
         }
@@ -56,6 +66,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
         addFragment(HomeMain())
 
+        btn_home_main.isSelected = true
         btn_myproduct_main.setOnClickListener(this)
         btn_home_main.setOnClickListener(this)
         btn_market_main.setOnClickListener(this)
@@ -80,6 +91,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         transaction.replace(R.id.frame_fragment_main,fragment)
         transaction.commit()
+    }
+
+    fun clearSelected(){
+        btn_myproduct_main.isSelected = false
+        btn_home_main.isSelected = false
+        btn_market_main.isSelected = false
+        btn_my_main.isSelected = false
+        btn_notice_main.isSelected = false
     }
 
 }

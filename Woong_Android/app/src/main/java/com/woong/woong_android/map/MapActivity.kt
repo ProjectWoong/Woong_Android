@@ -79,7 +79,7 @@ class MapActivity : AppCompatActivity(),MapReverseGeoCoder.ReverseGeoCodingResul
             mDefaultMarker.mapPoint = DEFAULT_MARKER_POINT
             mDefaultMarker.markerType = MapPOIItem.MarkerType.CustomImage
 
-            mDefaultMarker.customImageResourceId = R.drawable.custom_marker_red
+            mDefaultMarker.customImageResourceId = R.drawable.setting_location_1_woong
             mDefaultMarker.isCustomImageAutoscale = false
             mDefaultMarker.setCustomImageAnchor(0.5f, 1.0f)
 

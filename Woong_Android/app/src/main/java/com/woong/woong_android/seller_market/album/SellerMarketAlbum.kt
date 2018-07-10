@@ -18,7 +18,9 @@ class SellerMarketAlbum: Fragment() {
         val v = inflater.inflate(R.layout.fragment_sellermarket_album,container,false)
 
         albumItems = ArrayList()
-        albumItems.add(AlbumItem("2018년 7월 7일", R.drawable.rv_item_image, ";;;"))
+        albumItems.add(AlbumItem("2018년 6월 27일", R.drawable.rv_item_image, "내용내용내용"))
+        albumItems.add(AlbumItem("2018년 6월 25일", R.drawable.rv_item_image, "내용내용내용"))
+        albumItems.add(AlbumItem("2018년 6월 24일", R.drawable.rv_item_image, "내용내용내용"))
 
         albumAdapter = AlbumAdapter(albumItems)
         v.rv_sellermarket_album.layoutManager = LinearLayoutManager(context)
