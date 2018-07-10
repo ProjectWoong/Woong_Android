@@ -36,6 +36,10 @@ android {
 }
 
 dependencies {
+    implementation ('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar'){
+        transitive=true
+    }
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.squareup.retrofit2:retrofit:2.1.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
