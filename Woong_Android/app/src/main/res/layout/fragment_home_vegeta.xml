@@ -34,6 +34,7 @@
         android:layout_alignParentTop="true">
 
         <RelativeLayout
+            android:id="@+id/relative_potato_vegeta"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -60,6 +61,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/relative_sweet_vegeta"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -85,6 +87,7 @@
             </LinearLayout>
         </RelativeLayout>
         <RelativeLayout
+            android:id="@+id/relative_pepper_vegeta"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -117,6 +120,7 @@
         android:layout_alignParentTop="true">
 
         <RelativeLayout
+            android:id="@+id/relative_herb_vegeta"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -143,6 +147,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/relative_mushroom_vegeta"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -168,6 +173,7 @@
             </LinearLayout>
         </RelativeLayout>
         <RelativeLayout
+            android:id="@+id/relative_berry_vegeta"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -202,6 +208,7 @@
         android:layout_alignParentTop="true">
 
         <RelativeLayout
+            android:id="@+id/relative_leaf_vegeta"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -228,6 +235,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/relative_root_vegeta"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1">

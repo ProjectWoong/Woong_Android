@@ -42,8 +42,20 @@
             android:background="@android:color/darker_gray"/>
 
         <RelativeLayout
+<<<<<<< HEAD
 
             android:id="@+id/map_view"
+=======
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="50dp"
+            android:background="@drawable/round_map_layout"
+            android:layout_marginTop="20dp"></RelativeLayout>
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+>>>>>>> 123caef306f8fa4b7b06544985d260756e2d74ec
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -64,7 +76,10 @@
                 android:layout_height="30dp"
                 android:background="@color/colorPastel"/>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 123caef306f8fa4b7b06544985d260756e2d74ec
     </LinearLayout>
 
     <RelativeLayout
