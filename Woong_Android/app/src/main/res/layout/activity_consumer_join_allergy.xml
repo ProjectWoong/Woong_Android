@@ -13,15 +13,17 @@
         android:layout_weight="1">
         <ImageView
             android:id="@+id/join1_logo"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:background="@color/colorPrimaryDark"
+            android:layout_width="135dp"
+            android:layout_height="22dp"
+            android:src="@drawable/consumer_allergy_logo"
             android:layout_centerInParent="true"/>
         <TextView
+            android:fontFamily="@font/nanum_bold"
+            android:textSize="14dp"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="알러지 설명"
+            android:text="알러지반응을 일으키는 식품들을 모두 선택해주세요"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/join1_logo"/>
     </RelativeLayout>
@@ -31,7 +33,8 @@
         android:layout_height="0dp"
         android:layout_weight="2.3"
         android:orientation="vertical"
-        android:paddingTop="20dp">
+        android:paddingTop="20dp"
+        android:background="@drawable/consumer_allergy_background">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -40,12 +43,11 @@
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#EAEAEA">
+                android:layout_weight="1">
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="45.72dp"
+                    android:layout_height="38.04dp"
+                    android:src="@drawable/consumer_allergy_bucketwheat"
                     android:layout_centerInParent="true"/>
             </RelativeLayout>
             <RelativeLayout
@@ -53,21 +55,20 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="39.53dp"
+                    android:layout_height="43.14dp"
+                    android:src="@drawable/consumer_allergy_meal"
                     android:layout_centerInParent="true"/>
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#EAEAEA"
                 >
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/consumer_allergy_peach"
                     android:layout_centerInParent="true"/>
             </RelativeLayout>
         </LinearLayout>
@@ -81,20 +82,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@color/colorPrimaryDark"
-                    android:layout_centerInParent="true"/>
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#EAEAEA">
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="47.78dp"
+                    android:layout_height="47.79dp"
+                    android:src="@drawable/consumer_allergy_bean"
                     android:layout_centerInParent="true"/>
             </RelativeLayout>
             <RelativeLayout
@@ -102,9 +92,19 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/consumer_allergy_peanut"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="47.08dp"
+                    android:layout_height="37.59dp"
+                    android:src="@drawable/consumer_allergy_tomato"
                     android:layout_centerInParent="true"/>
             </RelativeLayout>
         </LinearLayout>
@@ -116,12 +116,11 @@
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#EAEAEA">
+                android:layout_weight="1">
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="46.29dp"
+                    android:layout_height="38.5dp"
+                    android:src="@drawable/consumer_allergy_egg"
                     android:layout_centerInParent="true"/>
             </RelativeLayout>
             <RelativeLayout
@@ -129,20 +128,19 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/consumer_allergy_milk"
                     android:layout_centerInParent="true"/>
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#EAEAEA">
+                android:layout_weight="1">
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@color/colorPrimaryDark"
+                    android:layout_width="45.28dp"
+                    android:layout_height="45.4dp"
+                    android:src="@drawable/consumer_allergy_onion"
                     android:layout_centerInParent="true"/>
             </RelativeLayout>
         </LinearLayout>
@@ -153,12 +151,14 @@
         android:layout_height="0dp"
         android:layout_weight="0.7">
         <Button
+            android:fontFamily="@font/nanum_extrabold"
+            android:textSize="16dp"
             android:id="@+id/btn_complete_allergy"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
+            android:layout_width="188dp"
+            android:layout_height="48dp"
             android:layout_centerInParent="true"
             android:text="등록 완료"
-            android:textColor="@android:color/white"
-            android:background="@color/colorPrimaryDark"/>
+            android:textColor="#FFFFFF"
+            android:background="@drawable/green_round_button"/>
     </RelativeLayout>
 </LinearLayout>
