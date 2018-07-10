@@ -51,7 +51,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             bundle.putInt("flag",1)
             HomeMain().arguments = bundle
         }
-
         addFragment(HomeMain())
 
         btn_myproduct_main.setOnClickListener(this)
