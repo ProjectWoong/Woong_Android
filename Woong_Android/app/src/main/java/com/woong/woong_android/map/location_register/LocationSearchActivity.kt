@@ -94,6 +94,6 @@ class LocationSearchActivity : AppCompatActivity(), View.OnClickListener {
 
     fun hideKeyboard()
     {
-        imm.hideSoftInputFromWindow( et_search_main.getWindowToken(), 0);
+        imm.hideSoftInputFromWindow( et_search_main.windowToken, 0);
     }
 }

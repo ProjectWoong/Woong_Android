@@ -14,7 +14,11 @@ class Enroll3Activity : AppCompatActivity() {
         setContentView(R.layout.activity_market_enroll3)
         btn_ok_enroll3.setOnClickListener {
             val intent = Intent(applicationContext, LoginActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
+
+
+
         }
     }
 }

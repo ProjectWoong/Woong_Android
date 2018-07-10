@@ -18,6 +18,7 @@ import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import net.daum.mf.map.api.MapPOIItem
 import android.support.design.widget.CoordinatorLayout.Behavior.setTag
+import com.woong.woong_android.login.LoginActivity
 import net.daum.mf.map.api.MapPoint
 
 
@@ -108,11 +109,12 @@ class MapActivity : AppCompatActivity(),MapReverseGeoCoder.ReverseGeoCodingResul
 
             val intent = Intent(applicationContext, LocationSearchActivity::class.java)
             startActivity(intent)   // 전환될 액티비티로 넘어갈때
-            finish()
         }
         btn_decided_join_map.setOnClickListener {
-            val intent = Intent(applicationContext, MainActivity::class.java)
+            val intent = Intent(applicationContext, LoginActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)   // 전환될 액티비티로 넘어갈때
+
         }
     }
 }
