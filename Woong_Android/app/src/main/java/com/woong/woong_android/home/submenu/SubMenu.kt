@@ -2,6 +2,7 @@ package com.woong.woong_android.home.submenu
 
 import android.graphics.Color
 import android.os.Bundle
+import android.support.design.R.id.container
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

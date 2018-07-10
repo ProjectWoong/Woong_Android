@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="11sp"
             android:background="#00000000"
             android:textColorHint="#9b9b9b"
@@ -95,6 +95,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp">
                 <RelativeLayout
+                    android:id="@+id/relative_fruit_main"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent">
@@ -105,19 +106,21 @@
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true">
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:background="@color/colorPrimary"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
                             android:layout_marginTop="10dp"
+                            android:textSize="15sp"
                             android:text="과일"/>
                     </LinearLayout>
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/relative_grain_main"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent">
@@ -128,15 +131,16 @@
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true">
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:background="@color/colorPrimary"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
+                            android:textSize="15sp"
                             android:layout_marginTop="10dp"
-                            android:text="과일"/>
+                            android:text="곡물"/>
                     </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>
@@ -144,48 +148,54 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp">
                 <RelativeLayout
+                    android:id="@+id/relative_vegeta_main"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent">
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="80dp"
+                        android:gravity="center"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true">
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:background="@color/colorAccent"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
                             android:layout_marginTop="10dp"
-                            android:text="과일"/>
+                            android:textSize="15sp"
+                            android:text="채소"/>
                     </LinearLayout>
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/relative_egg_main"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent">
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
+                        android:gravity="center"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true">
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:background="@color/colorPrimary"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
                             android:layout_marginTop="10dp"
-                            android:text="과일"/>
+                            android:textSize="15sp"
+                            android:text="달걀/유제품"/>
                     </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>
@@ -205,6 +215,7 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
                 <RelativeLayout
+                    android:id="@+id/relative_deliver_main"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="110dp">
@@ -223,11 +234,12 @@
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
                             android:layout_marginTop="10dp"
-                            android:textSize="11sp"
+                            android:textSize="15sp"
                             android:text="배송조회"/>
                     </LinearLayout>
                 </RelativeLayout>
                 <RelativeLayout
+                    android:id="@+id/relative_favorite_main"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="110dp">
@@ -246,34 +258,12 @@
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
                             android:layout_marginTop="10dp"
-                            android:textSize="11sp"
-                            android:text="장바구니"/>
-                    </LinearLayout>
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="110dp">
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true">
-                        <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:background="@color/colorPrimary"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:layout_marginTop="10dp"
-                            android:textSize="11sp"
+                            android:textSize="15sp"
                             android:text="찜한상품"/>
                     </LinearLayout>
                 </RelativeLayout>
                 <RelativeLayout
+                    android:id="@+id/relative_bookmark_main"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="110dp">
@@ -292,8 +282,32 @@
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
                             android:layout_marginTop="10dp"
-                            android:textSize="11sp"
-                            android:text="즐겨찾는마켓"/>
+                            android:textSize="15sp"
+                            android:text="즐겨찾기"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/relative_msg_main"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="110dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@color/colorPrimary"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:layout_marginTop="10dp"
+                            android:textSize="15sp"
+                            android:text="메세지"/>
                     </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>

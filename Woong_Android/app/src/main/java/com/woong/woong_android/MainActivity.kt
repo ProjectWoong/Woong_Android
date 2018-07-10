@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
+import android.view.SubMenu
 import android.view.View
 import com.woong.woong_android.my.MyPage
 import com.woong.woong_android.home.main.HomeMain
@@ -13,6 +14,8 @@ import com.woong.woong_android.myproduct.MyProduct
 import com.woong.woong_android.notice.Notice
 import com.woong.woong_android.seller_market.SellerMarketActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_home_main.*
+import kotlinx.android.synthetic.main.fragment_home_main.view.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     val bundle = Bundle()
@@ -58,8 +61,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_market_main.setOnClickListener(this)
         btn_my_main.setOnClickListener(this)
         btn_notice_main.setOnClickListener(this)
-
-
 
     }
 
