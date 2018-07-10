@@ -4,37 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.ConsumerLoginActivity">
+    tools:context=".login.ConsumerLoginActivity"
+    android:background="@drawable/login_background">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="184dp"
-            android:background="#ffffff">
+        <ImageView
+            android:id="@+id/login_logo"
+            android:layout_width="135dp"
+            android:layout_height="112dp"
+            android:src="@drawable/login_logo"
+            android:layout_gravity="center_horizontal"/>
 
-            <ImageView
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="51dp"
-                android:id="@+id/login_logo"
-                android:layout_width="135dp"
-                android:layout_height="112dp"
-                android:background="@color/colorPastel"/>
-
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3">
-            <LinearLayout
+        <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:orientation="vertical">
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginTop="44dp">
 
                 <RelativeLayout
                     android:layout_width="295dp"
@@ -43,105 +33,115 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="@drawable/white_round_button" />
+                        android:layout_height="match_parent"
+                        android:src="@drawable/consumer_login_id"/>
 
                     <EditText
-                        android:layout_width="230dp"
-                        android:layout_height="45dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="104dp"
                         android:layout_centerVertical="true"
-                        android:background="#FFFFFF" />
+                        android:background="#FFFFFF"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/nanum_regular"/>
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:layout_width="300dp"
-                    android:layout_height="60dp"
-                    android:layout_marginBottom="20dp">
+                    android:layout_width="295dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="29dp">
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="@drawable/white_round_button" />
+                        android:layout_height="match_parent"
+                        android:background="@drawable/consumer_login_password" />
                     <EditText
-                        android:layout_width="230dp"
-                        android:layout_height="45dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="104dp"
                         android:layout_centerVertical="true"
-                        android:background="#FFFFFF" />
+                        android:background="#FFFFFF"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/nanum_regular"/>
                 </RelativeLayout>
 
                 <Button
+                    android:fontFamily="@font/nanum_bold"
                     android:id="@+id/btn_login_consumer_login"
                     android:layout_width="297dp"
                     android:layout_height="48dp"
                     android:background="@drawable/green_round_button"
                     android:layout_centerInParent="true"
                     android:text="로그인"
+                    android:textSize="16dp"
                     android:textColor="#FFFFFF"/>
+                <ImageView
+                    android:layout_marginTop="26dp"
+                    android:layout_width="24dp"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/consumer_login_bar"/>
             </LinearLayout>
-        </RelativeLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
             android:orientation="vertical">
             <TextView
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="SNS로 로그인하기"
                 android:textAlignment="center"
-                android:textColor="#707070"
+                android:textColor="#1C2320"
                 />
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <LinearLayout
-                    android:id="@+id/sns_kind"
+            <LinearLayout
+                android:id="@+id/sns_kind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/consumer_login_facebook"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/consumer_login_google"
+                    android:layout_marginHorizontal="25dp"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/consumer_login_kakao_talk"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@+id/sns_kind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp">
+                <TextView
+                    android:fontFamily="@font/nanum_bold"
+                    android:textSize="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:text="계정이 없으신가요?"
+                    android:textColor="#707070"/>
+                <TextView
+                    android:fontFamily="@font/nanum_extrabold"
+                    android:textSize="15dp"
+                    android:id="@+id/tv_signup_consumer_login"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="페북"
-                        android:layout_marginRight="30dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="구글"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="카톡"
-                        android:layout_marginLeft="30dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_below="@+id/sns_kind"
-                    android:layout_width="wrap_content"
+                    android:layout_width="90dp"
+                    android:textAlignment="center"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="계정이 없으신가요?"
-                        android:layout_marginRight="20dp"
-                        android:textColor="#707070"/>
-                    <TextView
-                        android:id="@+id/tv_signup_consumer_login"
-                        android:layout_centerHorizontal="true"
-                        android:layout_width="100dp"
-                        android:textAlignment="center"
-                        android:layout_height="wrap_content"
-                        android:background="#FFFFFF"
-                        android:text="가입하기"
-                        android:textColor="#707070"/>
-                </LinearLayout>
-            </RelativeLayout>
+                    android:text="가입하기"
+                    android:textColor="#707070"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
