@@ -17,9 +17,9 @@
         android:id="@+id/tab_bottom_main"
         android:gravity="center"
         android:layout_alignParentBottom="true"
-        android:background="#ebebeb"
+        android:background="#FFFFFF"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="49dp"
         android:orientation="horizontal">
         <TextView
             android:id="@+id/btn_home_main"

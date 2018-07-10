@@ -1,26 +1,18 @@
 package com.woong.woong_android
 
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.util.Base64
 import android.util.Log
-import android.view.SubMenu
 import android.view.View
-import com.woong.woong_android.R
-import com.woong.woong_android.R.id.*
-import com.woong.woong_android.home.MyPage.MyPage
+import com.woong.woong_android.my.MyPage
 import com.woong.woong_android.home.main.HomeMain
-import com.woong.woong_android.map.location_change.LocationSearchResult
+import com.woong.woong_android.market.Market
 import com.woong.woong_android.myproduct.MyProduct
 import com.woong.woong_android.notice.Notice
 import com.woong.woong_android.seller_market.SellerMarketActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.view.*
-import java.security.MessageDigest
-import java.security.NoSuchAlgorithmException
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     val bundle = Bundle()
@@ -33,7 +25,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(intent)
             }
             btn_market_main ->{
-                replaceFragment(com.woong.woong_android.home.submenu.SubMenu())
+                replaceFragment(Market())
             }
             btn_myproduct_main ->{
                 replaceFragment(MyProduct())

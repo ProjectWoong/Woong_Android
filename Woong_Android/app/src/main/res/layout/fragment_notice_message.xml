@@ -16,9 +16,9 @@
                 android:layout_height="30dp">
                 <ImageView
                     android:layout_centerVertical="true"
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:background="@color/colorPastel"/>
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@color/colorPastel"/>
                 <TextView
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"

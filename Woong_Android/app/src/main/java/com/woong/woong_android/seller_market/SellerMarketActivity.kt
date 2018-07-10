@@ -49,9 +49,12 @@ class SellerMarketActivity : AppCompatActivity() {
                 tab_top_sellermarket.setTabTextColors(Color.WHITE, Color.WHITE)
             }
         }
-        test2.addOnOffsetChangedListener(listener)
+        appbar_sellermarket.addOnOffsetChangedListener(listener)
     }
     private fun dpToPx(dp:Float, context: Context):Float{
-        return (dp * context.resources.displayMetrics.density);
+        return (dp * context.resources.displayMetrics.density)
+    }
+    fun getAcbar(): ActionBar? {
+        return supportActionBar
     }
 }
