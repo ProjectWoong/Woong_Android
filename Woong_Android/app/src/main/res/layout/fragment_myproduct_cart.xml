@@ -22,6 +22,9 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:checked="true"
+                   android:textColor="#707070"
+                   android:fontFamily="@font/nanum_extrabold"
+                   android:textSize="16dp"
                    android:text="전체선택"/>
 
            </LinearLayout>
