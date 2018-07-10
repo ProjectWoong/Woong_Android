@@ -3,6 +3,7 @@ package com.woong.woong_android.marketer.adapter
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
+import com.woong.woong_android.marketer.market.intro.MarketIntro
 import com.woong.woong_android.myproduct.bookmark.MyProductBookMark
 import com.woong.woong_android.myproduct.cart.MyProductCart
 import com.woong.woong_android.seller_market.album.SellerMarketAlbum
@@ -13,8 +14,8 @@ import com.woong.woong_android.seller_market.review.SellerMarketReview
 class MarketerPagerAdapter (fm: FragmentManager) : FragmentPagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {
         when(position){
-            0 -> return SellerMarketIntro()
-            1 ->  return MyProductCart()
+            0 -> return MarketIntro()
+            1 -> return MyProductCart()
             2 -> return SellerMarketAlbum()
             3 -> return SellerMarketReview()
         }

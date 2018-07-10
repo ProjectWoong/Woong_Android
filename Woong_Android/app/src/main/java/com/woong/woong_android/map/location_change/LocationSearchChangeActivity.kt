@@ -62,7 +62,7 @@ class LocationSearchChangeActivity : AppCompatActivity() {
 
     fun hideKeyboard()
     {
-        imm.hideSoftInputFromWindow( et_change_search_main.getWindowToken(), 0);
+        imm.hideSoftInputFromWindow( et_change_search_main.windowToken, 0);
     }
     fun addFragment(fragment: Fragment) {
 
