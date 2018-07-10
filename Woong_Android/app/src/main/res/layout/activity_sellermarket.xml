@@ -28,7 +28,7 @@
                 <RelativeLayout
                     android:id="@+id/relative_top_sellermarket"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="180dp"
                     android:background="#e6e6e6">
                     <TextView
                         android:id="@+id/tv_name_sellermarket"
@@ -77,7 +77,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="80dp"
+                        android:layout_marginBottom="60dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -141,12 +141,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="110dp" />
 
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/iv_profile_sellermarket"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/ic_launcher_foreground"
-                        android:background="#ffaa22" />
+                        android:src="@color/colorPastel"
+                        app:civ_border_width="10px"
+                        app:civ_border_color="@color/colorPrimaryDark"/>
                 </LinearLayout>
             </RelativeLayout>
             <android.support.v7.widget.Toolbar

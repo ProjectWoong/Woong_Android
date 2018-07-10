@@ -13,10 +13,12 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         btn_consumer_login.setOnClickListener {
             val intent = Intent(applicationContext, ConsumerLoginActivity::class.java)
+
             startActivity(intent)
         }
         btn_marketer_login.setOnClickListener {
             val intent = Intent(applicationContext, MarketerLoginActivity::class.java)
+
             startActivity(intent)
         }
     }

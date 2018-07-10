@@ -149,16 +149,18 @@
                     android:layout_height="80dp"
                     android:orientation="horizontal">
                     <RelativeLayout
-
+                        android:id="@+id/btn_payment_kakao"
                         android:layout_weight="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
+
                             android:layout_centerHorizontal="true"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:background="@color/colorPastel"/>
                         <TextView
+
                           android:layout_centerHorizontal="true"
                             android:layout_alignParentBottom="true"
                             android:layout_width="wrap_content"
@@ -166,6 +168,7 @@
                             android:text="카카오페이"/>
                     </RelativeLayout>
                     <RelativeLayout
+                        android:id="@+id/btn_payment_naver"
                         android:layout_weight="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
@@ -182,6 +185,7 @@
                             android:text="네이버페이"/>
                     </RelativeLayout>
                     <RelativeLayout
+                        android:id="@+id/btn_payment_account"
                         android:layout_weight="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
@@ -198,6 +202,7 @@
                             android:text="계좌이체"/>
                     </RelativeLayout>
                     <RelativeLayout
+                        android:id="@+id/btn_payment_card"
                         android:layout_weight="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">

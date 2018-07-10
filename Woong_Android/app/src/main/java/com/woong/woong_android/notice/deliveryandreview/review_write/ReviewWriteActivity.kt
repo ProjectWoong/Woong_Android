@@ -104,6 +104,7 @@ class ReviewWriteActivity : AppCompatActivity(),RatingBar.OnRatingBarChangeListe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_review_write)
+        var flag = 0
 
         var displayMetrics = applicationContext.resources.displayMetrics
         var width = displayMetrics.widthPixels
@@ -119,6 +120,8 @@ class ReviewWriteActivity : AppCompatActivity(),RatingBar.OnRatingBarChangeListe
 
         btn_register_review.setOnClickListener {
             review_register_dialog.show()
+
+
         }
 
         rating_speed_review.setOnRatingBarChangeListener(this)
@@ -131,8 +134,6 @@ class ReviewWriteActivity : AppCompatActivity(),RatingBar.OnRatingBarChangeListe
         add_photo_review.setOnClickListener {
 
            changeImage()
-
-
 
 
         }

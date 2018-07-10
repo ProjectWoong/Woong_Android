@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/dialog_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="귀여운 웅이사진"/>
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/btn_ok_pmdialog"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="결제수단을 선택해 주세요."/>
+    <TextView
+        android:id="@+id/btn_ok_pmdialog"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#ffffff"
+        android:text="확인"/>
+
+</RelativeLayout>

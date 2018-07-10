@@ -192,70 +192,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="후기보기"/>
-        <LinearLayout
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_sellermarket_review"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="10dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="최윤정"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="7"
-                android:layout_marginLeft="10dp"
-                android:text="맛있당마시삳아아아아아앙ㅇ아아ㅏㅇ"/>
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:background="@color/colorPrimaryDark"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="10dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="최윤정"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="7"
-                android:layout_marginLeft="10dp"
-                android:text="맛있당마시삳아아아아아앙ㅇ아아ㅏㅇ"/>
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:background="@color/colorPrimaryDark"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="10dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="최윤정"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="7"
-                android:layout_marginLeft="15dp"
-                android:text="맛있당마시삳아아아아아앙ㅇ아아ㅏㅇ"/>
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:background="@color/colorPrimaryDark"/>
-        </LinearLayout>
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
         <Button
+            android:id="@+id/btn_show_more_review"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="34dp"
             android:layout_width="295dp"

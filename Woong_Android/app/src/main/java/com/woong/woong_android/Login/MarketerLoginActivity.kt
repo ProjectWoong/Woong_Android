@@ -20,6 +20,8 @@ class MarketerLoginActivity : AppCompatActivity() {
         */
         btn_login_marketer_login.setOnClickListener {
             val intent = Intent(applicationContext, MarketerMainActivity::class.java)    // getActivity: 현재 액티비티를 가져옴
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)   // 전환될 액티비티로 넘어갈때
         }
         tv_signup_marketer_login.setOnClickListener {
