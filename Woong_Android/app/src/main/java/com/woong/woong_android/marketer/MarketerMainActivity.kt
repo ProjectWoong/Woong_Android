@@ -1,8 +1,10 @@
 package com.woong.woong_android.marketer
 
+import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.app.ActionBar
 import android.view.View
 import com.woong.woong_android.R
 import com.woong.woong_android.notice.Notice
@@ -21,11 +23,17 @@ class MarketerMainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_marketer_main)
 
         addFragment(MarketerMarket())
+
+        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
+        supportActionBar?.setDisplayShowCustomEnabled(true)
+        supportActionBar?.setCustomView(R.layout.title_layout)
+        supportActionBar?.setShowHideAnimationEnabled(false)
 
         btn_market_marketer.setOnClickListener(this)
         btn_notice_marketer.setOnClickListener(this)
