@@ -1,75 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/tv_labelhi_intro"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/nanum_bold"
-        android:padding="20dp"
-        android:text="인사말"/>
-    <TextView
-        android:id="@+id/tv_hi_intro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/nanum_regular"
-        android:layout_below="@+id/tv_labelhi_intro"
-        android:textColor="#adadad"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="20dp"
-        android:text="안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^"
-        />
-    <LinearLayout
-        android:id="@+id/linear_tags_intro"
-        android:layout_below="@id/tv_hi_intro"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
         <TextView
-            android:id="@+id/tv_tag1_intro"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_labelhi_intro"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="2dp"
-            android:background="@color/colorPastel"
-            android:textColor="#ffffff"
-            android:text="#유기농"/>
+            android:fontFamily="@font/nanum_bold"
+            android:padding="20dp"
+            android:text="인사말"/>
+        <TextView
+            android:id="@+id/tv_hi_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_regular"
+            android:layout_below="@+id/tv_labelhi_intro"
+            android:textColor="#adadad"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+            android:text="안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^"
+            />
+        <LinearLayout
+            android:id="@+id/linear_tags_intro"
+            android:layout_below="@id/tv_hi_intro"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_tag1_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="2dp"
+                android:background="@color/colorPastel"
+                android:textColor="#ffffff"
+                android:text="#유기농"/>
 
-        <TextView
-            android:id="@+id/tv_tag2_intro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="2dp"
-            android:background="@color/colorPastel"
-            android:layout_marginLeft="10dp"
-            android:textColor="#ffffff"
-            android:text="#신속"/>
+            <TextView
+                android:id="@+id/tv_tag2_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="2dp"
+                android:background="@color/colorPastel"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                android:text="#신속"/>
 
-        <TextView
-            android:id="@+id/tv_tag3_intro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="2dp"
-            android:background="@color/colorPastel"
-            android:layout_marginLeft="10dp"
-            android:textColor="#ffffff"
-            android:text="#애정넘침"/>
-    </LinearLayout>
-    <ImageView
-        android:layout_below="@id/linear_tags_intro"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
-        android:src="@mipmap/ic_launcher_foreground"
-        android:background="@color/colorPrimaryDark"/>
-</RelativeLayout>
+            <TextView
+                android:id="@+id/tv_tag3_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="2dp"
+                android:background="@color/colorPastel"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                android:text="#애정넘침"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_below="@id/linear_tags_intro"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_launcher_foreground"
+            android:background="@color/colorPrimaryDark"/>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
