@@ -57,4 +57,5 @@ interface NetworkService {
     @POST("/account/signup")//소비자 회원가입하기
     fun postSignup(@Body signup :PostSignUpResponseData ):Call<PostSignUpResponse>
 
+
 }

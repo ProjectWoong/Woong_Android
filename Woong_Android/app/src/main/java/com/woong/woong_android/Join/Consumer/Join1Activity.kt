@@ -16,10 +16,7 @@ class Join1Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_consumer_join1)
 
-        btn_next_consumer_join1.setOnClickListener {
-            val intent = Intent(applicationContext, Join2Activity::class.java)
-            startActivity(intent)   // 전환될 액티비티로 넘어갈때
-        }
+
 
         //Spinner
         val spnYear = findViewById(R.id.spinner_year_consumer) as Spinner
@@ -33,18 +30,23 @@ class Join1Activity : AppCompatActivity() {
         //Year Spinner
         spnYear.adapter = adapterYear
 
-        spnYear.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
-            override fun onNothingSelected(parent: AdapterView<*>?) {
+        var user_year = spnYear.selectedItem.toString()
 
-            }
+//        spnYear.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
+//            override fun onNothingSelected(parent: AdapterView<*>?) {
+//
+//            }
+//
+//            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+//
+//            }
+//        }
 
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-
-            }
-        }
 
         //Month Spinner
         spnMonth.adapter = adapterMonth
+
+       var user_month = spnMonth.selectedItem.toString()
         /*
         spnMonth.onItemSelectedListener = object:AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -58,6 +60,7 @@ class Join1Activity : AppCompatActivity() {
         */
         //Day Spinner
         spnDay.adapter = adapterDay
+        var user_day = spnDay.selectedItem.toString()
         /*
         spnDay.onItemSelectedListener = object:AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -68,6 +71,16 @@ class Join1Activity : AppCompatActivity() {
                 TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
         }*/
+
+        var birth = user_day+user_month+user_day
+        var name = name_join_consumer.text.toString()
+        btn_next_consumer_join1.setOnClickListener {
+            val intent = Intent(applicationContext, Join2Activity::class.java)
+
+            intent.putExtra("birth",birth)
+            intent.putExtra("name",name)
+            startActivity(intent)   // 전환될 액티비티로 넘어갈때
+        }
 
     }
 }

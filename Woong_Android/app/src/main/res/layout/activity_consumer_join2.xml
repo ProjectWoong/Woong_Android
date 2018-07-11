@@ -41,96 +41,115 @@
         android:layout_gravity="center_horizontal"
         android:orientation="vertical"
         android:background="#FFFFFF">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.5"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.5">
+
             <LinearLayout
                 android:layout_width="310dp"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:orientation="horizontal">
+
                     <TextView
-                        android:fontFamily="@font/nanum_bold"
-                        android:textSize="15dp"
-                        android:textColor="#707070"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="이메일"/>
-                    <EditText
+                        android:layout_weight="1"
                         android:fontFamily="@font/nanum_bold"
-                        android:textSize="15dp"
-                        android:textColor="#1C2320"
+                        android:text="이메일"
+                        android:textColor="#707070"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:hint="woong@woong.com"
+                        android:id="@+id/email_join_consumer"
                         android:layout_width="0dp"
-                        android:layout_weight="3"
                         android:layout_height="20dp"
+                        android:layout_weight="3"
                         android:background="@null"
-                        android:inputType="textEmailAddress"/>
+                        android:fontFamily="@font/nanum_bold"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#1C2320"
+                        android:textSize="15dp" />
                 </LinearLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp"
-                    android:background="#707070"/>
+                    android:background="#707070" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
                     <TextView
-                        android:fontFamily="@font/nanum_bold"
-                        android:textSize="15dp"
-                        android:textColor="#707070"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="비밀번호"/>
-                    <EditText
+                        android:layout_weight="1"
                         android:fontFamily="@font/nanum_bold"
-                        android:textSize="15dp"
-                        android:textColor="#1C2320"
-                        android:layout_height="20dp"
-                        android:background="@null"
+                        android:text="비밀번호"
+                        android:textColor="#707070"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/pwd_join_consumer"
                         android:layout_width="0dp"
+                        android:layout_height="20dp"
                         android:layout_weight="3"
-                        android:inputType="textPassword"/>
+                        android:background="@null"
+                        android:fontFamily="@font/nanum_bold"
+                        android:inputType="textPassword"
+                        android:textColor="#1C2320"
+                        android:textSize="15dp" />
                 </LinearLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp"
-                    android:background="#707070"/>
+                    android:background="#707070" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
                     <TextView
-                        android:fontFamily="@font/nanum_bold"
-                        android:textSize="15dp"
-                        android:textColor="#707070"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="전화번호"/>
-                    <EditText
+                        android:layout_weight="1"
                         android:fontFamily="@font/nanum_bold"
-                        android:textSize="15dp"
-                        android:textColor="#1C2320"
-                        android:layout_height="20dp"
-                        android:background="@null"
+                        android:text="전화번호"
+                        android:textColor="#707070"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:hint="01012345678"
+                        android:id="@+id/phone_join_consumer"
                         android:layout_width="0dp"
+                        android:layout_height="20dp"
                         android:layout_weight="3"
-                        android:inputType="phone"/>
+                        android:background="@null"
+                        android:fontFamily="@font/nanum_bold"
+                        android:inputType="phone"
+                        android:textColor="#1C2320"
+                        android:textSize="15dp" />
                 </LinearLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp"
-                    android:background="#707070"/>
+                    android:background="#707070" />
             </LinearLayout>
         </RelativeLayout>
         <RelativeLayout

@@ -13,6 +13,11 @@ class AllergyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_consumer_join_allergy)
+        var birth = intent.getStringExtra("birth")
+        var name = intent.getStringExtra("name")
+        var email = intent.getStringExtra("email")
+        var pwd = intent.getStringExtra("pwd")
+        var phone = intent.getStringExtra("phone")
 
         btn_complete_allergy.setOnClickListener {
             val intent = Intent(applicationContext, MapActivity::class.java)
