@@ -4,21 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".home.submenu.HomeVegeta">
+    tools:context=".home.submenu.HomeVegeta"
+    android:background="#FFFFFF">
     <LinearLayout
         android:id="@+id/linear_filter_vegeta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginBottom="30dp"
         android:orientation="horizontal">
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@color/colorAccent"/>
+            android:layout_gravity="center_vertical"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/home_vegetable_align_icon"/>
         <TextView
+            android:fontFamily="@font/nanum_bold"
+            android:textSize="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimaryDark"
@@ -26,102 +29,115 @@
             android:text="가나다순"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="12dp"
+        android:background="@drawable/home_vegetable_bg_line">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/relative_potato_vegeta"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/home_vegetable_potato" />
+
+                    <TextView
+                        android:textSize="15dp"
+                        android:textColor="#1C2320"
+                        android:fontFamily="@font/nanum_bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="감자"
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_sweet_vegeta"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/home_vegetable_sweet_potato"/>
+
+                    <TextView
+                        android:textSize="15dp"
+                        android:textColor="#1C2320"
+                        android:fontFamily="@font/nanum_bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="고구마"
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relative_pepper_vegeta"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/home_vegetable_chilly" />
+
+                    <TextView
+                        android:textSize="15dp"
+                        android:textColor="#1C2320"
+                        android:fontFamily="@font/nanum_bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="고추"
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
-
-        <RelativeLayout
-            android:id="@+id/relative_potato_vegeta"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@color/colorPrimary" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="감자"
-                    android:textAlignment="center" />
-            </LinearLayout>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/relative_sweet_vegeta"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@color/colorPrimary" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="고구마"
-                    android:textAlignment="center" />
-            </LinearLayout>
-        </RelativeLayout>
-        <RelativeLayout
-            android:id="@+id/relative_pepper_vegeta"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@color/colorPrimary" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="고추"
-                    android:textAlignment="center" />
-            </LinearLayout>
-        </RelativeLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <RelativeLayout
             android:id="@+id/relative_herb_vegeta"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
@@ -135,9 +151,12 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@color/colorPrimary" />
+                    android:src="@drawable/home_vegetable_namul" />
 
                 <TextView
+                    android:textSize="15dp"
+                    android:textColor="#1C2320"
+                    android:fontFamily="@font/nanum_bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -148,7 +167,7 @@
 
         <RelativeLayout
             android:id="@+id/relative_mushroom_vegeta"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
@@ -162,9 +181,12 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@color/colorPrimary" />
+                    android:src="@drawable/home_vegetable_mushroom" />
 
                 <TextView
+                    android:textSize="15dp"
+                    android:textColor="#1C2320"
+                    android:fontFamily="@font/nanum_bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -174,7 +196,7 @@
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/relative_berry_vegeta"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
@@ -188,9 +210,12 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@color/colorPrimary" />
+                    android:src="@drawable/home_vegetable_eggplant" />
 
                 <TextView
+                    android:textSize="15dp"
+                    android:textColor="#1C2320"
+                    android:fontFamily="@font/nanum_bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -202,14 +227,14 @@
 
 
     <LinearLayout
+        android:paddingTop="15dp"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <RelativeLayout
             android:id="@+id/relative_leaf_vegeta"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
@@ -223,9 +248,12 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@color/colorPrimary" />
+                    android:src="@drawable/home_vegetable_cabbage" />
 
                 <TextView
+                    android:textSize="15dp"
+                    android:textColor="#1C2320"
+                    android:fontFamily="@font/nanum_bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -236,7 +264,7 @@
 
         <RelativeLayout
             android:id="@+id/relative_root_vegeta"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
             <LinearLayout
@@ -249,9 +277,12 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@color/colorPrimary" />
+                    android:src="@drawable/home_vegetable_radish" />
 
                 <TextView
+                    android:textSize="15dp"
+                    android:textColor="#1C2320"
+                    android:fontFamily="@font/nanum_bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -260,7 +291,7 @@
             </LinearLayout>
         </RelativeLayout>
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
             <LinearLayout
@@ -275,5 +306,6 @@
                     android:layout_height="60dp" />
             </LinearLayout>
         </RelativeLayout>
+    </LinearLayout>
     </LinearLayout>
 </LinearLayout>

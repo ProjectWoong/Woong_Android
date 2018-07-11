@@ -32,13 +32,13 @@ class PaymentActivity : AppCompatActivity() {
 
         var wm : WindowManager.LayoutParams = payment_dialog.window.attributes
         wm.copyFrom(payment_dialog.window.attributes)
-        wm.width = width-200
-        wm.height = height-600
+        //wm.width = 279dp
+        //wm.height = 434
 
         var failwm : WindowManager.LayoutParams = fail_payment_dialog.window.attributes
         failwm.copyFrom(fail_payment_dialog.window.attributes)
-        failwm.width = width-200
-        failwm.height = height-600
+//        failwm.width = 279
+//        failwm.height = 434
 
         paymentItems= ArrayList()
 

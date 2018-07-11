@@ -200,7 +200,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="후기보기"/>
+            android:text="후기보기"
+            android:layout_marginBottom="15dp"/>
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_sellermarket_review"
             android:layout_width="match_parent"
