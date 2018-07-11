@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.woong.woong_android.MainActivity
 import com.woong.woong_android.R
+import com.woong.woong_android.home.submenu.product.HomeProduct
 import kotlinx.android.synthetic.main.fragment_home_vegeta.view.*
 
 class HomeVegeta : Fragment() {
