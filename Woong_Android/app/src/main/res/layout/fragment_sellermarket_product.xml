@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="10dp">
+        android:layout_margin="20dp">
         <TextView
             android:id="@+id/btn_sort_name_product"
             android:layout_width="60dp"
@@ -26,10 +26,7 @@
     </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_sellermarket_product"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center"
-        android:foregroundGravity="center"
-        android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
