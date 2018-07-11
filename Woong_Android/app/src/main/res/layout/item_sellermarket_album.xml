@@ -20,6 +20,7 @@
         android:id="@+id/photo_sellermarket_album"
         android:layout_width="match_parent"
         android:layout_height="152dp"
+        android:scaleType="centerCrop"
         android:background="@android:color/darker_gray"/>
     <TextView
        android:layout_marginTop="5dp"
@@ -37,12 +38,7 @@
 
     <View
         android:layout_width="match_parent"
-<<<<<<< HEAD
         android:layout_height="0.5dp"
         android:background="#ADADAD"/>
 
-=======
-        android:layout_height="2dp"/>
-        android:background="#ADADAD"/>
->>>>>>> 1159f1ae652d5a53355a99b44680901b6e7680ad
 </LinearLayout>

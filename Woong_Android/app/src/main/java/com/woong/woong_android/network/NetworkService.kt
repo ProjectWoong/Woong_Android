@@ -1,5 +1,7 @@
 package com.woong.woong_android.network
 
+import com.woong.woong_android.Join.Consumer.post.PostSignUpResponse
+import com.woong.woong_android.Join.Consumer.post.PostSignUpResponseData
 import com.woong.woong_android.map.get.GetLocationListResponse
 import com.woong.woong_android.seller_market.get.*
 import com.woong.woong_android.Login.post.PostSignInAppResponse
@@ -46,10 +48,13 @@ interface NetworkService {
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
-    
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    @POST("/account/signin/app") //로그인하기
-    fun postMarketSignInApp(@Body signin : PostSignInAppResponseData):Call<PostSignInAppResponse>
+    @POST("/account/signin/app") //소비자로그인하기
+    fun postSignInApp(@Body signin : PostSignInAppResponseData):Call<PostSignInAppResponse>
+
+    @POST("/account/signup")//소비자 회원가입하기
+    fun postSignup(@Body signup :PostSignUpResponseData ):Call<PostSignUpResponse>
 
 }
