@@ -62,7 +62,12 @@ class SellerMarketActivity : AppCompatActivity() {
         tabLayout.setTabTextColors(Color.parseColor("#ffffff"), Color.parseColor("#ffffff"))
         tabLayout.setupWithViewPager(viewPager)
         if(SellerIdx.id==1){
-            replaceFragment(SellerMarketProductDetail())
+            val bundle = Bundle()
+            bundle.putInt("market_id", 1)
+            bundle.putInt("item_id", 2)
+            val smpd = SellerMarketProductDetail()
+            smpd.arguments=bundle
+            replaceFragment(smpd)
             SellerIdx.id=0
         }
 

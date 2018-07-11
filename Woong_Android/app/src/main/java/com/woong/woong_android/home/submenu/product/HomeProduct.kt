@@ -23,7 +23,6 @@ class HomeProduct : Fragment(), View.OnClickListener{
     override fun onClick(v: View?) {
         Log.d("asd","dasd")
         val intent : Intent = Intent(context, SellerMarketActivity::class.java)
-        intent.putExtra("가게 이름", "나중에 통신 값")
         SellerIdx.id = 1
         startActivity(intent)
     }
