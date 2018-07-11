@@ -62,7 +62,10 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@color/colorPastel"/>
+<<<<<<< HEAD
 
+=======
+>>>>>>> e02d7d4e1bb20ce01f8c03dc1c48fb78282ad7e1
     </LinearLayout>
 
     <RelativeLayout
