@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".join.consumer.TermsActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -20,11 +21,11 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="315dp"
         android:layout_height="0dp"
         android:layout_weight="2"
         android:background="@drawable/draw_edge"
-        android:layout_marginHorizontal="15dp"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,7 +37,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="태웅아 감자팔자 이용약관 동의"
+                android:text="웅아감자팔자 이용약관 동의"
                 android:layout_marginBottom="5dp"/>
             <ScrollView
                 android:layout_width="match_parent"
@@ -102,12 +103,14 @@
         android:layout_weight="0.7">
         <Button
             android:id="@+id/btn_next_consumer_terms"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
+            android:fontFamily="@font/nanum_bold"
+            android:textSize="16dp"
+            android:layout_width="188dp"
+            android:layout_height="48dp"
             android:layout_centerInParent="true"
             android:text="동의"
             android:textColor="@android:color/white"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@drawable/green_round_button"/>
     </RelativeLayout>
 
 </LinearLayout>
