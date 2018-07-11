@@ -6,13 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
-import com.woong.woong_android.home.submenu.data.HomeProductData
-import com.woong.woong_android.home.submenu.get.GetSearchItemResponseData
+import com.woong.woong_android.home.submenu.get.GetItemResponseData
 import com.woong.woong_android.home.submenu.viewholder.HomeProductViewHolder
-import com.woong.woong_android.myproduct.data.MyProductBookmarkData
-import com.woong.woong_android.myproduct.viewholder.MyProductBookmarkViewHolder
 
-class HomeProductAdapter(var productItems : ArrayList<GetSearchItemResponseData>, var requestManager: RequestManager) : RecyclerView.Adapter<HomeProductViewHolder>() {
+class HomeProductAdapter(var productItems : ArrayList<GetItemResponseData>, var requestManager: RequestManager) : RecyclerView.Adapter<HomeProductViewHolder>() {
 
     private lateinit var onItemClick : View.OnClickListener
 
