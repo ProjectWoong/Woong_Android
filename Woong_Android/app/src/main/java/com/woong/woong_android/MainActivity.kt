@@ -1,5 +1,6 @@
 package com.woong.woong_android
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -10,6 +11,7 @@ import com.woong.woong_android.home.main.HomeMain
 import com.woong.woong_android.market.Market
 import com.woong.woong_android.myproduct.MyProduct
 import com.woong.woong_android.notice.Notice
+import com.woong.woong_android.seller_market.SellerMarketActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -19,11 +21,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             btn_home_main ->{
                 clearSelected()
                 btn_home_main.isSelected = true
-//                replaceFragment(HomeMain())
+
                 replaceFragment(HomeMain())
                 // 판매자 마켓 테스트용 임시 인텐트
-//                val intent = Intent(applicationContext, SellerMarketActivity::class.java)
-//                startActivity(intent)
+                val intent = Intent(applicationContext, SellerMarketActivity::class.java)
+                startActivity(intent)
             }
             btn_market_main ->{
                 clearSelected()

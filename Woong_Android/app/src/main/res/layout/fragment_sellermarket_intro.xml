@@ -68,6 +68,7 @@
                 android:text="#애정넘침"/>
         </LinearLayout>
         <ImageView
+            android:id="@+id/iv_representimg_sellermarket_intro"
             android:layout_below="@id/linear_tags_intro"
             android:layout_width="300dp"
             android:layout_height="200dp"

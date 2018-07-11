@@ -10,6 +10,7 @@
         android:orientation="horizontal"
         android:layout_margin="10dp">
         <TextView
+            android:id="@+id/btn_sort_name_product"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:textAlignment="center"
@@ -17,6 +18,7 @@
             android:background="@color/colorPrimaryDark"
             android:textColor="#FFFFFF"/>
         <TextView
+            android:id="@+id/btn_sort_best_product"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:textAlignment="center"
