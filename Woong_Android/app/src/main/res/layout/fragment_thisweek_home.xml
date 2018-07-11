@@ -5,26 +5,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <RelativeLayout
-
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="38dp"
         android:background="@color/colorPrimaryDark">
         <TextView
             android:id="@+id/tv_title_thisweek"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#ffffff"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:text="이 주의 농부"/>
-        <ImageButton
-            android:id="@+id/btn_cart_thisweek"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@color/colorAccent"
-            android:layout_marginRight="10dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"/>
+            android:layout_centerInParent="true"
+            android:textSize="17dp"
+            android:fontFamily="@font/nanum_extrabold"
+            android:text="이주의 농부"/>
     </RelativeLayout>
     <ScrollView
         android:layout_width="match_parent"
@@ -33,77 +25,63 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp">
-                <ImageView
-                    android:id="@+id/iv_profile_thisweek"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:background="@color/colorPrimaryDark"
-                    android:layout_marginTop="35dp"
-                    android:layout_centerHorizontal="true"/>
-                <TextView
-                    android:id="@+id/tv_marketname_thisweek"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/iv_profile_thisweek"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="5dp"
-                    android:textSize="11sp"
-                    android:text="현듀 마켓"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_marketname_thisweek"
-                    android:layout_centerHorizontal="true"
-                    android:text="이현듀 농부님"/>
-            </RelativeLayout>
+            <ImageView
+                android:id="@+id/iv_profile_thisweek"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/mypage_profile"
+                android:layout_marginTop="17dp"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/tv_marketname_thisweek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_profile_thisweek"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="21dp"
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="12sp"
+                android:text="뚜덩 마켓"
+                android:textColor="#ADADAD"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_marketname_thisweek"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/nanum_extrabold"
+                android:textColor="#707070"
+                android:textSize="15dp"
+                android:text="최수정 농부님"/>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#d2d2d2"/>
-            <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ADADAD"
+                android:layout_marginTop="25dp"/>
+            <TextView
+                android:id="@+id/tv_headline_thisweek"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="10dp">
-                <TextView
-                    android:id="@+id/tv_headline_thisweek"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:text="맛있는 충격, 홍감자 먹어봤슈?" />
-                <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="15dp"
-                    android:background="@color/colorPrimaryDark"
-                    android:layout_toStartOf="@+id/tv_headline_thisweek"
-                    />
-                <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="15dp"
-                    android:background="@color/colorPrimaryDark"
-                    android:layout_toEndOf="@+id/tv_headline_thisweek"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@+id/tv_headline_thisweek"
-                    android:layout_margin="20dp"
-                    android:text="감자는 말이여 알감자가 진리재~!
+                android:layout_marginTop="15dp"
+                android:textSize="20dp"
+                android:fontFamily="@font/nanum_extrabold"
+                android:text="&quot;맛있는 충격, 홍감자 먹어봤슈?&quot;"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_headline_thisweek"
+                android:layout_margin="20dp"
+                android:text="감자는 말이여 알감자가 진리재~!
 현듀네 알감자 먹고 예뻐지세유~!
 현듀 프로필 보슈 얼마나 이쁜지^^
 증명됐자나유~?
 무농약 친환경 알감자라 그래유
 알감자만 10년 키워온 프로 알감자 셀러
 믿고 잡숴보슈~"/>
-            </RelativeLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"

@@ -33,6 +33,7 @@
         android:layout_alignParentTop="true">
 
         <RelativeLayout
+            android:id="@+id/relative_egg_egg"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -59,6 +60,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/relative_milk_egg"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1">

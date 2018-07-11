@@ -5,41 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#ddeeff">
-        <TextView
-            android:id="@+id/tv_location_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000000"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:text="강북구 미아동"/>
-        <ImageButton
-            android:id="@+id/ib_location_main"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/tv_location_main"
-            android:background="@color/colorAccent"/>
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@color/colorAccent"
-            android:layout_marginRight="10dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"/>
-    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#ffeeff">
-        <ImageView
-            android:id="@+id/iv_searchback_main"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="#ffffff">
+            <TextView
+                android:id="@+id/tv_location_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:textColor="#1C2320"
+                android:fontFamily="@font/nanum_extrabold"
+                android:textSize="17dp"
+                android:layout_centerHorizontal="true"
+                android:text="강북구 미아동"/>
+            <ImageButton
+                android:id="@+id/ib_location_main"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/tv_location_main"
+                android:src="@drawable/home_under"/>
+            <ImageButton
+                android:src="@drawable/home_basket"
+                android:background="#FFFFFF"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="21dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginLeft="25dp"
@@ -71,232 +76,285 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+            <ImageView
+                android:id="@+id/iv_searchback_main"
+                android:layout_width="325dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="25dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/gray_round_button"/>
+            <EditText
+                android:id="@+id/tv_search_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:background="#00000000"
+                android:textColorHint="#9B9B9B"
+                android:fontFamily="@font/nanum_bold"
+                android:hint="찾으시는 상품을 검색해주세요" />
+            <ImageView
+                android:id="@+id/iv_searchico_main"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_alignStart="@+id/iv_searchback_main"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/setting_location_1_search"/>
+        </RelativeLayout>
+    </LinearLayout>
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
             <ImageView
                 android:id="@+id/iv_thisweek_main"
                 android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:background="@color/colorPrimaryDark"/>
-            <RelativeLayout
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:background="@android:color/darker_gray"/>
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/nanum_bold"
                     android:textColor="#707070"
                     android:text="식품 카테고리"/>
             </RelativeLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp">
-                <RelativeLayout
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/home_bg_line"
+                    android:orientation="vertical">
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@color/colorPrimary"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:layout_marginTop="10dp"
-                            android:text="과일"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <RelativeLayout
+                            android:id="@+id/relative_fruit_main"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true">
+                                <ImageView
+                                    android:layout_gravity="center"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/home_category_fruit"/>
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="과일"
+                                    android:textSize="15dp"
+                                    android:fontFamily="@font/nanum_bold"
+                                    android:textColor="#1C2320"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/relative_grain_main"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true">
+                                <ImageView
+                                    android:layout_gravity="center"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                     android:src="@drawable/home_category_grain"/>
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="곡물"
+                                    android:textSize="15dp"
+                                    android:fontFamily="@font/nanum_bold"
+                                    android:textColor="#1C2320"/>
+                            </LinearLayout>
+                        </RelativeLayout>
                     </LinearLayout>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@color/colorPrimary"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:layout_marginTop="10dp"
-                            android:text="과일"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <RelativeLayout
+                            android:id="@+id/relative_vegeta_main"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true">
+                                <ImageView
+                                    android:layout_gravity="center"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/home_category_vegetable"/>
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="채소"
+                                    android:textSize="15dp"
+                                    android:fontFamily="@font/nanum_bold"
+                                    android:textColor="#1C2320"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/relative_egg_main"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true">
+                                <ImageView
+                                    android:layout_gravity="center"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/home_category_egg"/>
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="달걀/유제품"
+                                    android:textSize="15dp"
+                                    android:fontFamily="@font/nanum_bold"
+                                    android:textColor="#1C2320"/>
+                            </LinearLayout>
+                        </RelativeLayout>
                     </LinearLayout>
-                </RelativeLayout>
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp">
-                <RelativeLayout
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@color/colorAccent"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:layout_marginTop="10dp"
-                            android:text="과일"/>
-                    </LinearLayout>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@color/colorPrimary"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:layout_marginTop="10dp"
-                            android:text="과일"/>
-                    </LinearLayout>
-                </RelativeLayout>
-            </LinearLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="7dp"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/nanum_bold"
                     android:textColor="#707070"
                     android:text="바로가기"/>
-            </RelativeLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <RelativeLayout
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="110dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:id="@+id/relative_deliver_main"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:orientation="vertical"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true">
+                        android:layout_gravity="center_vertical">
                         <ImageView
+                            android:layout_gravity="center_horizontal"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:background="@color/colorPrimary"/>
+                            android:src="@drawable/home_delivery"/>
                         <TextView
-                            android:layout_width="match_parent"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/nanum_bold"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:layout_marginTop="10dp"
-                            android:textSize="11sp"
                             android:text="배송조회"/>
                     </LinearLayout>
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="110dp">
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:id="@+id/relative_favorite_main"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:orientation="vertical"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true">
+                        android:layout_gravity="center_vertical">
                         <ImageView
+                            android:layout_gravity="center_horizontal"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:background="@color/colorPrimary"/>
+                            android:src="@drawable/home_favorite"/>
                         <TextView
-                            android:layout_width="match_parent"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/nanum_bold"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:layout_marginTop="10dp"
-                            android:textSize="11sp"
-                            android:text="장바구니"/>
-                    </LinearLayout>
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="110dp">
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true">
-                        <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:background="@color/colorPrimary"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:layout_marginTop="10dp"
-                            android:textSize="11sp"
                             android:text="찜한상품"/>
                     </LinearLayout>
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="110dp">
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:id="@+id/relative_bookmark_main"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:orientation="vertical"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true">
+                        android:layout_gravity="center_vertical">
                         <ImageView
+                            android:layout_gravity="center_horizontal"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:background="@color/colorPrimary"/>
+                            android:src="@drawable/home_bookmark"/>
                         <TextView
-                            android:layout_width="match_parent"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/nanum_bold"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:layout_marginTop="10dp"
-                            android:textSize="11sp"
-                            android:text="즐겨찾는마켓"/>
+                            android:text="즐겨찾기"/>
                     </LinearLayout>
-                </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/relative_msg_main"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical">
+                        <ImageView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/home_message"/>
+                        <TextView
+                            android:textSize="15dp"
+                            android:fontFamily="@font/nanum_bold"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="메세지"/>
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
 </LinearLayout>
