@@ -6,35 +6,53 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
+import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
+import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.market.adapter.MarketNearbyAdapter
-import com.woong.woong_android.market.data.MarketNearbyData
+import com.woong.woong_android.market.market_usertoken
+import com.woong.woong_android.network.NetworkService
+import com.woong.woong_android.seller_market.get.GetNearMarketListResponse
+import com.woong.woong_android.seller_market.get.GetNearMarketListResponseData
 import kotlinx.android.synthetic.main.fragment_nearby_market.view.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MarketNearby: Fragment() {
     lateinit var marketNearbyAdapter: MarketNearbyAdapter
-    lateinit var marketNearbyItems : ArrayList<MarketNearbyData>
+    lateinit var marketNearbyItems : ArrayList<GetNearMarketListResponseData>
+    lateinit var networkService: NetworkService
+    lateinit var requestManager: RequestManager
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_nearby_market,container,false)
-        marketNearbyItems = ArrayList()
+        requestManager = Glide.with(this)
+        networkService = ApplicationController.instance.networkService
 
-        marketNearbyItems.add(MarketNearbyData(R.drawable.ic_launcher_background,"현듀마켓","마포구 우리집","#유기농","#유기농",null))
-        marketNearbyItems.add(MarketNearbyData(R.drawable.ic_launcher_background,"현듀마켓","마포구 우리집","#유기농","#유기농","#유기농"))
-        marketNearbyItems.add(MarketNearbyData(R.drawable.ic_launcher_background,"현듀마켓","마포구 우리집","#유기농","#유기농",null))
-        marketNearbyItems.add(MarketNearbyData(R.drawable.ic_launcher_background,"현듀마켓","마포구 우리집","#유기농","#유기농","#유기농"))
-        marketNearbyItems.add(MarketNearbyData(R.drawable.ic_launcher_background,"현듀마켓","마포구 우리집","#유기농","#유기농",null))
-        marketNearbyItems.add(MarketNearbyData(R.drawable.ic_launcher_background,"현듀마켓","마포구 우리집","#유기농","#유기농","#유기농"))
-        marketNearbyItems.add(MarketNearbyData(R.drawable.ic_launcher_background,"현듀마켓","마포구 우리집","#유기농","#유기농",null))
-        marketNearbyItems.add(MarketNearbyData(R.drawable.ic_launcher_background,"현듀마켓","마포구 우리집","#유기농","#유기농","#유기농"))
-        marketNearbyItems.add(MarketNearbyData(R.drawable.ic_launcher_background,"현듀마켓","마포구 우리집","#유기농","#유기농",null))
-        marketNearbyItems.add(MarketNearbyData(R.drawable.ic_launcher_background,"현듀마켓","마포구 우리집","#유기농","#유기농","#유기농"))
-        marketNearbyItems.add(MarketNearbyData(R.drawable.ic_launcher_background,"현듀마켓","마포구 우리집","#유기농","#유기농",null))
-        marketNearbyItems.add(MarketNearbyData(R.drawable.ic_launcher_background,"현듀마켓","마포구 우리집","#유기농","#유기농","#유기농"))
+        var user_token = market_usertoken.user_token
 
-        marketNearbyAdapter = MarketNearbyAdapter(marketNearbyItems)
+        val getNearMarket = networkService.getNearMarketList(user_token)
+        getNearMarket.enqueue(object : Callback<GetNearMarketListResponse>{
+            override fun onFailure(call: Call<GetNearMarketListResponse>?, t: Throwable?) {
 
-        v.rv_market_mymarket.layoutManager = LinearLayoutManager(context)
-        v.rv_market_mymarket.adapter = marketNearbyAdapter
+            }
+
+            override fun onResponse(call: Call<GetNearMarketListResponse>?, response: Response<GetNearMarketListResponse>?) {
+                if(response!!.isSuccessful){
+                    marketNearbyItems = response.body().data
+                    marketNearbyAdapter = MarketNearbyAdapter(marketNearbyItems,requestManager)
+
+                    v.rv_market_mymarket.layoutManager = LinearLayoutManager(context)
+                    v.rv_market_mymarket.adapter = marketNearbyAdapter
+
+                }
+            }
+
+        })
+
+
+
 
         return v
     }

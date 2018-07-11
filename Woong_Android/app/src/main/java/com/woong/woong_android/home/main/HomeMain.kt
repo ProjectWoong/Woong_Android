@@ -17,6 +17,8 @@ class HomeMain : Fragment() {
     var re_address : String = ""
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_home_main,container,false)
+        var user_token = arguments!!.getString("user_token")
+
         flag = arguments?.getInt("flag")
         Log.v("flag",flag.toString())
         if(flag == 1){

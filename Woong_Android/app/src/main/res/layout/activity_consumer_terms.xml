@@ -12,29 +12,49 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.6">
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="소비자 회원가입 약관"
-            android:layout_centerInParent="true"/>
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:layout_width="135dp"
+                android:layout_height="22dp"
+                android:src="@drawable/consumer_login_agree_logo"/>
+            <TextView
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="16dp"
+                android:textColor="#1C2320"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="소비자 회원가입 약관"
+                android:layout_centerInParent="true"/>
+        </LinearLayout>
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
     <LinearLayout
         android:layout_gravity="center_horizontal"
         android:layout_width="315dp"
-        android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_height="343dp"
         android:background="@drawable/draw_edge"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_marginVertical="15dp"
-            android:layout_marginHorizontal="15dp">
+            android:layout_marginHorizontal="12dp">
             <TextView
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="15dp"
+                android:textColor="#707070"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="웅아감자팔자 이용약관 동의"
@@ -44,10 +64,12 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/draw_edge">
                 <TextView
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nanum_regular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="어쩌구zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
-                    android:textColor="#000000" />
+                    android:text="웅아감자팔자 서비스 및 제품을 이용해 주셔서 감사 합니다. 본 약관은 다양한 웅감 서비스의 이용과 관련하여 웅아감자팔자 서비스를 제공하는 웅감 주식회사(이하 ‘웅감’)와 이를 이용하는 웅감 서비스"
+                    android:textColor="#95989A" />
             </ScrollView>
         </LinearLayout>
         <LinearLayout
@@ -57,6 +79,9 @@
             android:orientation="vertical"
             android:layout_marginHorizontal="15dp">
             <TextView
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="15dp"
+                android:textColor="#707070"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="개인정보 수집 및 이용약관 동의"
@@ -66,10 +91,12 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/draw_edge">
                 <TextView
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nanum_regular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="어쩌구zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
-                    android:textColor="#000000" />
+                    android:text="서비스 이용 과정에서 IP 주소, 쿠키, 서비스 이용 기록, 기기정보, 위치정보가 생성되어 수집될 수 있습니다. 구체적으로 1) 서비스 이용 과정에서 이용자에 관한 정보를 정보통신서비스 제공자가"
+                    android:textColor="#95989A" />
             </ScrollView>
         </LinearLayout>
         <LinearLayout
@@ -80,6 +107,9 @@
             android:layout_marginHorizontal="15dp"
             android:layout_marginVertical="15dp">
             <TextView
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="15dp"
+                android:textColor="#707070"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="위치정보 이용약관 동의"
@@ -89,13 +119,16 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/draw_edge">
                 <TextView
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nanum_regular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="어쩌구zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
-                    android:textColor="#000000" />
+                    android:text="위치정보 이용약관에 동의하시면, 위치를 활용한 광고 정보 수신 등을 포함하는 프리에이터 위치기반 서비스를 이용할 수 있습니다. 제 1 조 (목적)"
+                    android:textColor="#95989A" />
             </ScrollView>
         </LinearLayout>
     </LinearLayout>
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
