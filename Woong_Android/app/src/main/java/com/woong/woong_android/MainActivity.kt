@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when(p0){
             btn_home_main ->{
-//                replaceFragment(HomeMain())
-                // 판매자 마켓 테스트용 임시 인텐트
+                replaceFragment(HomeMain())
+               //  판매자 마켓 테스트용 임시 인텐트
                 val intent = Intent(applicationContext, SellerMarketActivity::class.java)
                 startActivity(intent)
             }

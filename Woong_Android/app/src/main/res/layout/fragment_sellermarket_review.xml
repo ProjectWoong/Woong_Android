@@ -20,6 +20,7 @@
             android:text="만족해요!"
             android:textColor="@color/colorPrimaryDark"/>
         <RatingBar
+            android:id="@+id/avr_rating_marketreview"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -85,6 +86,8 @@
                 android:layout_weight="2"
                 android:orientation="vertical">
                 <RatingBar
+                    android:id="@+id/first_rating_marketreview"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:isIndicator="true"
@@ -93,6 +96,8 @@
                     style="?android:attr/ratingBarStyleIndicator"
                     />
                 <RatingBar
+                    android:id="@+id/second_rating_marketreview"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:isIndicator="true"
@@ -101,6 +106,8 @@
                     style="?android:attr/ratingBarStyleIndicator"
                     />
                 <RatingBar
+                    android:id="@+id/third_rating_marketreview"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:isIndicator="true"
@@ -109,6 +116,8 @@
                     style="?android:attr/ratingBarStyleIndicator"
                     />
                 <RatingBar
+                    android:id="@+id/fourth_rating_marketreview"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:isIndicator="true"

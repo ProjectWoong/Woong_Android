@@ -6,23 +6,53 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
+import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
+import com.woong.woong_android.applicationcontroller.ApplicationController
+import com.woong.woong_android.network.NetworkService
+import com.woong.woong_android.seller_market.get.GetMarketAlbumResponse
+import com.woong.woong_android.seller_market.get.GetMarketAlbumResponseData
+import com.woong.woong_android.seller_market.get.GetMarketInfoResponseData
 import kotlinx.android.synthetic.main.fragment_sellermarket_album.view.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class SellerMarketAlbum: Fragment() {
 
-    lateinit var albumItems : ArrayList<AlbumItem>
+    lateinit var albumItems : ArrayList<GetMarketAlbumResponseData>
     lateinit var albumAdapter : AlbumAdapter
+    lateinit var networkService: NetworkService
+    lateinit var requestManager: RequestManager
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_sellermarket_album,container,false)
 
-        albumItems = ArrayList()
-        albumItems.add(AlbumItem("2018년 7월 7일", R.drawable.rv_item_image, ";;;"))
+        networkService = ApplicationController.instance.networkService
+        requestManager = Glide.with(this)
 
-        albumAdapter = AlbumAdapter(albumItems)
-        v.rv_sellermarket_album.layoutManager = LinearLayoutManager(context)
-        v.rv_sellermarket_album.adapter = albumAdapter
+        //market_id(path)
+        val getMarketAlbum = networkService.getMarketAlbum(1)
+        getMarketAlbum.enqueue(object: Callback<GetMarketAlbumResponse>{
+            override fun onFailure(call: Call<GetMarketAlbumResponse>?, t: Throwable?) {
+
+            }
+
+            override fun onResponse(call: Call<GetMarketAlbumResponse>?, response: Response<GetMarketAlbumResponse>?) {
+                if(response!!.isSuccessful){
+                    albumItems = response.body().data
+                    albumAdapter = AlbumAdapter(albumItems,requestManager)
+                    v.rv_sellermarket_album.layoutManager = LinearLayoutManager(context)
+                    v.rv_sellermarket_album.adapter = albumAdapter
+                }
+            }
+
+        })
+
+
+
+
 
         return v
     }

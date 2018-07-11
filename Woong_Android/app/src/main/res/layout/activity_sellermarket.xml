@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimaryDark"
+            app:contentScrim="@color/colorPrimaryDark"
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
@@ -28,7 +28,7 @@
                 <RelativeLayout
                     android:id="@+id/relative_top_sellermarket"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="180dp"
                     android:background="#e6e6e6">
                     <TextView
                         android:id="@+id/tv_name_sellermarket"
@@ -77,7 +77,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="80dp"
+                        android:layout_marginBottom="60dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -90,7 +90,12 @@
                             android:id="@+id/tv_distance_sellermarket"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="10km"
+                            android:text="10"
+                            android:textColor="@color/colorPrimaryDark" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="km"
                             android:textColor="@color/colorPrimaryDark" />
 
                         <TextView
@@ -107,12 +112,21 @@
                         android:layout_alignParentBottom="true"
                         android:layout_margin="10dp"/>
                     <TextView
+                        android:id="@+id/num_bookmark_sellermarket"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@+id/ib_bookmark_sellermarket"
                         android:layout_toRightOf="@id/ib_bookmark_sellermarket"
                         android:layout_marginBottom="10dp"
-                        android:text="70개"
+                        android:text="70"
+                        android:textColor="@color/colorPrimaryDark" />
+                    <TextView
+                        android:layout_toRightOf="@+id/num_bookmark_sellermarket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/ib_bookmark_sellermarket"
+                        android:layout_marginBottom="10dp"
+                        android:text="개"
                         android:textColor="@color/colorPrimaryDark" />
                     <ImageButton
                         android:id="@+id/ib_message_sellermarket"
@@ -141,12 +155,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="110dp" />
 
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/iv_profile_sellermarket"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/ic_launcher_foreground"
-                        android:background="#ffaa22" />
+                        android:src="@color/colorPastel"
+                        app:civ_border_width="10px"
+                        app:civ_border_color="@color/colorPrimaryDark"/>
                 </LinearLayout>
             </RelativeLayout>
             <android.support.v7.widget.Toolbar
