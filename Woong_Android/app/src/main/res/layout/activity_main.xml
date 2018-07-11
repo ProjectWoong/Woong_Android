@@ -12,6 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"></FrameLayout>
 
+    <View
+        android:layout_above="@+id/tab_bottom_main"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/above_shadow"
+        />
 
     <LinearLayout
         android:id="@+id/tab_bottom_main"
@@ -19,43 +25,44 @@
         android:layout_alignParentBottom="true"
         android:background="#FFFFFF"
         android:layout_width="match_parent"
-        android:layout_height="49dp"
+        android:layout_height="50dp"
         android:orientation="horizontal">
-        <TextView
+        <ImageView
             android:id="@+id/btn_home_main"
             android:textAlignment="center"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="홈"/>
-        <TextView
+            android:layout_width="24dp"
+            android:layout_height="39dp"
+            android:src="@drawable/tab_underbar_home"/>
+        <ImageView
             android:id="@+id/btn_market_main"
             android:textAlignment="center"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="마켓"/>
-        <TextView
+            android:layout_width="24dp"
+            android:layout_height="39dp"
+            android:src="@drawable/tab_underbar_market"/>
+        <ImageView
             android:id="@+id/btn_myproduct_main"
             android:textAlignment="center"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="내상품"/>
-        <TextView
+            android:layout_width="24dp"
+            android:layout_height="39dp"
+            android:src="@drawable/tab_underbar_mythings"/>
+        <ImageView
             android:id="@+id/btn_notice_main"
             android:textAlignment="center"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="알림"/>
-        <TextView
+            android:layout_width="24dp"
+            android:layout_height="39dp"
+            android:src="@drawable/tab_underbar_alarm"/>
+        <ImageView
             android:id="@+id/btn_my_main"
             android:textAlignment="center"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MY"/>
+            android:layout_width="24dp"
+            android:layout_height="39dp"
+            android:src="@drawable/tab_underbar_my"/>
+
 
     </LinearLayout>
 

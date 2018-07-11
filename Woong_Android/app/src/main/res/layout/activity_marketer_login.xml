@@ -38,8 +38,8 @@
                     android:src="@drawable/consumer_login_id" />
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="160dp"
+                    android:layout_height="30dp"
                     android:layout_marginLeft="104dp"
                     android:layout_centerVertical="true"
                     android:background="#FFFFFF"
