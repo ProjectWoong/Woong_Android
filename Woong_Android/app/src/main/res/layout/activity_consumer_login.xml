@@ -37,8 +37,9 @@
                         android:src="@drawable/consumer_login_id"/>
 
                     <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/id_consume_login"
+                        android:layout_width="160dp"
+                        android:layout_height="30dp"
                         android:layout_marginLeft="104dp"
                         android:layout_centerVertical="true"
                         android:background="#FFFFFF"
@@ -55,8 +56,9 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/consumer_login_password" />
                     <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/pwd_consume_login"
+                        android:layout_width="160dp"
+                        android:layout_height="30dp"
                         android:layout_marginLeft="104dp"
                         android:layout_centerVertical="true"
                         android:background="#FFFFFF"
