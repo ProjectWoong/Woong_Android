@@ -11,6 +11,7 @@
             android:layout_marginLeft="10dp"
             android:id="@+id/profileimg_message_notice"
             android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
             android:layout_width="120dp"
             android:layout_height="100dp"
             android:background="#bcbcbc"/>

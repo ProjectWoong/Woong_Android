@@ -147,21 +147,25 @@
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
+                android:scaleType="centerCrop"
                 android:layout_margin="1dp"/>
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
+                android:scaleType="centerCrop"
                 android:layout_margin="1dp"/>
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
+                android:scaleType="centerCrop"
                 android:layout_margin="1dp"/>
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
+                android:scaleType="centerCrop"
                 android:layout_margin="1dp"/>
         </LinearLayout>
         <LinearLayout
@@ -173,21 +177,25 @@
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
+                android:scaleType="centerCrop"
                 android:layout_margin="1dp"/>
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
+                android:scaleType="centerCrop"
                 android:layout_margin="1dp"/>
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
+                android:scaleType="centerCrop"
                 android:layout_margin="1dp"/>
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
+                android:scaleType="centerCrop"
                 android:layout_margin="1dp"/>
         </LinearLayout>
         <View

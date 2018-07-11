@@ -20,6 +20,7 @@
         android:id="@+id/photo_sellermarket_album"
         android:layout_width="match_parent"
         android:layout_height="152dp"
+        android:scaleType="centerCrop"
         android:background="@android:color/darker_gray"/>
     <TextView
        android:layout_marginTop="5dp"

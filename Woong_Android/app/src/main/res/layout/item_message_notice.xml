@@ -12,13 +12,14 @@
         android:background="@color/colorPastel"
         android:text="현듀 마켓"
         android:textColor="#ffffff"/>
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:layout_marginLeft="10dp"
         android:id="@+id/profileimg_message_notice"
         android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="#bcbcbc"/>
+        android:src="#bcbcbc"/>
     <RelativeLayout
         android:paddingLeft="10dp"
         android:layout_centerVertical="true"
