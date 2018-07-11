@@ -27,17 +27,19 @@
         </activity>
         <activity android:name=".map.location_register.LocationSearchActivity" />
         <activity android:name=".login.LoginActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".join.consumer.TermsActivity" />
         <activity android:name=".join.consumer.Join1Activity" />
         <activity android:name=".join.consumer.Join2Activity" />
         <activity android:name=".join.consumer.AllergyActivity" />
-        <activity android:name=".splash.SplashActivity" />
+        <activity android:name=".splash.SplashActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".map.MapActivity" >
 
         </activity>
