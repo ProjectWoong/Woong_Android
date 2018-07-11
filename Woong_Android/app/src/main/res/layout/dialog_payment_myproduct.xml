@@ -2,32 +2,52 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/dialog_background"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="279dp"
+    android:layout_height="434dp">
 
-
-    <TextView
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="귀여운 웅이사진"/>
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="161dp"
+            android:layout_height="218dp"
+            android:src="@drawable/payment_fail_character"/>
 
-    <TextView
-        android:layout_centerInParent="true"
-        android:layout_above="@+id/btn_ok_pmdialog"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:text="죄송합니다. 서비스 준비 중 입니다."/>
-    <TextView
-        android:id="@+id/btn_ok_pmdialog"
-        android:layout_centerInParent="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="60dp"
-        android:gravity="center"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="#ffffff"
-        android:text="확인"/>
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/nanum_bold"
+            android:textSize="15dp"
+            android:textColor="#1C2320"
+            android:layout_above="@+id/btn_ok_pmdialog"
+            android:layout_marginTop="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="죄송합니다"/>
 
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/nanum_bold"
+            android:textSize="15dp"
+            android:textColor="#1C2320"
+            android:layout_marginTop="5dp"
+            android:layout_above="@+id/btn_ok_pmdialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서비스 준비중입니다"/>
+        <TextView
+            android:id="@+id/btn_ok_pmdialog"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:layout_width="188dp"
+            android:layout_height="48dp"
+            android:background="@drawable/green_round_button"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            android:fontFamily="@font/nanum_extrabold"
+            android:text="확인"/>
+    </LinearLayout>
 </RelativeLayout>

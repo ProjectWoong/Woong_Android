@@ -19,10 +19,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             btn_home_main ->{
                 clearSelected()
                 btn_home_main.isSelected = true
-<<<<<<< HEAD
 //                replaceFragment(HomeMain())
-=======
->>>>>>> 123caef306f8fa4b7b06544985d260756e2d74ec
                 replaceFragment(HomeMain())
                 // 판매자 마켓 테스트용 임시 인텐트
 //                val intent = Intent(applicationContext, SellerMarketActivity::class.java)

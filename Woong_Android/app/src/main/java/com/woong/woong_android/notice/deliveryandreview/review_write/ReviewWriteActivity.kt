@@ -114,8 +114,8 @@ class ReviewWriteActivity : AppCompatActivity(),RatingBar.OnRatingBarChangeListe
 
         var wm : WindowManager.LayoutParams = review_register_dialog.window.attributes
         wm.copyFrom(review_register_dialog.window.attributes)
-        wm.width = width-200
-        wm.height = height-600
+//        wm.width = width-200
+//        wm.height = height-600
 
 
         btn_register_review.setOnClickListener {

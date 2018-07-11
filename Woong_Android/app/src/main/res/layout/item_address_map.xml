@@ -1,32 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:paddingVertical="13dp">
     <ImageView
         android:id="@+id/iv_pin_map"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:background="@color/colorPrimaryDark"/>
+        android:layout_width="12dp"
+        android:layout_height="16dp"
+        android:src="@drawable/setting_location_2_location_icon"/>
     <TextView
+        android:fontFamily="@font/nanum_regular"
+        android:textSize="16dp"
+        android:textColor="#1C2320"
         android:id="@+id/tv_address_map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/iv_pin_map"
         android:layout_marginLeft="10dp"
         android:text="마포구 상수동 72-1"/>
-
     <TextView
+        android:id="@+id/tv_road_map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/tv_address_map"
         android:layout_below="@+id/tv_address_map"
-        android:textSize="12sp"
-        android:layout_marginTop="5dp"
-        android:text="[도로명] 와우산로 94" />
+        android:textSize="13dp"
+        android:fontFamily="@font/nanum_regular"
+        android:textColor="#ADADAD"
+        android:layout_marginTop="7dp"
+        android:text="[도로명] " />
+    <TextView
+
+        android:layout_toRightOf="@+id/tv_road_map"
+        android:layout_alignTop="@+id/tv_road_map"
+        android:id="@+id/tv_road_name_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_address_map"
+        android:textSize="13dp"
+        android:fontFamily="@font/nanum_regular"
+        android:textColor="#ADADAD"
+        android:text="와우산로 94" />
     <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_alignParentRight="true"
-        android:background="@color/colorAccent"/>
+        android:layout_centerVertical="true"
+        android:src="@drawable/setting_location_2_big_x"/>
 </RelativeLayout>

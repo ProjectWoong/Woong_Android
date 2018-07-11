@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".myproduct.payment.PaymentActivity">
+    tools:context=".myproduct.payment.PaymentActivity"
+    android:background="#FFFFFF">
     <RelativeLayout
         android:id="@+id/top_payment"
         android:gravity="center"
         android:background="@color/colorPrimaryDark"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="40dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_extrabold"
+            android:textSize="17dp"
             android:textColor="#ffffff"
             android:text="결제 페이지"/>
 
@@ -28,33 +31,52 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <RelativeLayout
-                android:paddingRight="10dp"
-                android:paddingLeft="10dp"
+                android:paddingHorizontal="15dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="54dp">
                 <TextView
+                    android:id="@+id/tv_final_order"
                     android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="최종 주문(배송비포함)"/>
+                    android:fontFamily="@font/nanum_extrabold"
+                    android:textSize="16dp"
+                    android:text="최종 주문"/>
+                <TextView
+                    android:layout_toRightOf="@+id/tv_final_order"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanum_bold"
+                    android:textSize="14dp"
+                    android:text="(배송비포함)"/>
                <RelativeLayout
                    android:layout_centerVertical="true"
                    android:layout_alignParentRight="true"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content">
                    <TextView
+                       android:fontFamily="@font/nanum_extrabold"
+                       android:textColor="#237A59"
+                       android:textSize="20dp"
                        android:layout_toLeftOf="@+id/num_total_payment"
-                       android:layout_width="20dp"
+                       android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="총"
+                       android:text="총 "
                        />
                    <TextView
+                       android:fontFamily="@font/nanum_extrabold"
+                       android:textColor="#237A59"
+                       android:textSize="20dp"
                        android:id="@+id/num_total_payment"
                        android:layout_toLeftOf="@+id/won_payment"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:text="28800"/>
                    <TextView
+                       android:fontFamily="@font/nanum_extrabold"
+                       android:textColor="#237A59"
+                       android:textSize="20dp"
                        android:layout_alignParentRight="true"
                        android:id="@+id/won_payment"
                        android:layout_width="wrap_content"
@@ -64,173 +86,236 @@
             </RelativeLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#ebebeb"/>
+                android:layout_height="0.5dp"
+                android:background="#ADADAD"/>
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_payment_myproduct"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:nestedScrollingEnabled="false"/>
-            <RelativeLayout
-                android:paddingRight="10dp"
-                android:paddingLeft="10dp"
+            <LinearLayout
+                android:paddingHorizontal="15dp"
                 android:layout_width="match_parent"
-                android:layout_height="150dp">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
                 <TextView
+                    android:fontFamily="@font/nanum_bold"
+                    android:textSize="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#707070"
                     android:text="배달 정보"/>
                 <RelativeLayout
+                    android:layout_marginTop="13dp"
                     android:layout_alignParentBottom="true"
                     android:layout_width="match_parent"
-                    android:layout_height="125dp">
+                    android:layout_height="wrap_content">
                     <TextView
+                        android:fontFamily="@font/nanum_bold"
+                        android:textSize="15dp"
+                        android:textColor="#1C2320"
                         android:id="@+id/lotnum_address_payment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="마포구 상수동 72-1 "/>
                     <TextView
+                        android:fontFamily="@font/nanum_bold"
+                        android:textSize="13dp"
+                        android:textColor="#ADADAD"
                         android:layout_alignParentRight="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="변경"/>
                     <TextView
+                        android:fontFamily="@font/nanum_regular"
+                        android:textSize="13dp"
                         android:id="@+id/road_payment"
                         android:layout_below="@+id/lotnum_address_payment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#bcbcbc"
-                        android:text="[도로명]"/>
+                        android:textColor="#707070"
+                        android:layout_marginTop="7dp"
+                        android:text="[도로명] "/>
                     <TextView
                         android:layout_below="@+id/lotnum_address_payment"
                         android:layout_toRightOf="@+id/road_payment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#bcbcbc"
+                        android:fontFamily="@font/nanum_regular"
+                        android:textSize="13dp"
+                        android:textColor="#707070"
+                        android:layout_alignBaseline="@+id/road_payment"
                         android:text="와우산로 94"/>
-                    <LinearLayout
-                        android:layout_alignParentBottom="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="85dp"
-                        android:orientation="vertical">
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="15sp"
-                            android:textColorHint="#bcbcbc"
-                            android:hint="010-1234-5678"/>
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="15sp"
-                            android:textColorHint="#bcbcbc"
-                            android:hint="요청사항을 입력하세요(최대 30자 이내)"/>
-                    </LinearLayout>
-
                 </RelativeLayout>
-
-            </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="16dp"
+                    android:layout_width="330dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/white_edge_round_button">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColorHint="#bcbcbc"
+                        android:background="@null"
+                        android:layout_marginLeft="15dp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/nanum_bold"
+                        android:hint="010-1234-5678"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="330dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/white_edge_round_button">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColorHint="#bcbcbc"
+                        android:layout_marginLeft="15dp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/nanum_bold"
+                        android:hint="요청사항을 입력하세요(최대 30자 이내)"
+                        android:background="@null"/>
+                </RelativeLayout>
+            </LinearLayout>
             <View
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#ebebeb"/>
+                android:layout_height="0.5dp"
+                android:background="#ADADAD"/>
 
-                <TextView
-                    android:paddingRight="10dp"
-                    android:paddingLeft="10dp"
+            <TextView
+                android:layout_marginTop="20dp"
+                android:paddingLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="결제 수단"
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="15dp"
+                android:textColor="#707070"
+                />
+            <LinearLayout
+                android:layout_marginVertical="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/btn_payment_kakao"
+                    android:layout_weight="1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="결제 수단"
-                    />
-                <LinearLayout
-                    android:paddingTop="10dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:orientation="horizontal">
-                    <RelativeLayout
-                        android:id="@+id/btn_payment_kakao"
-                        android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_centerHorizontal="true"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
                         <ImageView
-
                             android:layout_centerHorizontal="true"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@color/colorPastel"/>
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/payment_kakao"/>
                         <TextView
-
-                          android:layout_centerHorizontal="true"
-                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/nanum_bold"
+                            android:textColor="#ADADAD"
+                            android:layout_centerHorizontal="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="카카오페이"/>
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:id="@+id/btn_payment_naver"
-                        android:layout_weight="1"
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/btn_payment_naver"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_centerHorizontal="true"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
                         <ImageView
                             android:layout_centerHorizontal="true"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@color/colorPastel"/>
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/payment_naver"/>
                         <TextView
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/nanum_bold"
+                            android:textColor="#ADADAD"
                             android:layout_centerHorizontal="true"
-                            android:layout_alignParentBottom="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="네이버페이"/>
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:id="@+id/btn_payment_account"
-                        android:layout_weight="1"
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/btn_payment_account"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_centerHorizontal="true"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
                         <ImageView
                             android:layout_centerHorizontal="true"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@color/colorPastel"/>
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/payment_3"/>
                         <TextView
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/nanum_bold"
+                            android:textColor="#ADADAD"
                             android:layout_centerHorizontal="true"
-                            android:layout_alignParentBottom="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="계좌이체"/>
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:id="@+id/btn_payment_card"
-                        android:layout_weight="1"
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/btn_payment_card"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_centerHorizontal="true"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
                         <ImageView
                             android:layout_centerHorizontal="true"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@color/colorPastel"/>
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/payment_visa"/>
                         <TextView
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/nanum_bold"
+                            android:textColor="#ADADAD"
                             android:layout_centerHorizontal="true"
-                            android:layout_alignParentBottom="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="카드결제"/>
-                    </RelativeLayout>
-                </LinearLayout>
-
-
+                        android:text="카드결제"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
     <RelativeLayout
         android:id="@+id/btn_pay_myproduct"
         android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:background="#227958"
+        android:background="#529C77"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="50dp">
         <TextView
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/nanum_bold"
+            android:textSize="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="결제하기"
