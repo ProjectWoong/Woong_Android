@@ -3,6 +3,8 @@ package com.woong.woong_android.join.consumer
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import com.woong.woong_android.R
@@ -30,16 +32,16 @@ class Join1Activity : AppCompatActivity() {
 
         //Year Spinner
         spnYear.adapter = adapterYear
-        /*
-        spnYear.onItemSelectedListener = object:AdapterView.OnItemSelectedListener {
+
+        spnYear.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
             }
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
             }
-        }*/
+        }
 
         //Month Spinner
         spnMonth.adapter = adapterMonth
