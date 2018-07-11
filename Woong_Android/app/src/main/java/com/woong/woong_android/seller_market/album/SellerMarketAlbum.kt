@@ -49,14 +49,6 @@ class SellerMarketAlbum: Fragment() {
             }
 
         })
-<<<<<<< HEAD
-
-
-
-
-
-=======
->>>>>>> 1159f1ae652d5a53355a99b44680901b6e7680ad
         return v
     }
 }
