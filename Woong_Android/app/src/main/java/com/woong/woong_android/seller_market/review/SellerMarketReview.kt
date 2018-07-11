@@ -12,7 +12,6 @@ import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.seller_market.adapter.SellerMarketReviewAdapter
 import com.woong.woong_android.seller_market.get.GetMarketReviewResponse
 import com.woong.woong_android.seller_market.get.GetMarketReviewResponseData
-import com.woong.woong_android.seller_market.review.data.SellerMarketReviewData
 import kotlinx.android.synthetic.main.fragment_sellermarket_review.*
 import kotlinx.android.synthetic.main.fragment_sellermarket_review.view.*
 import kotlinx.android.synthetic.main.item_sellermarket_review.*

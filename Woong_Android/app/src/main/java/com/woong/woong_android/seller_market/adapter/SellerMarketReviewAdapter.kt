@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.woong.woong_android.R
 import com.woong.woong_android.seller_market.get.GetMarketReviewResponseData
-import com.woong.woong_android.seller_market.review.data.SellerMarketReviewData
 import com.woong.woong_android.seller_market.viewholder.SellerMarketReviewViewHolder
 
 class SellerMarketReviewAdapter(private var reviewItems:ArrayList<GetMarketReviewResponseData>,var flag : Int):RecyclerView.Adapter<SellerMarketReviewViewHolder>() {
@@ -18,7 +17,10 @@ class SellerMarketReviewAdapter(private var reviewItems:ArrayList<GetMarketRevie
         if(flag == 1){
              return reviewItems.size
         }else {
-            return 3
+            if(reviewItems.size==1 || reviewItems.size==2){
+                return reviewItems.size
+            }else
+                return 3
         }
 
     }

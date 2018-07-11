@@ -9,6 +9,7 @@ import android.view.View
 import com.woong.woong_android.my.MyPage
 import com.woong.woong_android.home.main.HomeMain
 import com.woong.woong_android.market.Market
+import com.woong.woong_android.market.market_usertoken.user_token
 import com.woong.woong_android.myproduct.MyProduct
 import com.woong.woong_android.notice.Notice
 import com.woong.woong_android.seller_market.SellerMarketActivity
@@ -16,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     val bundle = Bundle()
+    var user_token = ""
     override fun onClick(p0: View?) {
         when(p0){
             btn_home_main ->{
@@ -32,6 +34,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             btn_market_main ->{
                 clearSelected()
                 btn_market_main.isSelected = true
+                bundle.putString("user_token",user_token)
                 replaceFragment(Market())
             }
             btn_myproduct_main ->{
@@ -56,6 +59,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        user_token = intent.getStringExtra("user_token")
+
         flag = intent.getIntExtra("address_flag",0)
         if(flag == 1){
             var re_address = intent.getStringExtra("search_address")
@@ -64,6 +69,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             bundle.putInt("flag",1)
             HomeMain().arguments = bundle
         }
+        bundle.putString("user_token",user_token)
         addFragment(HomeMain())
 
         btn_home_main.isSelected = true
@@ -89,7 +95,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     fun replaceFragment(fragment: Fragment) {
         val fm = supportFragmentManager
         val transaction = fm.beginTransaction()
-
+        fragment.arguments = bundle
         transaction.replace(R.id.frame_fragment_main,fragment)
         transaction.addToBackStack(null)
         transaction.commit()
