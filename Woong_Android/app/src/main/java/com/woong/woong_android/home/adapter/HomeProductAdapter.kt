@@ -2,6 +2,7 @@ package com.woong.woong_android.home.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import com.woong.woong_android.R
 import com.woong.woong_android.home.submenu.data.HomeProductData
@@ -11,9 +12,15 @@ import com.woong.woong_android.myproduct.viewholder.MyProductBookmarkViewHolder
 
 class HomeProductAdapter(private var productItems : ArrayList<HomeProductData>) : RecyclerView.Adapter<HomeProductViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeProductViewHolder {
+    private lateinit var onItemClick : View.OnClickListener
 
+    fun setOnItemClickListener(l : View.OnClickListener){
+        onItemClick = l
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeProductViewHolder {
         var view = LayoutInflater.from(parent.context).inflate(R.layout.item_product_home,parent,false)
+        view.setOnClickListener(onItemClick)
         return HomeProductViewHolder(view)
     }
 
