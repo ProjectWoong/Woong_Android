@@ -13,11 +13,13 @@
             android:orientation="vertical"
             android:layout_margin="25dp">
             <ImageView
+                android:id="@+id/iv_product_productdetail"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:background="@android:color/darker_gray"
                 android:layout_marginBottom="10dp"/>
             <TextView
+                android:id="@+id/name_item_productdetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="홍감자"
@@ -26,6 +28,7 @@
                 android:textSize="20sp"
                 android:layout_marginBottom="10dp"/>
             <TextView
+                android:id="@+id/info_item_productdetail"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
@@ -37,6 +40,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginBottom="5dp"/>
             <TextView
+                android:id="@+id/cook_item_productdetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="감자조림, 감자조림, 감자튀김"
@@ -48,6 +52,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginBottom="5dp"/>
             <TextView
+                android:id="@+id/maintain_item_productdetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="직사광선이 없는 서늘한 곳에 보관해주세요."
@@ -59,10 +64,11 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="1.5"
                     android:text="포장단위별 용량,수량, 크기"
                     android:textColor="@color/colorPrimaryDark"/>
                 <TextView
+                    android:id="@+id/weight_item_productdetail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -78,10 +84,11 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="1.5"
                     android:text="제조연월일"
                     android:textColor="@color/colorPrimaryDark"/>
                 <TextView
+                    android:id="@+id/manufacture_item_productdetail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -97,10 +104,11 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="1.5"
                     android:text="유통기한"
                     android:textColor="@color/colorPrimaryDark"/>
                 <TextView
+                    android:id="@+id/expiration_item_productdetail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -116,10 +124,11 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="1.5"
                     android:text="관련법상 표시사항"
                     android:textColor="@color/colorPrimaryDark"/>
                 <TextView
+                    android:id="@+id/related_item_productdetail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -135,10 +144,11 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="1.5"
                     android:text="생산자 이름"
                     android:textColor="@color/colorPrimaryDark"/>
                 <TextView
+                    android:id="@+id/producer_item_productdetail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

@@ -4,9 +4,11 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
+import com.woong.woong_android.seller_market.get.GetSellerMarketProductResponseData
 
-class SellerMarketProductAdapter(var productItems : ArrayList<SellerMarketProductItem>) : RecyclerView.Adapter<SellerMarketProductViewHolder>() {
+class SellerMarketProductAdapter(var productItems : ArrayList<GetSellerMarketProductResponseData>,var requestManager: RequestManager) : RecyclerView.Adapter<SellerMarketProductViewHolder>() {
     private lateinit var onItemClick : View.OnClickListener
 
     fun setOnItemClickListener(l : View.OnClickListener) {
@@ -22,10 +24,9 @@ class SellerMarketProductAdapter(var productItems : ArrayList<SellerMarketProduc
     override fun getItemCount(): Int = productItems.size
 
     override fun onBindViewHolder(holder: SellerMarketProductViewHolder, position: Int) {
-        holder.productimg.setImageResource(productItems[position].productimg)
-        holder.marketname.text = productItems[position].marketname
-        holder.productname.text = productItems[position].productname
-        holder.unitnum.text = productItems[position].unitnum
-        holder.cost.text = productItems[position].cost
+        requestManager.load(productItems[position].file_key).into(holder.productimg)
+        holder.marketname.text = productItems[position].market_name
+        holder.productname.text =productItems[position].item_name
+        holder.cost_per_unit.text = productItems[position].packaging
     }
 }
