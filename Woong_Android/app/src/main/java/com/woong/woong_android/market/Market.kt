@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.woong.woong_android.R
 import com.woong.woong_android.market.adapter.MarketPagerAdpter
+import com.woong.woong_android.market_usertoken
 import kotlinx.android.synthetic.main.fragment_market_tab.view.*
 
 class Market :android.support.v4.app.Fragment() {
