@@ -1,6 +1,6 @@
 package com.woong.woong_android.home.submenu.get
 
-data class GetSearchItemResponseData (
+data class GetItemResponseData (
         var item_id:Int,
         var market_id:Int,
         var main_id:Int,

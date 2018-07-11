@@ -7,6 +7,7 @@ import com.woong.woong_android.seller_market.get.*
 import com.woong.woong_android.Login.post.PostSignInAppResponse
 import com.woong.woong_android.Login.post.PostSignInAppResponseData
 import com.woong.woong_android.home.submenu.get.GetSearchItemResponse
+import com.woong.woong_android.home.submenu.get.GetSubItemResponse
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -65,4 +66,9 @@ interface NetworkService {
     @GET("/item/search") // 상품 검색하기
     fun getSearchItem(@Header ("usertoken")user_token: String?,
                       @Query ("keyword")keyword: String?) :Call<GetSearchItemResponse>
+
+    @GET("/category/main/{main_id}/sub/{sub_id}")
+    fun getSubItem(@Header ("usertoken")user_token: String?,
+                   @Path("main_id") main_id: Int,
+                   @Path("sub_id")sub_id: Int) : Call<GetSubItemResponse>
 }
