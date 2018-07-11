@@ -3,11 +3,12 @@ package com.woong.woong_android.market.adapter
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
-import com.woong.woong_android.market.data.MarketNearbyData
 import com.woong.woong_android.market.viewholder.MarketNearbyViewHolder
+import com.woong.woong_android.seller_market.get.GetNearMarketListResponseData
 
-class MarketNearbyAdapter(private var nearbyItems : ArrayList<MarketNearbyData>) : RecyclerView.Adapter<MarketNearbyViewHolder>() {
+class MarketNearbyAdapter(private var nearbyItems : ArrayList<GetNearMarketListResponseData>,var requestManager: RequestManager) : RecyclerView.Adapter<MarketNearbyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MarketNearbyViewHolder {
         var view = LayoutInflater.from(parent.context).inflate(R.layout.item_market_mymarket,parent,false)
@@ -17,11 +18,14 @@ class MarketNearbyAdapter(private var nearbyItems : ArrayList<MarketNearbyData>)
     override fun getItemCount(): Int = nearbyItems.size
 
     override fun onBindViewHolder(nearbyViewHolder: MarketNearbyViewHolder, position: Int) {
-        nearbyViewHolder.img.setImageResource(nearbyItems[position].nb_img)
-        nearbyViewHolder.name.text = nearbyItems[position].nb_name
-        nearbyViewHolder.address.text = nearbyItems[position].nb_address
-        nearbyViewHolder.tag1.text = nearbyItems[position].nb_tag1
-        nearbyViewHolder.tag2.text = nearbyItems[position].nb_tag2
-        nearbyViewHolder.tag3.text = nearbyItems[position].nb_tag3
+        requestManager.load(nearbyItems[position].title_image_key).into(nearbyViewHolder.img)
+        nearbyViewHolder.name.text = nearbyItems[position].market_name
+        nearbyViewHolder.address.text = nearbyItems[position].market_address
+
+        var tag : List<String> =nearbyItems[position].tag_name!!.split(",")
+
+        nearbyViewHolder.tag1.text = "#"+tag[0]
+        nearbyViewHolder.tag2.text = "#"+tag[1]
+        nearbyViewHolder.tag3.text = "#"+tag[2]
     }
 }
