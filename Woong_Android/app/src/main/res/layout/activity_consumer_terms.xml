@@ -22,6 +22,7 @@
                 android:layout_height="22dp"
                 android:src="@drawable/consumer_login_agree_logo"/>
             <TextView
+                android:layout_marginTop="12dp"
                 android:fontFamily="@font/nanum_bold"
                 android:textSize="16dp"
                 android:textColor="#1C2320"
@@ -58,11 +59,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="웅아감자팔자 이용약관 동의"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="7dp"/>
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/draw_edge">
+                android:background="@drawable/draw_edge"
+                android:padding="5dp">
                 <TextView
                     android:textSize="12dp"
                     android:fontFamily="@font/nanum_regular"
@@ -85,11 +87,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="개인정보 수집 및 이용약관 동의"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="7dp"/>
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/draw_edge">
+                android:background="@drawable/draw_edge"
+                android:padding="5dp">
                 <TextView
                     android:textSize="12dp"
                     android:fontFamily="@font/nanum_regular"
@@ -113,11 +116,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="위치정보 이용약관 동의"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="7dp"/>
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/draw_edge">
+                android:background="@drawable/draw_edge"
+                android:padding="5dp">
                 <TextView
                     android:textSize="12dp"
                     android:fontFamily="@font/nanum_regular"

@@ -2,34 +2,42 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
 android:layout_height="wrap_content">
-    <ImageButton
+    <ImageView
         android:id="@+id/ib_message_title"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:background="@drawable/ic_launcher_background"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/market_thing_details_topbar_message"
         android:layout_centerVertical="true"
         />
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/ib_message_title"
-        android:layout_toLeftOf="@+id/ib_cart_title">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/tv_storename_title"
+            android:fontFamily="@font/nanum_extrabold"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_gravity="center"
-            android:text="현듀곤듀"
+            android:text=""
             android:textColor="#ffffff"
-            android:textSize="18sp" />
+            android:textSize="17sp" />
     </RelativeLayout>
     <ImageButton
         android:id="@+id/ib_cart_title"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:background="@drawable/ic_launcher_background"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/market_thing_details_topbar_cart"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/ib_cancel_title"/>
+    <ImageButton
+        android:id="@+id/ib_cancel_title"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/market_thing_details_topbar_x"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/view_no_title"/>
     <View

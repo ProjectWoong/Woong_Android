@@ -1,58 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="130dp">
+    android:layout_height="111dp"
+    android:orientation="vertical">
     <TextView
         android:id="@+id/title_message_notice"
-        android:paddingLeft="10dp"
+        android:paddingLeft="15dp"
         android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="25dp"
-        android:background="@color/colorPastel"
+        android:background="#237A59"
         android:text="현듀 마켓"
-        android:textColor="#ffffff"/>
+        android:textColor="#ffffff"
+        android:fontFamily="@font/nanum_bold"
+        android:textSize="13dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_marginLeft="10dp"
         android:id="@+id/profileimg_message_notice"
-        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
         android:scaleType="centerCrop"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="#bcbcbc"/>
     <RelativeLayout
-        android:paddingLeft="10dp"
+        android:paddingLeft="13dp"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/profileimg_message_notice"
         android:layout_width="250dp"
-        android:layout_height="40dp">
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical">
         <TextView
+            android:fontFamily="@font/nanum_regular"
+            android:textSize="15dp"
+            android:textColor="#707070"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="제일 마지막으로 보내진 채팅"/>
+            android:text=""/>
         <TextView
+            android:fontFamily="@font/nanum_regular"
+            android:textSize="9dp"
+            android:textColor="#707070"
             android:layout_alignParentBottom="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="몇년몇월몇일 몇시 몇분"/>
+            android:text=""/>
     </RelativeLayout>
-    <RelativeLayout
-        android:paddingRight="10dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_width="70dp"
-        android:layout_height="50dp">
+    </LinearLayout>
         <TextView
             android:id="@+id/alarm_message_notice"
             android:gravity="center"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@color/colorPastel"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/alarm_pick_circle"
+            android:fontFamily="@font/nanum_bold"
+            android:textSize="12dp"
             android:textColor="#ffffff"
-            android:text="2"/>
-
+            android:layout_alignParentRight="true"
+            android:text=""
+            />
     </RelativeLayout>
-
-</RelativeLayout>
+</LinearLayout>
