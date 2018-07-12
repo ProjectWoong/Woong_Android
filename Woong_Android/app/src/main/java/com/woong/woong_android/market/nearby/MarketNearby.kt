@@ -17,6 +17,8 @@ import com.woong.woong_android.seller_market.get.GetNearMarketListResponseData
 import com.woong.woong_android.woong_usertoken
 import kotlinx.android.synthetic.main.fragment_nearby_market.view.*
 
+
+
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

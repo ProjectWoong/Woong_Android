@@ -9,9 +9,8 @@ import com.woong.woong_android.Login.post.PostSignInAppResponseData
 import com.woong.woong_android.home.submenu.get.GetSearchItemResponse
 import com.woong.woong_android.home.submenu.get.GetSubItemResponse
 import retrofit2.http.*
-
 import retrofit2.Call
-import retrofit2.http.*
+
 
 interface NetworkService {
     //주소를 키워드로 검색시 연관 주소 목록들 가져오기 (손대지 마세요!!)
