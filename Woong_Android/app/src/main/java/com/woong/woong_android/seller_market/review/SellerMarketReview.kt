@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
 import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.network.NetworkService
@@ -23,6 +24,7 @@ class SellerMarketReview: Fragment() {
     lateinit var sellerMarketReviewAdapter : SellerMarketReviewAdapter
     lateinit var reviewItems : ArrayList<GetMarketReviewResponseData>
     lateinit var networkService: NetworkService
+    lateinit var requestManager: RequestManager
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_sellermarket_review,container,false)
@@ -45,12 +47,12 @@ class SellerMarketReview: Fragment() {
 
                     var avr = (first+second+third+fourth)/4
 
-                    v.avr_rating_marketreview.numStars = avr
+                    v.avr_rating_marketreview.rating = avr.toFloat()
 
-                    v.first_rating_marketreview.numStars = first
-                    v.second_rating_marketreview.numStars = second
-                    v.third_rating_marketreview.numStars = third
-                    v.fourth_rating_marketreview.numStars = fourth
+                    v.first_rating_marketreview.rating = first.toFloat()
+                    v.second_rating_marketreview.rating = second.toFloat()
+                    v.third_rating_marketreview.rating = third.toFloat()
+                    v.fourth_rating_marketreview.rating = fourth.toFloat()
 
                     reviewItems = response.body().reviews
                     sellerMarketReviewAdapter = SellerMarketReviewAdapter(reviewItems,0)
