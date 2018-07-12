@@ -1,4 +1,4 @@
-package com.woong.woong_android.home.submenu.product
+package com.woong.woong_android.home.product
 
 import android.content.Context
 import android.content.Intent
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,9 +17,10 @@ import com.bumptech.glide.RequestManager
 import com.woong.woong_android.*
 import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.home.adapter.HomeProductAdapter
-import com.woong.woong_android.home.submenu.get.GetSearchItemResponse
-import com.woong.woong_android.home.submenu.get.GetItemResponseData
-import com.woong.woong_android.home.submenu.get.GetSubItemResponse
+import com.woong.woong_android.home.get.GetSearchItemResponse
+import com.woong.woong_android.home.get.GetItemResponseData
+import com.woong.woong_android.home.get.GetSubItemResponse
+import com.woong.woong_android.home.post.PostFavoriteResponse
 import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.seller_market.ResizeAnimation
 import com.woong.woong_android.seller_market.SellerMarketActivity
@@ -34,11 +36,13 @@ class HomeProduct : Fragment(), View.OnClickListener{
     lateinit var homeProductItems: ArrayList<GetItemResponseData>
 
     override fun onClick(v: View?) {
-        val intent : Intent = Intent(context, SellerMarketActivity::class.java)
+        val intent = Intent(context, SellerMarketActivity::class.java)
+
         SellerIdx.id = 1
         var idx : Int = this.rv_product_product.getChildAdapterPosition(v)
         woong_marketinfo.market_id = homeProductItems[idx].market_id
         woong_marketinfo.item_id = homeProductItems[idx].item_id
+
         startActivity(intent)
     }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

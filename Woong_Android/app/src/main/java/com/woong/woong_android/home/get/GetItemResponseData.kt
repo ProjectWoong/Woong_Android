@@ -1,4 +1,4 @@
-package com.woong.woong_android.home.submenu.get
+package com.woong.woong_android.home.get
 
 data class GetItemResponseData (
         var item_id:Int,
