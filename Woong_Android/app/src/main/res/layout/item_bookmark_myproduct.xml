@@ -5,8 +5,8 @@
     android:layout_height="wrap_content">
     <LinearLayout
         android:background="@drawable/rv_item_image"
-        android:layout_width="160dp"
-        android:layout_height="220dp"
+        android:layout_width="165dp"
+        android:layout_height="224dp"
         android:layout_marginBottom="20dp"
         android:elevation="3dp"
         android:layout_centerInParent="true"
@@ -24,28 +24,35 @@
             <ImageView
                 android:id="@+id/btn_bookmark_myproduct"
                 android:layout_alignParentBottom="true"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_margin="10dp"
-                android:background="#000000"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="0dp"
+                android:src="@drawable/my_pick_heart"/>
             <ImageView
                 android:id="@+id/btn_cart_myproduct"
                 android:layout_alignParentRight="true"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_margin="10dp"
-                android:background="#000000"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="0dp"
+                android:src="@drawable/my_pick_cart"/>
         </RelativeLayout>
         <RelativeLayout
             android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
             <TextView
+                android:fontFamily="@font/nanum_regular"
+                android:textSize="14sp"
+                android:textColor="#ADADAD"
                 android:id="@+id/sign"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="["/>
             <TextView
+                android:fontFamily="@font/nanum_regular"
+                android:textSize="14sp"
+                android:textColor="#ADADAD"
                 android:layout_toRightOf="@+id/sign"
                 android:id="@+id/marketname_bookmark_myproduct"
                 android:gravity="center"
@@ -56,6 +63,9 @@
 
 
             <TextView
+                android:fontFamily="@font/nanum_regular"
+                android:textSize="14sp"
+                android:textColor="#ADADAD"
                 android:layout_toRightOf="@+id/marketname_bookmark_myproduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,35 +74,51 @@
 
 
         <TextView
+            android:fontFamily="@font/nanumsquare_bold"
+            android:textSize="16sp"
+            android:textColor="#707070"
             android:id="@+id/productname_bookmark_myproduct"
             android:gravity="center"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="돼지 감자"/>
         <RelativeLayout
             android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
             <TextView
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="12sp"
+                android:textColor="#ADADAD"
                 android:id="@+id/unitnum_bookmark_myproduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"/>
             <TextView
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="12sp"
+                android:textColor="#ADADAD"
                 android:layout_toRightOf="@+id/unitnum_bookmark_myproduct"
                 android:id="@+id/unitname_bookmark_myproduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="kg"/>
             <TextView
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="12sp"
+                android:textColor="#ADADAD"
                 android:layout_toRightOf="@+id/unitname_bookmark_myproduct"
                 android:id="@+id/dang_bookmark_myproduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="당"/>
             <TextView
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="12sp"
+                android:textColor="#ADADAD"
                 android:id="@+id/cost_bookmark_myproduct"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/dang_bookmark_myproduct"
@@ -100,31 +126,43 @@
                 android:layout_height="wrap_content"
                 android:text="6600"/>
             <TextView
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="12sp"
+                android:textColor="#ADADAD"
                 android:layout_toRightOf="@+id/cost_bookmark_myproduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="원"/>
         </RelativeLayout>
         <RelativeLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:paddingTop="1dp"
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="12sp"
                 android:id="@+id/firsttag_bookmark_myproduct"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="74dp"
+                android:layout_height="23dp"
                 android:text="#당일배송"
-                android:background="#5fc1ad"
+                android:textAlignment="center"
+                android:background="@drawable/green_round_button"
                 android:textColor="#ffffff"/>
             <TextView
+                android:paddingTop="1dp"
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="12sp"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/firsttag_bookmark_myproduct"
                 android:id="@+id/secondtag_bookmark_myproduct"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="#당일배송"
-                android:background="#5fc1ad"
+                android:layout_width="74dp"
+                android:layout_height="23dp"
+                android:textAlignment="center"
+                android:text="#무료배송"
+                android:background="@drawable/green_round_button"
                 android:textColor="#ffffff"/>
         </RelativeLayout>
     </LinearLayout>
