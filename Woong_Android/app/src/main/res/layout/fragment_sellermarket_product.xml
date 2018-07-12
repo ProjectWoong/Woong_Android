@@ -11,18 +11,26 @@
         android:layout_margin="20dp">
         <TextView
             android:id="@+id/btn_sort_name_product"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
+            android:layout_width="62dp"
+            android:layout_height="28dp"
             android:textAlignment="center"
             android:text="이름순"
-            android:background="@color/colorPrimaryDark"
+            android:paddingTop="5dp"
+            android:fontFamily="@font/nanumsquare_bold"
+            android:textSize="12sp"
+            android:background="@drawable/market_thing_name"
             android:textColor="#FFFFFF"/>
         <TextView
+            android:background="@drawable/market_thing_high"
+            android:textColor="#ADADAD"
             android:id="@+id/btn_sort_best_product"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
+            android:layout_width="62dp"
+            android:paddingTop="5dp"
+            android:layout_height="match_parent"
             android:textAlignment="center"
-            android:text="최고인기"/>
+            android:text="최고인기"
+            android:fontFamily="@font/nanumsquare_bold"
+            android:textSize="12sp"/>
     </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_sellermarket_product"

@@ -38,7 +38,7 @@ class SellerMarketIntro: Fragment() {
                     var str:List<String> =response.body().data[0].tag_name!!.split(",")
                     tv_tag1_intro.text="#"+str[0]
                     tv_tag2_intro.text="#"+str[1]
-                    tv_tag3_intro.text="#"+str[2]
+                    //tv_tag3_intro.text="#"+str[2]
 
                     tv_hi_intro.text=response.body().data[0].market_info
 
