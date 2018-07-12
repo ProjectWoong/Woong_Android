@@ -6,16 +6,13 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
-import com.bumptech.glide.DrawableRequestBuilder
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
-import com.bumptech.glide.request.Request
 import com.woong.woong_android.*
 import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.home.adapter.HomeProductAdapter
@@ -130,15 +127,11 @@ class HomeProduct : Fragment(), View.OnClickListener{
         var requestManager: RequestManager = Glide.with(this)
 
         val getSubItem = networkService.getSubItem(woong_usertoken.user_token, main_id, sub_id)
-        Log.d("asdz","asdasd")
         getSubItem.enqueue(object: Callback<GetSubItemResponse>{
             override fun onFailure(call: Call<GetSubItemResponse>?, t: Throwable?) {
-                Log.d("asdx","asdasd")
             }
             override fun onResponse(call: Call<GetSubItemResponse>?, response: Response<GetSubItemResponse>?) {
                 if(response!!.isSuccessful){
-                    Log.d("asdc",TitleName.main_id.toString())
-                    Log.d("asdc",TitleName.sub_id.toString())
                     homeProductItems = response.body().data.item_info
                     homeProductAdapter = HomeProductAdapter(homeProductItems, requestManager)
                     homeProductAdapter.setOnItemClickListener(this@HomeProduct)
