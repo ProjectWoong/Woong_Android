@@ -1,6 +1,5 @@
 package com.woong.woong_android
 
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -9,15 +8,14 @@ import android.view.View
 import com.woong.woong_android.my.MyPage
 import com.woong.woong_android.home.main.HomeMain
 import com.woong.woong_android.market.Market
-import com.woong.woong_android.market.market_usertoken.user_token
 import com.woong.woong_android.myproduct.MyProduct
 import com.woong.woong_android.notice.Notice
-import com.woong.woong_android.seller_market.SellerMarketActivity
+import com.woong.woong_android.woong_usertoken.user_token
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     val bundle = Bundle()
-    var user_token = ""
+
     override fun onClick(p0: View?) {
         when(p0){
             btn_home_main ->{
@@ -56,7 +54,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        user_token = intent.getStringExtra("user_token")
+        //user_token = intent.getStringExtra("user_token")
+        var usertoken = woong_usertoken.user_token
 
         flag = intent.getIntExtra("address_flag",0)
         if(flag == 1){
@@ -66,7 +65,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             bundle.putInt("flag",1)
             HomeMain().arguments = bundle
         }
-        bundle.putString("user_token",user_token)
+        bundle.putString("user_token",usertoken)
         addFragment(HomeMain())
 
         btn_home_main.isSelected = true

@@ -29,8 +29,6 @@ class Join2Activity : AppCompatActivity() {
             val phone_p = Pattern.compile("(^[0-9]*\$)")
             val m = phone_p.matcher(phone)
 
-            val email_p = Pattern.compile("(^[_a-zA-Z0-9-\\\\.]+@[\\\\.a-zA-Z0-9-]+\\\\.[a-zA-Z]+\$"+")")
-            val email_m = email_p.matcher(email)
             Log.v("버쓰",birth)
             if(android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()&&m.matches()){
                 val intent = Intent(applicationContext,AllergyActivity::class.java)

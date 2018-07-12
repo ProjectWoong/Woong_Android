@@ -47,7 +47,7 @@
                 android:layout_below="@+id/tv_address_market"
                 android:textColor="#ffffff"
                 android:background="@color/colorPastel"
-                android:text="#유기농"/>
+                android:text=""/>
             <TextView
                 android:id="@+id/tv_tag2_market"
                 android:layout_width="wrap_content"
@@ -58,16 +58,7 @@
                 android:textColor="#ffffff"
                 android:background="@color/colorPastel"
                 android:layout_toRightOf="@+id/tv_tag1_market"
-                android:text="#유기농"/>
-            <TextView
-                android:id="@+id/tv_tag3_market"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_address_market"
-                android:textColor="#ffffff"
-                android:background="@color/colorPastel"
-                android:layout_toRightOf="@+id/tv_tag2_market"
-                android:text="#유기농"/>
+                android:text=""/>
         </RelativeLayout>
     </RelativeLayout>
     <View

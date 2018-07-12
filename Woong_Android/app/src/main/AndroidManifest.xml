@@ -32,7 +32,6 @@
         <activity android:name=".join.consumer.TermsActivity" />
         <activity android:name=".join.consumer.Join1Activity" />
         <activity android:name=".join.consumer.Join2Activity" />
-        <activity android:name=".join.consumer.AllergyActivity" />
         <activity android:name=".splash.SplashActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -54,6 +53,7 @@
         <activity android:name=".notice.message.chat.NoticeChatActivity" />
         <activity android:name=".notice.deliveryandreview.review_write.ReviewWriteActivity" />
         <activity android:name=".join.marketer.market.Enroll1SearchActivity" />
+        <activity android:name=".join.consumer.AllergyActivity"/>
         <activity android:name=".login.ConsumerLoginActivity" />
         <activity android:name=".login.MarketerLoginActivity" />
         <activity android:name=".seller_market.SellerMarketActivity" />

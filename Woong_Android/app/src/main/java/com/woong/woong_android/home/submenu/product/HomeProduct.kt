@@ -56,7 +56,7 @@ class HomeProduct : Fragment(), View.OnClickListener{
             btn_cart_product.visibility = View.INVISIBLE
             tv_cancel_product.visibility = View.VISIBLE
             Handler().postDelayed({
-                et_search_main.visibility = View.VISIBLE
+                et_search_product.visibility = View.VISIBLE
                 iv_searchico_product.visibility = View.VISIBLE
             }, dur)
         }
@@ -67,7 +67,7 @@ class HomeProduct : Fragment(), View.OnClickListener{
             iv_searchwide_product.startAnimation(rs)
             iv_searchwide_product.visibility = View.INVISIBLE
             iv_searchico_product.visibility = View.INVISIBLE
-            et_search_main.visibility = View.INVISIBLE
+            et_search_product.visibility = View.INVISIBLE
             Handler().postDelayed({
                 btn_search_product.visibility = View.VISIBLE
                 btn_cart_product.visibility = View.VISIBLE
