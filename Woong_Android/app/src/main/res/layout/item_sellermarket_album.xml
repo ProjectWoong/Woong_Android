@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="230dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
     <TextView
         android:gravity="center_vertical"
         android:fontFamily="@font/nanum_bold"
@@ -11,7 +12,7 @@
         android:id="@+id/date_sellermarket_album"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2018월 6월 27일"
+        android:text=""
         android:layout_marginLeft="15dp"
         android:layout_marginTop="14dp"
         android:layout_marginBottom="10dp"
@@ -23,14 +24,12 @@
         android:scaleType="centerCrop"
         android:background="@android:color/darker_gray"/>
     <TextView
-       android:layout_marginTop="5dp"
         android:gravity="center_vertical"
         android:id="@+id/content_sellermarket_album"
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:text="#내용을뭐라쓰징"
+        android:layout_height="wrap_content"
+        android:text=""
         android:textAlignment="center"
-        android:layout_marginBottom="5dp"/>
         android:fontFamily="@font/nanum_bold"
         android:textColor="#484848"
         android:textSize="13dp"

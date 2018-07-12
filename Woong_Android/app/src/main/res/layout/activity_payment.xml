@@ -214,7 +214,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:src="@drawable/payment_kakao"/>
@@ -222,7 +222,7 @@
                             android:layout_marginTop="12dp"
                             android:fontFamily="@font/nanum_bold"
                             android:textColor="#ADADAD"
-                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="카카오페이"/>
@@ -239,7 +239,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:src="@drawable/payment_naver"/>
@@ -247,7 +247,7 @@
                             android:layout_marginTop="12dp"
                             android:fontFamily="@font/nanum_bold"
                             android:textColor="#ADADAD"
-                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="네이버페이"/>
@@ -264,7 +264,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:src="@drawable/payment_3"/>
@@ -272,7 +272,7 @@
                             android:layout_marginTop="12dp"
                             android:fontFamily="@font/nanum_bold"
                             android:textColor="#ADADAD"
-                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="계좌이체"/>
@@ -289,7 +289,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:src="@drawable/payment_visa"/>
@@ -297,7 +297,7 @@
                             android:layout_marginTop="12dp"
                             android:fontFamily="@font/nanum_bold"
                             android:textColor="#ADADAD"
-                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                         android:text="카드결제"/>
