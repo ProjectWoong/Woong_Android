@@ -7,7 +7,9 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.Toast
 import com.woong.woong_android.R
+import com.woong.woong_android.home.submenu.TitleName.name
 import kotlinx.android.synthetic.main.activity_consumer_join1.*
 
 class Join1Activity : AppCompatActivity() {
@@ -30,51 +32,22 @@ class Join1Activity : AppCompatActivity() {
         //Year Spinner
         spnYear.adapter = adapterYear
 
-        var user_year = spnYear.selectedItem.toString()
-
-//        spnYear.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
-//            override fun onNothingSelected(parent: AdapterView<*>?) {
-//
-//            }
-//
-//            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-//
-//            }
-//        }
-
-
         //Month Spinner
         spnMonth.adapter = adapterMonth
 
-       var user_month = spnMonth.selectedItem.toString()
-        /*
-        spnMonth.onItemSelectedListener = object:AdapterView.OnItemSelectedListener {
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-        }
-        */
         //Day Spinner
         spnDay.adapter = adapterDay
-        var user_day = spnDay.selectedItem.toString()
-        /*
-        spnDay.onItemSelectedListener = object:AdapterView.OnItemSelectedListener {
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
 
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-        }*/
 
-        var birth = user_day+user_month+user_day
-        var name = name_join_consumer.text.toString()
+
+
         btn_next_consumer_join1.setOnClickListener {
+            var user_year = spnYear.selectedItem.toString()
+            var user_month = spnMonth.selectedItem.toString()
+            var user_day = spnDay.selectedItem.toString()
+
+            var birth = user_year+user_month+user_day
+            var name = name_join_consumer.text.toString()
             val intent = Intent(applicationContext, Join2Activity::class.java)
 
             intent.putExtra("birth",birth)
