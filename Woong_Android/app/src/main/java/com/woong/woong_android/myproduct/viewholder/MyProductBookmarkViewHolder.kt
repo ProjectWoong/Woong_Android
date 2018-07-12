@@ -16,4 +16,5 @@ class MyProductBookmarkViewHolder(itemView : View?) : RecyclerView.ViewHolder(it
     var firsttag : TextView = itemView!!.findViewById(R.id.firsttag_bookmark_myproduct) as TextView
     var secondtag : TextView = itemView!!.findViewById(R.id.secondtag_bookmark_myproduct) as TextView
     var favorite : ImageView = itemView!!.findViewById(R.id.btn_bookmark_myproduct) as ImageView
+    var cart : ImageView = itemView!!.findViewById(R.id.btn_cart_myproduct) as ImageView
 }

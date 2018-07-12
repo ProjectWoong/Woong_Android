@@ -4,12 +4,14 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
 import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.home.post.PostFavoriteResponse
 import com.woong.woong_android.myproduct.bookmark.MyProductBookMark
 import com.woong.woong_android.myproduct.get.GetFavoriteResponseData
+import com.woong.woong_android.myproduct.post.PostCartResponse
 import com.woong.woong_android.myproduct.viewholder.MyProductBookmarkViewHolder
 import com.woong.woong_android.woong_usertoken
 import retrofit2.Call
@@ -77,6 +79,17 @@ class MyProductBookmarkAdapter(private var bookmarkItems : ArrayList<GetFavorite
                     }
                 })
             }
+        }
+        bookmarkViewHolder.cart.setOnClickListener{
+            val postCart = networkService.postCart(woong_usertoken.user_token, bookmarkItems[position].item_id)
+            postCart.enqueue(object:Callback<PostCartResponse>{
+                override fun onFailure(call: Call<PostCartResponse>?, t: Throwable?) {
+                }
+
+                override fun onResponse(call: Call<PostCartResponse>?, response: Response<PostCartResponse>?) {
+                    Toast.makeText(it.context, "["+bookmarkItems[position].item_name+"] 을(를) 장바구니에 담았습니다.", Toast.LENGTH_SHORT).show()
+                }
+            })
         }
     }
 }
