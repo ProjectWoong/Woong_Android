@@ -225,6 +225,8 @@
             android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
 
         <Button
+            android:fontFamily="@font/nanumsquare_bold"
+            android:textSize="14sp"
             android:id="@+id/btn_show_more_review"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="34dp"

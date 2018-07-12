@@ -3,24 +3,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
     <RelativeLayout
+
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="38dp"
         android:background="@color/colorPrimaryDark">
-        <ImageView
+        <TextView
             android:id="@+id/tv_logo_market"
+            android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_extrabold"
+            android:textSize="17sp"
+            android:textColor="#FFFFFF"
+            android:text="마포구 서교동"/>
+
+        <ImageButton
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:background="@mipmap/ic_launcher_foreground"/>
-        <ImageButton
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/tv_logo_market"
+            android:src="@drawable/home_vegetable_under_more_white"/>
+        <ImageView
             android:id="@+id/btn_cart_market"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@color/colorPastel"
-            android:layout_marginRight="10dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/market_thing_details_topbar_cart"
+            android:layout_marginRight="20dp"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"/>
     </RelativeLayout>

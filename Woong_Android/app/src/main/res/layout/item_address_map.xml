@@ -12,7 +12,7 @@
         android:src="@drawable/setting_location_2_location_icon"/>
     <TextView
         android:fontFamily="@font/nanum_regular"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textColor="#1C2320"
         android:id="@+id/tv_address_map"
         android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/tv_address_map"
         android:layout_below="@+id/tv_address_map"
-        android:textSize="13dp"
+        android:textSize="13sp"
         android:fontFamily="@font/nanum_regular"
         android:textColor="#ADADAD"
         android:layout_marginTop="7dp"
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_address_map"
-        android:textSize="13dp"
+        android:textSize="13sp"
         android:fontFamily="@font/nanum_regular"
         android:textColor="#ADADAD"
         android:text="와우산로 94" />

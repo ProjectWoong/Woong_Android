@@ -32,7 +32,7 @@
                 android:fontFamily="@font/nanum_extrabold"
                 android:text="현듀마켓"
                 android:textColor="#707070"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
                     android:fontFamily="@font/nanumsquare_regular"
                     android:text="["
                     android:textColor="#ADADAD"
-                    android:textSize="14dp" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -53,7 +53,7 @@
                     android:fontFamily="@font/nanumsquare_regular"
                     android:text="서울시 마포구 와우산로"
                     android:textColor="#ADADAD"
-                    android:textSize="14dp" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -61,7 +61,7 @@
                     android:fontFamily="@font/nanumsquare_regular"
                     android:text="]"
                     android:textColor="#ADADAD"
-                    android:textSize="14dp" />
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
 

@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:textColor="#ffffff"
             android:layout_centerInParent="true"
-            android:textSize="17dp"
+            android:textSize="17sp"
             android:fontFamily="@font/nanum_extrabold"
             android:text="이주의 농부"/>
     </RelativeLayout>
@@ -29,7 +29,7 @@
                 android:id="@+id/iv_profile_thisweek"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                android:src="@drawable/mypage_profile"
+                android:src="@drawable/weekely_farmer_profile"
                 android:layout_marginTop="17dp"
                 android:layout_gravity="center_horizontal"/>
             <TextView
@@ -52,7 +52,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/nanum_extrabold"
                 android:textColor="#707070"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:text="최수정 농부님"/>
             <View
                 android:layout_width="match_parent"
@@ -64,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:fontFamily="@font/nanum_extrabold"
                 android:text="&quot;맛있는 충격, 홍감자 먹어봤슈?&quot;"
                 android:layout_gravity="center_horizontal"/>
@@ -140,10 +140,12 @@
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp">
                 <Button
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="16sp"
+                    android:layout_width="188dp"
+                    android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/green_round_button"
                     android:textColor="#ffffff"
                     android:text="마켓 둘러보기"/>
             </RelativeLayout>

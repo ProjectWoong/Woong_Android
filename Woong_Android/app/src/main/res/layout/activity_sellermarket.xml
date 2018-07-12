@@ -28,48 +28,57 @@
                 <RelativeLayout
                     android:id="@+id/relative_top_sellermarket"
                     android:layout_width="match_parent"
-                    android:layout_height="180dp"
-                    android:background="#e6e6e6">
+                    android:layout_height="200dp"
+                    android:background="@drawable/seller_market_intro_bg">
+                    <LinearLayout
+                        android:id="@+id/lay_sellermarketname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerHorizontal="true">
                     <TextView
                         android:id="@+id/tv_name_sellermarket"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:layout_centerHorizontal="true"
+                        android:textColor="#FFFFFF"
                         android:layout_marginTop="20dp"
-                        android:textSize="22sp"
-                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/nanumsquare_bold"
                         android:text="현듀 마켓"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="25dp"
+                            android:src="@drawable/seller_market_intro_leaf"/>
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:layout_below="@+id/tv_name_sellermarket"
-                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/lay_sellermarketname"
+                        android:layout_marginTop="12dp"
                         android:orientation="horizontal">
                         <TextView
                             android:id="@+id/tv_tag2_sellermarket"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingTop="3dp"
-                            android:paddingBottom="3dp"
-                            android:paddingLeft="20dp"
-                            android:paddingRight="20dp"
+                            android:layout_width="77dp"
+                            android:layout_height="23dp"
                             android:textColor="#ffffff"
-                            android:background="@color/colorPastel"
-                            android:text="#무료배송"/>
+                            android:fontFamily="@font/nanumsquare_bold"
+                            android:textSize="13sp"
+                            android:background="@drawable/transparent_green_round_button"
+                            android:text="#무료배송"
+                            android:paddingTop="2dp"
+                            android:textAlignment="center"/>
                         <TextView
                             android:id="@+id/tv_tag1_sellermarket"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingTop="3dp"
-                            android:paddingBottom="3dp"
-                            android:paddingLeft="20dp"
-                            android:paddingRight="20dp"
-                            android:layout_marginLeft="10dp"
+                            android:layout_width="77dp"
+                            android:layout_height="23dp"
+                            android:layout_marginLeft="19dp"
                             android:textColor="#ffffff"
-                            android:background="@color/colorPastel"
-                            android:text="#당일배송"/>
+                            android:background="@drawable/transparent_green_round_button"
+                            android:text="#당일배송"
+                            android:paddingTop="2dp"
+                            android:textAlignment="center"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -77,21 +86,26 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="60dp"
+                        android:layout_marginBottom="80dp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/tv_withme_sellermarket"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="나와의 거리는 " />
+                            android:text="나와의 거리는 "
+                            android:fontFamily="@font/nanum_regular"
+                            android:textSize="14sp"
+                            android:textColor="#707070"/>
 
                         <TextView
                             android:id="@+id/tv_distance_sellermarket"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="10"
-                            android:textColor="@color/colorPrimaryDark" />
+                            android:fontFamily="@font/nanum_regular"
+                            android:textSize="14sp"
+                            android:textColor="#529C77"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -102,37 +116,23 @@
                             android:id="@+id/tv_is_sellermarket"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=" 입니다" />
+                            android:text=" 입니다"
+                            android:fontFamily="@font/nanum_regular"
+                            android:textSize="14sp"
+                            android:textColor="#707070"/>
                     </LinearLayout>
                     <ImageButton
                         android:id="@+id/ib_bookmark_sellermarket"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:background="@color/colorPastel"
+                        android:src="@drawable/seller_market_intro_favorite"
                         android:layout_alignParentBottom="true"
                         android:layout_margin="10dp"/>
-                    <TextView
-                        android:id="@+id/num_bookmark_sellermarket"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/ib_bookmark_sellermarket"
-                        android:layout_toRightOf="@id/ib_bookmark_sellermarket"
-                        android:layout_marginBottom="10dp"
-                        android:text="70"
-                        android:textColor="@color/colorPrimaryDark" />
-                    <TextView
-                        android:layout_toRightOf="@+id/num_bookmark_sellermarket"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/ib_bookmark_sellermarket"
-                        android:layout_marginBottom="10dp"
-                        android:text="개"
-                        android:textColor="@color/colorPrimaryDark" />
                     <ImageButton
                         android:id="@+id/ib_message_sellermarket"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:background="@color/colorPastel"
+                        android:src="@drawable/seller_market_intro_message"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:layout_margin="10dp"/>
@@ -160,7 +160,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@color/colorPastel"
-                        app:civ_border_width="10px"
+                        app:civ_border_width="4px"
                         app:civ_border_color="@color/colorPrimaryDark"/>
                 </LinearLayout>
             </RelativeLayout>

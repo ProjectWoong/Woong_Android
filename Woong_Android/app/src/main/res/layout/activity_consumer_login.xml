@@ -76,7 +76,7 @@
                     android:background="@drawable/green_round_button"
                     android:layout_centerInParent="true"
                     android:text="로그인"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:textColor="#FFFFFF"/>
                 <ImageView
                     android:layout_marginTop="26dp"
@@ -93,7 +93,7 @@
             android:orientation="vertical">
             <TextView
                 android:fontFamily="@font/nanum_bold"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="SNS로 로그인하기"
@@ -130,14 +130,14 @@
                 android:layout_marginTop="35dp">
                 <TextView
                     android:fontFamily="@font/nanum_bold"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="계정이 없으신가요?"
                     android:textColor="#707070"/>
                 <TextView
                     android:fontFamily="@font/nanum_extrabold"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:id="@+id/tv_signup_consumer_login"
                     android:layout_centerHorizontal="true"
                     android:layout_width="90dp"

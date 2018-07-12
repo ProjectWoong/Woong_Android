@@ -21,7 +21,7 @@
             android:src="@drawable/home_vegetable_align_icon"/>
         <TextView
             android:fontFamily="@font/nanum_bold"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimaryDark"
@@ -59,7 +59,7 @@
                         android:src="@drawable/home_grain_ogok" />
 
                     <TextView
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:textColor="#1C2320"
                         android:fontFamily="@font/nanum_bold"
                         android:layout_width="match_parent"
@@ -89,7 +89,7 @@
                         android:src="@drawable/home_grain_gapgok"/>
 
                     <TextView
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:textColor="#1C2320"
                         android:fontFamily="@font/nanum_bold"
                         android:layout_width="match_parent"
@@ -118,7 +118,7 @@
                         android:src="@drawable/home_grain_rice" />
 
                     <TextView
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:textColor="#1C2320"
                         android:fontFamily="@font/nanum_bold"
                         android:layout_width="match_parent"

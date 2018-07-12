@@ -25,7 +25,7 @@
             <TextView
                 android:id="@+id/parentheses_open_payment_marketname"
                 android:fontFamily="@font/nanum_bold"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:textColor="#707070"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             <TextView
                 android:layout_toRightOf="@+id/parentheses_open_payment_marketname"
                 android:fontFamily="@font/nanum_bold"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:textColor="#707070"
                 android:id="@+id/name_mknpd_payment"
                 android:layout_width="wrap_content"
@@ -42,7 +42,7 @@
             <TextView
                 android:id="@+id/parentheses_end_payment_marketname"
                 android:fontFamily="@font/nanum_bold"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:textColor="#707070"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
             <TextView
                 android:id="@+id/parentheses_open_number"
                 android:fontFamily="@font/nanum_bold"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:textColor="#707070"
                 android:text="("
                 android:layout_toRightOf="@+id/parentheses_end_payment_marketname"
@@ -60,7 +60,7 @@
             <TextView
                 android:id="@+id/tv_payment_num"
                 android:fontFamily="@font/nanum_bold"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:textColor="#707070"
                 android:text=""
                 android:layout_toRightOf="@+id/parentheses_open_number"
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content" />
             <TextView
                 android:fontFamily="@font/nanum_bold"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:textColor="#707070"
                 android:text="개)"
                 android:layout_toRightOf="@+id/tv_payment_num"
@@ -80,7 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanum_regular"
-                android:textSize="13dp"
+                android:textSize="13sp"
                 android:textColor="#707070"
                 android:layout_marginTop="10dp"
                 android:text="가격"/>
@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/nanum_regular"
-                android:textSize="13dp"
+                android:textSize="13sp"
                 android:textColor="#707070"
                 android:layout_below="@+id/name_mknpd_payment"
                 android:text=":"
@@ -105,35 +105,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanum_regular"
-                android:textSize="13dp"
+                android:textSize="13sp"
                 android:textColor="#707070"
                 android:text=""/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nanum_regular"
-                    android:textSize="13dp"
+                    android:textSize="13sp"
                     android:textColor="#707070"
                     android:text="원"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanum_regular"
-                android:textSize="13dp"
+                android:textSize="13sp"
                 android:textColor="#707070"
                 android:text="("/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nanum_regular"
-                    android:textSize="13dp"
+                    android:textSize="13sp"
                     android:textColor="#707070"
                     android:text=""/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nanum_regular"
-                    android:textSize="13dp"
+                    android:textSize="13sp"
                     android:textColor="#707070"
                     android:text="kg)"/>
             </LinearLayout>
@@ -142,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanum_regular"
-                android:textSize="13dp"
+                android:textSize="13sp"
                 android:textColor="#707070"
                 android:layout_marginTop="5dp"
                 android:text="배송비"/>
@@ -151,7 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/nanum_regular"
-                android:textSize="13dp"
+                android:textSize="13sp"
                 android:textColor="#707070"
                 android:layout_below="@+id/tv_payment_cost"
                 android:text=":"
@@ -161,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/nanum_regular"
-                android:textSize="13dp"
+                android:textSize="13sp"
                 android:textColor="#707070"
                 android:layout_below="@+id/tv_payment_cost"
                 android:text="2500원"
@@ -177,7 +177,7 @@
                     android:gravity="end"
                     android:text="총 금액"
                     android:fontFamily="@font/nanum_bold"
-                    android:textSize="13dp"
+                    android:textSize="13sp"
                     android:layout_marginRight="15dp"/>
 
         </RelativeLayout>
@@ -194,7 +194,7 @@
                     android:layout_gravity="end"
                     android:textColor="#1C2320"
                     android:fontFamily="@font/nanum_bold"
-                    android:textSize="15dp"/>
+                    android:textSize="15sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -202,7 +202,7 @@
                 android:layout_gravity="end"
                 android:textColor="#1C2320"
                 android:fontFamily="@font/nanum_bold"
-                android:textSize="15dp"/>
+                android:textSize="15sp"/>
         </LinearLayout>
         </LinearLayout>
     </LinearLayout>

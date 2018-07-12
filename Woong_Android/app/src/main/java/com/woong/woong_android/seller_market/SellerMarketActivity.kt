@@ -120,7 +120,7 @@ class SellerMarketActivity : AppCompatActivity() {
                     }
 
                     tv_distance_sellermarket.text = response.body().data[0].youandi
-                    num_bookmark_sellermarket.text = response.body().data[0].bookmark_count.toString()
+                    //num_bookmark_sellermarket.text = response.body().data[0].bookmark_count.toString()
                     tv_storename_title.text = response.body().data[0].market_name
 
                     requestManager.load(response.body().data[0].farmer_image_key).into(iv_profile_sellermarket)

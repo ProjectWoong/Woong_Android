@@ -16,19 +16,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nanum_extrabold"
-            android:textSize="17dp"
+            android:textSize="17sp"
             android:textColor="#FFFFFF"
             android:text="마포구 서교동"/>
 
         <ImageButton
-            android:id="@+id/ib_location_submenu"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="15dp"
             android:layout_toRightOf="@+id/tv_location_submenu"
-            android:src="#FFFFFF"/>
+            android:src="@drawable/home_vegetable_under_more_white"/>
         <ImageView
             android:id="@+id/btn_cart_submenu"
             android:layout_width="24dp"

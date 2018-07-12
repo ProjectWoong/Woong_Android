@@ -23,7 +23,7 @@
                 android:layout_marginTop="14dp"
                 android:textColor="#1C2320"
                 android:fontFamily="@font/nanum_extrabold"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:layout_centerHorizontal="true"
                 android:text="강북구 미아동"/>
             <ImageButton
@@ -65,7 +65,7 @@
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
                 android:textColor="#000000"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:maxLines="1"
                 android:textAlignment="center"
                 android:background="#00000000"
@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:fontFamily="@font/nanum_bold"
                 android:textColor="#707070"
                 android:text="식품 카테고리"/>
@@ -140,7 +140,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="과일"
-                                android:textSize="15dp"
+                                android:textSize="15sp"
                                 android:fontFamily="@font/nanum_bold"
                                 android:textColor="#1C2320"/>
                         </LinearLayout>
@@ -166,7 +166,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="곡물"
-                                android:textSize="15dp"
+                                android:textSize="15sp"
                                 android:fontFamily="@font/nanum_bold"
                                 android:textColor="#1C2320"/>
                         </LinearLayout>
@@ -197,7 +197,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="채소"
-                                android:textSize="15dp"
+                                android:textSize="15sp"
                                 android:fontFamily="@font/nanum_bold"
                                 android:textColor="#1C2320"/>
                         </LinearLayout>
@@ -222,7 +222,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="달걀/유제품"
-                                android:textSize="15dp"
+                                android:textSize="15sp"
                                 android:fontFamily="@font/nanum_bold"
                                 android:textColor="#1C2320"/>
                         </LinearLayout>
@@ -240,7 +240,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="7dp"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:fontFamily="@font/nanum_bold"
                 android:textColor="#707070"
                 android:text="바로가기"/>
@@ -261,7 +261,7 @@
                         android:layout_height="60dp"
                         android:src="@drawable/home_delivery"/>
                     <TextView
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:fontFamily="@font/nanum_bold"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
@@ -281,7 +281,7 @@
                         android:layout_height="60dp"
                         android:src="@drawable/home_favorite"/>
                     <TextView
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:fontFamily="@font/nanum_bold"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
@@ -301,7 +301,7 @@
                         android:layout_height="60dp"
                         android:src="@drawable/home_bookmark"/>
                     <TextView
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:fontFamily="@font/nanum_bold"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
@@ -321,7 +321,7 @@
                         android:layout_height="60dp"
                         android:src="@drawable/home_message"/>
                     <TextView
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:fontFamily="@font/nanum_bold"
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
