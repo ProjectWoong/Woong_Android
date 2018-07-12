@@ -54,7 +54,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //user_token = intent.getStringExtra("user_token")
         var usertoken = woong_usertoken.user_token
 
         flag = intent.getIntExtra("address_flag",0)
@@ -74,7 +73,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_market_main.setOnClickListener(this)
         btn_my_main.setOnClickListener(this)
         btn_notice_main.setOnClickListener(this)
-
     }
 
     fun addFragment(fragment: Fragment) {

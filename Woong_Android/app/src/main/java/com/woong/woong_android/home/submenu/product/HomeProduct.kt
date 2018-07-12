@@ -14,8 +14,7 @@ import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
-import com.woong.woong_android.R
-import com.woong.woong_android.TitleName
+import com.woong.woong_android.*
 import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.home.adapter.HomeProductAdapter
 import com.woong.woong_android.home.submenu.get.GetSearchItemResponse
@@ -24,8 +23,6 @@ import com.woong.woong_android.home.submenu.get.GetSubItemResponse
 import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.seller_market.ResizeAnimation
 import com.woong.woong_android.seller_market.SellerMarketActivity
-import com.woong.woong_android.woong_marketinfo
-import com.woong.woong_android.woong_usertoken
 import kotlinx.android.synthetic.main.fragment_product_home.*
 import kotlinx.android.synthetic.main.fragment_product_home.view.*
 import retrofit2.Call
@@ -49,9 +46,11 @@ class HomeProduct : Fragment(), View.OnClickListener{
         val v = inflater.inflate(R.layout.fragment_product_home,container,false)
         // object로 중분류 누른 메뉴 이름 가져오기
         v.tv_submenu_product.text = TitleName.name
-        if(TitleName.main_id!=0 && TitleName.sub_id!=0){
+        if(TitleName.main_id!=0 && TitleName.sub_id!=0)
             getMenuProductList(TitleName.main_id, TitleName.sub_id)
-        }
+
+        if(searchString.str!="")
+            getSearchProductList(searchString.str)
 
         val dur : Long = 400
         v.btn_search_product.setOnClickListener {
