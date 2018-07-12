@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp">
+    android:layout_margin="10dp">
     <LinearLayout
         android:background="@drawable/rv_item_image"
         android:layout_width="match_parent"
@@ -34,14 +34,20 @@
         <RelativeLayout
             android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="15dp"
             android:layout_height="wrap_content">
             <TextView
+                android:textSize="14sp"
+                android:fontFamily="@font/nanum_regular"
+                android:textColor="#ADADAD"
                 android:id="@+id/sign"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="["/>
             <TextView
+                android:textSize="14sp"
+                android:fontFamily="@font/nanum_regular"
+                android:textColor="#ADADAD"
                 android:layout_toRightOf="@+id/sign"
                 android:id="@+id/marketname_bookmark_home"
                 android:gravity="center"
@@ -52,6 +58,9 @@
 
 
             <TextView
+                android:textSize="14sp"
+                android:fontFamily="@font/nanum_regular"
+                android:textColor="#ADADAD"
                 android:layout_toRightOf="@+id/marketname_bookmark_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -62,6 +71,9 @@
         <TextView
             android:id="@+id/productname_bookmark_home"
             android:gravity="center"
+            android:fontFamily="@font/nanumsquare_bold"
+            android:textSize="16sp"
+            android:textColor="#707070"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
@@ -73,23 +85,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="12sp"
+                android:textColor="#ADADAD"
                 android:id="@+id/unitnum_bookmark_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"/>
             <TextView
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="12sp"
+                android:textColor="#ADADAD"
                 android:layout_toRightOf="@+id/unitnum_bookmark_home"
                 android:id="@+id/unitname_bookmark_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="kg"/>
             <TextView
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="12sp"
+                android:textColor="#ADADAD"
                 android:layout_toRightOf="@+id/unitname_bookmark_home"
                 android:id="@+id/dang_bookmark_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="당"/>
             <TextView
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="12sp"
+                android:textColor="#ADADAD"
                 android:id="@+id/cost_bookmark_home"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/dang_bookmark_home"
@@ -97,6 +121,9 @@
                 android:layout_height="wrap_content"
                 android:text="6600"/>
             <TextView
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="12sp"
+                android:textColor="#ADADAD"
                 android:layout_toRightOf="@+id/cost_bookmark_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

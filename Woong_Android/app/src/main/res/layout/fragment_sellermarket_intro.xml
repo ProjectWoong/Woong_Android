@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF">
@@ -8,80 +7,99 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                <ImageView
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="29dp"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp"
+                    android:src="@drawable/seller_market_intro_leaf"/>
+                </LinearLayout>
+            </LinearLayout>
         <TextView
             android:id="@+id/tv_labelhi_intro"
             android:layout_width="match_parent"
             android:layout_height="49dp"
             android:fontFamily="@font/nanum_extrabold"
-            android:textSize="15sp"
-            android:padding="20dp"
+            android:layout_marginLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="인사말"
             android:textColor="#529C77"
-            android:text="인사말"/>
-        <ImageView
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/iv_representimg_sellermarket_intro"
-            android:layout_width="250dp"
-            android:layout_height="146dp"
-            android:layout_marginTop="17dp"
-            android:background="@color/colorPrimaryDark"
-            android:scaleType="centerCrop"
-            android:src="#000000" />
+            android:textSize="15sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/iv_representimg_sellermarket_intro"
+                android:layout_width="250dp"
+                android:layout_height="146dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/weekely_farmer_family" />
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/linear_tags_intro"
+            android:layout_marginVertical="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_tag1_intro"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="#유기농"
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="13dp"
+                android:textColor="#529C77" />
+
+            <TextView
+                android:id="@+id/tv_tag2_intro"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="#신속"
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="13dp"
+                android:textColor="#529C77" />
+
+        </LinearLayout>
+
         <TextView
             android:id="@+id/tv_hi_intro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nanum_regular"
             android:layout_below="@+id/tv_labelhi_intro"
-            android:textColor="#adadad"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="20dp"
+            android:fontFamily="@font/nanum_regular"
+            android:layout_marginHorizontal="25dp"
             android:text="안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^"
-            />
-        <LinearLayout
-            android:layout_below="@+id/iv_representimg_sellermarket_intro"
-            android:id="@+id/linear_tags_intro"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/tv_tag1_intro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="2dp"
-                android:background="@color/colorPastel"
-                android:textColor="#ffffff"
-                android:text="#유기농"/>
-
-            <TextView
-                android:id="@+id/tv_tag2_intro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="2dp"
-                android:background="@color/colorPastel"
-                android:layout_marginLeft="10dp"
-                android:textColor="#ffffff"
-                android:text="#신속"/>
-
-            <TextView
-                android:id="@+id/tv_tag3_intro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="2dp"
-                android:background="@color/colorPastel"
-                android:layout_marginLeft="10dp"
-                android:textColor="#ffffff"
-                android:text="#애정넘침"/>
-        </LinearLayout>
+            android:textColor="#adadad"
+            android:textSize="15sp"/>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
