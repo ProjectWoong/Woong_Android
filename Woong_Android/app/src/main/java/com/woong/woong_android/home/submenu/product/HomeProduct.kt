@@ -12,8 +12,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
+import com.bumptech.glide.DrawableRequestBuilder
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
+import com.bumptech.glide.request.Request
 import com.woong.woong_android.*
 import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.home.adapter.HomeProductAdapter
@@ -48,10 +50,20 @@ class HomeProduct : Fragment(), View.OnClickListener{
         v.tv_submenu_product.text = TitleName.name
         if(TitleName.main_id!=0 && TitleName.sub_id!=0)
             getMenuProductList(TitleName.main_id, TitleName.sub_id)
-
-        if(searchString.str!="")
+      
+        if(searchString.flag) {
             getSearchProductList(searchString.str)
-
+            searchString.flag=false
+            val rs  = ResizeAnimation(v.iv_searchwide_product, dpToPx(325F, activity!!.applicationContext).toInt())
+            rs.duration = 0
+            v.iv_searchwide_product.startAnimation(rs)
+            v.btn_search_product.visibility = View.INVISIBLE
+            v.iv_searchwide_product.visibility = View.VISIBLE
+            v.btn_cart_product.visibility = View.INVISIBLE
+            v.tv_cancel_product.visibility = View.VISIBLE
+            v.et_search_product.visibility = View.VISIBLE
+            v.iv_searchico_product.visibility = View.VISIBLE
+        }
         val dur : Long = 400
         v.btn_search_product.setOnClickListener {
             val rs  = ResizeAnimation(iv_searchwide_product, dpToPx(325F, activity!!.applicationContext).toInt())

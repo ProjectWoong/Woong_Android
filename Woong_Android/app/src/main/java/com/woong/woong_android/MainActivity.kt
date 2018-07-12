@@ -22,9 +22,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 clearSelected()
                 btn_home_main.isSelected = true
                 replaceFragment(HomeMain())
-                // 판매자 마켓 테스트용 임시 인텐트
-//                val intent = Intent(applicationContext, SellerMarketActivity::class.java)
-//                startActivity(intent)
             }
             btn_market_main ->{
                 clearSelected()
@@ -65,7 +62,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             HomeMain().arguments = bundle
         }
         bundle.putString("user_token",usertoken)
-        addFragment(HomeMain())
+
+        val fm = supportFragmentManager
+        val transaction = fm.beginTransaction()
+        HomeMain().arguments = bundle
+        transaction.add(R.id.frame_fragment_main,HomeMain())
+        transaction.commit()
 
         btn_home_main.isSelected = true
         btn_myproduct_main.setOnClickListener(this)
