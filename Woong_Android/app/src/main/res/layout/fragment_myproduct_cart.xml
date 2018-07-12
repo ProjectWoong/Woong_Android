@@ -31,7 +31,7 @@
                    android:text="전체 선택"
                    android:textColor="#707070"
                    android:fontFamily="@font/nanum_extrabold"
-                   android:textSize="16dp"/>
+                   android:textSize="16sp"/>
 
            </LinearLayout>
            <android.support.v7.widget.RecyclerView
@@ -52,7 +52,7 @@
                 android:layout_width="100dp"
                 android:layout_height="60dp">
                 <TextView
-                    android:textSize="12dp"
+                    android:textSize="12sp"
                     android:fontFamily="@font/nanum_extrabold"
                     android:textColor="#707070"
                     android:layout_centerHorizontal="true"
@@ -66,7 +66,7 @@
                     android:layout_height="30dp">
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:fontFamily="@font/nanum_bold"
                         android:textColor="#707070"
                         android:id="@+id/pdtotalnum_footer_myproduct"
@@ -75,7 +75,7 @@
                         android:text="25500"/>
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:fontFamily="@font/nanum_bold"
                         android:textColor="#707070"
                         android:layout_toRightOf="@+id/pdtotalnum_footer_myproduct"
@@ -88,7 +88,7 @@
             </RelativeLayout>
             <TextView
                 android:layout_marginTop="12dp"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:fontFamily="@font/nanum_bold"
                 android:textColor="#707070"
                 android:layout_gravity="center"
@@ -100,7 +100,7 @@
                 android:layout_width="100dp"
                 android:layout_height="60dp">
                 <TextView
-                    android:textSize="12dp"
+                    android:textSize="12sp"
                     android:fontFamily="@font/nanum_extrabold"
                     android:textColor="#707070"
                     android:layout_centerHorizontal="true"
@@ -114,7 +114,7 @@
                     android:layout_height="30dp">
                     <TextView
                         android:layout_marginTop="5dp"
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:fontFamily="@font/nanum_bold"
                         android:textColor="#707070"
                         android:layout_width="wrap_content"
@@ -126,7 +126,7 @@
 
             </RelativeLayout>
             <TextView
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/nanum_bold"
                 android:textColor="#707070"
@@ -140,7 +140,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="15dp">
                 <TextView
-                    android:textSize="12dp"
+                    android:textSize="12sp"
                     android:fontFamily="@font/nanum_extrabold"
                     android:textColor="#707070"
                     android:layout_centerHorizontal="true"
@@ -154,7 +154,7 @@
                     android:layout_height="30dp">
                     <TextView
                         android:fontFamily="@font/nanum_extrabold"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:textColor="#237A59"
                         android:id="@+id/totalnum_footer_myproduct"
                         android:layout_width="wrap_content"
@@ -162,7 +162,7 @@
                         android:text="28000"/>
                     <TextView
                         android:fontFamily="@font/nanum_extrabold"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:textColor="#237A59"
                         android:layout_toRightOf="@+id/totalnum_footer_myproduct"
                         android:layout_width="wrap_content"
@@ -186,10 +186,12 @@
         android:id="@+id/btn_order_myproduct"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:background="#227958"
+        android:background="#529C77"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="53dp">
         <TextView
+            android:fontFamily="@font/nanum_extrabold"
+            android:textSize="16sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="주문하기"

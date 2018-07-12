@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nanum_extrabold"
-            android:textSize="17dp"
+            android:textSize="17sp"
             android:textColor="#ffffff"
             android:text="결제 페이지"/>
 
@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nanum_extrabold"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:text="최종 주문"/>
                 <TextView
                     android:layout_toRightOf="@+id/tv_final_order"
@@ -48,7 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nanum_bold"
-                    android:textSize="14dp"
+                    android:textSize="14sp"
                     android:text="(배송비포함)"/>
                <RelativeLayout
                    android:layout_centerVertical="true"
@@ -58,7 +58,7 @@
                    <TextView
                        android:fontFamily="@font/nanum_extrabold"
                        android:textColor="#237A59"
-                       android:textSize="20dp"
+                       android:textSize="20sp"
                        android:layout_toLeftOf="@+id/num_total_payment"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                    <TextView
                        android:fontFamily="@font/nanum_extrabold"
                        android:textColor="#237A59"
-                       android:textSize="20dp"
+                       android:textSize="20sp"
                        android:id="@+id/num_total_payment"
                        android:layout_toLeftOf="@+id/won_payment"
                        android:layout_width="wrap_content"
@@ -76,7 +76,7 @@
                    <TextView
                        android:fontFamily="@font/nanum_extrabold"
                        android:textColor="#237A59"
-                       android:textSize="20dp"
+                       android:textSize="20sp"
                        android:layout_alignParentRight="true"
                        android:id="@+id/won_payment"
                        android:layout_width="wrap_content"
@@ -101,7 +101,7 @@
                 android:orientation="vertical">
                 <TextView
                     android:fontFamily="@font/nanum_bold"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#707070"
@@ -113,7 +113,7 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:fontFamily="@font/nanum_bold"
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:textColor="#1C2320"
                         android:id="@+id/lotnum_address_payment"
                         android:layout_width="wrap_content"
@@ -121,7 +121,7 @@
                         android:text="마포구 상수동 72-1 "/>
                     <TextView
                         android:fontFamily="@font/nanum_bold"
-                        android:textSize="13dp"
+                        android:textSize="13sp"
                         android:textColor="#ADADAD"
                         android:layout_alignParentRight="true"
                         android:layout_width="wrap_content"
@@ -129,7 +129,7 @@
                         android:text="변경"/>
                     <TextView
                         android:fontFamily="@font/nanum_regular"
-                        android:textSize="13dp"
+                        android:textSize="13sp"
                         android:id="@+id/road_payment"
                         android:layout_below="@+id/lotnum_address_payment"
                         android:layout_width="wrap_content"
@@ -143,7 +143,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nanum_regular"
-                        android:textSize="13dp"
+                        android:textSize="13sp"
                         android:textColor="#707070"
                         android:layout_alignBaseline="@+id/road_payment"
                         android:text="와우산로 94"/>
@@ -194,7 +194,7 @@
                 android:layout_height="wrap_content"
                 android:text="결제 수단"
                 android:fontFamily="@font/nanum_bold"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:textColor="#707070"
                 />
             <LinearLayout
@@ -315,7 +315,7 @@
         <TextView
             android:layout_centerInParent="true"
             android:fontFamily="@font/nanum_bold"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="결제하기"

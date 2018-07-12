@@ -43,7 +43,7 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:fontFamily="@font/nanumsquare_bold"
-                            android:textSize="15dp"
+                            android:textSize="15sp"
                             android:textColor="#707070"
                             android:id="@+id/opensign_cart_myproduct"
                             android:layout_width="wrap_content"
@@ -51,7 +51,7 @@
                             android:text="["/>
                         <TextView
                             android:fontFamily="@font/nanumsquare_bold"
-                            android:textSize="15dp"
+                            android:textSize="15sp"
                             android:textColor="#707070"
                             android:id="@+id/marketname_cart_myproduct"
                             android:layout_toRightOf="@id/opensign_cart_myproduct"
@@ -60,7 +60,7 @@
                             android:text="현듀 마켓"/>
                         <TextView
                             android:fontFamily="@font/nanumsquare_bold"
-                            android:textSize="15dp"
+                            android:textSize="15sp"
                             android:textColor="#707070"
                             android:id="@+id/closesign_cart_myproduct"
                             android:layout_toRightOf="@+id/marketname_cart_myproduct"
@@ -69,7 +69,7 @@
                             android:text="] "/>
                         <TextView
                             android:fontFamily="@font/nanumsquare_bold"
-                            android:textSize="15dp"
+                            android:textSize="15sp"
                             android:textColor="#707070"
                             android:id="@+id/productname_cart_myproduct"
                             android:layout_toRightOf="@+id/closesign_cart_myproduct"
@@ -170,7 +170,7 @@
                     </RelativeLayout>
                 </RelativeLayout>
                 <TextView
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:fontFamily="@font/nanum_extrabold"
                     android:textColor="#707070"
                     android:layout_marginBottom="3dp"
@@ -180,7 +180,7 @@
                     android:layout_height="20dp"
                     android:text="15500"/>
                 <TextView
-                    android:textSize="19dp"
+                    android:textSize="19sp"
                     android:fontFamily="@font/nanum_extrabold"
                     android:textColor="#707070"
                     android:layout_toRightOf="@+id/subtotal_cart_myproduct"
@@ -216,7 +216,7 @@
                 android:layout_marginLeft="92dp"
                 android:src="@drawable/my_basket_minus"/>
             <TextView
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:fontFamily="@font/nanumsquare_bold"
                 android:textColor="#237A59"
                 android:id="@+id/btn_cancle_myproduct"
