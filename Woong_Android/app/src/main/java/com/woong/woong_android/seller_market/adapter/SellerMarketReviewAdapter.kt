@@ -8,7 +8,9 @@ import com.woong.woong_android.R
 import com.woong.woong_android.seller_market.get.GetMarketReviewResponseData
 import com.woong.woong_android.seller_market.viewholder.SellerMarketReviewViewHolder
 
+
 class SellerMarketReviewAdapter(private var reviewItems:ArrayList<GetMarketReviewResponseData>,var flag:Int):RecyclerView.Adapter<SellerMarketReviewViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SellerMarketReviewViewHolder {
        val mainView = LayoutInflater.from(parent.context).inflate(R.layout.item_sellermarket_review,parent,false)
         return SellerMarketReviewViewHolder(mainView)

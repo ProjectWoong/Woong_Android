@@ -29,7 +29,7 @@
                 android:id="@+id/iv_profile_thisweek"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                android:src="@drawable/mypage_profile"
+                android:src="@drawable/weekely_farmer_profile"
                 android:layout_marginTop="17dp"
                 android:layout_gravity="center_horizontal"/>
             <TextView
@@ -140,10 +140,12 @@
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp">
                 <Button
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="16dp"
+                    android:layout_width="188dp"
+                    android:layout_height="48dp"
                     android:layout_centerHorizontal="true"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/green_round_button"
                     android:textColor="#ffffff"
                     android:text="마켓 둘러보기"/>
             </RelativeLayout>

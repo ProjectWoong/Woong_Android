@@ -21,7 +21,7 @@
         <TextView
             android:fontFamily="@font/nanum_bold"
             android:textColor="#1C2320"
-            android:textSize="14dp"
+            android:textSize="14sp"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -138,7 +138,7 @@
         android:layout_weight="0.7">
         <Button
             android:fontFamily="@font/nanum_extrabold"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:id="@+id/btn_complete_allergy"
             android:layout_width="188dp"
             android:layout_height="48dp"
