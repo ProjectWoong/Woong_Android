@@ -94,4 +94,8 @@ interface NetworkService {
 
     @GET("/cart")
     fun getCart(@Header("usertoken")user_token: String?):Call<GetCartResponse>
+
+    @DELETE("/cart/{item_id}")
+    fun delCart(@Header("usertoken")user_token: String?,
+                @Path("item_id")item_id: Int):Call<PostCartResponse>
 }
