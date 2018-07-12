@@ -144,24 +144,28 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal">
             <ImageView
+                android:id="@+id/img1_review"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
                 android:scaleType="centerCrop"
                 android:layout_margin="1dp"/>
             <ImageView
+                android:id="@+id/img2_review"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
                 android:scaleType="centerCrop"
                 android:layout_margin="1dp"/>
             <ImageView
+                android:id="@+id/img3_review"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
                 android:scaleType="centerCrop"
                 android:layout_margin="1dp"/>
             <ImageView
+                android:id="@+id/img4_review"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
@@ -174,24 +178,28 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal">
             <ImageView
+                android:id="@+id/img5_review"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
                 android:scaleType="centerCrop"
                 android:layout_margin="1dp"/>
             <ImageView
+                android:id="@+id/img6_review"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
                 android:scaleType="centerCrop"
                 android:layout_margin="1dp"/>
             <ImageView
+                android:id="@+id/img7_review"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"
                 android:scaleType="centerCrop"
                 android:layout_margin="1dp"/>
             <ImageView
+                android:id="@+id/img8_review"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/darker_gray"

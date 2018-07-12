@@ -4,13 +4,12 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
-import com.woong.woong_android.home.submenu.data.HomeProductData
+import com.woong.woong_android.home.submenu.get.GetItemResponseData
 import com.woong.woong_android.home.submenu.viewholder.HomeProductViewHolder
-import com.woong.woong_android.myproduct.data.MyProductBookmarkData
-import com.woong.woong_android.myproduct.viewholder.MyProductBookmarkViewHolder
 
-class HomeProductAdapter(private var productItems : ArrayList<HomeProductData>) : RecyclerView.Adapter<HomeProductViewHolder>() {
+class HomeProductAdapter(var productItems : ArrayList<GetItemResponseData>, var requestManager: RequestManager) : RecyclerView.Adapter<HomeProductViewHolder>() {
 
     private lateinit var onItemClick : View.OnClickListener
 
@@ -27,16 +26,16 @@ class HomeProductAdapter(private var productItems : ArrayList<HomeProductData>) 
     override fun getItemCount(): Int = productItems.size
 
     override fun onBindViewHolder(productViewHolder: HomeProductViewHolder, position: Int) {
-
-        productViewHolder.productimg.setImageResource(productItems[position].pr_productimg)
-        productViewHolder.marketname.text = productItems[position].pr_marketname
-        productViewHolder.productname.text = productItems[position].pr_productname
-        productViewHolder.unitname.text = productItems[position].pr_unitname
-        productViewHolder.unitnum.text = productItems[position].pr_unitnum
-        productViewHolder.cost.text = productItems[position].pr_cost
-        productViewHolder.firsttag.text = productItems[position].pr_firsttag
-        productViewHolder.secondtag.text = productItems[position].pr_secondtag
-        if (productItems[position].pr_favorite){
+        requestManager.load(productItems[position].file_key).into(productViewHolder.productimg)
+        productViewHolder.marketname.text = productItems[position].market_name
+        productViewHolder.productname.text = productItems[position].item_name
+        productViewHolder.unitname.text = productItems[position].item_unit
+        productViewHolder.cost.text = productItems[position].item_price.toString()
+        if(productItems[position].quick==0)
+            productViewHolder.firsttag.visibility = View.GONE
+        if(productItems[position].delivery==0)
+            productViewHolder.secondtag.visibility = View.GONE
+        if (productItems[position].favorite_flag==1){
             productViewHolder.favorite.setImageResource(R.drawable.consumer_allergy_onion)
         }else{
             productViewHolder.favorite.setImageResource(R.drawable.consumer_allergy_meal)

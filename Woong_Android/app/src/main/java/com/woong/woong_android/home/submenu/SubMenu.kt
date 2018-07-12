@@ -21,6 +21,7 @@ class SubMenu :android.support.v4.app.Fragment() {
 
         viewPager.adapter = subMenuPagerAdapter
         viewPager.currentItem = Idx.idx
+        Idx.idx=0
         tabLayout.setTabTextColors(Color.parseColor("#b2b2b2"), Color.parseColor("#227958"))
         tabLayout.setupWithViewPager(viewPager)
 

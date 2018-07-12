@@ -13,7 +13,7 @@
             android:layout_marginLeft="20dp"
             android:fontFamily="@font/nanum_bold"
             android:textSize="13dp"
-            android:text="최윤정"/>
+            android:text=""/>
         <TextView
             android:id="@+id/review_sellermarket"
             android:layout_marginLeft="21dp"
@@ -22,5 +22,5 @@
             android:fontFamily="@font/nanum_regular"
             android:textSize="13dp"
             android:textColor="#707070"
-            android:text="넘넘 맛있어용~!"/>
+            android:text=""/>
 </LinearLayout>

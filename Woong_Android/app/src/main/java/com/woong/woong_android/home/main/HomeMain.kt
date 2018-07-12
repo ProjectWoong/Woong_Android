@@ -29,6 +29,7 @@ class HomeMain : Fragment() {
         }
         // 메인 메뉴 4가지 클릭리스너
         v.relative_fruit_main.setOnClickListener {
+            Idx.idx = 0
             (activity as MainActivity).replaceFragment(com.woong.woong_android.home.submenu.SubMenu())
         }
         v.relative_grain_main.setOnClickListener {
