@@ -1,5 +1,6 @@
 package com.woong.woong_android.home.main
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -7,12 +8,18 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
 import com.woong.woong_android.MainActivity
 import com.woong.woong_android.R
+import com.woong.woong_android.home.submenu.product.HomeProduct
 import com.woong.woong_android.map.location_change.LocationSearchChangeActivity
+import com.woong.woong_android.searchString
 import kotlinx.android.synthetic.main.fragment_home_main.view.*
+import kotlinx.android.synthetic.main.fragment_product_home.*
 
 class HomeMain : Fragment() {
+    lateinit var imm : InputMethodManager
     var flag :Int? = 0
     var re_address : String = ""
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -50,6 +57,18 @@ class HomeMain : Fragment() {
             startActivity(intent)
         }
 
+        v.tv_search_main.setOnEditorActionListener { textView, i, keyEvent ->
+            when(i){
+                EditorInfo.IME_ACTION_SEARCH->{
+                    searchString.str = textView.text.toString()
+                    (activity as MainActivity).replaceFragment(HomeProduct())
+                    imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager //키보드 내리기위해서
+                    imm.hideSoftInputFromWindow(et_search_product.windowToken, 0)
+                    true
+                }
+            }
+            false
+        }
         return v
     }
 }
