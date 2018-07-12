@@ -47,7 +47,7 @@ class HomeProduct : Fragment(), View.OnClickListener{
         v.tv_submenu_product.text = TitleName.name
         if(TitleName.main_id!=0 && TitleName.sub_id!=0)
             getMenuProductList(TitleName.main_id, TitleName.sub_id)
-
+      
         if(searchString.flag) {
             getSearchProductList(searchString.str)
             searchString.flag=false

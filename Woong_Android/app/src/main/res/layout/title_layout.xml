@@ -6,7 +6,6 @@ android:layout_height="wrap_content">
         android:id="@+id/ib_message_title"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginLeft="20dp"
         android:src="@drawable/market_thing_details_topbar_message"
         android:layout_centerVertical="true"
         />
