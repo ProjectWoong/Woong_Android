@@ -2,17 +2,33 @@
 <android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <RelativeLayout
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
         <TextView
             android:id="@+id/tv_labelhi_intro"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nanum_bold"
+            android:layout_height="49dp"
+            android:fontFamily="@font/nanum_extrabold"
+            android:textSize="15sp"
             android:padding="20dp"
+            android:textColor="#529C77"
             android:text="인사말"/>
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/iv_representimg_sellermarket_intro"
+            android:layout_width="250dp"
+            android:layout_height="146dp"
+            android:layout_marginTop="17dp"
+            android:background="@color/colorPrimaryDark"
+            android:scaleType="centerCrop"
+            android:src="#000000" />
         <TextView
             android:id="@+id/tv_hi_intro"
             android:layout_width="match_parent"
@@ -26,8 +42,8 @@
             android:text="안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^"
             />
         <LinearLayout
+            android:layout_below="@+id/iv_representimg_sellermarket_intro"
             android:id="@+id/linear_tags_intro"
-            android:layout_below="@id/tv_hi_intro"
             android:gravity="center"
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -67,15 +83,5 @@
                 android:textColor="#ffffff"
                 android:text="#애정넘침"/>
         </LinearLayout>
-        <ImageView
-            android:id="@+id/iv_representimg_sellermarket_intro"
-            android:layout_below="@id/linear_tags_intro"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="30dp"
-            android:layout_centerHorizontal="true"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher_foreground"
-            android:background="@color/colorPrimaryDark"/>
-    </RelativeLayout>
+    </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
