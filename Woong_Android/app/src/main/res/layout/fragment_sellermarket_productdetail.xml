@@ -247,6 +247,7 @@
             android:orientation="horizontal"
             android:background="@color/colorPrimaryDark">
             <Button
+                android:id="@+id/btn_cart_productdetail"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
