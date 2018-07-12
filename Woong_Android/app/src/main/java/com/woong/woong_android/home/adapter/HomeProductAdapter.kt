@@ -36,9 +36,9 @@ class HomeProductAdapter(var productItems : ArrayList<GetItemResponseData>, var 
         if(productItems[position].delivery==0)
             productViewHolder.secondtag.visibility = View.GONE
         if (productItems[position].favorite_flag==1){
-            productViewHolder.favorite.setImageResource(R.drawable.consumer_allergy_onion)
+            productViewHolder.favorite.setImageResource(R.drawable.home_select_category_like1)
         }else{
-            productViewHolder.favorite.setImageResource(R.drawable.consumer_allergy_meal)
+            productViewHolder.favorite.setImageResource(R.drawable.home_select_category_no_like)
         }
     }
 }

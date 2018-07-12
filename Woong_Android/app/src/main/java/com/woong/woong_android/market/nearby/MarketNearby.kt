@@ -11,9 +11,6 @@ import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
 import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.market.adapter.MarketNearbyAdapter
-
-import com.woong.woong_android.woong_usertoken
-
 import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.seller_market.get.GetNearMarketListResponse
 import com.woong.woong_android.seller_market.get.GetNearMarketListResponseData

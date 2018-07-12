@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
 import com.woong.woong_android.R
-import com.woong.woong_android.home.submenu.TitleName.name
 import kotlinx.android.synthetic.main.activity_consumer_join1.*
 
 class Join1Activity : AppCompatActivity() {

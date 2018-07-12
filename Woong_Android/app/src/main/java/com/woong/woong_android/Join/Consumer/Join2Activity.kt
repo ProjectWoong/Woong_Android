@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.woong.woong_android.R
-import com.woong.woong_android.home.submenu.TitleName.name
 import kotlinx.android.synthetic.main.activity_consumer_join2.*
 import java.util.regex.Matcher
 import java.util.regex.Pattern
