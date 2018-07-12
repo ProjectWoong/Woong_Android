@@ -19,6 +19,7 @@ import com.woong.woong_android.seller_market.adapter.SmPagerAdapter
 import com.woong.woong_android.seller_market.get.GetMarketInfoResponse
 import com.woong.woong_android.home.submenu.product.SellerIdx
 import com.woong.woong_android.seller_market.product.SellerMarketProductDetail
+import com.woong.woong_android.woong_marketinfo
 import kotlinx.android.synthetic.main.activity_sellermarket.*
 import kotlinx.android.synthetic.main.fragment_product_home.*
 import kotlinx.android.synthetic.main.title_layout.*
@@ -61,8 +62,8 @@ class SellerMarketActivity : AppCompatActivity() {
         tabLayout.setupWithViewPager(viewPager)
         if (SellerIdx.id == 1) {
             val bundle = Bundle()
-            bundle.putInt("market_id", 1)
-            bundle.putInt("item_id", 2)
+            bundle.putInt("market_id", woong_marketinfo.market_id)
+            bundle.putInt("item_id", woong_marketinfo.item_id)
             val smpd = SellerMarketProductDetail()
             smpd.arguments = bundle
             replaceFragment(smpd)

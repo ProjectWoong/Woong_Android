@@ -3,20 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
     <RelativeLayout
 
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="38dp"
         android:background="@color/colorPrimaryDark">
         <TextView
             android:id="@+id/tv_location_submenu"
+            android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#000000"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:text="강북구 미아동"/>
+            android:fontFamily="@font/nanum_extrabold"
+            android:textSize="17dp"
+            android:textColor="#FFFFFF"
+            android:text="마포구 서교동"/>
+
         <ImageButton
             android:id="@+id/ib_location_submenu"
             android:layout_width="20dp"
@@ -25,21 +28,13 @@
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/tv_location_submenu"
-            android:background="@color/colorAccent"/>
-        <ImageButton
-            android:id="@+id/btn_search_submenu"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@color/colorAccent"
-            android:layout_marginRight="10dp"
-            android:layout_toLeftOf="@+id/btn_cart_submenu"
-            android:layout_centerVertical="true"/>
-        <ImageButton
+            android:src="#FFFFFF"/>
+        <ImageView
             android:id="@+id/btn_cart_submenu"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@color/colorAccent"
-            android:layout_marginRight="10dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/market_thing_details_topbar_cart"
+            android:layout_marginRight="20dp"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"/>
     </RelativeLayout>

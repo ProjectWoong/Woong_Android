@@ -10,6 +10,7 @@ import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.Login.post.PostSignInAppResponse
 import com.woong.woong_android.Login.post.PostSignInAppResponseData
 import com.woong.woong_android.MainActivity
+import com.woong.woong_android.woong_usertoken
 import kotlinx.android.synthetic.main.activity_consumer_login.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -42,6 +43,7 @@ class ConsumerLoginActivity : AppCompatActivity() {
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 
+                        woong_usertoken.user_token = user_token
 
                         startActivity(intent)   // 전환될 액티비티로 넘어갈때
                     }

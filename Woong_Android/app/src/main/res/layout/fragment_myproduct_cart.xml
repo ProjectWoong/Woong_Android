@@ -6,7 +6,8 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_above="@+id/btn_order_myproduct"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
 
        <LinearLayout
            android:layout_width="match_parent"
@@ -19,13 +20,18 @@
                <CheckBox
                    android:id="@+id/all_checkbox_header_myproduct"
                    android:layout_gravity="center"
+                   android:layout_marginHorizontal="10dp"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:checked="true"
+                   android:checked="true"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="15dp"
+                   android:text="전체 선택"
                    android:textColor="#707070"
                    android:fontFamily="@font/nanum_extrabold"
-                   android:textSize="16dp"
-                   android:text="전체선택"/>
+                   android:textSize="16dp"/>
 
            </LinearLayout>
            <android.support.v7.widget.RecyclerView
@@ -46,6 +52,9 @@
                 android:layout_width="100dp"
                 android:layout_height="60dp">
                 <TextView
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nanum_extrabold"
+                    android:textColor="#707070"
                     android:layout_centerHorizontal="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -56,11 +65,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp">
                     <TextView
+                        android:layout_marginTop="5dp"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/nanum_bold"
+                        android:textColor="#707070"
                         android:id="@+id/pdtotalnum_footer_myproduct"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="25500"/>
                     <TextView
+                        android:layout_marginTop="5dp"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/nanum_bold"
+                        android:textColor="#707070"
                         android:layout_toRightOf="@+id/pdtotalnum_footer_myproduct"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -70,6 +87,10 @@
 
             </RelativeLayout>
             <TextView
+                android:layout_marginTop="12dp"
+                android:textSize="15dp"
+                android:fontFamily="@font/nanum_bold"
+                android:textColor="#707070"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -79,6 +100,9 @@
                 android:layout_width="100dp"
                 android:layout_height="60dp">
                 <TextView
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nanum_extrabold"
+                    android:textColor="#707070"
                     android:layout_centerHorizontal="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -89,6 +113,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp">
                     <TextView
+                        android:layout_marginTop="5dp"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/nanum_bold"
+                        android:textColor="#707070"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="2500원"/>
@@ -98,6 +126,10 @@
 
             </RelativeLayout>
             <TextView
+                android:textSize="15dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/nanum_bold"
+                android:textColor="#707070"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -105,8 +137,12 @@
 
             <RelativeLayout
                 android:layout_width="100dp"
-                android:layout_height="60dp">
+                android:layout_height="60dp"
+                android:layout_marginLeft="15dp">
                 <TextView
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nanum_extrabold"
+                    android:textColor="#707070"
                     android:layout_centerHorizontal="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -117,11 +153,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp">
                     <TextView
+                        android:fontFamily="@font/nanum_extrabold"
+                        android:textSize="20dp"
+                        android:textColor="#237A59"
                         android:id="@+id/totalnum_footer_myproduct"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="28000"/>
                     <TextView
+                        android:fontFamily="@font/nanum_extrabold"
+                        android:textSize="20dp"
+                        android:textColor="#237A59"
                         android:layout_toRightOf="@+id/totalnum_footer_myproduct"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

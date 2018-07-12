@@ -62,8 +62,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@color/colorPastel"/>
-
-    </LinearLayout>
+</LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"

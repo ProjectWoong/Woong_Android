@@ -12,5 +12,4 @@ class MarketNearbyViewHolder(itemView : View?) : RecyclerView.ViewHolder(itemVie
     var address : TextView = itemView!!.findViewById(R.id.tv_address_market) as TextView
     var tag1 : TextView = itemView!!.findViewById(R.id.tv_tag1_market) as TextView
     var tag2 : TextView = itemView!!.findViewById(R.id.tv_tag2_market) as TextView
-    var tag3 : TextView = itemView!!.findViewById(R.id.tv_tag3_market) as TextView
 }

@@ -7,13 +7,16 @@
     <RelativeLayout
 
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="#227958">
+        android:layout_height="38dp"
+        android:background="@color/colorPrimaryDark">
         <TextView
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="로고랑 이미지"/>
+            android:fontFamily="@font/nanum_extrabold"
+            android:textSize="17dp"
+            android:textColor="#FFFFFF"
+            android:text="알림"/>
     </RelativeLayout>
     <android.support.design.widget.TabLayout
         android:id="@+id/tab_top_notice"
