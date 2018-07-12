@@ -3,11 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
     <RelativeLayout
 
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="38dp"
         android:background="@color/colorPrimaryDark">
         <TextView
             android:id="@+id/tv_submenu_product"
@@ -16,38 +17,39 @@
             android:textColor="#ffffff"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:text="감자"/>
+            android:text="감자"
+            android:fontFamily="@font/nanum_extrabold"
+            android:textSize="17sp"/>
         <ImageButton
             android:id="@+id/btn_search_product"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/comsumer_allergy_select_ed_eggs"
+            android:background="@null"
             android:layout_marginRight="10dp"
             android:layout_toLeftOf="@+id/btn_cart_product"
             android:layout_centerVertical="true"/>
         <ImageView
             android:id="@+id/iv_searchwide_product"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/gray_round_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/home_select_category_search"
             android:layout_marginRight="10dp"
-            android:visibility="invisible"
             android:layout_toLeftOf="@id/btn_cart_product"
             android:layout_centerVertical="true"/>
+
         <ImageView
             android:id="@+id/iv_searchico_product"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@drawable/comsumer_allergy_select_ed_peach"
-            android:layout_alignStart="@+id/iv_searchwide_product"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="4dp"
             android:layout_centerVertical="true"
-            android:visibility="gone"
-            android:layout_marginLeft="20dp"/>
+            android:layout_toRightOf="@+id/iv_searchwide_product"
+            android:src="@drawable/home_select_category_basket" />
         <ImageButton
             android:id="@+id/btn_cart_product"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/comsumer_allergy_select_ed_tomato"
+            android:background="@null"
             android:layout_marginRight="10dp"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"/>
@@ -79,31 +81,61 @@
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp">
+        android:layout_height="55dp"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="5dp">
         <Button
             android:id="@+id/btn_short_product"
-            android:layout_width="80dp"
-            android:layout_height="35dp"
-            android:background="@color/colorPrimaryDark"
+            android:layout_width="68dp"
+            android:layout_height="28dp"
+            android:background="@drawable/home_select_category_align_short"
             android:textColor="#ffffff"
+            android:fontFamily="@font/nanumsquare_bold"
+            android:textSize="11sp"
             android:text="짧은거리" />
         <Button
             android:id="@+id/btn_best_product"
-            android:layout_width="80dp"
-            android:layout_height="35dp"
+            android:layout_width="68dp"
+            android:layout_height="28dp"
             android:layout_toRightOf="@id/btn_short_product"
             android:background="#ffffff"
+            android:textColor="#ADADAD"
+            android:fontFamily="@font/nanumsquare_bold"
+            android:textSize="11sp"
             android:text="최고인기" />
         <Button
-            android:layout_width="80dp"
-            android:layout_height="35dp"
-            android:background="@color/colorPastel"
+            android:layout_width="68dp"
+            android:layout_height="28dp"
+            android:background="#FFFFFF"
             android:layout_toRightOf="@id/btn_best_product"
+            android:textColor="#ADADAD"
+            android:fontFamily="@font/nanumsquare_bold"
+            android:textSize="11sp"
             android:text="낮은가격" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/home_select_category_warning"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="12sp"
+                android:textColor="#529C77"
+                android:text="알러지주의"/>
+        </LinearLayout>
     </RelativeLayout>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_product_product"
+        android:layout_marginTop="5dp"
         app:layoutManager="android.support.v7.widget.GridLayoutManager"
         app:spanCount="2"
         android:layout_width="match_parent"

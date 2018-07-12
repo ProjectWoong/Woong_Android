@@ -22,8 +22,8 @@
         <View
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#bcbcbc"/>
+            android:layout_height="0.5dp"
+            android:background="#ADADAD"/>
         <TextView
             android:id="@+id/btn_register_review"
             android:layout_centerVertical="true"
@@ -54,11 +54,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="80dp">
                     <ImageView
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="15dp"
                         android:id="@+id/profileimg_message_notice"
                         android:layout_centerVertical="true"
-                        android:layout_width="80dp"
-                        android:layout_height="70dp"
+                        android:layout_width="55dp"
+                        android:layout_height="50dp"
                         android:background="#bcbcbc"/>
                     <RelativeLayout
                         android:layout_centerVertical="true"
@@ -67,16 +67,42 @@
                         android:layout_width="240dp"
                         android:layout_height="75dp">
                         <RelativeLayout
-                            android:paddingLeft="30dp"
+                            android:paddingLeft="15dp"
                             android:layout_width="240dp"
-                            android:layout_height="40dp">
-                            <TextView
+                            android:layout_height="45dp">
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="현듀마켓"/>
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:fontFamily="@font/nanumsquare_bold"
+                                    android:textSize="15sp"
+                                    android:textColor="#1C2320"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="["/>
+                                <TextView
+                                    android:fontFamily="@font/nanumsquare_bold"
+                                    android:textSize="15sp"
+                                    android:textColor="#1C2320"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="현듀마켓"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:fontFamily="@font/nanumsquare_bold"
+                                    android:textSize="15sp"
+                                    android:textColor="#1C2320"
+                                    android:layout_height="wrap_content"
+                                    android:text="]"/>
+                            </LinearLayout>
                             <TextView
-                                android:layout_alignParentBottom="true"
                                 android:layout_width="wrap_content"
+                                android:fontFamily="@font/nanumsquare_bold"
+                                android:textSize="15sp"
+                                android:textColor="#1C2320"
+                                android:layout_marginTop="5dp"
+                                android:layout_alignParentBottom="true"
                                 android:layout_height="wrap_content"
                                 android:text="웅이네 포슬포슬 왕감자 3kg"/>
                         </RelativeLayout>
@@ -89,21 +115,35 @@
                 <View
                     android:layout_alignParentBottom="true"
                     android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="#bcbcbc"/>
+                    android:layout_height="0.5dp"
+                    android:background="#ADADAD"
+                    android:layout_marginBottom="3dp"/>
 
             </RelativeLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="식품 만족도를 별점 평가해주세요"/>
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="15sp"
+                android:textColor="#707070"
+                android:text="식품 만족도를 별점 평가해주세요"
+                android:layout_marginBottom="15dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="배달속도"/>
+                android:text="배달속도"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/nanum_regular"
+                android:textSize="14sp"
+                android:textColor="#1C2320"
+                android:layout_marginBottom="10dp"/>
             <RelativeLayout
-                android:layout_width="260dp"
-                android:layout_height="wrap_content">
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp">
                 <RatingBar
                     android:id="@+id/rating_speed_review"
                     android:rating="5"
@@ -118,6 +158,9 @@
                     android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="15sp"
+                    android:textColor="#707070"
                     android:text="완벽해요"/>
 
             </RelativeLayout>
@@ -125,10 +168,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="맛"/>
+                android:text="맛"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/nanum_regular"
+                android:textSize="14sp"
+                android:textColor="#1C2320"
+                android:layout_marginBottom="10dp"/>
             <RelativeLayout
-                android:layout_width="260dp"
-                android:layout_height="wrap_content">
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp">
                 <RatingBar
                     android:id="@+id/rating_taste_review"
                     android:isIndicator="false"
@@ -143,6 +193,9 @@
                     android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="15sp"
+                    android:textColor="#707070"
                     android:text="완벽해요"/>
 
             </RelativeLayout>
@@ -150,10 +203,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="신선도"/>
+                android:text="신선도"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/nanum_regular"
+                android:textSize="14sp"
+                android:textColor="#1C2320"
+                android:layout_marginBottom="10dp"/>
             <RelativeLayout
-                android:layout_width="260dp"
-                android:layout_height="wrap_content">
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp">
                 <RatingBar
                     android:id="@+id/rating_fresh_review"
                     android:isIndicator="false"
@@ -168,6 +228,9 @@
                     android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="15sp"
+                    android:textColor="#707070"
                     android:text="완벽해요"/>
 
             </RelativeLayout>
@@ -175,10 +238,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="친절도"/>
+                android:text="친절도"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/nanum_regular"
+                android:textSize="14sp"
+                android:textColor="#1C2320"
+                android:layout_marginBottom="10dp"/>
             <RelativeLayout
-                android:layout_width="260dp"
-                android:layout_height="wrap_content">
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp">
                 <RatingBar
                     android:id="@+id/rating_kind_review"
                     android:isIndicator="false"
@@ -193,41 +263,75 @@
                     android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="15sp"
+                    android:textColor="#707070"
                     android:text="완벽해요"/>
 
             </RelativeLayout>
             <View
                 android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#bcbcbc"/>
+                android:layout_height="0.5dp"
+                android:background="#ADADAD"
+                android:layout_marginBottom="15dp"/>
             <TextView
+                android:layout_marginLeft="15dp"
+                android:textColor="#1C2320"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/nanumsquare_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="식품 후기를 작성해주세요 (최대 1000자 이내)"/>
             <EditText
                 android:gravity="top"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="wrap_content"
                 android:textSize="13sp"
                 android:maxLength="1000"
                 android:background="@null"
+                android:layout_marginHorizontal="15dp"
+                android:textColor="#ADADAD"
+                android:fontFamily="@font/nanum_regular"
                 android:hint="식품은 만족스러우셨나요? 식품의 장점과 아쉬운점을 다른 사람에게 알려주세요. 작성하신 후기는 지금 구매를 고민하는 사람에게 큰 도움이 됩니다."/>
             <View
                 android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#bcbcbc"/>
-            <TextView
-                android:id="@+id/add_photo_review"
+                android:layout_height="0.5dp"
+                android:layout_marginVertical="15dp"
+                android:background="#ADADAD"/>
+            <LinearLayout
+                android:layout_marginLeft="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="사진 추가하기"
-                />
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/alarm_reviewing_camera"/>
+                <TextView
+                    android:id="@+id/add_photo_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="사진 추가하기"
+                    android:textColor="#529C77"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:layout_marginBottom="14dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EDEDED">
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_photo_review"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"></android.support.v7.widget.RecyclerView>
+                android:layout_height="80dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginVertical="15dp"></android.support.v7.widget.RecyclerView>
+            </LinearLayout>
         </LinearLayout>
 
 
