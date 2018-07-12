@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="230dp"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="#FFFFFF">
     <TextView
@@ -20,7 +20,7 @@
     <ImageView
         android:id="@+id/photo_sellermarket_album"
         android:layout_width="match_parent"
-        android:layout_height="152dp"
+        android:layout_height="250dp"
         android:scaleType="centerCrop"
         android:background="@android:color/darker_gray"/>
     <TextView

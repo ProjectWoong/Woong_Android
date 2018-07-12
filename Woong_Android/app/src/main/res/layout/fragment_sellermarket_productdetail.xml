@@ -10,49 +10,67 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_product_productdetail"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:scaleType="centerCrop"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_margin="25dp">
-            <ImageView
-                android:id="@+id/iv_product_productdetail"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:background="@android:color/darker_gray"
-                android:layout_marginBottom="10dp"/>
+            android:layout_marginHorizontal="25dp">
             <TextView
                 android:id="@+id/name_item_productdetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="홍감자"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#529C77"
                 android:layout_gravity="center_horizontal"
                 android:textSize="20sp"
-                android:layout_marginBottom="10dp"/>
+                android:fontFamily="@font/nanumsquare_bold"
+                android:layout_marginBottom="25dp"/>
             <TextView
+                android:fontFamily="@font/nanum_regular"
+                android:textSize="15sp"
+                android:textColor="#707070"
                 android:id="@+id/info_item_productdetail"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
                 android:text="겉은 고구마처럼 자색을 띠고 속은 황금빛을 품은 제철 햇 홍감자입니다.겉은 고구마처럼 자색을 띠고 속은 황금빛을 품은 제철 햇 홍감자입니다."/>
             <TextView
+                android:fontFamily="@font/nanum_extrabold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="17sp"
                 android:text="활용 요리"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#529C77"
                 android:layout_marginBottom="5dp"/>
             <TextView
                 android:id="@+id/cook_item_productdetail"
+                android:textColor="#707070"
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="15sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="감자조림, 감자조림, 감자튀김"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="15dp"/>
             <TextView
+                android:fontFamily="@font/nanum_extrabold"
+                android:textSize="17sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="보관법"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#529C77"
                 android:layout_marginBottom="5dp"/>
             <TextView
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textSize="15sp"
+                android:textColor="#707070"
                 android:id="@+id/maintain_item_productdetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,12 +81,17 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="12sp"
+                    android:textColor="#529C77"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
-                    android:text="포장단위별 용량,수량, 크기"
-                    android:textColor="@color/colorPrimaryDark"/>
+                    android:text="포장단위별 용량,수량, 크기"/>
                 <TextView
+                    android:fontFamily="@font/nanum_regular"
+                    android:textSize="13sp"
+                    android:textColor="#707070"
                     android:id="@+id/weight_item_productdetail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -77,7 +100,9 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"/>
+                android:layout_height="0.5dp"
+                android:layout_marginVertical="5dp"
+                android:background="#ADADAD"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,8 +112,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
                     android:text="제조연월일"
-                    android:textColor="@color/colorPrimaryDark"/>
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="12sp"
+                    android:textColor="#529C77"/>
                 <TextView
+                    android:fontFamily="@font/nanum_regular"
+                    android:textSize="13sp"
+                    android:textColor="#707070"
                     android:id="@+id/manufacture_item_productdetail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -97,7 +127,9 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"/>
+                android:layout_height="0.5dp"
+                android:background="#ADADAD"
+                android:layout_marginVertical="5dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -107,8 +139,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
                     android:text="유통기한"
-                    android:textColor="@color/colorPrimaryDark"/>
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="12sp"
+                    android:textColor="#529C77"/>
                 <TextView
+                    android:fontFamily="@font/nanum_regular"
+                    android:textSize="13sp"
+                    android:textColor="#707070"
                     android:id="@+id/expiration_item_productdetail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -117,7 +154,9 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"/>
+                android:layout_height="0.5dp"
+                android:background="#ADADAD"
+                android:layout_marginVertical="5dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -127,8 +166,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
                     android:text="관련법상 표시사항"
-                    android:textColor="@color/colorPrimaryDark"/>
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="12sp"
+                    android:textColor="#529C77"/>
                 <TextView
+                    android:fontFamily="@font/nanum_regular"
+                    android:textSize="13sp"
+                    android:textColor="#707070"
                     android:id="@+id/related_item_productdetail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -137,7 +181,9 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"/>
+                android:layout_height="0.5dp"
+                android:background="#ADADAD"
+                android:layout_marginVertical="5dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -147,8 +193,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
                     android:text="생산자 이름"
-                    android:textColor="@color/colorPrimaryDark"/>
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="12sp"
+                    android:textColor="#529C77"/>
                 <TextView
+                    android:fontFamily="@font/nanum_regular"
+                    android:textSize="13sp"
+                    android:textColor="#707070"
                     android:id="@+id/producer_item_productdetail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -157,7 +208,9 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"/>
+                android:layout_height="0.5dp"
+                android:background="#ADADAD"
+                android:layout_marginVertical="5dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -165,38 +218,59 @@
                 android:layout_marginBottom="100dp">
                 <TextView android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="1.5"
                     android:text="소비자상담 관련 전화번호"
-                    android:textColor="@color/colorPrimaryDark"/>
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="12sp"
+                    android:textColor="#529C77"/>
                 <TextView
+                    android:fontFamily="@font/nanum_regular"
+                    android:textSize="13sp"
+                    android:textColor="#707070"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="1600-6725"/>
             </LinearLayout>
         </LinearLayout>
+        </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
     <!--밑에 고정 버튼-->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true">
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginRight="1dp"
-            android:background="@color/colorPrimaryDark"
-            android:text="장바구니담기"
-            android:textColor="#FFFFFF"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"
-            android:background="@color/colorPrimaryDark"
-            android:text="구매하기"
-            android:textColor="#FFFFFF"/>
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                android:text="장바구니담기"
+                android:fontFamily="@font/nanum_extrabold"
+                android:textSize="15sp"
+                android:textColor="#FFFFFF"
+                android:background="@null"/>
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:src="@drawable/market_thing_details_underbar_devide_line"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:layout_marginLeft="1dp"
+                android:fontFamily="@font/nanum_extrabold"
+                android:textSize="15sp"
+                android:text="구매하기"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+    </RelativeLayout>
 </RelativeLayout>
