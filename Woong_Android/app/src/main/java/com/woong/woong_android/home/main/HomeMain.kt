@@ -13,7 +13,7 @@ import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import com.woong.woong_android.MainActivity
 import com.woong.woong_android.R
-import com.woong.woong_android.home.submenu.product.HomeProduct
+import com.woong.woong_android.home.product.HomeProduct
 import com.woong.woong_android.map.location_change.LocationSearchChangeActivity
 import com.woong.woong_android.searchString
 import kotlinx.android.synthetic.main.fragment_home_main.view.*

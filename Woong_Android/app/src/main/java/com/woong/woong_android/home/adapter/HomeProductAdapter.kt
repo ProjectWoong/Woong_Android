@@ -5,12 +5,17 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
-import com.woong.woong_android.home.submenu.get.GetItemResponseData
-import com.woong.woong_android.home.submenu.viewholder.HomeProductViewHolder
-import kotlin.coroutines.experimental.coroutineContext
+import com.woong.woong_android.R.id.btn_favorite_home
+import com.woong.woong_android.applicationcontroller.ApplicationController
+import com.woong.woong_android.home.get.GetItemResponseData
+import com.woong.woong_android.home.post.PostFavoriteResponse
+import com.woong.woong_android.home.viewholder.HomeProductViewHolder
+import com.woong.woong_android.woong_usertoken
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class HomeProductAdapter(var productItems : ArrayList<GetItemResponseData>, var requestManager: RequestManager) : RecyclerView.Adapter<HomeProductViewHolder>() {
 
@@ -29,6 +34,8 @@ class HomeProductAdapter(var productItems : ArrayList<GetItemResponseData>, var 
     override fun getItemCount(): Int = productItems.size
 
     override fun onBindViewHolder(productViewHolder: HomeProductViewHolder, position: Int) {
+        var networkService = ApplicationController.instance.networkService
+
         requestManager.load(productItems[position].file_key).into(productViewHolder.productimg)
         productViewHolder.marketname.text = productItems[position].market_name
         productViewHolder.productname.text = productItems[position].item_name
@@ -45,11 +52,32 @@ class HomeProductAdapter(var productItems : ArrayList<GetItemResponseData>, var 
             productViewHolder.secondtag.visibility = View.VISIBLE
         if (productItems[position].favorite_flag==1){
             productViewHolder.favorite.setImageResource(R.drawable.home_select_category_like1)
+            productViewHolder.favorite.setOnClickListener {
+                val delFavorite = networkService.delFavorite(woong_usertoken.user_token, productItems[position].item_id)
+                delFavorite.enqueue(object : Callback<PostFavoriteResponse> {
+                    override fun onFailure(call: Call<PostFavoriteResponse>?, t: Throwable?) {
+                    }
+                    override fun onResponse(call: Call<PostFavoriteResponse>?, response: Response<PostFavoriteResponse>?) {
+                        if (response!!.isSuccessful) {
+                            productViewHolder.favorite.setImageResource(R.drawable.home_select_category_no_like)
+                        }
+                    }
+                })
+            }
         }else{
             productViewHolder.favorite.setImageResource(R.drawable.home_select_category_no_like)
-        }
-        productViewHolder.favorite.setOnClickListener{
-            Log.d("asd","asd")
+            productViewHolder.favorite.setOnClickListener {
+                val postFavorite = networkService.postFavorite(woong_usertoken.user_token, productItems[position].item_id)
+                postFavorite.enqueue(object : Callback<PostFavoriteResponse> {
+                    override fun onFailure(call: Call<PostFavoriteResponse>?, t: Throwable?) {
+                    }
+                    override fun onResponse(call: Call<PostFavoriteResponse>?, response: Response<PostFavoriteResponse>?) {
+                        if (response!!.isSuccessful) {
+                            productViewHolder.favorite.setImageResource(R.drawable.home_select_category_like1)
+                        }
+                    }
+                })
+            }
         }
     }
 }

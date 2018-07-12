@@ -17,7 +17,7 @@ import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.seller_market.adapter.SmPagerAdapter
 import com.woong.woong_android.seller_market.get.GetMarketInfoResponse
-import com.woong.woong_android.home.submenu.product.SellerIdx
+import com.woong.woong_android.home.product.SellerIdx
 import com.woong.woong_android.seller_market.product.SellerMarketProductDetail
 import com.woong.woong_android.woong_marketinfo
 import kotlinx.android.synthetic.main.activity_sellermarket.*

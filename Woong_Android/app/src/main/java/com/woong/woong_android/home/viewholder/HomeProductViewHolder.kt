@@ -1,4 +1,4 @@
-package com.woong.woong_android.home.submenu.viewholder
+package com.woong.woong_android.home.viewholder
 
 import android.support.v7.widget.RecyclerView
 import android.view.View

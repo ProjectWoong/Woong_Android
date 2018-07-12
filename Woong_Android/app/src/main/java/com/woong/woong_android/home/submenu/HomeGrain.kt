@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.woong.woong_android.MainActivity
 import com.woong.woong_android.R
 import com.woong.woong_android.TitleName
-import com.woong.woong_android.home.submenu.product.HomeProduct
+import com.woong.woong_android.home.product.HomeProduct
 import kotlinx.android.synthetic.main.fragment_home_grain.view.*
 
 class HomeGrain : Fragment() {

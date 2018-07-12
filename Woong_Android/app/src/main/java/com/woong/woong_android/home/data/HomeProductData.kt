@@ -1,4 +1,4 @@
-package com.woong.woong_android.home.submenu.data
+package com.woong.woong_android.home.data
 
 data class HomeProductData (
     var pr_productimg : Int,
