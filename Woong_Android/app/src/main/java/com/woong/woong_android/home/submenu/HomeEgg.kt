@@ -18,13 +18,13 @@ class HomeEgg : Fragment() {
         v.relative_egg_egg.setOnClickListener {
             TitleName.name = "달걀"
             TitleName.main_id = 4
-            TitleName.sub_id = 1
+            TitleName.sub_id = 17
             (activity as MainActivity).replaceFragment(HomeProduct())
         }
         v.relative_milk_egg.setOnClickListener {
             TitleName.name = "우유"
             TitleName.main_id = 4
-            TitleName.sub_id = 2
+            TitleName.sub_id = 18
             (activity as MainActivity).replaceFragment(HomeProduct())
         }
         return v

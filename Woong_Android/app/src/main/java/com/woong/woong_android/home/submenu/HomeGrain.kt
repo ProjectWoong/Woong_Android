@@ -18,19 +18,19 @@ class HomeGrain : Fragment() {
         v.relative_five_grain.setOnClickListener {
             TitleName.name = "오곡"
             TitleName.main_id = 2
-            TitleName.sub_id = 1
+            TitleName.sub_id = 6
             (activity as MainActivity).replaceFragment(HomeProduct())
         }
         v.relative_minor_grain.setOnClickListener {
             TitleName.name = "잡곡"
             TitleName.main_id = 2
-            TitleName.sub_id = 2
+            TitleName.sub_id = 7
             (activity as MainActivity).replaceFragment(HomeProduct())
         }
         v.relative_rice_grain.setOnClickListener {
             TitleName.name = "쌀"
             TitleName.main_id = 2
-            TitleName.sub_id = 3
+            TitleName.sub_id = 8
             (activity as MainActivity).replaceFragment(HomeProduct())
         }
 

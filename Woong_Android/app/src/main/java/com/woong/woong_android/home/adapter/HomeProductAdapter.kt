@@ -33,8 +33,13 @@ class HomeProductAdapter(var productItems : ArrayList<GetItemResponseData>, var 
         productViewHolder.cost.text = productItems[position].item_price.toString()
         if(productItems[position].quick==0)
             productViewHolder.firsttag.visibility = View.GONE
+        else
+            productViewHolder.firsttag.visibility = View.VISIBLE
+
         if(productItems[position].delivery==0)
             productViewHolder.secondtag.visibility = View.GONE
+        else
+            productViewHolder.secondtag.visibility = View.VISIBLE
         if (productItems[position].favorite_flag==1){
             productViewHolder.favorite.setImageResource(R.drawable.home_select_category_like1)
         }else{
