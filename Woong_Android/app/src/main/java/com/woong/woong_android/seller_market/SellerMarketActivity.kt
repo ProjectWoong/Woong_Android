@@ -18,8 +18,10 @@ import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.seller_market.adapter.SmPagerAdapter
 import com.woong.woong_android.seller_market.get.GetMarketInfoResponse
 import com.woong.woong_android.home.product.SellerIdx
+import com.woong.woong_android.seller_market.post.PostBookmarkResponse
 import com.woong.woong_android.seller_market.product.SellerMarketProductDetail
 import com.woong.woong_android.woong_marketinfo
+import com.woong.woong_android.woong_usertoken
 import kotlinx.android.synthetic.main.activity_sellermarket.*
 import kotlinx.android.synthetic.main.fragment_product_home.*
 import kotlinx.android.synthetic.main.title_layout.*
@@ -91,6 +93,17 @@ class SellerMarketActivity : AppCompatActivity() {
             }
         }
         appbar_sellermarket.addOnOffsetChangedListener(listener)
+        ib_bookmark_sellermarket.setOnClickListener{
+            val postBookmark = networkService.postBookmark(woong_usertoken.user_token, woong_marketinfo.market_id)
+            postBookmark.enqueue(object : Callback<PostBookmarkResponse> {
+                override fun onFailure(call: Call<PostBookmarkResponse>?, t: Throwable?) {
+                }
+
+                override fun onResponse(call: Call<PostBookmarkResponse>?, response: Response<PostBookmarkResponse>?) {
+                    ib_bookmark_sellermarket.setImageResource(R.drawable.seller_market_intro_f_like_o)
+                }
+            })
+        }
     }
     fun dpToPx(dp:Float, context: Context):Float{
         return (dp * context.resources.displayMetrics.density)
@@ -105,7 +118,6 @@ class SellerMarketActivity : AppCompatActivity() {
         var getMarketInfo = networkService.getMarketDetail("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImRvbmdzdUBnbWFpbC5jb20iLCJpYXQiOjE1MzEyMjc1NjUsImV4cCI6ODc5MzEyMjc1NjUsImlzcyI6InNlcnZpY2UiLCJzdWIiOiJ1c2VyX3Rva2VuIn0.pNHa45rQvyXEEb0PxAwUZhnQpof17GLDmVjBrQxGySo",1)
         getMarketInfo.enqueue(object : Callback<GetMarketInfoResponse> {
             override fun onFailure(call: Call<GetMarketInfoResponse>?, t: Throwable?) {
-
             }
 
             override fun onResponse(call: Call<GetMarketInfoResponse>?, response: Response<GetMarketInfoResponse>?) {
