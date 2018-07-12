@@ -10,6 +10,7 @@ import com.woong.woong_android.myproduct.get.GetFavoriteResponse
 import com.woong.woong_android.home.get.GetSearchItemResponse
 import com.woong.woong_android.home.get.GetSubItemResponse
 import com.woong.woong_android.home.post.PostFavoriteResponse
+import com.woong.woong_android.myproduct.get.GetCartResponse
 import com.woong.woong_android.myproduct.post.PostCartResponse
 import retrofit2.http.*
 import retrofit2.Call
@@ -90,4 +91,7 @@ interface NetworkService {
     @POST("/cart/{item_id}")
     fun postCart(@Header("usertoken")user_token: String?,
                      @Path("item_id")item_id:Int):Call<PostCartResponse>
+
+    @GET("/cart")
+    fun getCart(@Header("usertoken")user_token: String?):Call<GetCartResponse>
 }
