@@ -14,7 +14,7 @@
         android:text="현듀 마켓"
         android:textColor="#ffffff"
         android:fontFamily="@font/nanum_bold"
-        android:textSize="13dp"/>
+        android:textSize="13sp"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -38,14 +38,14 @@
         android:layout_gravity="center_vertical">
         <TextView
             android:fontFamily="@font/nanum_regular"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textColor="#707070"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""/>
         <TextView
             android:fontFamily="@font/nanum_regular"
-            android:textSize="9dp"
+            android:textSize="9sp"
             android:textColor="#707070"
             android:layout_alignParentBottom="true"
             android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
             android:layout_height="25dp"
             android:background="@drawable/alarm_pick_circle"
             android:fontFamily="@font/nanum_bold"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:textColor="#ffffff"
             android:layout_alignParentRight="true"
             android:text=""

@@ -53,7 +53,7 @@ class SellerMarketReview: Fragment() {
                     v.second_rating_marketreview.rating = second.toFloat()
                     v.third_rating_marketreview.rating = third.toFloat()
                     v.fourth_rating_marketreview.rating = fourth.toFloat()
-
+1
                     reviewItems = response.body().reviews
                     sellerMarketReviewAdapter = SellerMarketReviewAdapter(reviewItems,0)
                     v.rv_sellermarket_review.layoutManager = LinearLayoutManager(context)

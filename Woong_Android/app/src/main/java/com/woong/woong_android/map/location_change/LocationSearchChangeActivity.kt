@@ -16,6 +16,14 @@ class LocationSearchChangeActivity : AppCompatActivity() {
     lateinit var imm:InputMethodManager
     val bundle = Bundle()
     var location_keyword=""
+
+    override fun onPause() {
+        super.onPause()
+        if (isFinishing){
+            overridePendingTransition(R.anim.slide_stay_down, R.anim.slide_out_down)
+        }
+
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
