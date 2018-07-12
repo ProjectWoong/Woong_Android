@@ -13,5 +13,6 @@ object TitleName{
     var sub_id : Int = 0    // 서브 메뉴 id
 }
 object searchString{
+    var flag : Boolean = false
     var str : String = ""
 }

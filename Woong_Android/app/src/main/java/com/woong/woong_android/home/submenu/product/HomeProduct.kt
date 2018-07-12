@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,10 +47,20 @@ class HomeProduct : Fragment(), View.OnClickListener{
         v.tv_submenu_product.text = TitleName.name
         if(TitleName.main_id!=0 && TitleName.sub_id!=0)
             getMenuProductList(TitleName.main_id, TitleName.sub_id)
-
-        if(searchString.str!="")
+      
+        if(searchString.flag) {
             getSearchProductList(searchString.str)
-
+            searchString.flag=false
+            val rs  = ResizeAnimation(v.iv_searchwide_product, dpToPx(325F, activity!!.applicationContext).toInt())
+            rs.duration = 0
+            v.iv_searchwide_product.startAnimation(rs)
+            v.btn_search_product.visibility = View.INVISIBLE
+            v.iv_searchwide_product.visibility = View.VISIBLE
+            v.btn_cart_product.visibility = View.INVISIBLE
+            v.tv_cancel_product.visibility = View.VISIBLE
+            v.et_search_product.visibility = View.VISIBLE
+            v.iv_searchico_product.visibility = View.VISIBLE
+        }
         val dur : Long = 400
         v.btn_search_product.setOnClickListener {
             val rs  = ResizeAnimation(iv_searchwide_product, dpToPx(325F, activity!!.applicationContext).toInt())
@@ -118,15 +127,11 @@ class HomeProduct : Fragment(), View.OnClickListener{
         var requestManager: RequestManager = Glide.with(this)
 
         val getSubItem = networkService.getSubItem(woong_usertoken.user_token, main_id, sub_id)
-        Log.d("asdz","asdasd")
         getSubItem.enqueue(object: Callback<GetSubItemResponse>{
             override fun onFailure(call: Call<GetSubItemResponse>?, t: Throwable?) {
-                Log.d("asdx","asdasd")
             }
             override fun onResponse(call: Call<GetSubItemResponse>?, response: Response<GetSubItemResponse>?) {
                 if(response!!.isSuccessful){
-                    Log.d("asdc",TitleName.main_id.toString())
-                    Log.d("asdc",TitleName.sub_id.toString())
                     homeProductItems = response.body().data.item_info
                     homeProductAdapter = HomeProductAdapter(homeProductItems, requestManager)
                     homeProductAdapter.setOnItemClickListener(this@HomeProduct)

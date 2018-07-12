@@ -35,6 +35,8 @@
         android:layout_width="325dp"
         android:layout_height="35dp"
         android:layout_gravity="center_horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:background="@drawable/setting_location_2_search_bar">
         <ImageView
             android:layout_width="20dp"

@@ -1,13 +1,16 @@
 package com.woong.woong_android.home.adapter
 
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
 import com.woong.woong_android.home.submenu.get.GetItemResponseData
 import com.woong.woong_android.home.submenu.viewholder.HomeProductViewHolder
+import kotlin.coroutines.experimental.coroutineContext
 
 class HomeProductAdapter(var productItems : ArrayList<GetItemResponseData>, var requestManager: RequestManager) : RecyclerView.Adapter<HomeProductViewHolder>() {
 
@@ -44,6 +47,9 @@ class HomeProductAdapter(var productItems : ArrayList<GetItemResponseData>, var 
             productViewHolder.favorite.setImageResource(R.drawable.home_select_category_like1)
         }else{
             productViewHolder.favorite.setImageResource(R.drawable.home_select_category_no_like)
+        }
+        productViewHolder.favorite.setOnClickListener{
+            Log.d("asd","asd")
         }
     }
 }
