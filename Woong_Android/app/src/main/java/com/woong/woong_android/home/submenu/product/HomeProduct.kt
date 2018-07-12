@@ -2,49 +2,56 @@ package com.woong.woong_android.home.submenu.product
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Point
 import android.os.Bundle
 import android.os.Handler
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
-import android.util.DisplayMetrics
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
+import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
+import com.bumptech.glide.Glide
+import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
+import com.woong.woong_android.TitleName
+import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.home.adapter.HomeProductAdapter
-import com.woong.woong_android.home.submenu.TitleName
-import com.woong.woong_android.home.submenu.data.HomeProductData
+import com.woong.woong_android.home.submenu.get.GetSearchItemResponse
+import com.woong.woong_android.home.submenu.get.GetItemResponseData
+import com.woong.woong_android.home.submenu.get.GetSubItemResponse
+import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.seller_market.ResizeAnimation
 import com.woong.woong_android.seller_market.SellerMarketActivity
+import com.woong.woong_android.woong_marketinfo
+import com.woong.woong_android.woong_usertoken
 import kotlinx.android.synthetic.main.fragment_product_home.*
 import kotlinx.android.synthetic.main.fragment_product_home.view.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class HomeProduct : Fragment(), View.OnClickListener{
+    lateinit var imm : InputMethodManager
+    lateinit var homeProductAdapter: HomeProductAdapter
+    lateinit var homeProductItems: ArrayList<GetItemResponseData>
+
     override fun onClick(v: View?) {
-        Log.d("asd","dasd")
         val intent : Intent = Intent(context, SellerMarketActivity::class.java)
         SellerIdx.id = 1
+        var idx : Int = this.rv_product_product.getChildAdapterPosition(v)
+        woong_marketinfo.market_id = homeProductItems[idx].market_id
+        woong_marketinfo.item_id = homeProductItems[idx].item_id
         startActivity(intent)
     }
-    lateinit var homeProductAdapter: HomeProductAdapter
-    lateinit var homeProductItems: ArrayList<HomeProductData>
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_product_home,container,false)
         // object로 중분류 누른 메뉴 이름 가져오기
         v.tv_submenu_product.text = TitleName.name
-
-        homeProductItems = ArrayList()
-
-        homeProductItems.add(HomeProductData(R.drawable.comsumer_allergy_select_ed_milk, "아영마켓","돼지감자","3","kg","7000","당일배송","무료배송",true))
-        homeProductItems.add(HomeProductData(R.drawable.comsumer_allergy_select_ed_milk, "아영마켓","돼지감자","3","kg","7000","당일배송","무료배송",true))
-        homeProductItems.add(HomeProductData(R.drawable.comsumer_allergy_select_ed_milk, "아영마켓","돼지감자","3","kg","7000","당일배송","무료배송",false))
-
-        homeProductAdapter = HomeProductAdapter(homeProductItems)
-        homeProductAdapter.setOnItemClickListener(this)
+        if(TitleName.main_id!=0 && TitleName.sub_id!=0){
+            getMenuProductList(TitleName.main_id, TitleName.sub_id)
+        }
 
         val dur : Long = 400
         v.btn_search_product.setOnClickListener {
@@ -56,7 +63,7 @@ class HomeProduct : Fragment(), View.OnClickListener{
             btn_cart_product.visibility = View.INVISIBLE
             tv_cancel_product.visibility = View.VISIBLE
             Handler().postDelayed({
-                et_search_main.visibility = View.VISIBLE
+                et_search_product.visibility = View.VISIBLE
                 iv_searchico_product.visibility = View.VISIBLE
             }, dur)
         }
@@ -67,18 +74,68 @@ class HomeProduct : Fragment(), View.OnClickListener{
             iv_searchwide_product.startAnimation(rs)
             iv_searchwide_product.visibility = View.INVISIBLE
             iv_searchico_product.visibility = View.INVISIBLE
-            et_search_main.visibility = View.INVISIBLE
+            et_search_product.visibility = View.INVISIBLE
             Handler().postDelayed({
                 btn_search_product.visibility = View.VISIBLE
                 btn_cart_product.visibility = View.VISIBLE
                 tv_cancel_product.visibility = View.INVISIBLE
             }, dur)
         }
-
-
-        v.rv_product_product.layoutManager = GridLayoutManager(context, 2)
-        v.rv_product_product.adapter = homeProductAdapter
+        v.et_search_product.setOnEditorActionListener { textView, i, keyEvent ->
+            when(i){
+                EditorInfo.IME_ACTION_SEARCH->{
+                    getSearchProductList(et_search_product.text.toString())
+                    tv_submenu_product.text = et_search_product.text.toString()
+                    imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager //키보드 내리기위해서
+                    imm.hideSoftInputFromWindow(et_search_product.windowToken, 0)
+                    true
+                }
+            }
+            false
+        }
         return v
+    }
+    fun getSearchProductList(keyword:String?){
+        var networkService: NetworkService = ApplicationController.instance.networkService
+        var requestManager: RequestManager = Glide.with(this)
+
+        val getSearchItem = networkService.getSearchItem(woong_usertoken.user_token, keyword)
+        getSearchItem.enqueue(object: retrofit2.Callback<GetSearchItemResponse>{
+            override fun onFailure(call: Call<GetSearchItemResponse>?, t: Throwable?) {
+            }
+            override fun onResponse(call: Call<GetSearchItemResponse>?, response: Response<GetSearchItemResponse>?) {
+                if(response!!.isSuccessful){
+                    homeProductItems = response.body().data.item_info
+                    homeProductAdapter = HomeProductAdapter(homeProductItems, requestManager)
+                    homeProductAdapter.setOnItemClickListener(this@HomeProduct)
+                    rv_product_product.layoutManager = GridLayoutManager(context, 2)
+                    rv_product_product.adapter = homeProductAdapter
+                }
+            }
+        })
+    }
+    fun getMenuProductList(main_id:Int, sub_id:Int){
+        var networkService: NetworkService = ApplicationController.instance.networkService
+        var requestManager: RequestManager = Glide.with(this)
+
+        val getSubItem = networkService.getSubItem(woong_usertoken.user_token, main_id, sub_id)
+        Log.d("asdz","asdasd")
+        getSubItem.enqueue(object: Callback<GetSubItemResponse>{
+            override fun onFailure(call: Call<GetSubItemResponse>?, t: Throwable?) {
+                Log.d("asdx","asdasd")
+            }
+            override fun onResponse(call: Call<GetSubItemResponse>?, response: Response<GetSubItemResponse>?) {
+                if(response!!.isSuccessful){
+                    Log.d("asdc",TitleName.main_id.toString())
+                    Log.d("asdc",TitleName.sub_id.toString())
+                    homeProductItems = response.body().data.item_info
+                    homeProductAdapter = HomeProductAdapter(homeProductItems, requestManager)
+                    homeProductAdapter.setOnItemClickListener(this@HomeProduct)
+                    rv_product_product.layoutManager = GridLayoutManager(context, 2)
+                    rv_product_product.adapter = homeProductAdapter
+                }
+            }
+        })
     }
     fun dpToPx(dp:Float, context: Context):Float{
         return (dp * context.resources.displayMetrics.density)
