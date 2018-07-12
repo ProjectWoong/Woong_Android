@@ -63,8 +63,14 @@
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_address_market"
+<<<<<<< HEAD
                 android:textColor="#529C77"
                 android:text="#"/>
+=======
+                android:textColor="#ffffff"
+                android:background="@color/colorPastel"
+                android:text=""/>
+>>>>>>> 41dbb9fbecc9c4045a5721249956e9f73496ba08
             <TextView
                 android:fontFamily="@font/nanum_bold"
                 android:textSize="13dp"
@@ -75,7 +81,11 @@
                 android:layout_marginLeft="20dp"
                 android:textColor="#529C77"
                 android:layout_toRightOf="@+id/tv_tag1_market"
+<<<<<<< HEAD
                 android:text="#"/>
+=======
+                android:text=""/>
+>>>>>>> 41dbb9fbecc9c4045a5721249956e9f73496ba08
         </RelativeLayout>
     </RelativeLayout>
     <View

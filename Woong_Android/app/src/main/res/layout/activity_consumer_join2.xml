@@ -102,6 +102,7 @@
                         android:textSize="15dp" />
 
                     <EditText
+
                         android:id="@+id/pwd_join_consumer"
                         android:layout_width="0dp"
                         android:layout_height="20dp"
@@ -110,7 +111,7 @@
                         android:textColorLink="#000000"
                         android:hint="********"
                         android:inputType="textPassword"
-                        android:textColor="#1C2320"
+
                         android:textSize="15dp" />
                 </LinearLayout>
 

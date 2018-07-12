@@ -3,6 +3,7 @@ package com.woong.woong_android.market.adapter
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.TextView
 import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
 import com.woong.woong_android.market.viewholder.MarketNearbyViewHolder
@@ -26,5 +27,12 @@ class MarketNearbyAdapter(private var nearbyItems : ArrayList<GetNearMarketListR
 
         nearbyViewHolder.tag1.text = "#"+tag[0]
         nearbyViewHolder.tag2.text = "#"+tag[1]
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 41dbb9fbecc9c4045a5721249956e9f73496ba08
     }
 }

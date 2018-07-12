@@ -45,12 +45,14 @@
                 android:orientation="horizontal"
                 android:background="@null">
                 <RelativeLayout
+                    android:id="@+id/buckwheat_join_allergy"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/tab_allergy_bucketwheat">
                 </RelativeLayout>
                 <RelativeLayout
+                    android:id="@+id/wheat_join_allergy"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -58,6 +60,7 @@
                     >
                 </RelativeLayout>
                 <RelativeLayout
+                    android:id="@+id/peach_join_allergy"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -72,18 +75,21 @@
                 android:orientation="horizontal"
                 android:background="@null">
                 <RelativeLayout
+                    android:id="@+id/soybean_join_allergy"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/tab_allergy_bean">
                 </RelativeLayout>
                 <RelativeLayout
+                    android:id="@+id/nuts_join_allergy"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/tab_allergy_peanut">
                 </RelativeLayout>
                 <RelativeLayout
+                    android:id="@+id/tomato_join_allergy"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -97,18 +103,21 @@
                 android:orientation="horizontal"
                 android:background="@null">
                 <RelativeLayout
+                    android:id="@+id/egg_join_allergy"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/tab_allergy_egg">
                 </RelativeLayout>
                 <RelativeLayout
+                    android:id="@+id/milk_join_allergy"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/tab_allergy_milk">
                 </RelativeLayout>
                 <RelativeLayout
+                    android:id="@+id/onion_join_allergy"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

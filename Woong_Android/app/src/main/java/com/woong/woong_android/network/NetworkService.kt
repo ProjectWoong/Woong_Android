@@ -8,8 +8,9 @@ import com.woong.woong_android.Login.post.PostSignInAppResponse
 import com.woong.woong_android.Login.post.PostSignInAppResponseData
 import com.woong.woong_android.home.submenu.get.GetSearchItemResponse
 import com.woong.woong_android.home.submenu.get.GetSubItemResponse
-import retrofit2.Call
 import retrofit2.http.*
+import retrofit2.Call
+
 
 interface NetworkService {
     //주소를 키워드로 검색시 연관 주소 목록들 가져오기 (손대지 마세요!!)
@@ -59,10 +60,13 @@ interface NetworkService {
     @POST("/account/signup")//소비자 회원가입하기
     fun postSignup(@Body signup :PostSignUpResponseData ):Call<PostSignUpResponse>
 
+    @PUT("/")
+
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     //EVA///////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////
+
     @GET("/item/search") // 상품 검색하기
     fun getSearchItem(@Header ("usertoken")user_token: String?,
                       @Query ("keyword")keyword: String?) :Call<GetSearchItemResponse>
@@ -71,4 +75,5 @@ interface NetworkService {
     fun getSubItem(@Header ("usertoken")user_token: String?,
                    @Path("main_id") main_id: Int,
                    @Path("sub_id")sub_id: Int) : Call<GetSubItemResponse>
+
 }
