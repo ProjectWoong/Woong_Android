@@ -1,5 +1,6 @@
 package com.woong.woong_android.home.main
 
+import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -24,7 +25,6 @@ class HomeMain : Fragment() {
     var re_address : String = ""
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_home_main,container,false)
-        var user_token = arguments!!.getString("user_token")
 
         flag = arguments?.getInt("flag")
         Log.v("flag",flag.toString())
@@ -55,15 +55,17 @@ class HomeMain : Fragment() {
         v.tv_location_main.setOnClickListener {
             val intent = Intent(context,LocationSearchChangeActivity::class.java)
             startActivity(intent)
+            activity!!.overridePendingTransition( R.anim.slide_in_down, R.anim.slide_stay_down)
         }
 
         v.tv_search_main.setOnEditorActionListener { textView, i, keyEvent ->
             when(i){
                 EditorInfo.IME_ACTION_SEARCH->{
+                    searchString.flag = true
                     searchString.str = textView.text.toString()
                     (activity as MainActivity).replaceFragment(HomeProduct())
                     imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager //키보드 내리기위해서
-                    imm.hideSoftInputFromWindow(et_search_product.windowToken, 0)
+                    imm.hideSoftInputFromWindow(textView.windowToken, 0)
                     true
                 }
             }
