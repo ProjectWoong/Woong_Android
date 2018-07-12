@@ -2,7 +2,8 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="135dp">
+    android:layout_height="128dp"
+    android:background="#FFFFFF">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,8 +14,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:id="@+id/iv_market_market"
-            android:layout_width="130dp"
-            android:layout_height="100dp"
+            android:layout_width="115dp"
+            android:layout_height="88dp"
             android:scaleType="centerCrop"
             android:background="@color/colorPastel"/>
         <ImageView
@@ -25,54 +26,71 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="15dp"
             android:layout_toRightOf="@+id/iv_market_market">
             <TextView
+                android:textColor="#707070"
+                android:fontFamily="@font/nanum_extrabold"
+                android:textSize="16dp"
                 android:id="@+id/tv_name_market"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="현듀마켓"/>
+                android:text=""/>
             <ImageView
                 android:id="@+id/iv_bookmark_market"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
+                android:paddingTop="2dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:layout_toRightOf="@id/tv_name_market"
-                android:layout_marginLeft="5dp"
-                android:background="@color/colorPastel"/>
+                android:layout_marginLeft="14dp"
+                android:src="@drawable/market_lanking_favorite"/>
             <TextView
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="13dp"
+                android:textColor="#ADADAD"
                 android:id="@+id/tv_address_market"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_name_market"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:text="서울시 마포구 와우산로"/>
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="15dp"
+                android:text=""/>
             <TextView
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="13dp"
                 android:id="@+id/tv_tag1_market"
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_address_market"
+<<<<<<< HEAD
+                android:textColor="#529C77"
+                android:text="#"/>
+=======
                 android:textColor="#ffffff"
                 android:background="@color/colorPastel"
                 android:text=""/>
+>>>>>>> 41dbb9fbecc9c4045a5721249956e9f73496ba08
             <TextView
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="13dp"
                 android:id="@+id/tv_tag2_market"
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_address_market"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:textColor="#ffffff"
-                android:background="@color/colorPastel"
+                android:layout_marginLeft="20dp"
+                android:textColor="#529C77"
                 android:layout_toRightOf="@+id/tv_tag1_market"
+<<<<<<< HEAD
+                android:text="#"/>
+=======
                 android:text=""/>
+>>>>>>> 41dbb9fbecc9c4045a5721249956e9f73496ba08
         </RelativeLayout>
     </RelativeLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#d2d2d2"
+        android:layout_height="0.5dp"
+        android:background="#ADADAD"
         android:layout_alignParentBottom="true"/>
 </RelativeLayout>
