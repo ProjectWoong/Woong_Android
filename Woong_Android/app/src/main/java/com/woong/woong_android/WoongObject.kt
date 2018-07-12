@@ -12,3 +12,6 @@ object TitleName{
     var main_id : Int = 0   // 메인 메뉴 id
     var sub_id : Int = 0    // 서브 메뉴 id
 }
+object searchString{
+    var str : String = ""
+}
