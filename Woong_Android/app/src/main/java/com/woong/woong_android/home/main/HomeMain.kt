@@ -16,7 +16,14 @@ import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.home.product.HomeProduct
 import com.woong.woong_android.map.get.GetLocationResponse
 import com.woong.woong_android.map.location_change.LocationSearchChangeActivity
+import com.woong.woong_android.market.Market
+import com.woong.woong_android.market.bookmark.MarketBookmark
+import com.woong.woong_android.myproduct.MyProduct
+import com.woong.woong_android.myproduct.bookmark.MyProductBookMark
+import com.woong.woong_android.myproduct.cart.MyProductCart
 import com.woong.woong_android.network.NetworkService
+import com.woong.woong_android.notice.Notice
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home_main.view.*
 import kotlinx.android.synthetic.main.fragment_product_home.*
 import retrofit2.Call
@@ -91,6 +98,30 @@ class HomeMain : Fragment() {
                 }
             }
             false
+        }
+        v.relative_deliver_main.setOnClickListener {
+            frgIntent.flag=1
+            frgIntent.idx=1
+            (activity as MainActivity).replaceFragment(Notice())
+            (activity as MainActivity).clearSelected()
+            (activity as MainActivity).btn_notice_main.isSelected = true
+        }
+        v.relative_favorite_main.setOnClickListener {
+            (activity as MainActivity).replaceFragment(MyProduct())
+            (activity as MainActivity).clearSelected()
+            (activity as MainActivity).btn_myproduct_main.isSelected = true
+        }
+        v.relative_bookmark_main.setOnClickListener{
+            frgIntent.flag=1
+            frgIntent.idx=1
+            (activity as MainActivity).replaceFragment(Market())
+            (activity as MainActivity).clearSelected()
+            (activity as MainActivity).btn_market_main.isSelected = true
+        }
+        v.relative_msg_main.setOnClickListener {
+            (activity as MainActivity).replaceFragment(Notice())
+            (activity as MainActivity).clearSelected()
+            (activity as MainActivity).btn_notice_main.isSelected = true
         }
         return v
     }

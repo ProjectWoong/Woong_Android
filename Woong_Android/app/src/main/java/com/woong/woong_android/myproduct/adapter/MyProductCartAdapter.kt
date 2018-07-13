@@ -17,6 +17,9 @@ import retrofit2.Call
 import retrofit2.Response
 
 class MyProductCartAdapter(private var cartItems: ArrayList<GetCartResponseData>, var requestManager: RequestManager, val v: View) : RecyclerView.Adapter<MyProductCartViewHolder>() {
+
+    var marketIds:ArrayList<Int> = ArrayList()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyProductCartViewHolder {
         val mainView = LayoutInflater.from(parent.context).inflate(R.layout.item_cart_myproduct,parent,false)
 
@@ -30,10 +33,30 @@ class MyProductCartAdapter(private var cartItems: ArrayList<GetCartResponseData>
     fun initTotal(holder: MyProductCartViewHolder, position: Int) {
         var proPrice=0
         var deliPrice=0
+        marketIds=ArrayList()
         for (i in cartItems){
             proPrice += i.item_price
-            deliPrice += i.delivery
+            if(!marketIds.contains(i.market_id)) {
+                marketIds.add(i.market_id)
+                deliPrice += i.delivery
+            }
         }
+        v.pdtotalnum_footer_myproduct.text = proPrice.toString()
+        v.tv_deliver_myproduct.text = deliPrice.toString()+"원"
+        v.totalnum_footer_myproduct.text = (proPrice + deliPrice).toString()
+    }
+    fun delTotal(holder: MyProductCartViewHolder, position: Int) {
+        var proPrice=v.pdtotalnum_footer_myproduct.text.toString().toInt()
+        var deliPrice=v.tv_deliver_myproduct.text.toString().substring(0,v.tv_deliver_myproduct.text.toString().length-1).toInt()
+        proPrice -= cartItems[position].item_price * holder.quantity.text.toString().toInt()
+
+        if(marketIds.contains(cartItems[position].market_id)) {
+            if(!chkOther(cartItems[position].market_id, position)) {
+                deliPrice -= cartItems[position].delivery
+                marketIds.remove(cartItems[position].market_id)
+            }
+        }
+        deliPrice -= cartItems[position].delivery
         v.pdtotalnum_footer_myproduct.text = proPrice.toString()
         v.tv_deliver_myproduct.text = deliPrice.toString()+"원"
         v.totalnum_footer_myproduct.text = (proPrice + deliPrice).toString()
@@ -54,14 +77,12 @@ class MyProductCartAdapter(private var cartItems: ArrayList<GetCartResponseData>
         v.tv_deliver_myproduct.text = deliPrice.toString()+"원"
         v.totalnum_footer_myproduct.text = (proPrice + deliPrice).toString()
     }
-    fun delTotal(holder: MyProductCartViewHolder, position: Int) {
-        var proPrice=v.pdtotalnum_footer_myproduct.text.toString().toInt()
-        var deliPrice=v.tv_deliver_myproduct.text.toString().substring(0,v.tv_deliver_myproduct.text.toString().length-1).toInt()
-        proPrice -= cartItems[position].item_price * holder.quantity.text.toString().toInt()
-        deliPrice -= cartItems[position].delivery
-        v.pdtotalnum_footer_myproduct.text = proPrice.toString()
-        v.tv_deliver_myproduct.text = deliPrice.toString()+"원"
-        v.totalnum_footer_myproduct.text = (proPrice + deliPrice).toString()
+    fun chkOther(market_id: Int, now: Int):Boolean{
+        for(i in cartItems){
+            if(i!=cartItems[now] && i.market_id==market_id)
+                return true
+        }
+        return false
     }
 
     override fun onBindViewHolder(holder: MyProductCartViewHolder, position: Int) {
