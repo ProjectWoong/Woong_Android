@@ -18,6 +18,7 @@ import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.seller_market.adapter.SmPagerAdapter
 import com.woong.woong_android.seller_market.get.GetMarketInfoResponse
 import com.woong.woong_android.home.product.SellerIdx
+import com.woong.woong_android.seller_market.get.GetBookmarkFlagResponse
 import com.woong.woong_android.seller_market.post.PostBookmarkResponse
 import com.woong.woong_android.seller_market.product.SellerMarketProductDetail
 import com.woong.woong_android.woong_marketinfo
@@ -32,8 +33,8 @@ import retrofit2.Response
 
 class SellerMarketActivity : AppCompatActivity() {
     lateinit var networkService: NetworkService
-
     lateinit var requestManager: RequestManager
+    var bookmarkFlag:Int = 0
 
     fun replaceFragment(fragment: Fragment) {
         val fm = supportFragmentManager
@@ -95,16 +96,33 @@ class SellerMarketActivity : AppCompatActivity() {
             }
         }
         appbar_sellermarket.addOnOffsetChangedListener(listener)
-        ib_bookmark_sellermarket.setOnClickListener{
-            val postBookmark = networkService.postBookmark(woong_usertoken.user_token, woong_marketinfo.market_id)
-            postBookmark.enqueue(object : Callback<PostBookmarkResponse> {
-                override fun onFailure(call: Call<PostBookmarkResponse>?, t: Throwable?) {
-                }
 
-                override fun onResponse(call: Call<PostBookmarkResponse>?, response: Response<PostBookmarkResponse>?) {
-                    ib_bookmark_sellermarket.setImageResource(R.drawable.seller_market_intro_f_like_o)
-                }
-            })
+        ib_bookmark_sellermarket.setOnClickListener{
+            var postBookmark : Call<PostBookmarkResponse>
+
+            if(bookmarkFlag==1){ // 즐찾 중이라면
+                postBookmark = networkService.delBookmark(woong_usertoken.user_token, woong_marketinfo.market_id)
+                postBookmark.enqueue(object : Callback<PostBookmarkResponse> {
+                    override fun onFailure(call: Call<PostBookmarkResponse>?, t: Throwable?) {
+                    }
+
+                    override fun onResponse(call: Call<PostBookmarkResponse>?, response: Response<PostBookmarkResponse>?) {
+                        ib_bookmark_sellermarket.setImageResource(R.drawable.seller_market_intro_favorite)
+                        bookmarkFlag=0
+                    }
+                })
+            }else{
+                postBookmark = networkService.postBookmark(woong_usertoken.user_token, woong_marketinfo.market_id)
+                postBookmark.enqueue(object : Callback<PostBookmarkResponse> {
+                    override fun onFailure(call: Call<PostBookmarkResponse>?, t: Throwable?) {
+                    }
+
+                    override fun onResponse(call: Call<PostBookmarkResponse>?, response: Response<PostBookmarkResponse>?) {
+                        ib_bookmark_sellermarket.setImageResource(R.drawable.seller_market_intro_f_like_o)
+                        bookmarkFlag=1
+                    }
+                })
+            }
         }
     }
     fun dpToPx(dp:Float, context: Context):Float{
@@ -113,11 +131,31 @@ class SellerMarketActivity : AppCompatActivity() {
     fun getAcbar(): ActionBar? {
         return supportActionBar
     }
-    fun getMarketInfo(){
+    fun getBookmarkFlag(){
+        var getBookmarkFlag = networkService.getBookmarkFlag(woong_usertoken.user_token, woong_marketinfo.market_id)
+        getBookmarkFlag.enqueue(object : Callback<GetBookmarkFlagResponse> {
+            override fun onFailure(call: Call<GetBookmarkFlagResponse>?, t: Throwable?) {
+            }
 
+            override fun onResponse(call: Call<GetBookmarkFlagResponse>?, response: Response<GetBookmarkFlagResponse>?) {
+                if (response!!.isSuccessful){
+                    if(response.body().message=="1") {  // 즐찾 중이라면 찬 별 표시
+                        ib_bookmark_sellermarket.setImageResource(R.drawable.seller_market_intro_f_like_o)
+                        bookmarkFlag = 1
+                    }else {
+                        ib_bookmark_sellermarket.setImageResource(R.drawable.seller_market_intro_favorite)
+                        bookmarkFlag = 0
+                    }
+                }
+            }
+        })
+    }
+    fun getMarketInfo(){
         //유저토큰(header)과 마켓아이디(path)
         var user_token = woong_usertoken.user_token
         var market_id = woong_marketinfo.market_id
+
+        getBookmarkFlag()
 
         var getMarketInfo = networkService.getMarketDetail(user_token,market_id)
         getMarketInfo.enqueue(object : Callback<GetMarketInfoResponse> {
@@ -126,7 +164,6 @@ class SellerMarketActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<GetMarketInfoResponse>?, response: Response<GetMarketInfoResponse>?) {
                 if(response!!.isSuccessful){
-
                     tv_name_sellermarket.text = response.body().data.market_name
                     var free_flag = response.body().data.delivery
                     if(free_flag == 1){ //유료
@@ -136,13 +173,12 @@ class SellerMarketActivity : AppCompatActivity() {
                     }
 
                     tv_distance_sellermarket.text = response.body().data.youandi
-                    //num_bookmark_sellermarket.text = response.body().data[0].bookmark_count.toString()
+
                     tv_storename_title.text = response.body().data.market_name
 
                     requestManager.load(response.body().data.farmer_image_key).into(iv_profile_sellermarket)
                 }
             }
-
         })
 
     }

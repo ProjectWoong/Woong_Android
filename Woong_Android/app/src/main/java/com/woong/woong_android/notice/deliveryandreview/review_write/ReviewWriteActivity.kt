@@ -148,9 +148,6 @@ class ReviewWriteActivity : AppCompatActivity(),RatingBar.OnRatingBarChangeListe
                 }
 
                 override fun onResponse(call: Call<PostReviewResponse>?, response: Response<PostReviewResponse>?) {
-                    if (response != null) {
-                        Log.d("asd",response.message())
-                    }
                     if (response!!.isSuccessful) {
                         review_register_dialog.show()
                     }
@@ -205,8 +202,6 @@ class ReviewWriteActivity : AppCompatActivity(),RatingBar.OnRatingBarChangeListe
 
                     photoItems.add(PhotoData(data.data))
                     reviewImageItems.add(ReviewImageData(data.data.toString()))
-                    Log.d("asdad",data.data.toString())
-                    Log.d("asdad",data.dataString)
 
                     ntPhotoAdapter = NtPhotoAdapter(photoItems,requestManager)
                     rv_photo_review.layoutManager=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
