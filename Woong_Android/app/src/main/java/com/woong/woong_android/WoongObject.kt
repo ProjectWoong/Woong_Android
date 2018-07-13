@@ -28,3 +28,7 @@ object location{
 object chat{
     var chat_room_num : Int = 0
 }
+object frgIntent{
+    var flag : Int=0
+    var idx : Int=0
+}
