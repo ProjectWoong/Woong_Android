@@ -10,11 +10,16 @@ import com.woong.woong_android.myproduct.get.GetFavoriteResponse
 import com.woong.woong_android.home.get.GetSearchItemResponse
 import com.woong.woong_android.home.get.GetSubItemResponse
 import com.woong.woong_android.home.post.PostFavoriteResponse
+
 import com.woong.woong_android.map.get.GetLocationResponse
 import com.woong.woong_android.map.put.PutLocationRegisterResponse
 import com.woong.woong_android.map.put.PutLocationRegisterResponseData
+
+import com.woong.woong_android.market.get.GetBookmarkResponse
+
 import com.woong.woong_android.myproduct.get.GetCartResponse
 import com.woong.woong_android.myproduct.post.PostCartResponse
+import com.woong.woong_android.seller_market.post.PostBookmarkResponse
 import retrofit2.http.*
 import retrofit2.Call
 
@@ -103,4 +108,15 @@ interface NetworkService {
 
     @GET("/cart")
     fun getCart(@Header("usertoken")user_token: String?):Call<GetCartResponse>
+
+    @DELETE("/cart/{item_id}")
+    fun delCart(@Header("usertoken")user_token: String?,
+                @Path("item_id")item_id: Int):Call<PostCartResponse>
+
+    @POST("/bookmark/{market_id}")
+    fun postBookmark(@Header("usertoken")user_token: String?,
+                     @Path("market_id")market_id: Int):Call<PostBookmarkResponse>
+
+    @GET("/bookmark")
+    fun getBookmark(@Header("usertoken")user_token: String?):Call<GetBookmarkResponse>
 }

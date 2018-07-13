@@ -60,6 +60,8 @@ class HomeProductAdapter(var productItems : ArrayList<GetItemResponseData>, var 
                     override fun onResponse(call: Call<PostFavoriteResponse>?, response: Response<PostFavoriteResponse>?) {
                         if (response!!.isSuccessful) {
                             productViewHolder.favorite.setImageResource(R.drawable.home_select_category_no_like)
+                            productItems[position].favorite_flag = 0
+                            notifyItemRangeChanged(position,itemCount)
                         }
                     }
                 })
@@ -74,6 +76,8 @@ class HomeProductAdapter(var productItems : ArrayList<GetItemResponseData>, var 
                     override fun onResponse(call: Call<PostFavoriteResponse>?, response: Response<PostFavoriteResponse>?) {
                         if (response!!.isSuccessful) {
                             productViewHolder.favorite.setImageResource(R.drawable.home_select_category_like1)
+                            productItems[position].favorite_flag = 1
+                            notifyItemRangeChanged(position,itemCount)
                         }
                     }
                 })

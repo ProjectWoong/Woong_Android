@@ -21,12 +21,12 @@ class NtChatAdapter(private var chatItems : ArrayList<ChatData>) : RecyclerView.
     override fun onBindViewHolder(holder: NtChatViewHolder, position: Int) {
         if(chatItems[position].chat_flag == 0){ //판매자 -->서버에서 판매자마켓이름 보내줌
             holder.msg.text = chatItems[position].msg
-            holder.seller_icon.visibility = View.VISIBLE
+//            holder.seller_icon.visibility = View.VISIBLE
         }else if(chatItems[position].chat_flag == 1){ //소비자(me) -->서버에서 me 로 보내줌 String!!
             holder.msg.text = chatItems[position].msg
             holder.msg.gravity = Gravity.RIGHT
             holder.msg.setBackgroundResource(R.drawable.consumer_message_img)
-            holder.seller_icon.visibility = View.INVISIBLE
+//            holder.seller_icon.visibility = View.INVISIBLE
         }
 
     }
