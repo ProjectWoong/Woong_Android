@@ -56,8 +56,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         flag = intent.getIntExtra("address_flag",0)
         if(flag == 1){
             var re_address = intent.getStringExtra("search_address")
-            Log.v("주소넘김",re_address)
-            bundle.putString("re_address",re_address)
+//            Log.v("주소넘김",re_address)
+         //   bundle.putString("re_address",re_address)
             bundle.putInt("flag",1)
             HomeMain().arguments = bundle
         }

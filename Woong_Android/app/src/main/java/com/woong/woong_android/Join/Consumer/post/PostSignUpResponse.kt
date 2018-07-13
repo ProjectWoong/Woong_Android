@@ -1,4 +1,4 @@
-package com.woong.woong_android.Join.Consumer.post
+package com.woong.woong_android.join.consumer.post
 
 data class PostSignUpResponse (
         var message : String?
