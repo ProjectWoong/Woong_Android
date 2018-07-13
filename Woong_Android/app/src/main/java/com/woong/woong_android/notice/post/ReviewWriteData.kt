@@ -5,6 +5,6 @@ data class ReviewWriteData (
         var rate_taste: Int,
         var rate_fresh: Int,
         var rate_kindness: Int,
-        var review_content: String?,
-        var review_image: ArrayList<ReviewImageData>
+        var content: String?,
+        var file: ArrayList<ReviewImageData>
 )

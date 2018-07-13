@@ -115,6 +115,7 @@ class ReviewWriteActivity : AppCompatActivity(),RatingBar.OnRatingBarChangeListe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_review_write)
+        reviewImageItems=ArrayList()
         var flag = 0
 
         var displayMetrics = applicationContext.resources.displayMetrics
@@ -140,14 +141,19 @@ class ReviewWriteActivity : AppCompatActivity(),RatingBar.OnRatingBarChangeListe
                     rating_fresh_review.numStars, rating_kind_review.numStars, et_content_review.text.toString(), reviewImageItems)
 //            reviewWriteData.rate_fresh=
 
-            val postReview = networkService.postReview(woong_usertoken.user_token,woong_marketinfo.market_id,reviewWriteData)
+            val postReview = networkService.postReview(woong_usertoken.user_token,1,reviewWriteData)
             postReview.enqueue(object: retrofit2.Callback<PostReviewResponse>{
                 override fun onFailure(call: Call<PostReviewResponse>?, t: Throwable?) {
                     Toast.makeText(applicationContext, t.toString(), Toast.LENGTH_SHORT)
                 }
 
                 override fun onResponse(call: Call<PostReviewResponse>?, response: Response<PostReviewResponse>?) {
-                    review_register_dialog.show()
+                    if (response != null) {
+                        Log.d("asd",response.message())
+                    }
+                    if (response!!.isSuccessful) {
+                        review_register_dialog.show()
+                    }
                 }
             })
             review_register_dialog.show()
@@ -179,6 +185,7 @@ class ReviewWriteActivity : AppCompatActivity(),RatingBar.OnRatingBarChangeListe
                     var input: InputStream? = null // here, you need to get your context.
                     try {
                         input = contentResolver.openInputStream(this.data)
+                        Log.v("이미지", this.data.toString())
                     } catch (e: FileNotFoundException) {
                         e.printStackTrace()
                     }
@@ -197,7 +204,8 @@ class ReviewWriteActivity : AppCompatActivity(),RatingBar.OnRatingBarChangeListe
                     //body = MultipartBody.Part.createFormData("image", photo.getName(), profile_pic);
 
                     photoItems.add(PhotoData(data.data))
-                    reviewImageItems.add(ReviewImageData(data.dataString))
+                    reviewImageItems.add(ReviewImageData(data.data.toString()))
+                    Log.d("asdad",data.data.toString())
                     Log.d("asdad",data.dataString)
 
                     ntPhotoAdapter = NtPhotoAdapter(photoItems,requestManager)

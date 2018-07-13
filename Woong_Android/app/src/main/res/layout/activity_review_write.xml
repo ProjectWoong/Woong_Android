@@ -148,13 +148,9 @@
                     android:id="@+id/rating_speed_review"
                     android:rating="5"
                     android:numStars="5"
-                    style="@style/StarRatingBar"
-                    android:progressDrawable="@drawable/ratingbar_custom"
-                    android:layout_width="match_parent"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:scaleX="2"
-                    android:scaleY="2"
-
                     android:stepSize="1"/>
                 <TextView
                     android:id="@+id/txt_speed_review"
