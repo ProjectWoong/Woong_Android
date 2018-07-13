@@ -2,6 +2,7 @@ package com.woong.woong_android.myproduct
 
 import android.graphics.Color
 import android.os.Bundle
+import android.support.design.widget.TabLayout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

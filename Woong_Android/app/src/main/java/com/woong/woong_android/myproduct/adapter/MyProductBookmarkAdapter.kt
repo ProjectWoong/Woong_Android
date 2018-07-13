@@ -61,6 +61,9 @@ class MyProductBookmarkAdapter(private var bookmarkItems : ArrayList<GetFavorite
                     override fun onResponse(call: Call<PostFavoriteResponse>?, response: Response<PostFavoriteResponse>?) {
                         if (response!!.isSuccessful) {
                             bookmarkViewHolder.favorite.setImageResource(R.drawable.home_select_category_no_like)
+                            bookmarkItems.remove(bookmarkItems[position])
+                            notifyItemRemoved(position)
+                            notifyItemRangeChanged(position,itemCount)
                         }
                     }
                 })
