@@ -147,7 +147,7 @@
                 <RatingBar
                     android:id="@+id/rating_speed_review"
                     android:rating="5"
-                    android:numStars="5"
+                    android:isIndicator="false"
                     style="?android:attr/ratingBarStyleIndicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
