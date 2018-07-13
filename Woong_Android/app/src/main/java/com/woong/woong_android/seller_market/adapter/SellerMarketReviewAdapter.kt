@@ -31,7 +31,7 @@ class SellerMarketReviewAdapter(private var reviewItems:ArrayList<GetMarketRevie
     }
     override fun onBindViewHolder(holder: SellerMarketReviewViewHolder, position: Int) {
 
-        holder.review_name.text = reviewItems[position].user_id.toString()
+        holder.review_name.text = reviewItems[position].user_name
         holder.review.text = reviewItems[position].content
 
     }
