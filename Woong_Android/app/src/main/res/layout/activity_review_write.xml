@@ -289,6 +289,7 @@
                 android:layout_height="wrap_content"
                 android:text="식품 후기를 작성해주세요 (최대 1000자 이내)"/>
             <EditText
+                android:id="@+id/et_content_review"
                 android:gravity="top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
