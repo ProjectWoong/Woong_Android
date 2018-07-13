@@ -18,14 +18,14 @@
             android:background="#ffffff">
             <TextView
                 android:id="@+id/tv_location_main"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
                 android:textColor="#1C2320"
                 android:fontFamily="@font/nanum_extrabold"
                 android:textSize="17sp"
                 android:layout_centerHorizontal="true"
-                android:text="강북구 미아동"/>
+                android:text=""/>
             <ImageButton
                 android:id="@+id/ib_location_main"
                 android:layout_width="28dp"
