@@ -30,7 +30,7 @@
                     android:textColor="#707070"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="현듀마켓"/>
+                    android:text=""/>
                 <TextView
                     android:fontFamily="@font/nanumsquare_bold"
                     android:textSize="13sp"
@@ -38,7 +38,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="웅이네 포슬포슬 왕감자 3kg"
+                    android:text=""
                     android:layout_marginBottom="3dp"/>
             </RelativeLayout>
 
@@ -64,7 +64,7 @@
                     android:fontFamily="@font/nanumsquare_bold"
                     android:textSize="12sp"
                     android:textColor="#ADADAD"
-                    android:text="2018.06.24"/>
+                    android:text=""/>
                 <TextView
 
                     android:id="@+id/totalpay"

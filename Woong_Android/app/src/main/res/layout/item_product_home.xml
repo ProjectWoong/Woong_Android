@@ -140,17 +140,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="#당일배송"
-                android:background="#5fc1ad"
-                android:textColor="#ffffff"/>
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="12sp"
+                android:textColor="#529C77"/>
             <TextView
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/firsttag_bookmark_home"
                 android:id="@+id/secondtag_bookmark_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="#당일배송"
-                android:background="#5fc1ad"
-                android:textColor="#ffffff"/>
+                android:text="#무료배송"
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="12sp"
+                android:textColor="#529C77"/>
         </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>

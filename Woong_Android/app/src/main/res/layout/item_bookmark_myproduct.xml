@@ -141,7 +141,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:paddingTop="1dp"
+                android:paddingTop="2dp"
                 android:fontFamily="@font/nanumsquare_bold"
                 android:textSize="12sp"
                 android:id="@+id/firsttag_bookmark_myproduct"
@@ -152,7 +152,7 @@
                 android:background="@drawable/green_round_button"
                 android:textColor="#ffffff"/>
             <TextView
-                android:paddingTop="1dp"
+                android:paddingTop="2dp"
                 android:fontFamily="@font/nanumsquare_bold"
                 android:textSize="12sp"
                 android:layout_marginLeft="10dp"
