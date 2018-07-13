@@ -9,6 +9,7 @@ import com.woong.woong_android.chat
 import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.notice.adapter.NtChatAdapter
 import com.woong.woong_android.notice.get.ChatMessageListData
+import com.woong.woong_android.notice.get.GetChatMessageResponse
 import com.woong.woong_android.woong_usertoken
 import kotlinx.android.synthetic.main.activity_notice_chat.*
 import retrofit2.Call
@@ -31,34 +32,32 @@ class NoticeChatActivity : AppCompatActivity() {
 
         val getChatMessage = networkService.getChatMessage(usertoken,chat_room_id)
 
-        getChatMessage.enqueue(object : Callback<ChatMessageListData>{
-            override fun onFailure(call: Call<ChatMessageListData>?, t: Throwable?) {
+        getChatMessage.enqueue(object :Callback<GetChatMessageResponse>{
+            override fun onFailure(call: Call<GetChatMessageResponse>?, t: Throwable?) {
 
             }
 
-            override fun onResponse(call: Call<ChatMessageListData>?, response: Response<ChatMessageListData>?) {
+            override fun onResponse(call: Call<GetChatMessageResponse>?, response: Response<GetChatMessageResponse>?) {
                 if(response!!.isSuccessful){
+                    chatItems = response.body().data.send_data
                     ntChatAdapter = NtChatAdapter(chatItems)
                     rv_chat_notice.layoutManager = LinearLayoutManager(this@NoticeChatActivity)
                     rv_chat_notice.adapter = ntChatAdapter
+                    rv_chat_notice.scrollToPosition(ntChatAdapter.itemCount - 1)
                 }
             }
 
         })
 
-//        chatItems = ArrayList()
-//        chatItems.add(ChatData(0,"안녕하세요"))
-//        chatItems.add(ChatData(1,"반가워용"))
-//        chatItems.add(ChatData(1,"감자얼마에여"))
-//        chatItems.add(ChatData(0,"안팔아여"))
-//
-//        networkService = ApplicationController.instance.networkService
-//        var usertoken = woong_usertoken.user_token
-//        val getChatMessage = networkService.getChatMessage()
-//
-//        ntChatAdapter = NtChatAdapter(chatItems)
-//        rv_chat_notice.layoutManager = LinearLayoutManager(this)
-//        rv_chat_notice.adapter = ntChatAdapter
+        btn_send_notice.setOnClickListener {
+            chatItems.add(ChatMessageListData(0,input_message_notice.text.toString(),""))//date
+            ntChatAdapter = NtChatAdapter(chatItems)
+            rv_chat_notice.layoutManager = LinearLayoutManager(this@NoticeChatActivity)
+            rv_chat_notice.adapter = ntChatAdapter
+            rv_chat_notice.scrollToPosition(ntChatAdapter.itemCount - 1)
+            val set = ""
+            input_message_notice.setText("")
+        }
 
 
 

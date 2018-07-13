@@ -28,7 +28,7 @@
                 android:layout_width="124dp"
                 android:layout_height="96dp"
                 android:scaleType="centerCrop"
-                android:background="#ececec"/>
+                android:src="#ececec"/>
             <RelativeLayout
                 android:layout_toRightOf="@+id/productimg_cart_myproduct"
                 android:layout_marginLeft="10dp"
@@ -62,13 +62,13 @@
                          android:id="@+id/tv_cost_cart"
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
-                         android:text="가격         :"/>
+                         android:text="가격       :"/>
                         <TextView
                             android:fontFamily="@font/nanumsquare_bold"
                             android:textSize="13sp"
                             android:textColor="#ADADAD"
                             android:id="@+id/cost_cart_myproduct"
-                            android:layout_marginLeft="20dp"
+                            android:layout_marginLeft="18dp"
                             android:layout_toRightOf="@+id/tv_cost_cart"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
                             android:layout_marginBottom="3dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="배송비     :"/>
+                            android:text="배송비    :"/>
                         <TextView
                             android:id="@+id/tv_deliver_cart"
                             android:fontFamily="@font/nanumsquare_bold"
@@ -136,31 +136,35 @@
                             android:layout_alignParentBottom="true"
                             android:layout_marginBottom="3dp"
                             android:layout_toRightOf="@+id/tv_deliverfee"
-                            android:layout_marginLeft="20dp"
+                            android:layout_marginLeft="18dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=""/>
                     </RelativeLayout>
                 </RelativeLayout>
-                <TextView
-                    android:textSize="20sp"
-                    android:fontFamily="@font/nanum_extrabold"
-                    android:textColor="#707070"
-                    android:layout_marginBottom="3dp"
-                    android:id="@+id/subtotal_cart_myproduct"
-                    android:layout_alignParentBottom="true"
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:text="15500"/>
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true">
                 <TextView
                     android:textSize="19sp"
                     android:fontFamily="@font/nanum_extrabold"
                     android:textColor="#707070"
-                    android:layout_toRightOf="@+id/subtotal_cart_myproduct"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/subtotal_cart_myproduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="15500"/>
+                <TextView
+                    android:textSize="20sp"
+                    android:fontFamily="@font/nanum_extrabold"
+                    android:textColor="#707070"
                     android:layout_alignParentBottom="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="원"/>
+                </LinearLayout>
             </RelativeLayout>
         </RelativeLayout>
         <RelativeLayout

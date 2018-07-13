@@ -30,7 +30,6 @@ class MarketBookmark: Fragment(),View.OnClickListener {
     override fun onClick(v: View?) {
         val intent = Intent(context, SellerMarketActivity::class.java)
 
-//        SellerIdx.id = 0
         var idx : Int = this.rv_bookmark_mymarket.getChildAdapterPosition(v)
         woong_marketinfo.market_id = bookmarkItems[idx].market_id
 

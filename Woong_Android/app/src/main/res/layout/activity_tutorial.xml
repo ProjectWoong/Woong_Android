@@ -24,7 +24,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#707070"
+            android:background="#ADADAD"
             android:layout_alignParentBottom="true"/>
     </RelativeLayout>
     <FrameLayout

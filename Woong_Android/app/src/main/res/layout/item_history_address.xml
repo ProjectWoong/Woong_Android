@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+    <ImageView
+        android:id="@+id/iv_pin_location"
+        android:layout_width="12dp"
+        android:layout_height="16dp"
+        android:src="@drawable/setting_location_2_location_icon"/>
+    <TextView
+        android:fontFamily="@font/nanum_regular"
+        android:textSize="16sp"
+        android:textColor="#1C2320"
+        android:id="@+id/item_address_history_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_pin_location"
+        android:layout_marginLeft="10dp"
+        android:text="마포구 상수동 72-1"/>
+
+</RelativeLayout>

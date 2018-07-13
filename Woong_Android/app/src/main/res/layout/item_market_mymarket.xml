@@ -17,7 +17,7 @@
             android:layout_width="115dp"
             android:layout_height="88dp"
             android:scaleType="centerCrop"
-            android:background="@color/colorPastel"/>
+            android:background="#acacac"/>
         <ImageView
             android:id="@+id/iv_mymarket_leaf"
             android:layout_width="30dp"
@@ -36,15 +36,16 @@
                 android:id="@+id/tv_name_market"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
+                android:text="zzzzzz"/>
             <ImageView
                 android:id="@+id/iv_bookmark_market"
-                android:paddingTop="2dp"
-                android:layout_width="18dp"
+                android:layout_width="16dp"
                 android:layout_height="18dp"
+
+                android:paddingBottom="2dp"
                 android:layout_toRightOf="@id/tv_name_market"
                 android:layout_marginLeft="14dp"
-                android:src="@drawable/market_lanking_favorite"/>
+                android:src="#FFFFFF"/>
             <TextView
                 android:fontFamily="@font/nanum_bold"
                 android:textSize="13sp"

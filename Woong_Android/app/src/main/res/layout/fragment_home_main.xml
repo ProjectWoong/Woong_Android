@@ -24,6 +24,7 @@
                 android:textColor="#1C2320"
                 android:fontFamily="@font/nanum_extrabold"
                 android:textSize="17sp"
+                android:textAlignment="center"
                 android:layout_centerHorizontal="true"
                 android:text=""/>
             <ImageButton
@@ -33,7 +34,7 @@
                 android:layout_marginLeft="11dp"
                 android:layout_marginTop="8dp"
                 android:layout_toRightOf="@+id/tv_location_main"
-                android:src="@drawable/home_under"/>
+                android:background="@drawable/home_under"/>
             <ImageButton
                 android:src="@drawable/home_basket"
                 android:background="#FFFFFF"
