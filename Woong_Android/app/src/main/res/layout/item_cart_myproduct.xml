@@ -180,10 +180,12 @@
                 android:text="2"
                 android:background="@drawable/my_basket_plus_minus"/>
             <ImageView
+                android:id="@+id/iv_plus_product"
                 android:layout_width="30dp"
                 android:layout_height="25dp"
                 android:src="@drawable/my_basket_plus"/>
             <ImageView
+                android:id="@+id/iv_minus_product"
                 android:layout_width="30dp"
                 android:layout_height="25dp"
                 android:layout_marginLeft="92dp"

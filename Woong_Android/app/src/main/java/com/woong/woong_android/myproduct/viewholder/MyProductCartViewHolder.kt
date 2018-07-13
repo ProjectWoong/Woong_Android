@@ -18,4 +18,9 @@ class MyProductCartViewHolder(itemView : View?) : RecyclerView.ViewHolder(itemVi
     var delivery :TextView = itemView!!.findViewById(R.id.tv_deliver_cart) as TextView
     var checkbox :CheckBox= itemView!!.findViewById(R.id.checkbox_cart_myproduct) as CheckBox
     var del :TextView = itemView!!.findViewById(R.id.btn_cancle_myproduct) as TextView
+    var plusbtn :ImageView = itemView!!.findViewById(R.id.iv_plus_product) as ImageView
+    var minusbtn :ImageView = itemView!!.findViewById(R.id.iv_minus_product) as ImageView
+    var quantity :TextView = itemView!!.findViewById(R.id.quantity_cart_product) as TextView
+    var subtotal :TextView = itemView!!.findViewById(R.id.subtotal_cart_myproduct) as TextView
+
 }
