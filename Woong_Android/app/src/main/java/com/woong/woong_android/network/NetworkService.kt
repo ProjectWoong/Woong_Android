@@ -19,6 +19,8 @@ import com.woong.woong_android.market.get.GetBookmarkResponse
 
 import com.woong.woong_android.myproduct.get.GetCartResponse
 import com.woong.woong_android.myproduct.post.PostCartResponse
+import com.woong.woong_android.notice.post.PostReviewResponse
+import com.woong.woong_android.notice.post.ReviewWriteData
 import com.woong.woong_android.seller_market.post.PostBookmarkResponse
 import retrofit2.http.*
 import retrofit2.Call
@@ -119,4 +121,9 @@ interface NetworkService {
 
     @GET("/bookmark")
     fun getBookmark(@Header("usertoken")user_token: String?):Call<GetBookmarkResponse>
+
+    @POST("/review/{market_id}")
+    fun postReview(@Header("usertoken")user_token: String?,
+                   @Path("market_id")market_id: Int,
+                   @Body reviewWriteData: ReviewWriteData):Call<PostReviewResponse>
 }
