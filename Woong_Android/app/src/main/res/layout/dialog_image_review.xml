@@ -12,11 +12,12 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_width="188dp"
-        android:layout_height="48dp"
+        android:layout_height="30dp"
         android:textColor="#FFFFFF"
         android:fontFamily="@font/nanum_extrabold"
-        android:textSize="15sp"
+        android:textSize="14sp"
         android:background="@drawable/green_round_button"
-        android:text="닫기"/>
+        android:text="닫기"
+        android:layout_marginBottom="20dp"/>
 
 </RelativeLayout>

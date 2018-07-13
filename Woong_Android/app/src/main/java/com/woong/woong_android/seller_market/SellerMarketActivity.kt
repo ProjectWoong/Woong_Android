@@ -29,12 +29,20 @@ import kotlinx.android.synthetic.main.title_layout.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import android.graphics.Typeface
+import android.view.LayoutInflater
+import android.widget.TextView
+import android.view.ViewGroup
+import kotlinx.android.synthetic.main.slider.*
 
 
 class SellerMarketActivity : AppCompatActivity() {
     lateinit var networkService: NetworkService
     lateinit var requestManager: RequestManager
     var bookmarkFlag:Int = 0
+
+
+    val tabLayout = tab_top_sellermarket
 
     fun replaceFragment(fragment: Fragment) {
         val fm = supportFragmentManager
@@ -48,7 +56,10 @@ class SellerMarketActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sellermarket)
-        requestManager = Glide.with(this)
+//        requestManager = Glide.with(this)
+//        var tv:TextView = LayoutInflater.from(this).inflate(R.id.tab_top_sellermarket, null)
+////        textView tv=(TextView)LayoutInflater.from(this).inflate(R.layout.custom_tab,null)
+//        textView.setTypeface()
 
         networkService = ApplicationController.instance.networkService
 
@@ -63,6 +74,7 @@ class SellerMarketActivity : AppCompatActivity() {
         viewPager.currentItem = SellerIdx.id
         tabLayout.setTabTextColors(Color.parseColor("#ffffff"), Color.parseColor("#ffffff"))
         tabLayout.setupWithViewPager(viewPager)
+//        setCustomFont()
         if (SellerIdx.id == 1) {
             val bundle = Bundle()
             bundle.putInt("market_id", woong_marketinfo.market_id)
@@ -182,4 +194,26 @@ class SellerMarketActivity : AppCompatActivity() {
         })
 
     }
+//
+//    fun setCustomFont() {
+//        val vg = tabLayout.getChildAt(0)
+//
+//        val vg = tabLayout.getChildAt(0) as ViewGroup
+//        val tabsCount = vg.childCount
+//
+//        for (j in 0 until tabsCount) {
+//            val vgTab = vg.getChildAt(j) as ViewGroup
+//
+//            val tabChildsCount = vgTab.childCount
+//
+//            for (i in 0 until tabChildsCount) {
+//                val tabViewChild = vgTab.getChildAt(i)
+//                if (tabViewChild is TextView) {
+//                    //Put your font in assests folder
+//                    //assign name of the font here (Must be case sensitive)
+//                    tabViewChild.typeface = Typeface.createFromAsset(assets, "nanumsquare_bold.ttf")
+//                }
+//            }
+//        }
+//    }
 }

@@ -28,6 +28,7 @@
             android:paddingTop="5dp"
             android:layout_height="match_parent"
             android:textAlignment="center"
+            android:paddingRight="5dp"
             android:text="최고인기"
             android:fontFamily="@font/nanumsquare_bold"
             android:textSize="12sp"/>
