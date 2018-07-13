@@ -113,6 +113,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp">
                     <TextView
+                        android:id="@+id/tv_deliver_myproduct"
                         android:layout_marginTop="5dp"
                         android:textSize="15sp"
                         android:fontFamily="@font/nanum_bold"

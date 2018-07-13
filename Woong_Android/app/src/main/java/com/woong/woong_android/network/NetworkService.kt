@@ -28,6 +28,7 @@ import com.woong.woong_android.notice.get.GetChatRoomResponse
 import com.woong.woong_android.notice.post.PostReviewResponse
 import com.woong.woong_android.notice.post.ReviewWriteData
 import com.woong.woong_android.seller_market.post.PostBookmarkResponse
+
 import retrofit2.http.*
 import retrofit2.Call
 
@@ -131,6 +132,7 @@ interface NetworkService {
     @GET("/bookmark")
     fun getBookmark(@Header("usertoken")user_token: String?):Call<GetBookmarkResponse>
 
+
     @DELETE("/bookmark/{market_id}")
     fun delBookmark(@Header("usertoken")user_token: String?,
                     @Path("market_id")market_id: Int):Call<PostBookmarkResponse>
@@ -145,10 +147,14 @@ interface NetworkService {
     fun getChatMessage(@Header("usertoken")user_token: String?,@Path("chatting_room_id")chat_room_id :Int):Call<GetChatMessageResponse>
 
 
+
+    ////////////////////////////////////////
+
     @POST("/review/{market_id}")
     fun postReview(@Header("usertoken")user_token: String?,
                    @Path("market_id")market_id: Int,
                    @Body reviewWriteData: ReviewWriteData):Call<PostReviewResponse>
+
 
 
     @GET("/market/{market_id}/bookmarkflag")

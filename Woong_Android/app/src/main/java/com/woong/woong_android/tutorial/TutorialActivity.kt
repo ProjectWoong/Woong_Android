@@ -26,18 +26,15 @@ class TutorialActivity : AppCompatActivity() {
         val transaction = fm.beginTransaction()
         fragment.arguments = bundle
         transaction.add(R.id.frame_tutorial,fragment)
-        transaction.addToBackStack(null)
         transaction.commit()
 
     }
-
     fun replaceFragment(fragment: Fragment) {
         val fm = supportFragmentManager
         val transaction = fm.beginTransaction()
         fragment.arguments = bundle
-        transaction.replace(R.id.frame_tutorial,fragment)
+        transaction.replace(R.id.frame_tutorial, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }
-
 }

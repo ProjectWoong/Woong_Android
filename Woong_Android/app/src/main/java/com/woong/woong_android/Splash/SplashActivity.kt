@@ -11,7 +11,8 @@ import com.woong.woong_android.R
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget
-
+import com.woong.woong_android.SharedReferenceController
+import com.woong.woong_android.tutorial.TutorialActivity
 
 
 class SplashActivity : AppCompatActivity() {
@@ -27,9 +28,19 @@ class SplashActivity : AppCompatActivity() {
 
         val handler = Handler()
         handler.postDelayed({
-            //
-            startActivity(Intent(applicationContext, LoginActivity::class.java))
-            finish()
+            if(SharedReferenceController.getFlag(this)==0){
+                //튜토리얼 보여주기
+                startActivity(Intent(applicationContext,TutorialActivity::class.java))
+                SharedReferenceController.setFlag(this,1) //튜토리얼이 끝나는 부분에 집어넣기
+                finish()
+
+            }else{
+                //로그인으로 바로 넘어가기 (한번 이앱을 켜서 튜토리얼을 본 이상)
+                startActivity(Intent(applicationContext, LoginActivity::class.java))
+                finish()
+            }
+
+
         }, 3100) // 밀리세컨드=초*1000
     }
 }

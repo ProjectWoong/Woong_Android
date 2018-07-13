@@ -90,39 +90,11 @@
         android:paddingTop="15dp"
         android:paddingLeft="15dp"
         android:paddingBottom="5dp">
-        <Button
-            android:id="@+id/btn_short_product"
-            android:layout_width="68dp"
-            android:layout_height="28dp"
-            android:background="@drawable/home_select_category_align_short"
-            android:textColor="#ffffff"
-            android:fontFamily="@font/nanumsquare_bold"
-            android:textSize="11sp"
-            android:text="짧은거리" />
-        <Button
-            android:id="@+id/btn_best_product"
-            android:layout_width="68dp"
-            android:layout_height="28dp"
-            android:layout_toRightOf="@id/btn_short_product"
-            android:background="#ffffff"
-            android:textColor="#ADADAD"
-            android:fontFamily="@font/nanumsquare_bold"
-            android:textSize="11sp"
-            android:text="최고인기" />
-        <Button
-            android:layout_width="68dp"
-            android:layout_height="28dp"
-            android:background="#FFFFFF"
-            android:layout_toRightOf="@id/btn_best_product"
-            android:textColor="#ADADAD"
-            android:fontFamily="@font/nanumsquare_bold"
-            android:textSize="11sp"
-            android:text="낮은가격" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
             android:layout_marginRight="10dp">
             <ImageView
                 android:layout_width="16dp"

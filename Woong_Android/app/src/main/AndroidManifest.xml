@@ -25,8 +25,7 @@
         <activity android:name=".join.consumer.TermsActivity" />
         <activity android:name=".join.consumer.Join1Activity" />
         <activity android:name=".join.consumer.Join2Activity" />
-        <activity android:name=".splash.SplashActivity">
-        </activity>
+        <activity android:name=".splash.SplashActivity" />
         <activity android:name=".map.MapActivity" />
         <activity android:name=".map.location_change.LocationSearchChangeActivity" />
         <activity android:name=".join.marketer.TermsActivity" />
@@ -51,6 +50,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".tutorial.TutorialEndActivity" />
+        <activity android:name=".tutorial.Tutorial2" />
+        <activity android:name=".tutorial.Tutorial3"></activity>
     </application>
 
 </manifest>
