@@ -4,22 +4,42 @@
     android:paddingTop="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="140dp">
+    android:layout_height="wrap_content">
 
 
     <RelativeLayout
+        android:id="@+id/dd"
         android:layout_centerHorizontal="true"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <TextView
+            android:minWidth="150dp"
+            android:layout_alignParentRight="true"
             android:id="@+id/msg_chat_notice"
             android:background="@drawable/chat_background_green"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="20dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="50dp"
             android:layout_margin="10dp"
-            android:text="판매자 배경"/>
+            android:text="cvxcvxcvxcvxcvxcv"/>
+
+
     </RelativeLayout>
+    <TextView
+        android:id="@+id/date_chat_notice"
+        android:paddingRight="30dp"
+        android:paddingBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignBaseline="@id/dd"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시간나옴"/>
+
+
 
 </RelativeLayout>

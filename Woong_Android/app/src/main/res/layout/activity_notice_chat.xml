@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:textColor="#ADADAD"
-                android:text="대화를 입력하세요"
+                android:hint="대화를 입력하세요"
                 android:layout_centerVertical="true"
                 android:background="@null"/>
         </RelativeLayout>

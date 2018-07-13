@@ -8,7 +8,7 @@ import com.woong.woong_android.R
 
 class NtChatViewHolder(itemView : View?) : RecyclerView.ViewHolder(itemView) {
 
-
+    var time : TextView = itemView!!.findViewById(R.id.date_chat_notice) as TextView
     var msg : TextView = itemView!!.findViewById(R.id.msg_chat_notice) as TextView
 
 }
