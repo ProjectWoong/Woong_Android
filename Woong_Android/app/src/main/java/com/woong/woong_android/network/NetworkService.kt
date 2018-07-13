@@ -122,8 +122,16 @@ interface NetworkService {
     @GET("/bookmark")
     fun getBookmark(@Header("usertoken")user_token: String?):Call<GetBookmarkResponse>
 
+    @DELETE("/bookmark/{market_id}")
+    fun delBookmark(@Header("usertoken")user_token: String?,
+                    @Path("market_id")market_id: Int):Call<PostBookmarkResponse>
+
     @POST("/review/{market_id}")
     fun postReview(@Header("usertoken")user_token: String?,
                    @Path("market_id")market_id: Int,
                    @Body reviewWriteData: ReviewWriteData):Call<PostReviewResponse>
+
+    @GET("/market/{market_id}/bookmarkflag")
+    fun getBookmarkFlag(@Header("usertoken")user_token: String?,
+                        @Path("market_id")market_id: Int):Call<GetBookmarkFlagResponse>
 }
