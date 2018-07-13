@@ -1,12 +1,20 @@
 package com.woong.woong_android.myproduct.adapter
 
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
+import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.myproduct.get.GetCartResponseData
+import com.woong.woong_android.myproduct.post.PostCartResponse
 import com.woong.woong_android.myproduct.viewholder.MyProductCartViewHolder
+import com.woong.woong_android.network.NetworkService
+import com.woong.woong_android.woong_usertoken
+import retrofit2.Call
+import retrofit2.Response
 
 class MyProductCartAdapter(private var cartItems : ArrayList<GetCartResponseData>,var requestManager: RequestManager) : RecyclerView.Adapter<MyProductCartViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyProductCartViewHolder {
@@ -25,7 +33,29 @@ class MyProductCartAdapter(private var cartItems : ArrayList<GetCartResponseData
         holder.cost.text = cartItems[position].packging
         holder.delivery.text = cartItems[position].delivery.toString()+"원"
         holder.del.setOnClickListener {
-            TODO()
+            var networkService: NetworkService = ApplicationController.instance.networkService
+//            var requestManager: RequestManager = Glide.with(this)
+            val delCartItem = networkService.delCart(woong_usertoken.user_token,cartItems[position].item_id)
+            delCartItem.enqueue(object: retrofit2.Callback<PostCartResponse>{
+                override fun onFailure(call: Call<PostCartResponse>?, t: Throwable?) {
+                }
+
+                override fun onResponse(call: Call<PostCartResponse>?, response: Response<PostCartResponse>?) {
+                    cartItems.remove(cartItems[position])
+                    notifyItemRemoved(position)
+                    notifyItemRangeChanged(position,itemCount)
+
+                }
+
+//                override fun onResponse(call: Call<GetCartResponse>?, response: Response<GetCartResponse>?) {
+//                    if(response!!.isSuccessful){
+//                        cartItems = response.body().data
+//                        myProductCartAdapter = MyProductCartAdapter(cartItems, requestManager)
+//                        v.rv_cart_myproduct.layoutManager = LinearLayoutManager(context)
+//                        v.rv_cart_myproduct.adapter = myProductCartAdapter
+//                    }
+//                }
+            })
         }
 //        holder.header_checkbox.setOnClickListener {
 //            if(holder.header_checkbox.isChecked){
