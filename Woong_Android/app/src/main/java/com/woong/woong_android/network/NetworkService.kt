@@ -10,6 +10,7 @@ import com.woong.woong_android.myproduct.get.GetFavoriteResponse
 import com.woong.woong_android.home.get.GetSearchItemResponse
 import com.woong.woong_android.home.get.GetSubItemResponse
 import com.woong.woong_android.home.post.PostFavoriteResponse
+<<<<<<< HEAD
 import com.woong.woong_android.map.get.GetLocationResponse
 import com.woong.woong_android.map.put.PutLocationRegisterResponse
 import com.woong.woong_android.map.put.PutLocationRegisterResponseData
@@ -19,6 +20,19 @@ import com.woong.woong_android.myproduct.post.PostCartResponse
 import com.woong.woong_android.notice.get.ChatMessageListData
 import com.woong.woong_android.notice.get.GetChatMessageResponseData
 import com.woong.woong_android.notice.get.GetChatRoomResponse
+=======
+
+import com.woong.woong_android.map.get.GetLocationResponse
+import com.woong.woong_android.map.put.PutLocationRegisterResponse
+import com.woong.woong_android.map.put.PutLocationRegisterResponseData
+
+import com.woong.woong_android.market.get.GetBookmarkResponse
+
+import com.woong.woong_android.myproduct.get.GetCartResponse
+import com.woong.woong_android.myproduct.post.PostCartResponse
+import com.woong.woong_android.notice.post.PostReviewResponse
+import com.woong.woong_android.notice.post.ReviewWriteData
+>>>>>>> 05a4be279cc4c1dad6f62b96792e9a4bdab157eb
 import com.woong.woong_android.seller_market.post.PostBookmarkResponse
 import retrofit2.http.*
 import retrofit2.Call
@@ -120,6 +134,7 @@ interface NetworkService {
     @GET("/bookmark")
     fun getBookmark(@Header("usertoken")user_token: String?):Call<GetBookmarkResponse>
 
+<<<<<<< HEAD
 
     ////////////////////////////////////
 
@@ -130,4 +145,10 @@ interface NetworkService {
     fun getChatMessage(@Header("usertoken")user_token: String?,@Path("chatting_room_id")chat_room_id :Int):Call<ChatMessageListData>
 
 
+=======
+    @POST("/review/{market_id}")
+    fun postReview(@Header("usertoken")user_token: String?,
+                   @Path("market_id")market_id: Int,
+                   @Body reviewWriteData: ReviewWriteData):Call<PostReviewResponse>
+>>>>>>> 05a4be279cc4c1dad6f62b96792e9a4bdab157eb
 }
