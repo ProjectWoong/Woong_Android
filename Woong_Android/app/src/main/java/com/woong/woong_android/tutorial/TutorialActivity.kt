@@ -9,7 +9,7 @@ import com.woong.woong_android.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_tutorial.*
 
 class TutorialActivity : AppCompatActivity() {
-    val bundle = Bundle()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tutorial)
@@ -24,20 +24,9 @@ class TutorialActivity : AppCompatActivity() {
 
         val fm = supportFragmentManager
         val transaction = fm.beginTransaction()
-        fragment.arguments = bundle
         transaction.add(R.id.frame_tutorial,fragment)
-        transaction.addToBackStack(null)
         transaction.commit()
 
-    }
-
-    fun replaceFragment(fragment: Fragment) {
-        val fm = supportFragmentManager
-        val transaction = fm.beginTransaction()
-        fragment.arguments = bundle
-        transaction.replace(R.id.frame_tutorial,fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
     }
 
 }
