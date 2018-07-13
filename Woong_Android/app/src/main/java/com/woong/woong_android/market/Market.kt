@@ -23,12 +23,11 @@ class Market :android.support.v4.app.Fragment() {
         val viewPager = v.viewpager_market
         val tabLayout = v.tab_top_market
 
+        viewPager.adapter = myProductPagerAdapter
         if(frgIntent.flag==1){
             viewPager.currentItem = frgIntent.idx
             frgIntent.flag=0
         }
-
-        viewPager.adapter = myProductPagerAdapter
         tabLayout.setTabTextColors(Color.parseColor("#adadad"), Color.parseColor("#227958"))
         tabLayout.setupWithViewPager(viewPager)
 

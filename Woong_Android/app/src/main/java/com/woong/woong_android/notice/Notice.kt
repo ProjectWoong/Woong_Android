@@ -20,12 +20,11 @@ class Notice : Fragment() {
         val viewPager = v.viewpager_notice
         val tabLayout = v.tab_top_notice
 
+        viewPager.adapter = ntPagerAdapter
         if (frgIntent.flag==1){
             viewPager.currentItem = frgIntent.idx
             frgIntent.flag = 0
         }
-
-        viewPager.adapter = ntPagerAdapter
         tabLayout.setTabTextColors(Color.parseColor("#b2b2b2"), Color.parseColor("#227958"))
         tabLayout.setupWithViewPager(viewPager)
 
