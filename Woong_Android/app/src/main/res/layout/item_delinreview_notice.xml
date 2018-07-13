@@ -2,18 +2,18 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="130dp">
+    android:layout_height="140dp">
     <RelativeLayout
         android:layout_centerVertical="true"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="20dp">
         <ImageView
-            android:layout_marginLeft="10dp"
             android:id="@+id/profileimg_message_notice"
             android:layout_centerVertical="true"
             android:scaleType="centerCrop"
-            android:layout_width="120dp"
-            android:layout_height="100dp"
+            android:layout_width="124dp"
+            android:layout_height="96dp"
             android:background="#bcbcbc"/>
         <RelativeLayout
 
@@ -25,17 +25,25 @@
                 android:layout_width="240dp"
                 android:layout_height="40dp">
                 <TextView
+                    android:fontFamily="@font/nanum_extrabold"
+                    android:textSize="15sp"
+                    android:textColor="#707070"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="현듀마켓"/>
                 <TextView
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="13sp"
+                    android:textColor="#707070"
                     android:layout_alignParentBottom="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="웅이네 포슬포슬 왕감자 3kg"/>
+                    android:text="웅이네 포슬포슬 왕감자 3kg"
+                    android:layout_marginBottom="3dp"/>
             </RelativeLayout>
 
             <RelativeLayout
+                android:layout_marginTop="8dp"
                 android:paddingLeft="10dp"
                 android:layout_alignParentBottom="true"
                 android:layout_width="240dp"
@@ -44,12 +52,18 @@
                     android:id="@+id/orderdate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="12sp"
+                    android:textColor="#ADADAD"
                     android:text="주문일"/>
                 <TextView
-                    android:paddingLeft="30dp"
+                    android:paddingLeft="25dp"
                     android:layout_toRightOf="@+id/orderdate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="12sp"
+                    android:textColor="#ADADAD"
                     android:text="2018.06.24"/>
                 <TextView
 
@@ -57,6 +71,9 @@
                     android:layout_alignParentBottom="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="12sp"
+                    android:textColor="#ADADAD"
                     android:text="결제 금액"/>
                 <TextView
                     android:paddingLeft="12dp"
@@ -64,12 +81,18 @@
                     android:layout_alignParentBottom="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquare_bold"
+                    android:textSize="12sp"
+                    android:textColor="#ADADAD"
                     android:text="30,000원"/>
             </RelativeLayout>
 
 
         </RelativeLayout>
         <TextView
+            android:fontFamily="@font/nanumsquare_bold"
+            android:textSize="12sp"
+            android:textColor="#529C77"
             android:id="@+id/delivernum_deliver_notice"
             android:paddingLeft="10dp"
             android:layout_toRightOf="@+id/profileimg_message_notice"
@@ -78,20 +101,24 @@
             android:layout_height="wrap_content"
             android:text="송장번호: 우체국 000-0000-0000 "
             android:visibility="invisible"/>
-        <ImageView
+        <Button
+            android:layout_alignParentRight="true"
             android:id="@+id/writebtn_review_message"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/profileimg_message_notice"
             android:layout_alignParentBottom="true"
             android:layout_width="70dp"
-            android:layout_height="20dp"
-            android:background="@color/colorPastel"/>
+            android:layout_height="24dp"
+            android:fontFamily="@font/nanum_extrabold"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:text="후기등록"
+            android:background="@drawable/alarm_reivew_orange_bar"/>
 
     </RelativeLayout>
     <View
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#bcbcbc"/>
+        android:layout_height="0.5dp"
+        android:background="#ADADAD"/>
 
 </RelativeLayout>
