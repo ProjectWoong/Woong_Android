@@ -47,7 +47,7 @@ class MarketNearbyAdapter(private var nearbyItems : ArrayList<GetNearMarketListR
             override fun onResponse(call: Call<GetBookmarkFlagResponse>?, response: Response<GetBookmarkFlagResponse>?) {
                 if (response!!.isSuccessful){
                     if(response.body().message=="1") {  // 즐찾 중이라면 찬 별 표시
-                        nearbyViewHolder.label.setImageResource(R.drawable.market_favorite_favorite_o)
+                        nearbyViewHolder.label.setImageResource(R.drawable.market_lanking_favorite)
                     }
                 }
             }
