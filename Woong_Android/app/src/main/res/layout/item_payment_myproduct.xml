@@ -29,7 +29,7 @@
                 android:textColor="#707070"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="["/>
+                android:text=""/>
             <TextView
                 android:layout_toRightOf="@+id/parentheses_open_payment_marketname"
                 android:fontFamily="@font/nanum_bold"
@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/name_mknpd_payment"
-                android:text="]"/>
+                android:text=""/>
             <TextView
                 android:id="@+id/parentheses_open_number"
                 android:fontFamily="@font/nanum_bold"
