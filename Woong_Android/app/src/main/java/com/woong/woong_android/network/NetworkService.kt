@@ -1,16 +1,22 @@
 package com.woong.woong_android.network
 
-import com.woong.woong_android.Join.Consumer.post.PostSignUpResponse
-import com.woong.woong_android.Join.Consumer.post.PostSignUpResponseData
+import com.woong.woong_android.join.consumer.post.PostSignUpResponse
+import com.woong.woong_android.join.consumer.post.PostSignUpResponseData
 import com.woong.woong_android.map.get.GetLocationListResponse
 import com.woong.woong_android.seller_market.get.*
-import com.woong.woong_android.Login.post.PostSignInAppResponse
-import com.woong.woong_android.Login.post.PostSignInAppResponseData
+import com.woong.woong_android.login.post.PostSignInAppResponse
+import com.woong.woong_android.login.post.PostSignInAppResponseData
 import com.woong.woong_android.myproduct.get.GetFavoriteResponse
 import com.woong.woong_android.home.get.GetSearchItemResponse
 import com.woong.woong_android.home.get.GetSubItemResponse
 import com.woong.woong_android.home.post.PostFavoriteResponse
+
+import com.woong.woong_android.map.get.GetLocationResponse
+import com.woong.woong_android.map.put.PutLocationRegisterResponse
+import com.woong.woong_android.map.put.PutLocationRegisterResponseData
+
 import com.woong.woong_android.market.get.GetBookmarkResponse
+
 import com.woong.woong_android.myproduct.get.GetCartResponse
 import com.woong.woong_android.myproduct.post.PostCartResponse
 import com.woong.woong_android.seller_market.post.PostBookmarkResponse
@@ -65,6 +71,12 @@ interface NetworkService {
 
     @POST("/account/signup")//소비자 회원가입하기
     fun postSignup(@Body signup :PostSignUpResponseData ):Call<PostSignUpResponse>
+
+    @PUT("/account/location") //위치 등록 or 변경 - 등록 ok
+    fun putLocationRegister(@Header("usertoken")user_token: String?, @Body locaion_register_change : PutLocationRegisterResponseData):Call<PutLocationRegisterResponse>
+
+    @GET("/account/location")//위치 가져오기(맨위에)
+    fun getLocation(@Header("usertoken")user_token:String?):Call<GetLocationResponse>
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     //EVA///////////////////////////////////////////////////////////////////////////////////////////////
