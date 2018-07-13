@@ -10,8 +10,5 @@ class NtChatViewHolder(itemView : View?) : RecyclerView.ViewHolder(itemView) {
 
 
     var msg : TextView = itemView!!.findViewById(R.id.msg_chat_notice) as TextView
-    var seller_icon : ImageView = itemView!!.findViewById(R.id.icon_seller_chat) as ImageView
-
-
 
 }

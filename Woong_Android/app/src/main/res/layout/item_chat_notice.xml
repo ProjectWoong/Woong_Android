@@ -6,29 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="140dp">
 
-        <ImageView
-            android:id="@+id/icon_seller_chat"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="#bcbcbc"/>
-
 
     <RelativeLayout
         android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/msg_chat_notice"
-            android:background="@drawable/seller_message_img"
-            android:layout_width="290dp"
-            android:layout_height="110dp"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
+            android:background="@drawable/chat_background_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_margin="10dp"
             android:text="판매자 배경"/>
     </RelativeLayout>
-
-    
 
 </RelativeLayout>
