@@ -137,6 +137,7 @@ interface NetworkService {
     fun delBookmark(@Header("usertoken")user_token: String?,
                     @Path("market_id")market_id: Int):Call<PostBookmarkResponse>
 
+
     ////////////////////////////////////
 
     @GET("/chat/room") //채팅룸가져오기
@@ -146,13 +147,18 @@ interface NetworkService {
     fun getChatMessage(@Header("usertoken")user_token: String?,@Path("chatting_room_id")chat_room_id :Int):Call<GetChatMessageResponse>
 
 
+
     ////////////////////////////////////////
+
     @POST("/review/{market_id}")
     fun postReview(@Header("usertoken")user_token: String?,
                    @Path("market_id")market_id: Int,
                    @Body reviewWriteData: ReviewWriteData):Call<PostReviewResponse>
 
+
+
     @GET("/market/{market_id}/bookmarkflag")
     fun getBookmarkFlag(@Header("usertoken")user_token: String?,
                         @Path("market_id")market_id: Int):Call<GetBookmarkFlagResponse>
+
 }

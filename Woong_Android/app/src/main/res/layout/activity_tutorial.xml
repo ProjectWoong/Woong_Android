@@ -7,6 +7,7 @@
     tools:context=".tutorial.TutorialActivity"
     android:orientation="vertical">
     <RelativeLayout
+        android:id="@+id/btn_skip_tutorial"
         android:layout_width="match_parent"
         android:layout_height="47dp">
         <TextView
@@ -27,6 +28,7 @@
             android:layout_alignParentBottom="true"/>
     </RelativeLayout>
     <FrameLayout
+        android:id="@+id/frame_tutorial"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></FrameLayout>
 </LinearLayout>
