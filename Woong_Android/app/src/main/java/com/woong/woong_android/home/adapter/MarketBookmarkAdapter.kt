@@ -35,5 +35,20 @@ class MarketBookmarkAdapter(var bookmarkItems : ArrayList<GetBookmarkResponseDat
         requestManager.load(bookmarkItems[position].title_image_key).into(ViewHolder.marketimg)
         ViewHolder.marketname.text = bookmarkItems[position].market_name
         ViewHolder.address.text = bookmarkItems[position].market_address
+//        ViewHolder.bookmark.setOnClickListener {
+//            // 상태(버튼의 이미지)에 따라 북마크 해제/설정(Del/Post)
+//            Log.d("asd", (ViewHolder.bookmark.drawable).toString())
+////            Log.d("asd", (Resources.getSystem().getDrawable(R.drawable.tab_market_favorite)).toString())
+//            Log.d("asd", (ContextCompat.getDrawable(ViewHolder.marketimg.context,R.drawable.tab_market_favorite)).toString())
+//
+//
+////            if (ViewHolder.bookmark.drawable == ContextCompat.getDrawable(ViewHolder.marketimg.context,R.drawable.tab_market_favorite)) {
+//
+//            if (ViewHolder.bookmark.drawable == ContextCompat.getDrawable(ViewHolder.marketimg.context,R.drawable.tab_market_favorite)) {
+//                ViewHolder.bookmark.setImageResource(R.drawable.market_favorite_favorite_o)
+//            } else {
+//                ViewHolder.bookmark.setImageResource(R.drawable.tab_market_favorite)
+//            }
+//        }
     }
 }

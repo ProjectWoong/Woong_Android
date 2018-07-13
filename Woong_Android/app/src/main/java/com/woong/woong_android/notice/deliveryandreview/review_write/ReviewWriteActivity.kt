@@ -110,7 +110,11 @@ class ReviewWriteActivity : AppCompatActivity(),RatingBar.OnRatingBarChangeListe
         var width = displayMetrics.widthPixels
         var height = displayMetrics.heightPixels
 
+
         var review_register_dialog = ReviewRegisterDialog(this)
+
+//                ratingbar.setStarSize(20, Dimension.DP);
+
 
         var wm : WindowManager.LayoutParams = review_register_dialog.window.attributes
         wm.copyFrom(review_register_dialog.window.attributes)
