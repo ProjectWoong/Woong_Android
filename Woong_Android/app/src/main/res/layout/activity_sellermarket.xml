@@ -75,6 +75,8 @@
                             android:layout_height="23dp"
                             android:layout_marginLeft="19dp"
                             android:textColor="#ffffff"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/nanumsquare_bold"
                             android:background="@drawable/transparent_green_round_button"
                             android:text="#당일배송"
                             android:paddingTop="2dp"
@@ -160,7 +162,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@color/colorPastel"
-                        app:civ_border_width="4px"
+                        app:civ_border_width="10px"
                         app:civ_border_color="@color/colorPrimaryDark"/>
                 </LinearLayout>
             </RelativeLayout>

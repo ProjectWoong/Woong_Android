@@ -56,7 +56,7 @@
                 android:layout_height="146dp"
                 android:layout_centerHorizontal="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/weekely_farmer_family" />
+                android:src="" />
 
         </RelativeLayout>
 
@@ -74,7 +74,7 @@
                 android:id="@+id/tv_tag1_intro"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:text="#유기농"
+                android:text="#"
                 android:fontFamily="@font/nanumsquare_bold"
                 android:textSize="13dp"
                 android:textColor="#529C77" />
@@ -84,7 +84,7 @@
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:text="#신속"
+                android:text="#"
                 android:fontFamily="@font/nanumsquare_bold"
                 android:textSize="13dp"
                 android:textColor="#529C77" />
@@ -98,7 +98,7 @@
             android:layout_below="@+id/tv_labelhi_intro"
             android:fontFamily="@font/nanum_regular"
             android:layout_marginHorizontal="25dp"
-            android:text="안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^안녕하세요 저는 현듀에요^-^"
+            android:text=""
             android:textColor="#adadad"
             android:textSize="15sp"/>
     </LinearLayout>
