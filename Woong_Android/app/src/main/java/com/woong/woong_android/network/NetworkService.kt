@@ -10,29 +10,19 @@ import com.woong.woong_android.myproduct.get.GetFavoriteResponse
 import com.woong.woong_android.home.get.GetSearchItemResponse
 import com.woong.woong_android.home.get.GetSubItemResponse
 import com.woong.woong_android.home.post.PostFavoriteResponse
-<<<<<<< HEAD
+import com.woong.woong_android.map.get.GetLocationHistoryResponse
 import com.woong.woong_android.map.get.GetLocationResponse
+import com.woong.woong_android.map.get.GetLocationResponseData
 import com.woong.woong_android.map.put.PutLocationRegisterResponse
 import com.woong.woong_android.map.put.PutLocationRegisterResponseData
 import com.woong.woong_android.market.get.GetBookmarkResponse
 import com.woong.woong_android.myproduct.get.GetCartResponse
 import com.woong.woong_android.myproduct.post.PostCartResponse
 import com.woong.woong_android.notice.get.ChatMessageListData
-import com.woong.woong_android.notice.get.GetChatMessageResponseData
+import com.woong.woong_android.notice.get.GetChatMessageResponse
 import com.woong.woong_android.notice.get.GetChatRoomResponse
-=======
-
-import com.woong.woong_android.map.get.GetLocationResponse
-import com.woong.woong_android.map.put.PutLocationRegisterResponse
-import com.woong.woong_android.map.put.PutLocationRegisterResponseData
-
-import com.woong.woong_android.market.get.GetBookmarkResponse
-
-import com.woong.woong_android.myproduct.get.GetCartResponse
-import com.woong.woong_android.myproduct.post.PostCartResponse
 import com.woong.woong_android.notice.post.PostReviewResponse
 import com.woong.woong_android.notice.post.ReviewWriteData
->>>>>>> 05a4be279cc4c1dad6f62b96792e9a4bdab157eb
 import com.woong.woong_android.seller_market.post.PostBookmarkResponse
 import retrofit2.http.*
 import retrofit2.Call
@@ -92,6 +82,9 @@ interface NetworkService {
     @GET("/account/location")//위치 가져오기(맨위에)
     fun getLocation(@Header("usertoken")user_token:String?):Call<GetLocationResponse>
 
+    @GET("/account/location/history")//최근검색주소 보이기
+    fun getLocationHistory(@Header("usertoken")user_token: String?):Call<GetLocationHistoryResponse>
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     //EVA///////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -134,7 +127,6 @@ interface NetworkService {
     @GET("/bookmark")
     fun getBookmark(@Header("usertoken")user_token: String?):Call<GetBookmarkResponse>
 
-<<<<<<< HEAD
 
     ////////////////////////////////////
 
@@ -142,13 +134,13 @@ interface NetworkService {
     fun getChatRoom(@Header("usertoken")user_token: String?):Call<GetChatRoomResponse>
 
     @GET("/chat/message/{chatting_room_id}") //채팅메시지 가져오기
-    fun getChatMessage(@Header("usertoken")user_token: String?,@Path("chatting_room_id")chat_room_id :Int):Call<ChatMessageListData>
+    fun getChatMessage(@Header("usertoken")user_token: String?,@Path("chatting_room_id")chat_room_id :Int):Call<GetChatMessageResponse>
 
 
-=======
+    ////////////////////////////////////////
     @POST("/review/{market_id}")
     fun postReview(@Header("usertoken")user_token: String?,
                    @Path("market_id")market_id: Int,
                    @Body reviewWriteData: ReviewWriteData):Call<PostReviewResponse>
->>>>>>> 05a4be279cc4c1dad6f62b96792e9a4bdab157eb
+
 }

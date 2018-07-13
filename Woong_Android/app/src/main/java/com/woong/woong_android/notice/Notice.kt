@@ -23,6 +23,7 @@ class Notice : Fragment() {
         tabLayout.setTabTextColors(Color.parseColor("#b2b2b2"), Color.parseColor("#227958"))
         tabLayout.setupWithViewPager(viewPager)
 
+
         return v
     }
 }

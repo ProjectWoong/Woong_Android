@@ -20,11 +20,15 @@ class NtChatAdapter(private var chatItems : ArrayList<ChatMessageListData>) : Re
     override fun onBindViewHolder(holder: NtChatViewHolder, position: Int) {
         if(chatItems[position].send_user == 1){ //판매자
             holder.msg.text = chatItems[position].content
-           // holder.seller_icon.visibility = View.VISIBLE
+            holder.time.text = chatItems[position].date
+            holder.msg.setBackgroundResource(R.drawable.chat_background_gray)
+
+
         }else if(chatItems[position].send_user== 0){ //소비자
             holder.msg.text = chatItems[position].content
-            holder.msg.gravity = Gravity.RIGHT
-            holder.msg.setBackgroundResource(R.drawable.consumer_message_img)
+         //   holder.msg.gravity = Gravity.RIGHT
+            holder.time.text = chatItems[position].date
+            holder.msg.setBackgroundResource(R.drawable.chat_background_green)
            // holder.seller_icon.visibility = View.INVISIBLE
         }
 
