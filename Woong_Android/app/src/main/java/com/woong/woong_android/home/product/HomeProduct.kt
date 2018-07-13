@@ -84,8 +84,8 @@ class HomeProduct : Fragment(), View.OnClickListener{
             val rs  = ResizeAnimation(iv_searchwide_product, dpToPx(30F, activity!!.applicationContext).toInt())
             rs.duration = dur
             iv_searchwide_product.startAnimation(rs)
-            iv_searchwide_product.visibility = View.INVISIBLE
-            iv_searchico_product.visibility = View.INVISIBLE
+            iv_searchwide_product.visibility = View.VISIBLE
+            iv_searchico_product.visibility = View.VISIBLE
             et_search_product.visibility = View.INVISIBLE
             Handler().postDelayed({
                 btn_search_product.visibility = View.VISIBLE
