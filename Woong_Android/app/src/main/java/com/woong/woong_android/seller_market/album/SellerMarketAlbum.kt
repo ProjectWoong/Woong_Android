@@ -14,6 +14,7 @@ import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.seller_market.get.GetMarketAlbumResponse
 import com.woong.woong_android.seller_market.get.GetMarketAlbumResponseData
 import com.woong.woong_android.seller_market.get.GetMarketInfoResponseData
+import com.woong.woong_android.woong_marketinfo
 import kotlinx.android.synthetic.main.fragment_sellermarket_album.view.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -32,8 +33,10 @@ class SellerMarketAlbum: Fragment() {
         networkService = ApplicationController.instance.networkService
         requestManager = Glide.with(this)
 
+        var market_id = woong_marketinfo.market_id
+
         //market_id(path)
-        val getMarketAlbum = networkService.getMarketAlbum(1)
+        val getMarketAlbum = networkService.getMarketAlbum(market_id)
         getMarketAlbum.enqueue(object: Callback<GetMarketAlbumResponse>{
             override fun onFailure(call: Call<GetMarketAlbumResponse>?, t: Throwable?) {
 

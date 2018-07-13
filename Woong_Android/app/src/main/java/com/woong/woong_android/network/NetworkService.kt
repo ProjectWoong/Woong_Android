@@ -28,7 +28,7 @@ interface NetworkService {
 
     //////////////////////마켓소개페이지 부분//////////////////////////////////////////////////////////////
     @GET("market/info/{market_id}") //마켓 첫 페이지
-    fun getMarketDetail(@Header("usertoken") user: String,
+    fun getMarketDetail(@Header("usertoken") user: String?,
                         @Path("market_id") idx: Int): Call<GetMarketInfoResponse>
 
     @GET("/market/{market_id}") //해당 마켓의 물품목록 보기 (name정렬, best정렬)
