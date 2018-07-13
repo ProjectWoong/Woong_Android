@@ -99,7 +99,7 @@ class MapActivity : AppCompatActivity(),MapReverseGeoCoder.ReverseGeoCodingResul
             mDefaultMarker.mapPoint = DEFAULT_MARKER_POINT
             mDefaultMarker.markerType = MapPOIItem.MarkerType.CustomImage
 
-            mDefaultMarker.customImageResourceId = R.drawable.setting_location_1_woong
+            mDefaultMarker.customImageResourceId = R.drawable.custom_marker_red
             mDefaultMarker.isCustomImageAutoscale = false
             mDefaultMarker.setCustomImageAnchor(0.5f, 1.0f)
 
@@ -109,7 +109,7 @@ class MapActivity : AppCompatActivity(),MapReverseGeoCoder.ReverseGeoCodingResul
             mapView.setMapCenterPoint(DEFAULT_MARKER_POINT, false)
         }else{
             val trackingImageAnchorPointOffset = MapPOIItem.ImageOffset(28, 28) // 좌하단(0,0) 기준 앵커포인트 오프셋
-            mapView.setCustomCurrentLocationMarkerTrackingImage(R.drawable.setting_location_1_woong, trackingImageAnchorPointOffset)
+            mapView.setCustomCurrentLocationMarkerTrackingImage(R.drawable.custom_marker_red, trackingImageAnchorPointOffset)
             mapView.currentLocationTrackingMode = MapView.CurrentLocationTrackingMode.TrackingModeOnWithoutHeading
 
             location.latitude = mapView.mapCenterPoint.mapPointGeoCoord.latitude
@@ -125,7 +125,7 @@ class MapActivity : AppCompatActivity(),MapReverseGeoCoder.ReverseGeoCodingResul
         btn_presentloc_join_map.setOnClickListener {
             mapView.removeAllPOIItems()
             val trackingImageAnchorPointOffset = MapPOIItem.ImageOffset(28, 28) // 좌하단(0,0) 기준 앵커포인트 오프셋
-            mapView.setCustomCurrentLocationMarkerTrackingImage(R.drawable.setting_location_1_woong, trackingImageAnchorPointOffset)
+            mapView.setCustomCurrentLocationMarkerTrackingImage(R.drawable.custom_marker_red, trackingImageAnchorPointOffset)
             mapView.currentLocationTrackingMode = MapView.CurrentLocationTrackingMode.TrackingModeOnWithoutHeading
             mReverseGeoCoder = MapReverseGeoCoder("5b9f84f71895898003a9683274d06a39", mapView.mapCenterPoint, this@MapActivity, this@MapActivity)
             mReverseGeoCoder.startFindingAddress()
