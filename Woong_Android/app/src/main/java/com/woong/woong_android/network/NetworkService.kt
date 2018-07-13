@@ -10,6 +10,7 @@ import com.woong.woong_android.myproduct.get.GetFavoriteResponse
 import com.woong.woong_android.home.get.GetSearchItemResponse
 import com.woong.woong_android.home.get.GetSubItemResponse
 import com.woong.woong_android.home.post.PostFavoriteResponse
+import com.woong.woong_android.market.get.GetBookmarkResponse
 import com.woong.woong_android.myproduct.get.GetCartResponse
 import com.woong.woong_android.myproduct.post.PostCartResponse
 import com.woong.woong_android.seller_market.post.PostBookmarkResponse
@@ -103,4 +104,7 @@ interface NetworkService {
     @POST("/bookmark/{market_id}")
     fun postBookmark(@Header("usertoken")user_token: String?,
                      @Path("market_id")market_id: Int):Call<PostBookmarkResponse>
+
+    @GET("/bookmark")
+    fun getBookmark(@Header("usertoken")user_token: String?):Call<GetBookmarkResponse>
 }
