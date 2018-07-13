@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/bgr_message_notice"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="111dp"
@@ -10,7 +11,7 @@
         android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="25dp"
-        android:background="#237A59"
+        android:background="#96C3AC"
         android:text="현듀 마켓"
         android:textColor="#ffffff"
         android:fontFamily="@font/nanum_bold"
@@ -37,6 +38,7 @@
         android:layout_height="40dp"
         android:layout_gravity="center_vertical">
         <TextView
+            android:id="@+id/recentmsg_message_notice"
             android:fontFamily="@font/nanum_regular"
             android:textSize="15sp"
             android:textColor="#707070"
@@ -44,6 +46,7 @@
             android:layout_height="wrap_content"
             android:text=""/>
         <TextView
+            android:id="@+id/time_message_notice"
             android:fontFamily="@font/nanum_regular"
             android:textSize="9sp"
             android:textColor="#707070"

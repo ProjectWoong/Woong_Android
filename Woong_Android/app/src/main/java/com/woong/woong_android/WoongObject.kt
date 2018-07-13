@@ -24,3 +24,7 @@ object location{
     var real_address : String = ""
     var simple_address : String = ""
 }
+
+object chat{
+    var chat_room_num : Int = 0
+}

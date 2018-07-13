@@ -8,11 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.woong.woong_android.R
 import com.woong.woong_android.notice.adapter.NtDelivertandReviewAdapter
-import com.woong.woong_android.notice.adapter.NtMessageAdapter
 import com.woong.woong_android.notice.data.DeliveryData
-import com.woong.woong_android.notice.data.MessageData
 import kotlinx.android.synthetic.main.fragment_notice_delireview.view.*
-import kotlinx.android.synthetic.main.fragment_notice_message.view.*
 
 class NoticeDeliveryAndReview :Fragment() {
     lateinit var deliveryItems : ArrayList<DeliveryData>
