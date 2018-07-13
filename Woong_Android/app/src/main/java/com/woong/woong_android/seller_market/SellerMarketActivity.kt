@@ -18,8 +18,10 @@ import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.seller_market.adapter.SmPagerAdapter
 import com.woong.woong_android.seller_market.get.GetMarketInfoResponse
 import com.woong.woong_android.home.product.SellerIdx
+import com.woong.woong_android.seller_market.post.PostBookmarkResponse
 import com.woong.woong_android.seller_market.product.SellerMarketProductDetail
 import com.woong.woong_android.woong_marketinfo
+import com.woong.woong_android.woong_usertoken
 import kotlinx.android.synthetic.main.activity_sellermarket.*
 import kotlinx.android.synthetic.main.fragment_product_home.*
 import kotlinx.android.synthetic.main.title_layout.*
@@ -49,7 +51,7 @@ class SellerMarketActivity : AppCompatActivity() {
 
         networkService = ApplicationController.instance.networkService
 
-        getMarketInfo()
+
 
 
         val myProductPagerAdapter = SmPagerAdapter(supportFragmentManager) // 프래그먼트안에 뷰페이저 쓸경우 childFragmentManager써주세욤
@@ -69,6 +71,8 @@ class SellerMarketActivity : AppCompatActivity() {
             replaceFragment(smpd)
             SellerIdx.id = 0
         }
+
+        getMarketInfo()
 
         setSupportActionBar(toolbar)
 
@@ -91,6 +95,17 @@ class SellerMarketActivity : AppCompatActivity() {
             }
         }
         appbar_sellermarket.addOnOffsetChangedListener(listener)
+        ib_bookmark_sellermarket.setOnClickListener{
+            val postBookmark = networkService.postBookmark(woong_usertoken.user_token, woong_marketinfo.market_id)
+            postBookmark.enqueue(object : Callback<PostBookmarkResponse> {
+                override fun onFailure(call: Call<PostBookmarkResponse>?, t: Throwable?) {
+                }
+
+                override fun onResponse(call: Call<PostBookmarkResponse>?, response: Response<PostBookmarkResponse>?) {
+                    ib_bookmark_sellermarket.setImageResource(R.drawable.seller_market_intro_f_like_o)
+                }
+            })
+        }
     }
     fun dpToPx(dp:Float, context: Context):Float{
         return (dp * context.resources.displayMetrics.density)
@@ -101,29 +116,30 @@ class SellerMarketActivity : AppCompatActivity() {
     fun getMarketInfo(){
 
         //유저토큰(header)과 마켓아이디(path)
+        var user_token = woong_usertoken.user_token
+        var market_id = woong_marketinfo.market_id
 
-        var getMarketInfo = networkService.getMarketDetail("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImRvbmdzdUBnbWFpbC5jb20iLCJpYXQiOjE1MzEyMjc1NjUsImV4cCI6ODc5MzEyMjc1NjUsImlzcyI6InNlcnZpY2UiLCJzdWIiOiJ1c2VyX3Rva2VuIn0.pNHa45rQvyXEEb0PxAwUZhnQpof17GLDmVjBrQxGySo",1)
+        var getMarketInfo = networkService.getMarketDetail(user_token,market_id)
         getMarketInfo.enqueue(object : Callback<GetMarketInfoResponse> {
             override fun onFailure(call: Call<GetMarketInfoResponse>?, t: Throwable?) {
-
             }
 
             override fun onResponse(call: Call<GetMarketInfoResponse>?, response: Response<GetMarketInfoResponse>?) {
                 if(response!!.isSuccessful){
 
-                    tv_name_sellermarket.text = response.body().data[0].market_name
-                    var free_flag = response.body().data[0].delivery
+                    tv_name_sellermarket.text = response.body().data.market_name
+                    var free_flag = response.body().data.delivery
                     if(free_flag == 1){ //유료
                         tv_tag2_sellermarket.text = "#유료배송"
                     }else {
                         tv_tag2_sellermarket.text="#무료배송"
                     }
 
-                    tv_distance_sellermarket.text = response.body().data[0].youandi
+                    tv_distance_sellermarket.text = response.body().data.youandi
                     //num_bookmark_sellermarket.text = response.body().data[0].bookmark_count.toString()
-                    tv_storename_title.text = response.body().data[0].market_name
+                    tv_storename_title.text = response.body().data.market_name
 
-                    requestManager.load(response.body().data[0].farmer_image_key).into(iv_profile_sellermarket)
+                    requestManager.load(response.body().data.farmer_image_key).into(iv_profile_sellermarket)
                 }
             }
 

@@ -45,38 +45,10 @@
                             android:fontFamily="@font/nanumsquare_bold"
                             android:textSize="15sp"
                             android:textColor="#707070"
-                            android:id="@+id/opensign_cart_myproduct"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="["/>
-                        <TextView
-                            android:fontFamily="@font/nanumsquare_bold"
-                            android:textSize="15sp"
-                            android:textColor="#707070"
                             android:id="@+id/marketname_cart_myproduct"
-                            android:layout_toRightOf="@id/opensign_cart_myproduct"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="현듀 마켓"/>
-                        <TextView
-                            android:fontFamily="@font/nanumsquare_bold"
-                            android:textSize="15sp"
-                            android:textColor="#707070"
-                            android:id="@+id/closesign_cart_myproduct"
-                            android:layout_toRightOf="@+id/marketname_cart_myproduct"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="] "/>
-                        <TextView
-                            android:fontFamily="@font/nanumsquare_bold"
-                            android:textSize="15sp"
-                            android:textColor="#707070"
-                            android:id="@+id/productname_cart_myproduct"
-                            android:layout_toRightOf="@+id/closesign_cart_myproduct"
-                            android:layout_alignParentRight="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="왕감장"/>
+                            android:text=""/>
                     </RelativeLayout>
                     <RelativeLayout
                         android:layout_below="@+id/tv_marketnproductname"
@@ -100,7 +72,7 @@
                             android:layout_toRightOf="@+id/tv_cost_cart"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="6500"/>
+                            android:text=""/>
                         <TextView
                             android:fontFamily="@font/nanumsquare_bold"
                             android:textSize="13sp"
@@ -109,7 +81,7 @@
                             android:id="@+id/won_cart_myproduct"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="원"/>
+                            android:text=""/>
                         <TextView
                             android:fontFamily="@font/nanumsquare_bold"
                             android:textSize="13sp"
@@ -118,7 +90,7 @@
                             android:layout_toRightOf="@+id/won_cart_myproduct"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="("/>
+                            android:text=""/>
                         <TextView
                             android:fontFamily="@font/nanumsquare_bold"
                             android:textSize="13sp"
@@ -127,7 +99,7 @@
                             android:layout_toRightOf="@id/smallopen_cart_myproduct"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1"/>
+                            android:text=""/>
                         <TextView
                             android:fontFamily="@font/nanumsquare_bold"
                             android:textSize="13sp"
@@ -136,7 +108,7 @@
                             android:layout_toRightOf="@+id/unitnum_cart_myproduct"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="kg"/>
+                            android:text=""/>
                         <TextView
                             android:fontFamily="@font/nanumsquare_bold"
                             android:textSize="13sp"
@@ -145,7 +117,7 @@
                             android:layout_toRightOf="@+id/unitname_cart_myproduct"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=")"/>
+                            android:text=""/>
                         <TextView
                             android:fontFamily="@font/nanumsquare_bold"
                             android:textSize="13sp"
@@ -157,6 +129,7 @@
                             android:layout_height="wrap_content"
                             android:text="배송비     :"/>
                         <TextView
+                            android:id="@+id/tv_deliver_cart"
                             android:fontFamily="@font/nanumsquare_bold"
                             android:textSize="13sp"
                             android:textColor="#ADADAD"
@@ -166,7 +139,7 @@
                             android:layout_marginLeft="20dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2500원"/>
+                            android:text=""/>
                     </RelativeLayout>
                 </RelativeLayout>
                 <TextView

@@ -12,17 +12,10 @@ import kotlinx.android.synthetic.main.item_cart_myproduct.*
 import org.w3c.dom.Text
 
 class MyProductCartViewHolder(itemView : View?) : RecyclerView.ViewHolder(itemView) {
-
-
-    var productimg : ImageView = itemView!!.findViewById(R.id.productimg_cart_myproduct) as ImageView
-    var marketname : TextView= itemView!!.findViewById(R.id.marketname_cart_myproduct) as TextView
-    var productname :TextView = itemView!!.findViewById(R.id.productname_cart_myproduct) as TextView
-    var unitnum :TextView = itemView!!.findViewById(R.id.unitnum_cart_myproduct) as TextView
-    var unitname :TextView= itemView!!.findViewById(R.id.unitname_cart_myproduct) as TextView
-    var cost:TextView = itemView!!.findViewById(R.id.cost_cart_myproduct) as TextView
-    var quantity :TextView= itemView!!.findViewById(R.id.quantity_cart_product) as TextView
-    var subtotal :TextView = itemView!!.findViewById(R.id.subtotal_cart_myproduct) as TextView
+    var productimg :ImageView = itemView!!.findViewById(R.id.productimg_cart_myproduct) as ImageView
+    var marketname :TextView= itemView!!.findViewById(R.id.marketname_cart_myproduct) as TextView
+    var cost :TextView = itemView!!.findViewById(R.id.cost_cart_myproduct) as TextView
+    var delivery :TextView = itemView!!.findViewById(R.id.tv_deliver_cart) as TextView
     var checkbox :CheckBox= itemView!!.findViewById(R.id.checkbox_cart_myproduct) as CheckBox
-
-
+    var del :TextView = itemView!!.findViewById(R.id.btn_cancle_myproduct) as TextView
 }

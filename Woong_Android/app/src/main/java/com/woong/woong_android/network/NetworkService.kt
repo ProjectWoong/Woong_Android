@@ -10,6 +10,10 @@ import com.woong.woong_android.myproduct.get.GetFavoriteResponse
 import com.woong.woong_android.home.get.GetSearchItemResponse
 import com.woong.woong_android.home.get.GetSubItemResponse
 import com.woong.woong_android.home.post.PostFavoriteResponse
+import com.woong.woong_android.market.get.GetBookmarkResponse
+import com.woong.woong_android.myproduct.get.GetCartResponse
+import com.woong.woong_android.myproduct.post.PostCartResponse
+import com.woong.woong_android.seller_market.post.PostBookmarkResponse
 import retrofit2.http.*
 import retrofit2.Call
 
@@ -26,7 +30,7 @@ interface NetworkService {
 
     //////////////////////마켓소개페이지 부분//////////////////////////////////////////////////////////////
     @GET("market/info/{market_id}") //마켓 첫 페이지
-    fun getMarketDetail(@Header("usertoken") user: String,
+    fun getMarketDetail(@Header("usertoken") user: String?,
                         @Path("market_id") idx: Int): Call<GetMarketInfoResponse>
 
     @GET("/market/{market_id}") //해당 마켓의 물품목록 보기 (name정렬, best정렬)
@@ -85,4 +89,22 @@ interface NetworkService {
 
     @GET("/favorite")
     fun getFavorite(@Header("usertoken")user_token: String?):Call<GetFavoriteResponse>
+
+    @POST("/cart/{item_id}")
+    fun postCart(@Header("usertoken")user_token: String?,
+                     @Path("item_id")item_id:Int):Call<PostCartResponse>
+
+    @GET("/cart")
+    fun getCart(@Header("usertoken")user_token: String?):Call<GetCartResponse>
+
+    @DELETE("/cart/{item_id}")
+    fun delCart(@Header("usertoken")user_token: String?,
+                @Path("item_id")item_id: Int):Call<PostCartResponse>
+
+    @POST("/bookmark/{market_id}")
+    fun postBookmark(@Header("usertoken")user_token: String?,
+                     @Path("market_id")market_id: Int):Call<PostBookmarkResponse>
+
+    @GET("/bookmark")
+    fun getBookmark(@Header("usertoken")user_token: String?):Call<GetBookmarkResponse>
 }

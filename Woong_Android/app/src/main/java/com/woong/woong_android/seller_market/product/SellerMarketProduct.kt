@@ -14,6 +14,7 @@ import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.seller_market.get.GetSellerMarketProductResponse
 import com.woong.woong_android.seller_market.get.GetSellerMarketProductResponseData
+import com.woong.woong_android.woong_marketinfo
 import kotlinx.android.synthetic.main.fragment_sellermarket_product.*
 import kotlinx.android.synthetic.main.fragment_sellermarket_product.view.*
 import retrofit2.Call
@@ -28,7 +29,7 @@ class SellerMarketProduct: Fragment(), View.OnClickListener {
         var idx : Int = this.rv_sellermarket_product.getChildAdapterPosition(v)
         bundle.putInt("market_id",productItems[idx].market_id)
         bundle.putInt("item_id",productItems[idx].item_id)
-        Log.v("넘겨죽이ㅣ잉ㅇ",productItems[idx].item_id.toString())
+        //Log.v("넘겨죽이ㅣ잉ㅇ",productItems[idx].item_id.toString())
         replaceFragment(SellerMarketProductDetail())
     }
 
@@ -71,8 +72,9 @@ class SellerMarketProduct: Fragment(), View.OnClickListener {
     fun getMarketProductbyName(v:View){
         networkService = ApplicationController.instance.networkService
 
+        var market_id = woong_marketinfo.market_id
         //option (query), market_id(path)
-        var getMarketProductbyname = networkService.getMarketProductList(1,"name")
+        var getMarketProductbyname = networkService.getMarketProductList(market_id,"name")
         getMarketProductbyname.enqueue(object: Callback<GetSellerMarketProductResponse>{
             override fun onFailure(call: Call<GetSellerMarketProductResponse>?, t: Throwable?) {
 
@@ -98,8 +100,9 @@ class SellerMarketProduct: Fragment(), View.OnClickListener {
     }
     fun getMarketProductbyBest(v:View){
         networkService = ApplicationController.instance.networkService
+        var market_id = woong_marketinfo.market_id
 
-        var getMarketProductbybest = networkService.getMarketProductList(1,"best")
+        var getMarketProductbybest = networkService.getMarketProductList(market_id,"best")
         getMarketProductbybest.enqueue(object: Callback<GetSellerMarketProductResponse>{
             override fun onFailure(call: Call<GetSellerMarketProductResponse>?, t: Throwable?) {
 

@@ -6,7 +6,6 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.WindowManager
 import com.woong.woong_android.R
 import com.woong.woong_android.myproduct.adapter.MyProductPaymentAdapter
-import com.woong.woong_android.myproduct.data.MyProductPaymentData
 import com.woong.woong_android.myproduct.payment.dialog.FailPaymentDialog
 import com.woong.woong_android.myproduct.payment.dialog.PaymentDialog
 import kotlinx.android.synthetic.main.activity_payment.*
@@ -14,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_payment.*
 class PaymentActivity : AppCompatActivity() {
 
     lateinit var myProductPaymentAdapter: MyProductPaymentAdapter
-    lateinit var paymentItems : ArrayList<MyProductPaymentData>
+//    lateinit var paymentItems : ArrayList<MyProductPaymentData>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment)
@@ -40,14 +39,14 @@ class PaymentActivity : AppCompatActivity() {
 //        failwm.width = 279
 //        failwm.height = 434
 
-        paymentItems= ArrayList()
+//        paymentItems= ArrayList()
 
-        paymentItems.add(MyProductPaymentData("[복순마켓] 흙감자"))
-        paymentItems.add(MyProductPaymentData("[영떠마켓] 브로콜리"))
-        paymentItems.add(MyProductPaymentData("[수뎡마켓] 생감자"))
-        paymentItems.add(MyProductPaymentData("[점례마켓] 싱싱배추"))
+//        paymentItems.add(MyProductPaymentData("[복순마켓] 흙감자"))
+//        paymentItems.add(MyProductPaymentData("[영떠마켓] 브로콜리"))
+//        paymentItems.add(MyProductPaymentData("[수뎡마켓] 생감자"))
+//        paymentItems.add(MyProductPaymentData("[점례마켓] 싱싱배추"))
 
-        myProductPaymentAdapter = MyProductPaymentAdapter(paymentItems)
+//        myProductPaymentAdapter = MyProductPaymentAdapter(paymentItems)
 
         rv_payment_myproduct.layoutManager = LinearLayoutManager(this)
         rv_payment_myproduct.adapter = myProductPaymentAdapter
