@@ -2,6 +2,7 @@ package com.woong.woong_android
 
 object woong_usertoken{
     var user_token : String? = ""
+    var user_id : String = " "
 }
 object woong_marketinfo{    // 물품 상세 혹은 마켓에 들어갈 때
     var market_id : Int = 0
@@ -15,4 +16,11 @@ object TitleName{
 object searchString{
     var flag : Boolean = false
     var str : String = ""
+}
+object location{
+    var logitude : Double = 0.0
+    var latitude : Double = 0.0
+
+    var real_address : String = ""
+    var simple_address : String = ""
 }

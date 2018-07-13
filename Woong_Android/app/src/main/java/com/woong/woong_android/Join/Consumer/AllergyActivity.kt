@@ -4,15 +4,13 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import com.woong.woong_android.Join.Consumer.post.PostSignUpResponse
-import com.woong.woong_android.Join.Consumer.post.PostSignUpResponseData
+import com.woong.woong_android.join.consumer.post.PostSignUpResponse
+import com.woong.woong_android.join.consumer.post.PostSignUpResponseData
 import com.woong.woong_android.R
 import com.woong.woong_android.applicationcontroller.ApplicationController
-import com.woong.woong_android.map.MapActivity
+import com.woong.woong_android.login.LoginActivity
 import com.woong.woong_android.network.NetworkService
 import kotlinx.android.synthetic.main.activity_consumer_join_allergy.*
-import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -151,18 +149,22 @@ class AllergyActivity : AppCompatActivity(),View.OnClickListener {
 
                 override fun onResponse(call: Call<PostSignUpResponse>?, response: Response<PostSignUpResponse>?) {
                     if(response!!.isSuccessful){
-                        Toast.makeText(applicationContext,"회원가입아 되라!",Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(applicationContext,"회원가입아 되라!",Toast.LENGTH_SHORT).show()
+                        val intent = Intent(applicationContext, LoginActivity::class.java)
+
+                          startActivity(intent)   // 전환될 액티비티로 넘어갈때
+
                     }
                 }
 
             })
 
-
-
-
-            val intent = Intent(applicationContext, MapActivity::class.java)
-
-            startActivity(intent)   // 전환될 액티비티로 넘어갈때
+//
+//
+//
+//            val intent = Intent(applicationContext, MapActivity::class.java)
+//
+//            startActivity(intent)   // 전환될 액티비티로 넘어갈때
         }
     }
 
