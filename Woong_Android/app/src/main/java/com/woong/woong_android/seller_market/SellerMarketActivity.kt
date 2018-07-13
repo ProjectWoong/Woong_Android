@@ -42,7 +42,7 @@ class SellerMarketActivity : AppCompatActivity() {
     var bookmarkFlag:Int = 0
 
 
-    val tabLayout = tab_top_sellermarket
+    //val tabLayout = tab_top_sellermarket
 
     fun replaceFragment(fragment: Fragment) {
         val fm = supportFragmentManager
@@ -56,7 +56,7 @@ class SellerMarketActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sellermarket)
-//        requestManager = Glide.with(this)
+        requestManager = Glide.with(this)
 //        var tv:TextView = LayoutInflater.from(this).inflate(R.id.tab_top_sellermarket, null)
 ////        textView tv=(TextView)LayoutInflater.from(this).inflate(R.layout.custom_tab,null)
 //        textView.setTypeface()
