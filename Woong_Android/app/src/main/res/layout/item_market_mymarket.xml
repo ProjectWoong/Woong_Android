@@ -44,7 +44,7 @@
                 android:layout_height="18dp"
                 android:layout_toRightOf="@id/tv_name_market"
                 android:layout_marginLeft="14dp"
-                android:src="@drawable/market_lanking_favorite"/>
+                android:src="#ffffff"/>
             <TextView
                 android:fontFamily="@font/nanum_bold"
                 android:textSize="13sp"

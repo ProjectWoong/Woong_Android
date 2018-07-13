@@ -5,5 +5,6 @@ data class GetNearMarketListResponseData(
         var market_address : String?,
         var title_image_key : String?,
         var tag_name : String?,
-        var youandi : String?
+        var youandi : String?,
+        var market_id: Int
 )
