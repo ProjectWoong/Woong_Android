@@ -9,7 +9,8 @@ import android.view.ViewGroup
 import com.woong.woong_android.*
 import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.map.get.GetLocationResponse
-import com.woong.woong_android.map.location_change.LocationSearchChangeActivity
+import com.woong.woong_android.map.location_change.LocationSearchChangeActivit
+import com.woong.woong_android.frgIntent
 import com.woong.woong_android.market.adapter.MarketPagerAdpter
 import com.woong.woong_android.network.NetworkService
 import kotlinx.android.synthetic.main.fragment_market_tab.view.*
