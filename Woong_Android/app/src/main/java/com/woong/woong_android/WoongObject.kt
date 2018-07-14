@@ -40,4 +40,9 @@ object previousLocation{
 object submain{
     var flag : Int = 0
     var right : Int = 0
+
+}
+object frgIntent{
+    var flag : Int=0
+    var idx : Int=0
 }

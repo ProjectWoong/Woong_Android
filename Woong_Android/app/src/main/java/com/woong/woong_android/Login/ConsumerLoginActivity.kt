@@ -11,6 +11,7 @@ import com.woong.woong_android.login.post.PostSignInAppResponse
 import com.woong.woong_android.login.post.PostSignInAppResponseData
 import com.woong.woong_android.MainActivity
 import com.woong.woong_android.map.MapActivity
+import com.woong.woong_android.myproduct.payment.dialog.PaymentDialog
 import com.woong.woong_android.woong_usertoken
 import io.realm.Realm
 import io.realm.RealmResults
@@ -28,11 +29,14 @@ class ConsumerLoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_consumer_login)
 
+        val dialog = PaymentDialog(this)
+
         networkService = ApplicationController.instance.networkService
         btn_login_consumer_login.setOnClickListener {
             var consumer_id = id_consume_login.text.toString()
             var consumer_pwd = pwd_consume_login.text.toString()
             val postSignInAppResponseData = PostSignInAppResponseData(consumer_id,consumer_pwd)
+
 
             val postSigninApp = networkService.postSignInApp(postSignInAppResponseData)
             postSigninApp.enqueue(object:Callback<PostSignInAppResponse>{
@@ -75,6 +79,15 @@ class ConsumerLoginActivity : AppCompatActivity() {
         tv_signup_consumer_login.setOnClickListener {
             val intent = Intent(applicationContext, TermsActivity::class.java)
             startActivity(intent)   // 전환될 액티비티로 넘어갈때
+        }
+        btn_fb_login.setOnClickListener {
+            dialog.show()
+        }
+        btn_google_login.setOnClickListener {
+            dialog.show()
+        }
+        btn_kakao_login.setOnClickListener {
+            dialog.show()
         }
     }
 

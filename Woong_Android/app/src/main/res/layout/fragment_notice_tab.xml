@@ -21,9 +21,13 @@
     <android.support.design.widget.TabLayout
         android:id="@+id/tab_top_notice"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="4dp"
-        app:tabIndicatorColor="#227958"></android.support.design.widget.TabLayout>
+        android:layout_height="40dp"
+        android:background="#FFFFFF"
+        app:tabIndicatorColor="@color/colorPrimaryDark"></android.support.design.widget.TabLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/below_shadow"/>
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager_notice"
         android:layout_width="match_parent"

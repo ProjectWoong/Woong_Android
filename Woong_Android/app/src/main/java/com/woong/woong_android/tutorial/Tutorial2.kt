@@ -6,14 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.woong.woong_android.R
-import kotlinx.android.synthetic.main.fragment_tutorial1.view.*
+import kotlinx.android.synthetic.main.fragment_tutorial2.view.*
 
-class Tutorial1 : Fragment() {
+class Tutorial2 : Fragment() {
     val bundle = Bundle()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val v = inflater.inflate(R.layout.fragment_tutorial1, container, false)
-        v.btn_next_tutorial1.setOnClickListener{
-            replaceFragment(Tutorial2())
+        val v = inflater.inflate(R.layout.fragment_tutorial2, container, false)
+        v.btn_next_tutorial2.setOnClickListener{
+            replaceFragment(Tutorial3())
         }
         return v
     }

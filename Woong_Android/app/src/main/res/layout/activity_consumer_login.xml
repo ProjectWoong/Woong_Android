@@ -110,15 +110,18 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="18dp">
                 <ImageView
+                    android:id="@+id/btn_fb_login"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/consumer_login_facebook"/>
                 <ImageView
+                    android:id="@+id/btn_google_login"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/consumer_login_google"
                     android:layout_marginHorizontal="25dp"/>
                 <ImageView
+                    android:id="@+id/btn_kakao_login"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/consumer_login_kakao_talk"/>

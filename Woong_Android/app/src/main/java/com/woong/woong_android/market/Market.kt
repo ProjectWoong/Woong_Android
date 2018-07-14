@@ -10,7 +10,8 @@ import com.woong.woong_android.R
 import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.location
 import com.woong.woong_android.map.get.GetLocationResponse
-import com.woong.woong_android.map.location_change.LocationSearchChangeActivity
+import com.woong.woong_android.map.location_change.LocationSearchChangeActivit
+import com.woong.woong_android.frgIntent
 import com.woong.woong_android.market.adapter.MarketPagerAdpter
 import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.submain
@@ -27,8 +28,7 @@ class Market :android.support.v4.app.Fragment() {
         val v = inflater.inflate(R.layout.fragment_market_tab ,container,false)
         var user_token = arguments!!.getString("user_token")
 
-
-       woong_usertoken.user_token = user_token
+        woong_usertoken.user_token = user_token
 
         val myProductPagerAdapter = MarketPagerAdpter(this.childFragmentManager) // 프래그먼트안에 뷰페이저 쓸경우 childFragmentManager써주세욤
         val viewPager = v.viewpager_market
@@ -61,6 +61,10 @@ class Market :android.support.v4.app.Fragment() {
         }
 
         viewPager.adapter = myProductPagerAdapter
+        if(frgIntent.flag==1){
+            viewPager.currentItem = frgIntent.idx
+            frgIntent.flag=0
+        }
         tabLayout.setTabTextColors(Color.parseColor("#adadad"), Color.parseColor("#227958"))
         tabLayout.setupWithViewPager(viewPager)
 
