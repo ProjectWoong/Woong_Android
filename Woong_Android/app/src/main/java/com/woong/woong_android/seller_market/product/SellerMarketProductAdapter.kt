@@ -102,4 +102,3 @@ class SellerMarketProductAdapter(var productItems: ArrayList<GetSellerMarketProd
 
     }
 }
-}
