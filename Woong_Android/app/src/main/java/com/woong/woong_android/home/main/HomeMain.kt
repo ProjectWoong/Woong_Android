@@ -23,6 +23,7 @@ import com.woong.woong_android.myproduct.bookmark.MyProductBookMark
 import com.woong.woong_android.myproduct.cart.MyProductCart
 import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.notice.Notice
+import com.woong.woong_android.thisweek.ThisWeek
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home_main.view.*
 import kotlinx.android.synthetic.main.fragment_product_home.*
@@ -62,6 +63,17 @@ class HomeMain : Fragment() {
 //            Log.v("주소진짜받음",re_address)
             v.tv_location_main.text = location.simple_address
         }
+
+        v.iv_thisweek_main.setOnClickListener {
+                val fm = activity!!.supportFragmentManager
+                val transaction = fm.beginTransaction()
+                transaction.replace(R.id.frame_fragment_main, ThisWeek())
+                transaction.addToBackStack(null)
+                transaction.commit()
+        }
+
+
+
         // 메인 메뉴 4가지 클릭리스너
         v.relative_fruit_main.setOnClickListener {
             Idx.idx = 0
