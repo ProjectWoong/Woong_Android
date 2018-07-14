@@ -98,13 +98,11 @@
             android:textSize="11sp"
             android:textColor="#529C77"
             android:id="@+id/delivernum_deliver_notice"
-            android:paddingLeft="10dp"
-            android:layout_toRightOf="@+id/profileimg_message_notice"
+            android:layout_marginLeft="134dp"
             android:layout_alignParentBottom="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="송장번호:우체국 000-0000-0000 "
-            android:visibility="invisible"/>
+            android:text="송장번호:우체국 000-0000-0000 "/>
         <Button
             android:layout_alignParentRight="true"
             android:id="@+id/writebtn_review_message"

@@ -8,16 +8,15 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.woong.woong_android.R
+import com.woong.woong_android.*
 import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.home.adapter.SubMenuPagerAdapter
 import com.woong.woong_android.home.main.Idx
-import com.woong.woong_android.location
 import com.woong.woong_android.map.get.GetLocationResponse
 import com.woong.woong_android.map.location_change.LocationSearchChangeActivity
+import com.woong.woong_android.myproduct.MyProduct
 import com.woong.woong_android.network.NetworkService
-import com.woong.woong_android.submain
-import com.woong.woong_android.woong_usertoken
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home_main.view.*
 import kotlinx.android.synthetic.main.fragment_submenu_tab.view.*
 import retrofit2.Call
@@ -56,6 +55,14 @@ class SubMenu :android.support.v4.app.Fragment() {
         }
         if(submain.right==1){
             v.tv_location_submenu.text = location.simple_address
+        }
+
+        v.btn_cart_submenu.setOnClickListener {
+            frgIntent.flag=1
+            frgIntent.idx=1
+            (activity as MainActivity).replaceFragment(MyProduct())
+            (activity as MainActivity).clearSelected()
+            (activity as MainActivity).btn_myproduct_main.isSelected = true
         }
 
         viewPager.adapter = subMenuPagerAdapter

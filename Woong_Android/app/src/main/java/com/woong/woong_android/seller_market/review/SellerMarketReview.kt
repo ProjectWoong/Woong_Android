@@ -81,60 +81,132 @@ class SellerMarketReview: Fragment() {
                     if(imageItems.size == 0){
 
                     }else if(imageItems.size == 1){
-                        requestManager.load(imageItems[0].file_key).into(v.img1_review)
+                        requestManager.load(imageItems[0].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img1_review)
 
                     }else if(imageItems.size == 2){
-                        requestManager.load(imageItems[0].file_key).into(v.img1_review)
-                        requestManager.load(imageItems[1].file_key).into(v.img2_review)
+                        requestManager.load(imageItems[0].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img1_review)
+                        requestManager.load(imageItems[1].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img2_review)
 
                     }else if(imageItems.size == 3){
-                        requestManager.load(imageItems[0].file_key).into(v.img1_review)
-                        requestManager.load(imageItems[1].file_key).into(v.img2_review)
-                        requestManager.load(imageItems[2].file_key).into(v.img3_review)
+                        requestManager.load(imageItems[0].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img1_review)
+                        requestManager.load(imageItems[1].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img2_review)
+                        requestManager.load(imageItems[2].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img3_review)
 
                     }else if( imageItems.size == 4){
-                        requestManager.load(imageItems[0].file_key).into(v.img1_review)
-                        requestManager.load(imageItems[1].file_key).into(v.img2_review)
-                        requestManager.load(imageItems[2].file_key).into(v.img3_review)
-                        requestManager.load(imageItems[3].file_key).into(v.img4_review)
+                        requestManager.load(imageItems[0].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img1_review)
+                        requestManager.load(imageItems[1].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img2_review)
+                        requestManager.load(imageItems[2].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img3_review)
+                        requestManager.load(imageItems[3].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img4_review)
 
 
                     }else if(imageItems.size == 5){
-                        requestManager.load(imageItems[0].file_key).into(v.img1_review)
-                        requestManager.load(imageItems[1].file_key).into(v.img2_review)
-                        requestManager.load(imageItems[2].file_key).into(v.img3_review)
-                        requestManager.load(imageItems[3].file_key).into(v.img4_review)
-                        requestManager.load(imageItems[4].file_key).into(v.img5_review)
+                        requestManager.load(imageItems[0].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img1_review)
+                        requestManager.load(imageItems[1].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img2_review)
+                        requestManager.load(imageItems[2].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img3_review)
+                        requestManager.load(imageItems[3].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img4_review)
+                        requestManager.load(imageItems[4].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img5_review)
 
 
                     }else if (imageItems.size == 6){
-                        requestManager.load(imageItems[0].file_key).into(v.img1_review)
-                        requestManager.load(imageItems[1].file_key).into(v.img2_review)
-                        requestManager.load(imageItems[2].file_key).into(v.img3_review)
-                        requestManager.load(imageItems[3].file_key).into(v.img4_review)
-                        requestManager.load(imageItems[4].file_key).into(v.img5_review)
-                        requestManager.load(imageItems[5].file_key).into(v.img6_review)
+                        requestManager.load(imageItems[0].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img1_review)
+                        requestManager.load(imageItems[1].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img2_review)
+                        requestManager.load(imageItems[2].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img3_review)
+                        requestManager.load(imageItems[3].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img4_review)
+                        requestManager.load(imageItems[4].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img5_review)
+                        requestManager.load(imageItems[5].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img6_review)
 
 
                     }else if( imageItems.size == 7){
-                        requestManager.load(imageItems[0].file_key).into(v.img1_review)
-                        requestManager.load(imageItems[1].file_key).into(v.img2_review)
-                        requestManager.load(imageItems[2].file_key).into(v.img3_review)
-                        requestManager.load(imageItems[3].file_key).into(v.img4_review)
-                        requestManager.load(imageItems[4].file_key).into(v.img5_review)
-                        requestManager.load(imageItems[5].file_key).into(v.img6_review)
-                        requestManager.load(imageItems[6].file_key).into(v.img7_review)
+                        requestManager.load(imageItems[0].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img1_review)
+                        requestManager.load(imageItems[1].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img2_review)
+                        requestManager.load(imageItems[2].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img3_review)
+                        requestManager.load(imageItems[3].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img4_review)
+                        requestManager.load(imageItems[4].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img5_review)
+                        requestManager.load(imageItems[5].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img6_review)
+                        requestManager.load(imageItems[6].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img7_review)
 
 
                     }else if(imageItems.size == 8){
-                        requestManager.load(imageItems[0].file_key).into(v.img1_review)
-                        requestManager.load(imageItems[1].file_key).into(v.img2_review)
-                        requestManager.load(imageItems[2].file_key).into(v.img3_review)
-                        requestManager.load(imageItems[3].file_key).into(v.img4_review)
-                        requestManager.load(imageItems[4].file_key).into(v.img5_review)
-                        requestManager.load(imageItems[5].file_key).into(v.img6_review)
-                        requestManager.load(imageItems[6].file_key).into(v.img7_review)
-                        requestManager.load(imageItems[7].file_key).into(v.img8_review)
+                        requestManager.load(imageItems[0].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img1_review)
+                        requestManager.load(imageItems[1].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img2_review)
+                        requestManager.load(imageItems[2].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img3_review)
+                        requestManager.load(imageItems[3].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img4_review)
+                        requestManager.load(imageItems[4].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img5_review)
+                        requestManager.load(imageItems[5].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img6_review)
+                        requestManager.load(imageItems[6].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img7_review)
+                        requestManager.load(imageItems[7].file_key).apply {
+                            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                        }.into(v.img8_review)
 
                     }
 

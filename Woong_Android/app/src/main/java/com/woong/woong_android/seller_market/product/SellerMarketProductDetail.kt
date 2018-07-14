@@ -1,5 +1,6 @@
 package com.woong.woong_android.seller_market.product
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
@@ -11,6 +12,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
 import com.woong.woong_android.applicationcontroller.ApplicationController
+import com.woong.woong_android.myproduct.payment.PaymentActivity
 import com.woong.woong_android.myproduct.post.PostCartResponse
 import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.seller_market.get.GetProductDetailResponse
@@ -32,6 +34,11 @@ class SellerMarketProductDetail : Fragment() {
         Log.v("넘겨들",item_id.toString())
 
         requestManager = Glide.with(this)
+
+        v.btn_buy_productdetail.setOnClickListener{
+            val intent = Intent(context, PaymentActivity::class.java)
+            startActivity(intent)
+        }
         v.btn_cart_productdetail.setOnClickListener {
             val postCart = networkService.postCart(woong_usertoken.user_token, item_id)
             postCart.enqueue(object:Callback<PostCartResponse>{
@@ -50,7 +57,9 @@ class SellerMarketProductDetail : Fragment() {
 
             override fun onResponse(call: Call<GetProductDetailResponse>?, response: Response<GetProductDetailResponse>?) {
                 if(response!!.isSuccessful){
-                    requestManager.load(response.body().data.file_key).into(v.iv_product_productdetail)
+                    requestManager.load(response.body().data.file_key).apply {
+                        placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                    }.into(v.iv_product_productdetail)
                     v.name_item_productdetail.text = response.body().data.item_name
                     v.info_item_productdetail.text = response.body().data.item_info
                     v.cook_item_productdetail.text = response.body().data.item_cook

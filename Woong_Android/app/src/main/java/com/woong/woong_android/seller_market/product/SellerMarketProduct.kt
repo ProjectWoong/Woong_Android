@@ -1,5 +1,6 @@
 package com.woong.woong_android.seller_market.product
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
@@ -11,12 +12,14 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
 import com.woong.woong_android.applicationcontroller.ApplicationController
+import com.woong.woong_android.myproduct.payment.PaymentActivity
 import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.seller_market.get.GetSellerMarketProductResponse
 import com.woong.woong_android.seller_market.get.GetSellerMarketProductResponseData
 import com.woong.woong_android.woong_marketinfo
 import kotlinx.android.synthetic.main.fragment_sellermarket_product.*
 import kotlinx.android.synthetic.main.fragment_sellermarket_product.view.*
+import kotlinx.android.synthetic.main.fragment_sellermarket_productdetail.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -86,8 +89,6 @@ class SellerMarketProduct: Fragment(), View.OnClickListener {
                     productItems = response.body().data
                     productAdapter = SellerMarketProductAdapter(productItems,requestManager)
                     productAdapter.setOnItemClickListener(this@SellerMarketProduct)
-
-
                     v.rv_sellermarket_product.layoutManager = GridLayoutManager(context,2)
                     v.rv_sellermarket_product.adapter = productAdapter
 

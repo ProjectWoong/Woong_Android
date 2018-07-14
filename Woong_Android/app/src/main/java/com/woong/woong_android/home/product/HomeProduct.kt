@@ -22,9 +22,11 @@ import com.woong.woong_android.home.get.GetSearchItemResponse
 import com.woong.woong_android.home.get.GetItemResponseData
 import com.woong.woong_android.home.get.GetSubItemResponse
 import com.woong.woong_android.home.post.PostFavoriteResponse
+import com.woong.woong_android.myproduct.MyProduct
 import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.seller_market.ResizeAnimation
 import com.woong.woong_android.seller_market.SellerMarketActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_product_home.*
 import kotlinx.android.synthetic.main.fragment_product_home.view.*
 import retrofit2.Call
@@ -107,6 +109,13 @@ class HomeProduct : Fragment(), View.OnClickListener{
                 }
             }
             false
+        }
+        v.btn_cart_product.setOnClickListener {
+            frgIntent.flag=1
+            frgIntent.idx=1
+            (activity as MainActivity).replaceFragment(MyProduct())
+            (activity as MainActivity).clearSelected()
+            (activity as MainActivity).btn_myproduct_main.isSelected = true
         }
         return v
     }

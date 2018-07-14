@@ -19,7 +19,9 @@ class AlbumAdapter(var albumItems : ArrayList<GetMarketAlbumResponseData>,var re
 
     override fun onBindViewHolder(holder: AlbumViewHolder, position: Int) {
         holder.albumDate.text = albumItems[position].cr_dt
-        requestManager.load(albumItems[position].file_key).into(holder.albumPhoto)
+        requestManager.load(albumItems[position].file_key).apply {
+            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+        }.into(holder.albumPhoto)
         holder.albumContent.text = "#"+albumItems[position].album_title
     }
 

@@ -43,7 +43,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="김영서"
+                        android:text="이동수"
                         android:fontFamily="@font/nanum_extrabold"
                         android:textSize="18sp"
                         android:layout_gravity="center"
@@ -66,7 +66,7 @@
                             android:layout_marginLeft="15dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="YOUNG12@gmail.com"/>
+                            android:text="dongsu@gmail.com"/>
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>
