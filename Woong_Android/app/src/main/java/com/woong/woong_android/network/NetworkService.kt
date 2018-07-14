@@ -171,4 +171,7 @@ interface NetworkService {
     fun getBookmarkFlag(@Header("usertoken")user_token: String?,
                         @Path("market_id")market_id: Int):Call<GetBookmarkFlagResponse>
 
+    @GET("/market/{item_id}/favoriteflag")
+    fun getFavoriteFlag(@Header("usertoken")user_token: String?,
+                        @Path("item_id")market_id: Int):Call<GetFavoriteFlagResponse>
 }
