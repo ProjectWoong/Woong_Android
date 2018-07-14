@@ -48,3 +48,9 @@ object frgIntent{
     var flag : Int=0
     var idx : Int=0
 }
+
+object register_review{
+    var market_id : Int =0
+    var market_name :String =""
+    var product_name :String = ""
+}
