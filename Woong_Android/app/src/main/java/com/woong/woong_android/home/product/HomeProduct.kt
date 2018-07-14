@@ -115,7 +115,7 @@ class HomeProduct : Fragment(), View.OnClickListener{
             frgIntent.idx=1
             (activity as MainActivity).replaceFragment(MyProduct())
             (activity as MainActivity).clearSelected()
-            (activity as MainActivity).btn_market_main.isSelected = true
+            (activity as MainActivity).btn_myproduct_main.isSelected = true
         }
         return v
     }

@@ -69,11 +69,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         transaction.add(R.id.frame_fragment_main,HomeMain())
         transaction.commit()
 
-        if(frgIntent.flag==1){
-            replaceFragment(MyProduct())
-            clearSelected()
-            btn_market_main.isSelected = true
-        }
 
         btn_home_main.isSelected = true
         btn_myproduct_main.setOnClickListener(this)
@@ -81,6 +76,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_market_main.setOnClickListener(this)
         btn_my_main.setOnClickListener(this)
         btn_notice_main.setOnClickListener(this)
+        if(frgIntent.flag==1){
+            replaceFragment(MyProduct())
+            clearSelected()
+            btn_myproduct_main.isSelected = true
+        }
     }
 
     fun addFragment(fragment: Fragment) {
