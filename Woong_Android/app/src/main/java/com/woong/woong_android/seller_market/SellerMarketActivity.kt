@@ -31,9 +31,14 @@ import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.widget.TextView
 import android.view.ViewGroup
+import com.woong.woong_android.R
+import com.woong.woong_android.woong_marketinfo
+
+import com.woong.woong_android.chat
+import com.woong.woong_android.notice.get.GetChatRoomIdResponse
 import com.woong.woong_android.*
 import com.woong.woong_android.notice.message.chat.NoticeChatActivity
-import kotlinx.android.synthetic.main.slider.*
+
 
 
 class SellerMarketActivity : AppCompatActivity() {
@@ -63,6 +68,22 @@ class SellerMarketActivity : AppCompatActivity() {
         val market_id = woong_marketinfo.market_id
         ib_message_sellermarket.setOnClickListener {
             woong_marketinfo.market_id = market_id
+            networkService = ApplicationController.instance.networkService
+
+            val getChatRoomId = networkService.getChatRoomId(woong_usertoken.user_token,woong_marketinfo.market_id)
+            getChatRoomId.enqueue(object:Callback<GetChatRoomIdResponse>{
+                override fun onFailure(call: Call<GetChatRoomIdResponse>?, t: Throwable?) {
+
+                }
+
+                override fun onResponse(call: Call<GetChatRoomIdResponse>?, response: Response<GetChatRoomIdResponse>?) {
+
+                    if(response!!.isSuccessful){
+                        chat.chat_room_num = response.body().data.chatting_room_id
+                    }
+                }
+
+            })
             chat.new_room_flag = 1
             val intent = Intent(this@SellerMarketActivity, NoticeChatActivity::class.java)
             startActivity(intent)

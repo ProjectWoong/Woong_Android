@@ -31,6 +31,7 @@ object chat{
     var market_user_id : Int = 0
     var new_room_flag : Int = 0
     var chat_store_name : String? = ""
+
 }
 
 object previousLocation{
@@ -51,6 +52,7 @@ object frgIntent{
 
 object register_review{
     var market_id : Int =0
+    var product_img : Int = 0
     var market_name :String =""
     var product_name :String = ""
 }

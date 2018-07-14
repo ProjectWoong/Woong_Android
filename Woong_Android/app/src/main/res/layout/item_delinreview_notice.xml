@@ -9,7 +9,7 @@
         android:layout_height="100dp"
         android:layout_marginHorizontal="20dp">
         <ImageView
-            android:id="@+id/profileimg_message_notice"
+            android:id="@+id/profileimg_message_item"
             android:layout_centerVertical="true"
             android:scaleType="centerCrop"
             android:layout_width="124dp"
@@ -17,7 +17,7 @@
             android:background="#bcbcbc"/>
         <RelativeLayout
 
-            android:layout_toRightOf="@+id/profileimg_message_notice"
+            android:layout_toRightOf="@+id/profileimg_message_item"
             android:layout_width="240dp"
             android:layout_height="75dp">
             <RelativeLayout
