@@ -66,7 +66,8 @@ class NoticeMessage :Fragment() {
                             var recentmsg = messageItems[i].recent_message
                             var chatroom_id = messageItems[i].chatting_room_id
                             var market_id = messageItems[i].market_id
-                            newItems.add(GetChatRoomResponseData(img,title,chatroom_id,market_id,new,recentmsg,time))
+                            var room_user_id = messageItems[i].room_user_id
+                            newItems.add(GetChatRoomResponseData(img,title,chatroom_id,market_id,new,recentmsg,time,room_user_id))
                         }
                     }
                     for(i in 0 until messageItems.size){
@@ -79,7 +80,8 @@ class NoticeMessage :Fragment() {
                             var recentmsg = messageItems[i].recent_message
                             var chatroom_id = messageItems[i].chatting_room_id
                             var market_id = messageItems[i].market_id
-                            oldItems.add(GetChatRoomResponseData(img,title,chatroom_id,market_id,old,recentmsg,time))
+                            var room_user_id = messageItems[i].room_user_id
+                            oldItems.add(GetChatRoomResponseData(img,title,chatroom_id,market_id,old,recentmsg,time,room_user_id))
                         }
                     }
                     ntMessageAdapter = NtMessageAdapter(newItems,requestManager,context!!)

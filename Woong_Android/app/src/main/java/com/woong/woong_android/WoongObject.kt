@@ -27,4 +27,17 @@ object location{
 
 object chat{
     var chat_room_num : Int = 0
+    var room_user_id :Int = 0
+    var market_user_id : Int = 0
+}
+
+object previousLocation{
+    var history_address = ""
+    var longitude : Double = 0.0
+    var latitude : Double = 0.0
+}
+
+object submain{
+    var flag : Int = 0
+    var right : Int = 0
 }

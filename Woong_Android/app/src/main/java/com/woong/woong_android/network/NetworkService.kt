@@ -15,6 +15,8 @@ import com.woong.woong_android.map.get.GetLocationHistoryResponse
 
 import com.woong.woong_android.map.get.GetLocationResponse
 import com.woong.woong_android.map.get.GetLocationResponseData
+import com.woong.woong_android.map.post.PostLocationHistoryResponse
+import com.woong.woong_android.map.post.PostLocationHistoryResponseData
 import com.woong.woong_android.map.put.PutLocationRegisterResponse
 import com.woong.woong_android.map.put.PutLocationRegisterResponseData
 import com.woong.woong_android.market.get.GetBookmarkResponse
@@ -25,6 +27,8 @@ import com.woong.woong_android.notice.get.ChatMessageListData
 import com.woong.woong_android.notice.get.GetChatMessageResponse
 
 import com.woong.woong_android.notice.get.GetChatRoomResponse
+import com.woong.woong_android.notice.post.PostChatMessageResponse
+import com.woong.woong_android.notice.post.PostChatMessageResponseData
 import com.woong.woong_android.notice.post.PostReviewResponse
 import com.woong.woong_android.notice.post.ReviewWriteData
 import com.woong.woong_android.seller_market.post.PostBookmarkResponse
@@ -90,6 +94,9 @@ interface NetworkService {
     @GET("/account/location/history")//최근검색주소 보이기
     fun getLocationHistory(@Header("usertoken")user_token: String?):Call<GetLocationHistoryResponse>
 
+    @POST("/account/location/history")//최근검색주소 저장
+    fun postLocationHistory(@Header("usertoken")user_token: String?,@Body history:PostLocationHistoryResponseData):Call<PostLocationHistoryResponse>
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     //EVA///////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -145,6 +152,9 @@ interface NetworkService {
 
     @GET("/chat/message/{chatting_room_id}") //채팅메시지 가져오기
     fun getChatMessage(@Header("usertoken")user_token: String?,@Path("chatting_room_id")chat_room_id :Int):Call<GetChatMessageResponse>
+
+    @POST("/chat/message")
+    fun postChatMessage(@Header("usertoken")user_token: String?,@Body chat:PostChatMessageResponseData):Call<PostChatMessageResponse>
 
 
 

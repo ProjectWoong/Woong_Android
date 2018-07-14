@@ -6,23 +6,24 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.SubMenu
 import android.view.View
 import android.view.ViewGroup
-import com.woong.woong_android.MainActivity
-import com.woong.woong_android.R
+import android.widget.Toast
+import com.woong.woong_android.*
 import com.woong.woong_android.applicationcontroller.ApplicationController
 import com.woong.woong_android.home.main.HomeMain
 import com.woong.woong_android.home.main.Idx.idx
-import com.woong.woong_android.location
 import com.woong.woong_android.map.MapActivity
 import com.woong.woong_android.map.get.GetLocationListResponse
 import com.woong.woong_android.map.get.GetLocationListResponseData
 import com.woong.woong_android.map.get.GetLocationResponse
 import com.woong.woong_android.map.location_register.LocationSearchAdapter
+import com.woong.woong_android.map.post.PostLocationHistoryResponse
+import com.woong.woong_android.map.post.PostLocationHistoryResponseData
 import com.woong.woong_android.map.put.PutLocationRegisterResponse
 import com.woong.woong_android.map.put.PutLocationRegisterResponseData
 import com.woong.woong_android.network.NetworkService
-import com.woong.woong_android.woong_usertoken
 import kotlinx.android.synthetic.main.activity_location_search.*
 import kotlinx.android.synthetic.main.fragment_locationsearch_result.view.*
 import retrofit2.Call
@@ -41,6 +42,21 @@ class LocationSearchResult() : android.support.v4.app.Fragment(),View.OnClickLis
         var latitude = locationSearchItems[idx].y!!.toDouble()
         var real_address = locationSearchItems[idx].address_name
 
+        val postLocationHistoryResponseData = PostLocationHistoryResponseData(real_address,latitude,longitude)
+        val postLocationResponse = networkService.postLocationHistory(usertoken,postLocationHistoryResponseData)
+        postLocationResponse.enqueue(object:Callback<PostLocationHistoryResponse>{
+            override fun onFailure(call: Call<PostLocationHistoryResponse>?, t: Throwable?) {
+
+            }
+
+            override fun onResponse(call: Call<PostLocationHistoryResponse>?, response: Response<PostLocationHistoryResponse>?) {
+                if(response!!.isSuccessful){
+
+                }
+            }
+
+        })
+
         val putLocationRegisterResponseData = PutLocationRegisterResponseData(latitude,longitude,real_address)
         val putChangeLocation = networkService.putLocationRegister(usertoken,putLocationRegisterResponseData)
         putChangeLocation.enqueue(object:Callback<PutLocationRegisterResponse>{
@@ -50,12 +66,27 @@ class LocationSearchResult() : android.support.v4.app.Fragment(),View.OnClickLis
 
             override fun onResponse(call: Call<PutLocationRegisterResponse>?, response: Response<PutLocationRegisterResponse>?) {
                 if(response!!.isSuccessful){
-                    val intent = Intent(context, MainActivity::class.java)
-                   // intent.putExtra("search_address",locationSearchItems[idx].address_name)
-                    intent.putExtra("address_flag",1)
-                    //Log.v("주소",locationSearchItems[idx].address_name)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                    startActivity(intent)
+                    if(submain.flag == 1){
+                        val intent = Intent(context,MainActivity::class.java)
+
+                        submain.right = 1
+                        startActivity(intent)
+
+                    }else if(submain.flag==2){
+                        val intent = Intent(context,MainActivity::class.java)
+
+                        submain.right = 2
+                        startActivity(intent)
+
+                    }else{
+                        val intent = Intent(context, MainActivity::class.java)
+                        // intent.putExtra("search_address",locationSearchItems[idx].address_name)
+                        intent.putExtra("address_flag",1)
+                        //Log.v("주소",locationSearchItems[idx].address_name)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                        startActivity(intent)
+                    }
+
 
                 }
             }

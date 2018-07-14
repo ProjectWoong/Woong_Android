@@ -29,18 +29,18 @@ class LocationSearchChangeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_change_location_search)
         imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager //키보드 내리기위해서
-        addFragment(LocationShowPreviousSearch())
+         addFragment(LocationShowPreviousSearch())
 
 //        rv_result_consumer_location_search.layoutManager = LinearLayoutManager(this)
 
         //if(btn_)
         et_change_search_main.setOnEditorActionListener { textView, i, keyEvent ->
-            when(i){
-                EditorInfo.IME_ACTION_SEARCH->{
+            when (i) {
+                EditorInfo.IME_ACTION_SEARCH -> {
 
-                    location_keyword=  et_change_search_main.text.toString()
+                    location_keyword = et_change_search_main.text.toString()
 
-                    bundle.putString("keyword",location_keyword)
+                    bundle.putString("keyword", location_keyword)
                     LocationSearchResult().arguments = bundle
                     replaceFragment(LocationSearchResult())
                     hideKeyboard()
@@ -52,19 +52,6 @@ class LocationSearchChangeActivity : AppCompatActivity() {
             false
         }
 
-
-
-//        btn_back_join_location_search.setOnClickListener {
-//            val intent = Intent(applicationContext, MapActivity::class.java)
-//            startActivity(intent)   // 전환될 액티비티로 넘어갈때
-//        }
-
-//        locationSearchItems = ArrayList()
-//        locationSearchItems.add(LocationSearchItem("마포구 상수동 72-1", "와우산로 94"))
-//
-//        locationSearchAdapter = LocationSearchAdapter(locationSearchItems)
-//        rv_result_consumer_location_search.layoutManager = LinearLayoutManager(this)
-//        rv_result_consumer_location_search.adapter = locationSearchAdapter
     }
 
 

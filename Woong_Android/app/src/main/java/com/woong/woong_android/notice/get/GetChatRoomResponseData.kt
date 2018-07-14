@@ -8,6 +8,7 @@ data class GetChatRoomResponseData (
         var market_id : Int,
         var unread_count : Int,
         var recent_message : String?,
-        var interval_time : String?
+        var interval_time : String?,
+        var room_user_id:Int
 
 )
