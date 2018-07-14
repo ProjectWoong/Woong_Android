@@ -46,7 +46,9 @@ class SellerMarketIntro: Fragment() {
 
                     tv_hi_intro.text=response.body().data.market_info
 
-                    requestManager.load(response.body().data.title_image_key).into(iv_representimg_sellermarket_intro)
+                    requestManager.load(response.body().data.title_image_key).apply {
+                        placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                    }.into(iv_representimg_sellermarket_intro)
 
 
                 }

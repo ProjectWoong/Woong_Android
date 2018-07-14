@@ -24,7 +24,9 @@ class SellerMarketProductAdapter(var productItems : ArrayList<GetSellerMarketPro
     override fun getItemCount(): Int = productItems.size
 
     override fun onBindViewHolder(holder: SellerMarketProductViewHolder, position: Int) {
-        requestManager.load(productItems[position].file_key).into(holder.productimg)
+        requestManager.load(productItems[position].file_key).apply {
+            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+        }.into(holder.productimg)
         holder.marketname.text = productItems[position].market_name
         holder.productname.text =productItems[position].item_name
         holder.cost_per_unit.text = productItems[position].packaging
