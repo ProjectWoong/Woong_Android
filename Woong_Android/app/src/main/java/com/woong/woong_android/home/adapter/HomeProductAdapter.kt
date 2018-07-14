@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
 import com.woong.woong_android.R.id.btn_favorite_home
@@ -16,6 +17,7 @@ import com.woong.woong_android.woong_usertoken
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.security.AccessController.getContext
 
 class HomeProductAdapter(var productItems : ArrayList<GetItemResponseData>, var requestManager: RequestManager) : RecyclerView.Adapter<HomeProductViewHolder>() {
 
@@ -36,7 +38,10 @@ class HomeProductAdapter(var productItems : ArrayList<GetItemResponseData>, var 
     override fun onBindViewHolder(productViewHolder: HomeProductViewHolder, position: Int) {
         var networkService = ApplicationController.instance.networkService
 
-        requestManager.load(productItems[position].file_key).into(productViewHolder.productimg)
+        requestManager.load(productItems[position].file_key).apply {
+            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+        }.into(productViewHolder.productimg)
+
         productViewHolder.marketname.text = productItems[position].market_name
         productViewHolder.productname.text = productItems[position].item_name
         productViewHolder.unitname.text = productItems[position].item_unit

@@ -35,7 +35,9 @@ class MarketNearbyAdapter(private var nearbyItems : ArrayList<GetNearMarketListR
     override fun onBindViewHolder(nearbyViewHolder: MarketNearbyViewHolder, position: Int) {
         val networkService = ApplicationController.instance.networkService
 
-        requestManager.load(nearbyItems[position].title_image_key).into(nearbyViewHolder.img)
+        requestManager.load(nearbyItems[position].title_image_key).apply {
+            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+        }.into(nearbyViewHolder.img)
         nearbyViewHolder.name.text = nearbyItems[position].market_name
         nearbyViewHolder.address.text = nearbyItems[position].market_address
 

@@ -39,7 +39,9 @@ class MarketBookmarkAdapter(var bookmarkItems : ArrayList<GetBookmarkResponseDat
     override fun onBindViewHolder(ViewHolder: MarketBookmarkViewHolder, position: Int) {
         var networkService = ApplicationController.instance.networkService
 
-        requestManager.load(bookmarkItems[position].title_image_key).into(ViewHolder.marketimg)
+        requestManager.load(bookmarkItems[position].title_image_key).apply {
+            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+        }.into(ViewHolder.marketimg)
         ViewHolder.marketname.text = bookmarkItems[position].market_name
         ViewHolder.address.text = bookmarkItems[position].market_address
         ViewHolder.bookmark.setOnClickListener {
