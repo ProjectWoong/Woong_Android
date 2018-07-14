@@ -29,6 +29,8 @@ object chat{
     var chat_room_num : Int = 0
     var room_user_id :Int = 0
     var market_user_id : Int = 0
+    var new_room_flag : Int = 0
+    var chat_store_name : String? = ""
 }
 
 object previousLocation{

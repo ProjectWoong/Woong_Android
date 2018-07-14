@@ -59,6 +59,8 @@ class NtMessageAdapter(private var messageItems : ArrayList<GetChatRoomResponseD
 
             holder.bgr.setOnClickListener {
                 chat.chat_room_num = messageItems[position].chatting_room_id
+                chat.market_user_id = messageItems[position].market_id
+                chat.room_user_id = messageItems[position].room_user_id
                 val intent : Intent = Intent(context, NoticeChatActivity::class.java)
                 context.startActivity(intent)
 
