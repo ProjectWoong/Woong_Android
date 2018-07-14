@@ -37,7 +37,9 @@ class MyProductBookmarkAdapter(private var bookmarkItems : ArrayList<GetFavorite
     override fun onBindViewHolder(bookmarkViewHolder: MyProductBookmarkViewHolder, position: Int) {
         var networkService = ApplicationController.instance.networkService
 
-        requestManager.load(bookmarkItems[position].file_key).into(bookmarkViewHolder.productimg)
+        requestManager.load(bookmarkItems[position].file_key).apply {
+            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+        }.into(bookmarkViewHolder.productimg)
         bookmarkViewHolder.marketname.text = bookmarkItems[position].market_name
         bookmarkViewHolder.productname.text = bookmarkItems[position].item_name
         bookmarkViewHolder.unitname.text = bookmarkItems[position].item_unit

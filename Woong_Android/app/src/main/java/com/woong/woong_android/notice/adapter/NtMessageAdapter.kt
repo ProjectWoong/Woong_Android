@@ -37,7 +37,9 @@ class NtMessageAdapter(private var messageItems : ArrayList<GetChatRoomResponseD
             holder.title.setBackgroundColor(Color.parseColor("#237A59"))
             holder.title.text = messageItems[position].market_name
             holder.recentmsg.text = messageItems[position].recent_message
-            requestManager.load(messageItems[position].farmer_image).into(holder.img)
+            requestManager.load(messageItems[position].farmer_image).apply {
+                placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+            }.into(holder.img)
             holder.time.text = messageItems[position].interval_time
 
             holder.bgr.setOnClickListener {
@@ -54,7 +56,9 @@ class NtMessageAdapter(private var messageItems : ArrayList<GetChatRoomResponseD
             holder.alarm.visibility = View.INVISIBLE
             holder.title.text = messageItems[position].market_name
             holder.recentmsg.text = messageItems[position].recent_message
-            requestManager.load(messageItems[position].farmer_image).into(holder.img)
+            requestManager.load(messageItems[position].farmer_image).apply {
+                placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+            }.into(holder.img)
             holder.time.text = messageItems[position].interval_time
 
             holder.bgr.setOnClickListener {
