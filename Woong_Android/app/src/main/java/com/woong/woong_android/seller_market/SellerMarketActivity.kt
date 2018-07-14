@@ -2,6 +2,7 @@ package com.woong.woong_android.seller_market
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -33,6 +34,8 @@ import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.widget.TextView
 import android.view.ViewGroup
+import com.woong.woong_android.chat
+import com.woong.woong_android.notice.message.chat.NoticeChatActivity
 import kotlinx.android.synthetic.main.slider.*
 
 
@@ -60,6 +63,13 @@ class SellerMarketActivity : AppCompatActivity() {
 //        var tv:TextView = LayoutInflater.from(this).inflate(R.id.tab_top_sellermarket, null)
 ////        textView tv=(TextView)LayoutInflater.from(this).inflate(R.layout.custom_tab,null)
 //        textView.setTypeface()
+        val market_id = woong_marketinfo.market_id
+        ib_message_sellermarket.setOnClickListener {
+            woong_marketinfo.market_id = market_id
+            chat.new_room_flag = 1
+            val intent = Intent(this@SellerMarketActivity,NoticeChatActivity::class.java)
+            startActivity(intent)
+        }
 
         networkService = ApplicationController.instance.networkService
 
@@ -183,10 +193,12 @@ class SellerMarketActivity : AppCompatActivity() {
                     }else {
                         tv_tag2_sellermarket.text="#무료배송"
                     }
-
                     tv_distance_sellermarket.text = response.body().data.youandi
 
                     tv_storename_title.text = response.body().data.market_name
+
+
+                    chat.chat_store_name = tv_storename_title.text.toString()
 
                     requestManager.load(response.body().data.farmer_image_key).into(iv_profile_sellermarket)
                 }

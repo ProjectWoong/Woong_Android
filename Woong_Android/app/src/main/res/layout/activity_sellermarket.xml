@@ -67,7 +67,7 @@
                             android:textSize="13sp"
                             android:background="@drawable/transparent_green_round_button"
                             android:text="#무료배송"
-                            android:paddingTop="2dp"
+                            android:gravity="center"
                             android:textAlignment="center"/>
                         <TextView
                             android:id="@+id/tv_tag1_sellermarket"
@@ -79,7 +79,7 @@
                             android:fontFamily="@font/nanumsquare_bold"
                             android:background="@drawable/transparent_green_round_button"
                             android:text="#당일배송"
-                            android:paddingTop="2dp"
+                            android:gravity="center"
                             android:textAlignment="center"/>
                     </LinearLayout>
 

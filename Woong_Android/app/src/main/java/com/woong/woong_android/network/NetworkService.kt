@@ -153,7 +153,7 @@ interface NetworkService {
     @GET("/chat/message/{chatting_room_id}") //채팅메시지 가져오기
     fun getChatMessage(@Header("usertoken")user_token: String?,@Path("chatting_room_id")chat_room_id :Int):Call<GetChatMessageResponse>
 
-    @POST("/chat/message")
+    @POST("/chat/message") //채팅메시지 적은거 보내기
     fun postChatMessage(@Header("usertoken")user_token: String?,@Body chat:PostChatMessageResponseData):Call<PostChatMessageResponse>
 
 
