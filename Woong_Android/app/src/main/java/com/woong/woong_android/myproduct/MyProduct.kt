@@ -20,6 +20,11 @@ class MyProduct :android.support.v4.app.Fragment() {
         val tabLayout = v.tab_top_myproduct
 
         viewPager.adapter = myProductPagerAdapter
+
+        if(frgIntent.flag==1){
+            viewPager.currentItem = frgIntent.idx
+            frgIntent.flag=0
+        }
         tabLayout.setTabTextColors(Color.parseColor("#b2b2b2"),Color.parseColor("#227958"))
         tabLayout.setupWithViewPager(viewPager)
 
