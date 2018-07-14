@@ -147,7 +147,7 @@
                 <RatingBar
                     android:id="@+id/rating_speed_review"
                     android:rating="5"
-                    android:numStars="5"
+                    android:isIndicator="false"
                     style="?android:attr/ratingBarStyleIndicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -293,7 +293,7 @@
                 android:maxLength="1000"
                 android:background="@null"
                 android:layout_marginHorizontal="15dp"
-                android:textColor="#ADADAD"
+                android:textColor="#1D3025"
                 android:fontFamily="@font/nanum_regular"
                 android:hint="식품은 만족스러우셨나요? 식품의 장점과 아쉬운점을 다른 사람에게 알려주세요. 작성하신 후기는 지금 구매를 고민하는 사람에게 큰 도움이 됩니다."/>
             <View

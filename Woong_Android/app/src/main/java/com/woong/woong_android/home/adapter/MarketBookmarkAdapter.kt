@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.bumptech.glide.RequestManager
 import com.woong.woong_android.R
 import com.woong.woong_android.applicationcontroller.ApplicationController
@@ -54,6 +55,7 @@ class MarketBookmarkAdapter(var bookmarkItems : ArrayList<GetBookmarkResponseDat
                     override fun onResponse(call: Call<PostBookmarkResponse>?, response: Response<PostBookmarkResponse>?) {
                         ViewHolder.bookmark.setImageResource(R.drawable.market_favorite_x_cancel)
                         bookmarkFlag=0
+                        Toast.makeText(ViewHolder.marketimg.context, "즐겨찾기에서 해제되었습니다", Toast.LENGTH_SHORT).show()
                     }
                 })
             }else{

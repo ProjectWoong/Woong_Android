@@ -72,7 +72,7 @@
                         android:id="@+id/pdtotalnum_footer_myproduct"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="25500"/>
+                        android:text="0"/>
                     <TextView
                         android:layout_marginTop="5dp"
                         android:textSize="15sp"
@@ -113,13 +113,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp">
                     <TextView
+                        android:id="@+id/tv_deliver_myproduct"
                         android:layout_marginTop="5dp"
                         android:textSize="15sp"
                         android:fontFamily="@font/nanum_bold"
                         android:textColor="#707070"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2500원"/>
+                        android:text="0원"/>
 
                 </RelativeLayout>
 
@@ -159,7 +160,7 @@
                         android:id="@+id/totalnum_footer_myproduct"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="28000"/>
+                        android:text="0"/>
                     <TextView
                         android:fontFamily="@font/nanum_extrabold"
                         android:textSize="20sp"

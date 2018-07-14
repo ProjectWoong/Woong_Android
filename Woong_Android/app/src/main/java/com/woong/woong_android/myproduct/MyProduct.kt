@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.woong.woong_android.R
+import com.woong.woong_android.frgIntent
 import com.woong.woong_android.myproduct.adapter.MpPagerAdapter
 import kotlinx.android.synthetic.main.fragment_myproduct_tab.view.*
 

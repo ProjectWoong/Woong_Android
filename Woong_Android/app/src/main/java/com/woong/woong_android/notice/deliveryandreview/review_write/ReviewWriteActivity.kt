@@ -156,6 +156,7 @@ class ReviewWriteActivity : AppCompatActivity(),RatingBar.OnRatingBarChangeListe
             review_register_dialog.show()
         }
 
+
         rating_speed_review.onRatingBarChangeListener = this
         rating_fresh_review.onRatingBarChangeListener = this
         rating_kind_review.onRatingBarChangeListener = this

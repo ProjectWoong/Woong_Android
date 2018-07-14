@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.woong.woong_android.R
+import com.woong.woong_android.frgIntent
 import com.woong.woong_android.myproduct.adapter.MpPagerAdapter
 import com.woong.woong_android.notice.adapter.NtPagerAdapter
 import kotlinx.android.synthetic.main.fragment_myproduct_tab.view.*
@@ -20,6 +21,10 @@ class Notice : Fragment() {
         val tabLayout = v.tab_top_notice
 
         viewPager.adapter = ntPagerAdapter
+        if (frgIntent.flag==1){
+            viewPager.currentItem = frgIntent.idx
+            frgIntent.flag = 0
+        }
         tabLayout.setTabTextColors(Color.parseColor("#b2b2b2"), Color.parseColor("#227958"))
         tabLayout.setupWithViewPager(viewPager)
 

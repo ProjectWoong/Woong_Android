@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
+import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
 import com.woong.woong_android.*
@@ -58,6 +59,8 @@ class HomeProduct : Fragment(), View.OnClickListener{
             val rs  = ResizeAnimation(v.iv_searchwide_product, dpToPx(325F, activity!!.applicationContext).toInt())
             rs.duration = 0
             v.iv_searchwide_product.startAnimation(rs)
+            v.tv_submenu_product.text = searchString.str
+            v.et_search_product.setText(searchString.str,TextView.BufferType.EDITABLE)
             v.btn_search_product.visibility = View.INVISIBLE
             v.iv_searchwide_product.visibility = View.VISIBLE
             v.btn_cart_product.visibility = View.INVISIBLE
@@ -84,9 +87,9 @@ class HomeProduct : Fragment(), View.OnClickListener{
             val rs  = ResizeAnimation(iv_searchwide_product, dpToPx(30F, activity!!.applicationContext).toInt())
             rs.duration = dur
             iv_searchwide_product.startAnimation(rs)
-            iv_searchwide_product.visibility = View.VISIBLE
-            iv_searchico_product.visibility = View.VISIBLE
+            iv_searchico_product.visibility = View.INVISIBLE
             et_search_product.visibility = View.INVISIBLE
+            iv_searchwide_product.visibility = View.INVISIBLE
             Handler().postDelayed({
                 btn_search_product.visibility = View.VISIBLE
                 btn_cart_product.visibility = View.VISIBLE

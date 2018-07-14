@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,7 +18,6 @@ import com.woong.woong_android.myproduct.get.GetCartResponseData
 import com.woong.woong_android.myproduct.payment.PaymentActivity
 import com.woong.woong_android.network.NetworkService
 import com.woong.woong_android.woong_usertoken
-import kotlinx.android.synthetic.main.fragment_myproduct_bookmark.view.*
 import kotlinx.android.synthetic.main.fragment_myproduct_cart.view.*
 import kotlinx.android.synthetic.main.item_cart_myproduct.view.*
 import retrofit2.Call
@@ -46,7 +44,7 @@ class MyProductCart : Fragment() {
             override fun onResponse(call: Call<GetCartResponse>?, response: Response<GetCartResponse>?) {
                 if(response!!.isSuccessful){
                     cartItems = response.body().data
-                    myProductCartAdapter = MyProductCartAdapter(cartItems, requestManager)
+                    myProductCartAdapter = MyProductCartAdapter(cartItems, requestManager, v)
                     v.rv_cart_myproduct.layoutManager = LinearLayoutManager(context)
                     v.rv_cart_myproduct.adapter = myProductCartAdapter
                 }
