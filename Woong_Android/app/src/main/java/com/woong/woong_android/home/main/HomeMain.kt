@@ -135,6 +135,13 @@ class HomeMain : Fragment() {
             (activity as MainActivity).clearSelected()
             (activity as MainActivity).btn_notice_main.isSelected = true
         }
+        v.ib_cart_main.setOnClickListener{
+            frgIntent.flag=1
+            frgIntent.idx=1
+            (activity as MainActivity).replaceFragment(MyProduct())
+            (activity as MainActivity).clearSelected()
+            (activity as MainActivity).btn_market_main.isSelected = true
+        }
         return v
     }
 }

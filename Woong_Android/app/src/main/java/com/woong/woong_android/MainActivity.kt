@@ -69,6 +69,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         transaction.add(R.id.frame_fragment_main,HomeMain())
         transaction.commit()
 
+        if(frgIntent.flag==1){
+            replaceFragment(MyProduct())
+            clearSelected()
+            btn_market_main.isSelected = true
+        }
+
         btn_home_main.isSelected = true
         btn_myproduct_main.setOnClickListener(this)
         btn_home_main.setOnClickListener(this)

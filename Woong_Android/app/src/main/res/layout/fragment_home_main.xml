@@ -36,6 +36,7 @@
                 android:layout_toRightOf="@+id/tv_location_main"
                 android:background="@drawable/home_under"/>
             <ImageButton
+                android:id="@+id/ib_cart_main"
                 android:src="@drawable/home_basket"
                 android:background="#FFFFFF"
                 android:layout_width="24dp"

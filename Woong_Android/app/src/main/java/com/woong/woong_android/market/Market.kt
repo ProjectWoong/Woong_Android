@@ -16,9 +16,11 @@ import kotlinx.android.synthetic.main.fragment_market_tab.view.*
 
 import com.woong.woong_android.location
 import com.woong.woong_android.map.location_change.LocationSearchChangeActivity
+import com.woong.woong_android.myproduct.MyProduct
 
 import com.woong.woong_android.submain
 import com.woong.woong_android.woong_usertoken
+import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -69,6 +71,13 @@ class Market :android.support.v4.app.Fragment() {
         tabLayout.setTabTextColors(Color.parseColor("#adadad"), Color.parseColor("#227958"))
         tabLayout.setupWithViewPager(viewPager)
 
+        v.btn_cart_market.setOnClickListener {
+            frgIntent.flag=1
+            frgIntent.idx=1
+            (activity as MainActivity).replaceFragment(MyProduct())
+            (activity as MainActivity).clearSelected()
+            (activity as MainActivity).btn_market_main.isSelected = true
+        }
         return v
     }
 
