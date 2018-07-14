@@ -188,7 +188,9 @@ class SellerMarketActivity : AppCompatActivity() {
 
                     tv_storename_title.text = response.body().data.market_name
 
-                    requestManager.load(response.body().data.farmer_image_key).into(iv_profile_sellermarket)
+                    requestManager.load(response.body().data.farmer_image_key).apply {
+                        placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+                    }.into(iv_profile_sellermarket)
                 }
             }
         })
