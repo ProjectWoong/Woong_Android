@@ -10,7 +10,7 @@ import org.w3c.dom.Text
 
 class NtDeliverandReviewViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
     var deliver_num : TextView= itemView!!.findViewById(R.id.delivernum_deliver_notice) as TextView
-    var img : ImageView = itemView!!.findViewById(R.id.profileimg_message_notice) as ImageView
+    var img : ImageView = itemView!!.findViewById(R.id.profileimg_message_item) as ImageView
     var market_name :TextView = itemView!!.findViewById(R.id.marketname_alarm_item) as TextView
     var product_name : TextView = itemView!!.findViewById(R.id.productname_alarm_item) as TextView
     var order_date : TextView = itemView!!.findViewById(R.id.date_order_alarm_item) as TextView

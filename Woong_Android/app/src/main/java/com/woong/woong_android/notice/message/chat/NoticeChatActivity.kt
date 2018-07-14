@@ -34,7 +34,7 @@ class NoticeChatActivity : AppCompatActivity() {
         val chat_room_id = chat.chat_room_num
         if(chat.new_room_flag == 1){
 
-            val getChatMessage = networkService.getChatMessage(usertoken,chat_room_id)
+            val getChatMessage = networkService.getChatMessage(woong_usertoken.user_token,chat.chat_room_num)
 
             getChatMessage.enqueue(object :Callback<GetChatMessageResponse>{
                 override fun onFailure(call: Call<GetChatMessageResponse>?, t: Throwable?) {
@@ -65,7 +65,7 @@ class NoticeChatActivity : AppCompatActivity() {
                     override fun onResponse(call: Call<PostChatMessageResponse>?, response: Response<PostChatMessageResponse>?) {
 
                         if(response!!.isSuccessful){
-                            Toast.makeText(applicationContext,"dfsfd",Toast.LENGTH_SHORT).show()
+//                            Toast.makeText(applicationContext,"dfsfd",Toast.LENGTH_SHORT).show()
 
 //                        ntChatAdapter = NtChatAdapter(chatItems)
 //                        rv_chat_notice.layoutManager = LinearLayoutManager(this@NoticeChatActivity)
@@ -132,7 +132,7 @@ class NoticeChatActivity : AppCompatActivity() {
                     override fun onResponse(call: Call<PostChatMessageResponse>?, response: Response<PostChatMessageResponse>?) {
 
                         if(response!!.isSuccessful){
-                            Toast.makeText(applicationContext,"dfsfd",Toast.LENGTH_SHORT).show()
+//                            Toast.makeText(applicationContext,"dfsfd",Toast.LENGTH_SHORT).show()
 
 //                        ntChatAdapter = NtChatAdapter(chatItems)
 //                        rv_chat_notice.layoutManager = LinearLayoutManager(this@NoticeChatActivity)

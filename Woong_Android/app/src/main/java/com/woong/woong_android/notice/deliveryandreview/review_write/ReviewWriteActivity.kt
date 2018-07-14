@@ -27,6 +27,7 @@ import com.woong.woong_android.notice.deliveryandreview.review_write.dialog.Revi
 import com.woong.woong_android.notice.post.PostReviewResponse
 import com.woong.woong_android.notice.post.ReviewImageData
 import com.woong.woong_android.notice.post.ReviewWriteData
+import com.woong.woong_android.register_review
 import com.woong.woong_android.woong_marketinfo
 import com.woong.woong_android.woong_usertoken
 import kotlinx.android.synthetic.main.activity_review_write.*
@@ -133,6 +134,10 @@ class ReviewWriteActivity : AppCompatActivity(),RatingBar.OnRatingBarChangeListe
 //        wm.width = width-200
 //        wm.height = height-600
 
+        profileimg_message_notice.setImageResource(register_review.product_img)
+        marketname_alarm.text = register_review.market_name
+        productname_alarm.text = register_review.product_name
+
 
         btn_register_review.setOnClickListener {
             var networkService: NetworkService = ApplicationController.instance.networkService
@@ -141,7 +146,7 @@ class ReviewWriteActivity : AppCompatActivity(),RatingBar.OnRatingBarChangeListe
                     rating_fresh_review.numStars, rating_kind_review.numStars, et_content_review.text.toString(), reviewImageItems)
 //            reviewWriteData.rate_fresh=
 
-            val postReview = networkService.postReview(woong_usertoken.user_token,1,reviewWriteData)
+            val postReview = networkService.postReview(woong_usertoken.user_token,register_review.market_id,reviewWriteData)
             postReview.enqueue(object: retrofit2.Callback<PostReviewResponse>{
                 override fun onFailure(call: Call<PostReviewResponse>?, t: Throwable?) {
                     Toast.makeText(applicationContext, t.toString(), Toast.LENGTH_SHORT)

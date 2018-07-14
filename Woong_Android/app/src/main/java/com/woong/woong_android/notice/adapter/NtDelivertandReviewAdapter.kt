@@ -22,10 +22,15 @@ class NtDelivertandReviewAdapter(var context: Context,private var deliveryItems 
 
     override fun onBindViewHolder(holder: NtDeliverandReviewViewHolder, position: Int) {
         if(deliveryItems[position].isShipping == 1){//1이면 배송중
+            holder.img.setImageResource(deliveryItems[position].product_img)
+            holder.market_name.text = deliveryItems[position].market_name
+            holder.order_date.text = deliveryItems[position].order_date
+            holder.order_cost.text = deliveryItems[position].order_cost
             holder.deliver_num.visibility = View.VISIBLE
             holder.review_write_btn.visibility = View.INVISIBLE
         }else if(deliveryItems[position].isShipping == 0){ //배송완료
             holder.deliver_num.visibility = View.INVISIBLE
+            holder.img.setImageResource(deliveryItems[position].product_img)
             holder.market_name.text = deliveryItems[position].market_name
             holder.order_date.text = deliveryItems[position].order_date
             holder.order_cost.text = deliveryItems[position].order_cost
@@ -33,27 +38,33 @@ class NtDelivertandReviewAdapter(var context: Context,private var deliveryItems 
             holder.review_write_btn.setOnClickListener {
                 if(deliveryItems[position].market_id==1){
                     register_review.market_id = 1
+                    register_review.product_img = deliveryItems[position].product_img
                     register_review.market_name = deliveryItems[position].market_name.toString()
                     register_review.product_name = deliveryItems[position].product_name.toString()
                 }else if(deliveryItems[position].market_id==2){
                     register_review.market_id = 2
+                    register_review.product_img = deliveryItems[position].product_img
                     register_review.market_name = deliveryItems[position].market_name.toString()
                     register_review.product_name = deliveryItems[position].product_name.toString()
 
                 }else if(deliveryItems[position].market_id==3){
                     register_review.market_id = 3
+                    register_review.product_img = deliveryItems[position].product_img
                     register_review.market_name = deliveryItems[position].market_name.toString()
                     register_review.product_name = deliveryItems[position].product_name.toString()
                 }else if(deliveryItems[position].market_id==4){
                     register_review.market_id = 4
+                    register_review.product_img = deliveryItems[position].product_img
                     register_review.market_name = deliveryItems[position].market_name.toString()
                     register_review.product_name = deliveryItems[position].product_name.toString()
                 }else if(deliveryItems[position].market_id==5){
                     register_review.market_id = 5
+                    register_review.product_img = deliveryItems[position].product_img
                     register_review.market_name = deliveryItems[position].market_name.toString()
                     register_review.product_name = deliveryItems[position].product_name.toString()
                 }else if(deliveryItems[position].market_id==6){
                     register_review.market_id = 6
+                    register_review.product_img = deliveryItems[position].product_img
                     register_review.market_name = deliveryItems[position].market_name.toString()
                     register_review.product_name = deliveryItems[position].product_name.toString()
                 }

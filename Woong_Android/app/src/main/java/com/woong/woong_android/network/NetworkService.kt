@@ -25,6 +25,7 @@ import com.woong.woong_android.myproduct.post.PostCartResponse
 import com.woong.woong_android.notice.get.ChatMessageListData
 
 import com.woong.woong_android.notice.get.GetChatMessageResponse
+import com.woong.woong_android.notice.get.GetChatRoomIdResponse
 
 import com.woong.woong_android.notice.get.GetChatRoomResponse
 import com.woong.woong_android.notice.post.PostChatMessageResponse
@@ -156,6 +157,8 @@ interface NetworkService {
     @POST("/chat/message") //채팅메시지 적은거 보내기
     fun postChatMessage(@Header("usertoken")user_token: String?,@Body chat:PostChatMessageResponseData):Call<PostChatMessageResponse>
 
+    @GET("/chat/room/{market_id}")
+    fun getChatRoomId(@Header("usertoken")user_token: String?,@Path("market_id")id:Int):Call<GetChatRoomIdResponse>
 
 
     ////////////////////////////////////////

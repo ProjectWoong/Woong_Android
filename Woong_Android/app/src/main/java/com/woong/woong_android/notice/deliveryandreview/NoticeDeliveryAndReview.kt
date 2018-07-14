@@ -53,7 +53,7 @@ class NoticeDeliveryAndReview :Fragment() {
                 var product_name = deliveryItems[i].product_name
                 var order_date = deliveryItems[i].order_date
                 var order_cost = deliveryItems[i].order_cost
-                ing_shipping.add(DeliveryData(m_id,done,img,market_name,product_name,order_date,order_cost))
+                done_shipping.add(DeliveryData(m_id,done,img,market_name,product_name,order_date,order_cost))
             }
         }
 
