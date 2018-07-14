@@ -86,7 +86,9 @@ class MyProductCartAdapter(private var cartItems: ArrayList<GetCartResponseData>
     }
 
     override fun onBindViewHolder(holder: MyProductCartViewHolder, position: Int) {
-        requestManager.load(cartItems[position].file_key).into(holder.productimg)
+        requestManager.load(cartItems[position].file_key).apply {
+            placeholder(R.drawable.flicker).thumbnail(requestManager.load(R.drawable.flicker))
+        }.into(holder.productimg)
         holder.marketname.text = cartItems[position].carttitle
         holder.subtotal.text = cartItems[position].item_price.toString()
         holder.quantity.text = "1"
