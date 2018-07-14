@@ -6,18 +6,20 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.woong.woong_android.R
+import com.woong.woong_android.*
 import com.woong.woong_android.applicationcontroller.ApplicationController
-import com.woong.woong_android.location
 import com.woong.woong_android.map.get.GetLocationResponse
 import com.woong.woong_android.map.location_change.LocationSearchChangeActivit
 import com.woong.woong_android.frgIntent
 import com.woong.woong_android.market.adapter.MarketPagerAdpter
 import com.woong.woong_android.network.NetworkService
+import kotlinx.android.synthetic.main.fragment_market_tab.view.*
+
+import com.woong.woong_android.location
+
+import com.woong.woong_android.frgIntent
 import com.woong.woong_android.submain
 import com.woong.woong_android.woong_usertoken
-import kotlinx.android.synthetic.main.fragment_market_tab.view.*
-import kotlinx.android.synthetic.main.fragment_submenu_tab.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
