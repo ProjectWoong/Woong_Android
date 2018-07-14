@@ -20,6 +20,7 @@ import com.woong.woong_android.seller_market.SellerMarketActivity
 import com.woong.woong_android.woong_marketinfo
 import com.woong.woong_android.woong_usertoken
 import kotlinx.android.synthetic.main.fragment_bookmark_market.*
+import kotlinx.android.synthetic.main.fragment_bookmark_market.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -52,8 +53,8 @@ class MarketBookmark: Fragment(),View.OnClickListener {
                     bookmarkItems = response.body().data
                     getBookmarkAdapter = MarketBookmarkAdapter(bookmarkItems, requestManager)
                     getBookmarkAdapter.setOnItemClickListener(this@MarketBookmark)
-                    rv_bookmark_mymarket.layoutManager = LinearLayoutManager(context)
-                    rv_bookmark_mymarket.adapter = getBookmarkAdapter
+                    v.rv_bookmark_mymarket.layoutManager = LinearLayoutManager(context)
+                    v.rv_bookmark_mymarket.adapter = getBookmarkAdapter
                 }
             }
         })

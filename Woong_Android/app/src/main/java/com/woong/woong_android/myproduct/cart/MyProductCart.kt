@@ -44,17 +44,7 @@ class MyProductCart : Fragment() {
             override fun onResponse(call: Call<GetCartResponse>?, response: Response<GetCartResponse>?) {
                 if(response!!.isSuccessful){
                     cartItems = response.body().data
-//                    myProductCartAdapter = MyProductCartAdapter(cartItems, requestManager,v.pdtotalnum_footer_myproduct,v.tv_deliver_myproduct,v.totalnum_footer_myproduct,v)
                     myProductCartAdapter = MyProductCartAdapter(cartItems, requestManager, v)
-//                    var proPrice=0
-//                    var deliPrice=0
-//                    for (i in cartItems){
-//                        proPrice += i.item_price
-//                        deliPrice += i.delivery
-//                    }
-//                    v.pdtotalnum_footer_myproduct.text = proPrice.toString()
-//                    v.tv_deliver_myproduct.text = deliPrice.toString()+"원"
-//                    v.totalnum_footer_myproduct.text = (proPrice + deliPrice).toString()
                     v.rv_cart_myproduct.layoutManager = LinearLayoutManager(context)
                     v.rv_cart_myproduct.adapter = myProductCartAdapter
                 }
