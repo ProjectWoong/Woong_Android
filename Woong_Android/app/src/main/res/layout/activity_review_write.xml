@@ -82,6 +82,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="["/>
                                 <TextView
+                                    android:id="@+id/marketname_alarm"
                                     android:fontFamily="@font/nanumsquare_bold"
                                     android:textSize="15sp"
                                     android:textColor="#1C2320"
@@ -96,15 +97,17 @@
                                     android:layout_height="wrap_content"
                                     android:text="]"/>
                             </LinearLayout>
+
                             <TextView
+                                android:id="@+id/productname_alarm"
                                 android:layout_width="wrap_content"
-                                android:fontFamily="@font/nanumsquare_bold"
-                                android:textSize="15sp"
-                                android:textColor="#1C2320"
-                                android:layout_marginTop="5dp"
-                                android:layout_alignParentBottom="true"
                                 android:layout_height="wrap_content"
-                                android:text="웅이네 포슬포슬 왕감자 3kg"/>
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/nanumsquare_bold"
+                                android:text="웅이네 포슬포슬 왕감자 3kg"
+                                android:textColor="#1C2320"
+                                android:textSize="15sp" />
                         </RelativeLayout>
 
 
