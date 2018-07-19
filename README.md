@@ -1,5 +1,6 @@
 # Project Woong
 Project Woong's Android Repository
+This project is for location-based local food direct dealing platform.
 
 ![woong3d](https://user-images.githubusercontent.com/24809669/42792330-af44b95c-89af-11e8-96a0-079c490181be.png)
 
