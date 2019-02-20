@@ -1,6 +1,6 @@
 # Project Woong
 Project Woong's Android Repository<br/>
-This project is for location-based local food direct dealing platform.
+This is the location-based application to directly trade local food.
 
 ![woong3d](https://user-images.githubusercontent.com/24809669/42792330-af44b95c-89af-11e8-96a0-079c490181be.png)
 
